@@ -2,10 +2,29 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-22T09:29:34.822Z",
+  "generatedAt": "2026-04-22T19:03:15.215Z",
   "name": "Vibe Research BuildingHub",
-  "packageCount": 3,
+  "packageCount": 4,
   "packages": [
+    {
+      "id": "instacart",
+      "name": "Instacart",
+      "category": "Commerce",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "63540abe39112b3d4fb23d98513c9733a85d8623a5382bddef76125fb3c43944",
+      "source": {
+        "manifestPath": "buildings/instacart/building.json",
+        "readmePath": "buildings/instacart/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "63540abe39112b3d4fb23d98513c9733a85d8623a5382bddef76125fb3c43944",
+          "manifestPath": "buildings/instacart/building.json"
+        }
+      ]
+    },
     {
       "id": "linear",
       "name": "Linear",
@@ -65,6 +84,203 @@
     }
   ],
   "buildings": [
+    {
+      "id": "instacart",
+      "name": "Instacart",
+      "version": "0.1.0",
+      "category": "Commerce",
+      "description": "Let agents create Instacart shopping list and recipe links for user-reviewed checkout through Instacart Marketplace.",
+      "status": "community",
+      "trust": "mcp",
+      "icon": "shopping-cart",
+      "docsUrl": "https://docs.instacart.com/developer_platform_api/guide/tutorials/mcp/",
+      "keywords": [
+        "groceries",
+        "shopping",
+        "commerce",
+        "mcp",
+        "checkout"
+      ],
+      "visual": {
+        "shape": "market"
+      },
+      "access": {
+        "label": "Instacart Developer Platform",
+        "detail": "Requires an Instacart Developer Platform API key where the agent or MCP client runs. The public Developer Platform and MCP path creates shoppable recipe or shopping-list pages; user checkout still happens on Instacart Marketplace. Direct order creation is a separate Instacart Connect retailer-partner workflow and must not be treated as a general consumer ordering API."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "INSTACART_API_KEY",
+          "detail": "Instacart Developer Platform key used as a Bearer token. Never print, log, or commit this value.",
+          "required": true
+        },
+        {
+          "type": "mcp",
+          "name": "Instacart MCP server",
+          "detail": "Development URL: https://mcp.dev.instacart.tools/mcp. Production URL: https://mcp.instacart.com/mcp. Requires Authorization bearer token.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "Create shopping list page",
+          "detail": "POST /idp/v1/products/products_link creates a Marketplace shopping-list URL that the user reviews, adds to cart, and checks out from.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "Nearby retailers",
+          "detail": "GET /idp/v1/retailers?postal_code=...&country_code=US|CA lists nearby retailer banners for planning.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Developer Platform key",
+            "value": "INSTACART_API_KEY in agent environment",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Environment",
+            "value": "development or production Instacart API/MCP endpoint",
+            "required": true
+          },
+          {
+            "label": "Checkout rule",
+            "value": "human reviews cart, delivery details, substitutions, and total before paying",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Get API access",
+            "detail": "Apply for Instacart Developer Platform access and create a development key in the Instacart Developer Dashboard."
+          },
+          {
+            "title": "Test MCP connection",
+            "detail": "Use MCP inspector against https://mcp.dev.instacart.tools/mcp with Authorization set to a Bearer token, then verify create-recipe and create-shopping-list tools are listed."
+          },
+          {
+            "title": "Generate a shopping handoff",
+            "detail": "Have the agent create a recipe or shopping-list page from the user's requested items, then send the returned Instacart URL for human review."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add Instacart to Agent Town after the key, endpoint, and checkout-confirmation rule are documented.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Instacart when an agent needs to turn grocery requests, recipes, or meal plans into an Instacart Marketplace shopping-list or recipe link for user-reviewed checkout.",
+        "useCases": [
+          "Create a shoppable Instacart list from a user's grocery request or meal plan.",
+          "Use the official Instacart MCP server so the agent can call create-recipe or create-shopping-list without hand-writing API payloads.",
+          "Check nearby retailer banners by postal code before preparing a shopping handoff.",
+          "Explain that the user must complete checkout on Instacart Marketplace unless there is a separate authorized Connect retailer integration."
+        ],
+        "setup": [
+          "Confirm INSTACART_API_KEY is available only in the agent runtime or MCP client configuration; never write it to the Library, result docs, screenshots, or commits.",
+          "Use the development API or MCP endpoint until the integration is reviewed and a production key is approved.",
+          "For public Developer Platform use, create a shopping list or recipe URL and hand it to the user for cart review and checkout.",
+          "Do not place or imply final orders, payments, age-restricted purchases, substitutions, tips, or delivery windows without explicit human confirmation in the active conversation.",
+          "Treat Instacart Connect Fulfillment order creation as retailer-partner infrastructure only; use it only when the workspace already has authorized retailer credentials, catalog/store setup, and a customer checkout flow."
+        ],
+        "commands": [
+          {
+            "label": "Read generated guide",
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/instacart.md\"",
+            "detail": "Start here before using the building from an agent session."
+          },
+          {
+            "label": "Inspect MCP server",
+            "command": "npx @modelcontextprotocol/inspector",
+            "detail": "Set Transport Type to Streamable HTTP, URL to https://mcp.dev.instacart.tools/mcp, and Authorization to a Bearer token."
+          },
+          {
+            "label": "Set development API base",
+            "command": "export INSTACART_API_BASE_URL=https://connect.dev.instacart.tools",
+            "detail": "Use the production base URL only after Instacart approves production access."
+          },
+          {
+            "label": "Create shopping list page",
+            "command": "curl -X POST \"$INSTACART_API_BASE_URL/idp/v1/products/products_link\" -H \"Authorization: Bearer $INSTACART_API_KEY\" -H \"Content-Type: application/json\" -d @instacart-shopping-list.json",
+            "detail": "Payload should include title and line_items with line_item_measurements."
+          },
+          {
+            "label": "List nearby retailers",
+            "command": "curl \"$INSTACART_API_BASE_URL/idp/v1/retailers?postal_code=${INSTACART_POSTAL_CODE:?set}&country_code=${INSTACART_COUNTRY_CODE:-US}\" -H \"Authorization: Bearer $INSTACART_API_KEY\"",
+            "detail": "Use the user's postal code only when they have provided it for this task."
+          }
+        ],
+        "env": [
+          {
+            "name": "INSTACART_API_KEY",
+            "detail": "Instacart Developer Platform API key used as Authorization bearer token.",
+            "required": true
+          },
+          {
+            "name": "INSTACART_API_BASE_URL",
+            "detail": "Optional REST base URL. Defaults should be development https://connect.dev.instacart.tools until production approval.",
+            "required": false
+          },
+          {
+            "name": "INSTACART_MCP_URL",
+            "detail": "Optional MCP URL, usually https://mcp.dev.instacart.tools/mcp for development or https://mcp.instacart.com/mcp for production.",
+            "required": false
+          },
+          {
+            "name": "INSTACART_POSTAL_CODE",
+            "detail": "Only set from a postal code the user provided for the current grocery task.",
+            "required": false
+          },
+          {
+            "name": "INSTACART_COUNTRY_CODE",
+            "detail": "US or CA. Defaults to US in the sample command.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+            "detail": "Generated per-building guide directory.",
+            "required": false
+          }
+        ],
+        "docs": [
+          {
+            "label": "Instacart MCP tutorial",
+            "url": "https://docs.instacart.com/developer_platform_api/guide/tutorials/mcp/"
+          },
+          {
+            "label": "Developer Platform introduction",
+            "url": "https://docs.instacart.com/developer_platform_api/"
+          },
+          {
+            "label": "API reference overview",
+            "url": "https://docs.instacart.com/developer_platform_api/api/overview/"
+          },
+          {
+            "label": "Create shopping list page",
+            "url": "https://docs.instacart.com/developer_platform_api/api/products/create_shopping_list_page/"
+          },
+          {
+            "label": "Nearby retailers",
+            "url": "https://docs.instacart.com/developer_platform_api/api/retailers/get_nearby_retailers/"
+          },
+          {
+            "label": "Instacart Connect APIs",
+            "url": "https://docs.instacart.com/connect/"
+          },
+          {
+            "label": "Connect Fulfillment API",
+            "url": "https://docs.instacart.com/connect/fulfillment/"
+          }
+        ]
+      }
+    },
     {
       "id": "linear",
       "name": "Linear",
