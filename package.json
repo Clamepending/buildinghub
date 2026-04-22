@@ -1,10 +1,16 @@
 {
   "name": "vibe-research-buildinghub",
-  "version": "0.1.0",
+  "version": "0.2.0",
   "private": true,
   "type": "module",
+  "bin": {
+    "buildinghub": "./bin/buildinghub.mjs"
+  },
   "scripts": {
-    "build": "node scripts/build-registry.mjs",
-    "test": "node scripts/validate-buildings.mjs"
+    "build": "node bin/buildinghub.mjs build",
+    "doctor": "node bin/buildinghub.mjs doctor",
+    "list": "node bin/buildinghub.mjs list",
+    "pack": "node bin/buildinghub.mjs pack --all",
+    "test": "node --test test/*.test.mjs && node bin/buildinghub.mjs validate"
   }
 }

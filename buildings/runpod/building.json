@@ -1,6 +1,7 @@
 {
   "id": "runpod",
   "name": "RunPod",
+  "version": "0.1.0",
   "category": "Compute",
   "description": "Track GPU pod setup for agents that launch, monitor, or use RunPod jobs through a connector or helper.",
   "status": "community",

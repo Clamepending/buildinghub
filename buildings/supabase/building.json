@@ -1,6 +1,7 @@
 {
   "id": "supabase",
   "name": "Supabase",
+  "version": "0.1.0",
   "category": "Data",
   "description": "Give agents a visible home for Supabase project setup, migrations, logs, and database access instructions.",
   "status": "community",

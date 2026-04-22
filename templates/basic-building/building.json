@@ -1,6 +1,7 @@
 {
   "id": "example-building",
   "name": "Example Building",
+  "version": "0.1.0",
   "category": "Community",
   "description": "Describe what this building helps agents do.",
   "status": "community",

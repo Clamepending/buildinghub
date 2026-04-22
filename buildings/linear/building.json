@@ -1,6 +1,7 @@
 {
   "id": "linear",
   "name": "Linear",
+  "version": "0.1.0",
   "category": "Planning",
   "description": "Let agents triage issues, inspect project state, and prepare Linear updates through an MCP or helper command.",
   "status": "community",

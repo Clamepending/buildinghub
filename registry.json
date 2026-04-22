@@ -1,11 +1,74 @@
 {
+  "registryVersion": 1,
   "manifestVersion": 1,
-  "generatedAt": "2026-04-22T07:59:50.957Z",
+  "generatedBy": "buildinghub/0.2.0",
+  "generatedAt": "2026-04-22T09:29:34.822Z",
   "name": "Vibe Research BuildingHub",
+  "packageCount": 3,
+  "packages": [
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "Planning",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "0f16227ada7e6284f25d1c4f86a3cabbf93a9f447311ee5a41b571abdfd4e2be",
+      "source": {
+        "manifestPath": "buildings/linear/building.json",
+        "readmePath": "buildings/linear/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "0f16227ada7e6284f25d1c4f86a3cabbf93a9f447311ee5a41b571abdfd4e2be",
+          "manifestPath": "buildings/linear/building.json"
+        }
+      ]
+    },
+    {
+      "id": "runpod",
+      "name": "RunPod",
+      "category": "Compute",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "b99579ecd544c2addb7b98e36ab3344bc1e6a1250119b20322a2804f88ab267e",
+      "source": {
+        "manifestPath": "buildings/runpod/building.json",
+        "readmePath": "buildings/runpod/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "b99579ecd544c2addb7b98e36ab3344bc1e6a1250119b20322a2804f88ab267e",
+          "manifestPath": "buildings/runpod/building.json"
+        }
+      ]
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "Data",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "1e66597ef7dbbb5f3d4f6095de59e8b52fe4d5b52df4aa967c978c109799cb98",
+      "source": {
+        "manifestPath": "buildings/supabase/building.json",
+        "readmePath": "buildings/supabase/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "1e66597ef7dbbb5f3d4f6095de59e8b52fe4d5b52df4aa967c978c109799cb98",
+          "manifestPath": "buildings/supabase/building.json"
+        }
+      ]
+    }
+  ],
   "buildings": [
     {
       "id": "linear",
       "name": "Linear",
+      "version": "0.1.0",
       "category": "Planning",
       "description": "Let agents triage issues, inspect project state, and prepare Linear updates through an MCP or helper command.",
       "status": "community",
@@ -69,6 +132,7 @@
     {
       "id": "runpod",
       "name": "RunPod",
+      "version": "0.1.0",
       "category": "Compute",
       "description": "Track GPU pod setup for agents that launch, monitor, or use RunPod jobs through a connector or helper.",
       "status": "community",
@@ -133,6 +197,7 @@
     {
       "id": "supabase",
       "name": "Supabase",
+      "version": "0.1.0",
       "category": "Data",
       "description": "Give agents a visible home for Supabase project setup, migrations, logs, and database access instructions.",
       "status": "community",
