@@ -1,0 +1,87 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://buildinghub.local/schemas/building.schema.json",
+  "title": "BuildingHub Building Manifest",
+  "type": "object",
+  "additionalProperties": true,
+  "required": ["id", "name", "category", "description", "onboarding"],
+  "properties": {
+    "id": {
+      "type": "string",
+      "pattern": "^[a-z0-9][a-z0-9-]*$"
+    },
+    "name": { "type": "string", "minLength": 1 },
+    "category": { "type": "string", "minLength": 1 },
+    "description": { "type": "string", "minLength": 1 },
+    "status": { "type": "string" },
+    "trust": {
+      "type": "string",
+      "enum": ["manifest-only", "helper-command", "mcp"]
+    },
+    "icon": { "type": "string" },
+    "repositoryUrl": { "type": "string" },
+    "docsUrl": { "type": "string" },
+    "visual": {
+      "type": "object",
+      "additionalProperties": true,
+      "properties": {
+        "shape": { "type": "string" }
+      }
+    },
+    "access": {
+      "type": "object",
+      "required": ["label", "detail"],
+      "properties": {
+        "label": { "type": "string" },
+        "detail": { "type": "string" }
+      }
+    },
+    "capabilities": {
+      "type": "array",
+      "items": {
+        "type": "object",
+        "required": ["type", "name"],
+        "properties": {
+          "type": {
+            "type": "string",
+            "enum": ["mcp", "helper-command", "env", "webhook", "oauth", "api"]
+          },
+          "name": { "type": "string" },
+          "command": { "type": "string" },
+          "detail": { "type": "string" },
+          "required": { "type": "boolean" }
+        }
+      }
+    },
+    "onboarding": {
+      "type": "object",
+      "properties": {
+        "variables": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["label"],
+            "properties": {
+              "label": { "type": "string" },
+              "value": { "type": "string" },
+              "required": { "type": "boolean" },
+              "secret": { "type": "boolean" }
+            }
+          }
+        },
+        "steps": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["title", "detail"],
+            "properties": {
+              "title": { "type": "string" },
+              "detail": { "type": "string" },
+              "completeWhen": { "type": "object" }
+            }
+          }
+        }
+      }
+    }
+  }
+}

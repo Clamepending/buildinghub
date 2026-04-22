@@ -1,0 +1,63 @@
+{
+  "id": "linear",
+  "name": "Linear",
+  "category": "Planning",
+  "description": "Let agents triage issues, inspect project state, and prepare Linear updates through an MCP or helper command.",
+  "status": "community",
+  "trust": "mcp",
+  "icon": "notebook",
+  "docsUrl": "https://developers.linear.app/docs",
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Linear connector",
+    "detail": "Requires a Linear MCP, OAuth connector, or API token configured where the agent runs. BuildingHub only records the setup path."
+  },
+  "capabilities": [
+    {
+      "type": "mcp",
+      "name": "linear",
+      "detail": "Preferred path for issue and project access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "LINEAR_API_KEY",
+      "detail": "Fallback for local helper commands.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Linear access",
+        "value": "MCP connector or LINEAR_API_KEY",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Workspace scope",
+        "value": "teams/projects agents may edit",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect Linear",
+        "detail": "Authorize the MCP or provide an API key to the agent environment."
+      },
+      {
+        "title": "Set team boundaries",
+        "detail": "Document which Linear teams, projects, and update actions are allowed."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add Linear to Agent Town once access has been reviewed.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

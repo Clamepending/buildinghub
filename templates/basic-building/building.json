@@ -1,0 +1,47 @@
+{
+  "id": "example-building",
+  "name": "Example Building",
+  "category": "Community",
+  "description": "Describe what this building helps agents do.",
+  "status": "community",
+  "trust": "manifest-only",
+  "icon": "plug",
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "External service",
+    "detail": "Describe the API, MCP, account, or local helper that must already be configured."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "EXAMPLE_API_KEY",
+      "detail": "Required where the agent or helper command runs.",
+      "required": true
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "API key",
+        "value": "EXAMPLE_API_KEY in agent environment",
+        "required": true,
+        "secret": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect the service",
+        "detail": "Set up the external service or connector."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add the building to Agent Town after reviewing its capabilities.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

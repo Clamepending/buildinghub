@@ -1,0 +1,64 @@
+{
+  "id": "runpod",
+  "name": "RunPod",
+  "category": "Compute",
+  "description": "Track GPU pod setup for agents that launch, monitor, or use RunPod jobs through a connector or helper.",
+  "status": "community",
+  "trust": "helper-command",
+  "icon": "gpu",
+  "docsUrl": "https://docs.runpod.io/",
+  "visual": {
+    "shape": "factory"
+  },
+  "access": {
+    "label": "RunPod API or CLI",
+    "detail": "Requires RUNPOD_API_KEY or a reviewed helper command where the agent runs. BuildingHub does not run pod lifecycle code itself."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "RUNPOD_API_KEY",
+      "detail": "Required for API-backed pod and endpoint operations.",
+      "required": true
+    },
+    {
+      "type": "helper-command",
+      "name": "runpod",
+      "command": "runpod",
+      "detail": "Optional local CLI wrapper for reviewed workflows.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "RunPod key",
+        "value": "RUNPOD_API_KEY in agent environment",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Budget guardrail",
+        "value": "max pod type, region, and run duration",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Add credentials",
+        "detail": "Expose RUNPOD_API_KEY only to agents allowed to spend compute."
+      },
+      {
+        "title": "Write budget limits",
+        "detail": "Capture allowed GPU classes, max runtime, and teardown expectations."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add RunPod to Agent Town after guardrails are documented.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

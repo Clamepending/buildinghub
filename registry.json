@@ -1,0 +1,198 @@
+{
+  "manifestVersion": 1,
+  "generatedAt": "2026-04-22T07:53:29.850Z",
+  "name": "Vibe Research BuildingHub",
+  "buildings": [
+    {
+      "id": "linear",
+      "name": "Linear",
+      "category": "Planning",
+      "description": "Let agents triage issues, inspect project state, and prepare Linear updates through an MCP or helper command.",
+      "status": "community",
+      "trust": "mcp",
+      "icon": "notebook",
+      "docsUrl": "https://developers.linear.app/docs",
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Linear connector",
+        "detail": "Requires a Linear MCP, OAuth connector, or API token configured where the agent runs. BuildingHub only records the setup path."
+      },
+      "capabilities": [
+        {
+          "type": "mcp",
+          "name": "linear",
+          "detail": "Preferred path for issue and project access.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "LINEAR_API_KEY",
+          "detail": "Fallback for local helper commands.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Linear access",
+            "value": "MCP connector or LINEAR_API_KEY",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Workspace scope",
+            "value": "teams/projects agents may edit",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect Linear",
+            "detail": "Authorize the MCP or provide an API key to the agent environment."
+          },
+          {
+            "title": "Set team boundaries",
+            "detail": "Document which Linear teams, projects, and update actions are allowed."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add Linear to Agent Town once access has been reviewed.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "runpod",
+      "name": "RunPod",
+      "category": "Compute",
+      "description": "Track GPU pod setup for agents that launch, monitor, or use RunPod jobs through a connector or helper.",
+      "status": "community",
+      "trust": "helper-command",
+      "icon": "gpu",
+      "docsUrl": "https://docs.runpod.io/",
+      "visual": {
+        "shape": "factory"
+      },
+      "access": {
+        "label": "RunPod API or CLI",
+        "detail": "Requires RUNPOD_API_KEY or a reviewed helper command where the agent runs. BuildingHub does not run pod lifecycle code itself."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "RUNPOD_API_KEY",
+          "detail": "Required for API-backed pod and endpoint operations.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "runpod",
+          "command": "runpod",
+          "detail": "Optional local CLI wrapper for reviewed workflows.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "RunPod key",
+            "value": "RUNPOD_API_KEY in agent environment",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Budget guardrail",
+            "value": "max pod type, region, and run duration",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Add credentials",
+            "detail": "Expose RUNPOD_API_KEY only to agents allowed to spend compute."
+          },
+          {
+            "title": "Write budget limits",
+            "detail": "Capture allowed GPU classes, max runtime, and teardown expectations."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add RunPod to Agent Town after guardrails are documented.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "supabase",
+      "name": "Supabase",
+      "category": "Data",
+      "description": "Give agents a visible home for Supabase project setup, migrations, logs, and database access instructions.",
+      "status": "community",
+      "trust": "helper-command",
+      "icon": "database",
+      "docsUrl": "https://supabase.com/docs",
+      "visual": {
+        "shape": "library"
+      },
+      "access": {
+        "label": "Supabase CLI or MCP",
+        "detail": "Requires Supabase CLI authentication, a provider MCP, or scoped database credentials where the agent runs."
+      },
+      "capabilities": [
+        {
+          "type": "helper-command",
+          "name": "supabase",
+          "command": "supabase",
+          "detail": "Local CLI for migrations, branches, and project inspection.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "SUPABASE_ACCESS_TOKEN",
+          "detail": "Optional token for CLI automation.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Project ref",
+            "value": "Supabase project ref or local config",
+            "required": true
+          },
+          {
+            "label": "Access scope",
+            "value": "CLI login, MCP, or scoped DB URL",
+            "required": true,
+            "secret": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Choose access path",
+            "detail": "Use Supabase CLI, MCP, or scoped database credentials."
+          },
+          {
+            "title": "Document migration policy",
+            "detail": "Tell agents whether they may apply migrations or only prepare them."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add Supabase to Agent Town once project boundaries are clear.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    }
+  ]
+}
