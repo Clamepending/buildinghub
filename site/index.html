@@ -3,30 +3,41 @@
   <head>
     <meta charset="utf-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <meta name="description" content="Shared Vibe Research buildings and Agent Town layouts." />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@400..900&display=swap" rel="stylesheet" />
+    <link
+      rel="icon"
+      href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%23111114'/%3E%3Cpath d='M13 42 25 17l10 21 6-13 10 17' fill='none' stroke='%23ff8c5f' stroke-width='5' stroke-linecap='round' stroke-linejoin='round'/%3E%3Cpath d='M13 50h38' stroke='%23f5f1ec' stroke-width='5' stroke-linecap='round'/%3E%3C/svg%3E"
+    />
     <title>BuildingHub</title>
     <link rel="stylesheet" href="./styles.css" />
   </head>
   <body>
-    <main class="shell">
+    <main class="page">
       <header class="hero">
-        <p>Vibe Research community catalog</p>
+        <p class="eyebrow">Vibe Research community catalog</p>
         <h1>BuildingHub</h1>
-        <span>Discover safe manifest-only buildings and remixable Agent Town layouts.</span>
+        <p class="description">
+          Remix safe manifest-only buildings and screenshot-backed Agent Town base layouts.
+        </p>
       </header>
 
-      <section class="toolbar" aria-label="BuildingHub search">
-        <div class="tabs" role="tablist" aria-label="Catalog sections">
-          <button class="tab is-active" type="button" data-tab="layouts">Layouts</button>
-          <button class="tab" type="button" data-tab="buildings">Buildings</button>
+      <section class="catalog" aria-label="BuildingHub catalog">
+        <div class="toolbar">
+          <div class="tabs" role="tablist" aria-label="Catalog sections">
+            <button class="tab is-active" type="button" data-tab="layouts" role="tab" aria-selected="true">Layouts</button>
+            <button class="tab" type="button" data-tab="buildings" role="tab" aria-selected="false">Buildings</button>
+          </div>
+          <label class="search">
+            <span>Search</span>
+            <input id="search" type="search" placeholder="factory, starter, mcp, compute..." autocomplete="off" />
+          </label>
         </div>
-        <label class="search">
-          <span>Search</span>
-          <input id="search" type="search" placeholder="factory, starter, github, mcp..." autocomplete="off" />
-        </label>
+        <div id="summary" class="summary" aria-live="polite"></div>
+        <section id="cards" class="grid" aria-label="Catalog results"></section>
       </section>
-
-      <section id="summary" class="summary" aria-live="polite"></section>
-      <section id="cards" class="grid" aria-label="Catalog results"></section>
     </main>
     <script type="module" src="./app.js"></script>
   </body>

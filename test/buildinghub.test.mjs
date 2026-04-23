@@ -104,8 +104,11 @@ test("buildSite copies registry into the static site folder", async () => {
     await mkdir(path.join(root, "site"), { recursive: true });
     const result = await buildSite({ root });
     const registry = JSON.parse(await readFile(path.join(result.siteDir, "registry.json"), "utf8"));
+    const preview = await readFile(path.join(result.layoutAssetsDir, "main-street.svg"), "utf8");
     assert.equal(registry.layouts[0].id, "main-street");
     assert.equal(registry.buildings[0].id, "example");
+    assert.match(preview, /Main Street Agent Town layout preview/);
+    assert.match(preview, /#b99a5f/);
   } finally {
     await rm(root, { recursive: true, force: true });
   }

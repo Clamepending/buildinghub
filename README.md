@@ -34,6 +34,8 @@ node bin/buildinghub.mjs init notion --name "Notion"
 node bin/buildinghub.mjs publish notion
 ```
 
+`npm run site` also regenerates screenshot-style layout preview assets under `site/assets/layouts/`. GitHub Pages deploys the `site/` folder from `.github/workflows/pages.yml`.
+
 `publish` is intentionally a local review prep step right now. It validates the repo, regenerates `registry.json`, writes a package bundle into ignored `dist/`, prints the bundle checksum, and tells the contributor to open a PR. A future hosted BuildingHub can replace that final PR step with authenticated upload without changing the manifest format.
 
 ## Add A Building

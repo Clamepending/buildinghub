@@ -1,0 +1,117 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="960" height="540" viewBox="0 0 960 540" role="img" aria-label="Courtyard Hub Agent Town layout preview">
+  <defs>
+    <pattern id="grid-courtyard-hub" width="32" height="32" patternUnits="userSpaceOnUse">
+      <path d="M32 0H0V32" fill="none" stroke="rgba(245,241,236,.06)" stroke-width="1"/>
+    </pattern>
+    <linearGradient id="ground-courtyard-hub" x1="0" y1="0" x2="1" y2="1">
+      <stop offset="0" stop-color="#173126"/>
+      <stop offset=".52" stop-color="#203e31"/>
+      <stop offset="1" stop-color="#10251f"/>
+    </linearGradient>
+  </defs>
+  <rect width="960" height="540" fill="#07090d"/>
+  <rect x="24" y="24" width="912" height="492" rx="8" fill="#0d0f14" stroke="rgba(245,241,236,.12)"/>
+  <rect x="24" y="24" width="912" height="54" rx="8" fill="#151820"/>
+  <circle cx="56" cy="51" r="6" fill="#ff8c5f"/>
+  <circle cx="78" cy="51" r="6" fill="#f2c66d"/>
+  <circle cx="100" cy="51" r="6" fill="#7ac7b7"/>
+  <text x="132" y="57" fill="#f5f1ec" font-family="Inter, ui-sans-serif, system-ui" font-size="19" font-weight="800">Courtyard Hub</text>
+  <text x="820" y="57" fill="#a8a3a0" font-family="Inter, ui-sans-serif, system-ui" font-size="15" text-anchor="end">Hub</text>
+  <rect x="48" y="88" width="864" height="416" rx="8" fill="url(#ground-courtyard-hub)" stroke="rgba(245,241,236,.12)"/>
+  <rect x="48" y="88" width="864" height="416" rx="8" fill="url(#grid-courtyard-hub)"/>
+  <path d="M48 468C228 494 374 428 528 464S792 484 912 442" fill="none" stroke="rgba(122,199,183,.18)" stroke-width="16" stroke-linecap="round"/>
+  
+    <g>
+      <rect x="282.7216494845361" y="190.9278350515464" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M288.7216494845361 235.95876288659792H366.7835051546392" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M283.7216494845361 191.9278350515464H371.7835051546392V279.9896907216495H283.7216494845361Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="342.7628865979382" y="190.9278350515464" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M348.7628865979382 235.95876288659792H426.8247422680413" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M343.7628865979382 191.9278350515464H431.8247422680413V279.9896907216495H343.7628865979382Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="402.80412371134025" y="190.9278350515464" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M408.80412371134025 235.95876288659792H486.86597938144337" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M403.80412371134025 191.9278350515464H491.86597938144337V279.9896907216495H403.80412371134025Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="282.7216494845361" y="250.96907216494844" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M288.7216494845361 296H366.7835051546392" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M283.7216494845361 251.96907216494844H371.7835051546392V340.03092783505156H283.7216494845361Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="402.80412371134025" y="250.96907216494844" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M408.80412371134025 296H486.86597938144337" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M403.80412371134025 251.96907216494844H491.86597938144337V340.03092783505156H403.80412371134025Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="282.7216494845361" y="311.0103092783505" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M288.7216494845361 356.0412371134021H366.7835051546392" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M283.7216494845361 312.0103092783505H371.7835051546392V400.07216494845363H283.7216494845361Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="342.7628865979382" y="311.0103092783505" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M348.7628865979382 356.0412371134021H426.8247422680413" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M343.7628865979382 312.0103092783505H431.8247422680413V400.07216494845363H343.7628865979382Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <rect x="402.80412371134025" y="311.0103092783505" width="90.06185567010309" height="90.06185567010309" rx="4" fill="#b99a5f"/>
+      <path d="M408.80412371134025 356.0412371134021H486.86597938144337" stroke="#f2d893" stroke-width="3" stroke-linecap="round" stroke-dasharray="8 7" opacity=".72"/>
+      <path d="M403.80412371134025 312.0103092783505H491.86597938144337V400.07216494845363H403.80412371134025Z" fill="none" stroke="rgba(41,30,17,.34)" stroke-width="2"/>
+    </g>
+  
+  
+    <g>
+      <ellipse cx="387.79381443298973" cy="315.8136082474227" rx="32.42226804123711" ry="16.211134020618555" fill="#3b261c" opacity=".38"/>
+      <rect x="364.3777319587629" y="285.1925773195876" width="46.83216494845361" height="28.819793814432987" rx="5" fill="#a5633f"/>
+      <ellipse cx="387.79381443298973" cy="285.1925773195876" rx="28.819793814432987" ry="14.409896907216494" fill="#c88455"/>
+      <circle cx="378.7876288659794" cy="273.4845360824742" r="14.409896907216494" fill="#7ac777"/>
+      <circle cx="394.99876288659794" cy="270.7826804123711" r="16.211134020618555" fill="#5eab69"/>
+      <circle cx="389.5950515463918" cy="260.8758762886598" r="11.708041237113402" fill="#a5d97c"/>
+    </g>
+  
+  
+      <g>
+        <rect x="282.7216494845361" y="377.6560824742268" width="102.9278350515464" height="6.604536082474227" rx="2" fill="#dcc78a"/>
+        <rect x="282.7216494845361" y="389.0639175257732" width="102.9278350515464" height="6.604536082474227" rx="2" fill="#c2a669"/>
+        <rect x="287.7216494845361" y="371.0515463917526" width="5" height="30.02061855670103" rx="2" fill="#f0dfaa"/>
+        <rect x="375.64948453608247" y="371.0515463917526" width="5" height="30.02061855670103" rx="2" fill="#f0dfaa"/>
+      </g>
+    
+  
+      <g>
+        <rect x="402.80412371134025" y="377.6560824742268" width="102.9278350515464" height="6.604536082474227" rx="2" fill="#dcc78a"/>
+        <rect x="402.80412371134025" y="389.0639175257732" width="102.9278350515464" height="6.604536082474227" rx="2" fill="#c2a669"/>
+        <rect x="407.80412371134025" y="371.0515463917526" width="5" height="30.02061855670103" rx="2" fill="#f0dfaa"/>
+        <rect x="495.7319587628866" y="371.0515463917526" width="5" height="30.02061855670103" rx="2" fill="#f0dfaa"/>
+      </g>
+    
+  
+    <g>
+      <ellipse cx="586.7018556701031" cy="353.55381443298967" rx="79.25443298969071" ry="13.38061855670103" fill="#111319" opacity=".42"/>
+      <rect x="518.7694845360825" y="297.80123711340207" width="132.09072164948452" height="49.06226804123711" rx="6" fill="#735f3e"/>
+      <path d="M505.560412371134 302.2614432989691L582.9278350515464 266.579793814433L660.2952577319588 302.2614432989691Z" fill="#8f5865"/>
+      <path d="M526.3175257731959 300.0313402061856H639.5381443298969" stroke="#f0c978" stroke-width="4" stroke-linecap="round"/>
+      <rect x="571.6057731958763" y="314.52701030927835" width="33.96618556701031" height="32.336494845360825" rx="3" fill="#3a2e25"/>
+      <rect x="533.8655670103093" y="313.41195876288657" width="24.531134020618556" height="16.72577319587629" rx="2" fill="#f1d98f"/>
+    </g>
+  
+  <rect x="48" y="88" width="864" height="416" rx="8" fill="none" stroke="rgba(245,241,236,.13)"/>
+</svg>

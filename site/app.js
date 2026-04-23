@@ -40,58 +40,38 @@ function escapeHtml(value) {
     .replaceAll("'", "&#039;");
 }
 
-function layoutBounds(decorations) {
-  if (!decorations.length) {
-    return { x: 0, y: 0, width: 120, height: 80 };
-  }
-
-  const minX = Math.min(...decorations.map((decoration) => Number(decoration.x) || 0));
-  const minY = Math.min(...decorations.map((decoration) => Number(decoration.y) || 0));
-  const maxX = Math.max(...decorations.map((decoration) => (Number(decoration.x) || 0) + (decoration.itemId === "shed" ? 56 : 28)));
-  const maxY = Math.max(...decorations.map((decoration) => (Number(decoration.y) || 0) + 28));
-  return { x: minX, y: minY, width: Math.max(28, maxX - minX), height: Math.max(28, maxY - minY) };
-}
-
-function renderLayoutPreview(layout) {
-  const decorations = Array.isArray(layout.layout?.decorations) ? layout.layout.decorations : [];
-  const bounds = layoutBounds(decorations);
-  const pad = 18;
-  const width = bounds.width + pad * 2;
-  const height = bounds.height + pad * 2;
-  const cells = decorations.map((decoration) => {
-    const itemId = text(decoration.itemId || "decor");
-    const itemWidth = itemId === "shed" ? 56 : 28;
-    const itemHeight = 28;
-    const left = (((Number(decoration.x) || 0) - bounds.x + pad) / width) * 100;
-    const top = (((Number(decoration.y) || 0) - bounds.y + pad) / height) * 100;
-    return `<i class="${escapeHtml(itemId)}" style="left:${left.toFixed(2)}%;top:${top.toFixed(2)}%;width:${((itemWidth / width) * 100).toFixed(2)}%;height:${((itemHeight / height) * 100).toFixed(2)}%;"></i>`;
-  }).join("");
-  return `<div class="preview">${cells}</div>`;
-}
-
 async function copyJson(value) {
   const json = JSON.stringify(value, null, 2);
   try {
     await navigator.clipboard.writeText(json);
   } catch {
-    window.prompt("Copy blueprint JSON", json);
+    window.prompt("Copy JSON", json);
   }
+}
+
+function renderTags(tags) {
+  return tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
 }
 
 function renderLayoutCard(layout) {
   const tags = (Array.isArray(layout.tags) ? layout.tags : []).slice(0, 6);
   const decorations = Array.isArray(layout.layout?.decorations) ? layout.layout.decorations : [];
+  const functionalCount = Object.keys(layout.layout?.functional || {}).length;
+  const shot = `./assets/layouts/${encodeURIComponent(layout.id)}.svg`;
   return `
     <article class="card">
-      ${renderLayoutPreview(layout)}
+      <div class="preview-shell">
+        <img class="layout-shot" src="${escapeHtml(shot)}" alt="${escapeHtml(layout.name)} Agent Town layout screenshot" loading="lazy" />
+      </div>
       <div class="meta">
-        <span class="pill">${escapeHtml(layout.category || "Layout")}</span>
+        <span class="pill is-accent">${escapeHtml(layout.category || "Layout")}</span>
         <span class="pill">${escapeHtml(`${decorations.length} pieces`)}</span>
+        <span class="pill">${escapeHtml(`${functionalCount} buildings`)}</span>
         <span class="pill">${escapeHtml(layout.version || "0.1.0")}</span>
       </div>
       <h2>${escapeHtml(layout.name)}</h2>
       <p>${escapeHtml(layout.description)}</p>
-      <div class="tags">${tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}</div>
+      <div class="tags">${renderTags(tags)}</div>
       <div class="actions">
         <button class="copy" type="button" data-copy-layout="${escapeHtml(layout.id)}">Copy blueprint</button>
       </div>
@@ -101,21 +81,35 @@ function renderLayoutCard(layout) {
 
 function renderBuildingCard(building) {
   const tags = (Array.isArray(building.keywords) ? building.keywords : []).slice(0, 6);
+  const initial = text(building.name || building.id).slice(0, 1).toUpperCase();
   return `
     <article class="card">
+      <div class="building-mark" aria-hidden="true">
+        <div class="building-icon">${escapeHtml(initial)}</div>
+        <span>${escapeHtml(building.category || "Building")}</span>
+      </div>
       <div class="meta">
-        <span class="pill">${escapeHtml(building.category || "Building")}</span>
+        <span class="pill is-accent">${escapeHtml(building.category || "Building")}</span>
         <span class="pill">${escapeHtml(building.trust || "manifest-only")}</span>
         <span class="pill">${escapeHtml(building.version || "0.1.0")}</span>
       </div>
       <h2>${escapeHtml(building.name)}</h2>
       <p>${escapeHtml(building.description)}</p>
-      <div class="tags">${tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("")}</div>
+      <div class="tags">${renderTags(tags)}</div>
       <div class="actions">
         <button class="copy" type="button" data-copy-building="${escapeHtml(building.id)}">Copy manifest</button>
       </div>
     </article>
   `;
+}
+
+function setActiveTab(tab) {
+  state.tab = tab;
+  document.querySelectorAll("[data-tab]").forEach((button) => {
+    const active = button.getAttribute("data-tab") === tab;
+    button.classList.toggle("is-active", active);
+    button.setAttribute("aria-selected", active ? "true" : "false");
+  });
 }
 
 function render() {
@@ -124,10 +118,12 @@ function render() {
     ? (Array.isArray(registry.layouts) ? registry.layouts : [])
     : (Array.isArray(registry.buildings) ? registry.buildings : []);
   const filtered = entries.filter((entry) => matches(entry, state.query));
-  summary.textContent = `${filtered.length} ${state.tab} shown from ${registry.name || "BuildingHub"}`;
+  const totalLayouts = Array.isArray(registry.layouts) ? registry.layouts.length : 0;
+  const totalBuildings = Array.isArray(registry.buildings) ? registry.buildings.length : 0;
+  summary.textContent = `${filtered.length} ${state.tab} shown · ${totalLayouts} layouts · ${totalBuildings} buildings`;
   cards.innerHTML = filtered.length
     ? filtered.map((entry) => state.tab === "layouts" ? renderLayoutCard(entry) : renderBuildingCard(entry)).join("")
-    : `<article class="card"><h2>No matches</h2><p>Try a broader search.</p></article>`;
+    : `<article class="card empty-card"><h2>No matches</h2><p>Try a broader search.</p></article>`;
   document.querySelectorAll("[data-copy-layout]").forEach((button) => {
     button.addEventListener("click", () => {
       const layout = (registry.layouts || []).find((candidate) => candidate.id === button.getAttribute("data-copy-layout"));
@@ -148,10 +144,7 @@ function render() {
 
 document.querySelectorAll("[data-tab]").forEach((button) => {
   button.addEventListener("click", () => {
-    state.tab = button.getAttribute("data-tab") || "layouts";
-    document.querySelectorAll("[data-tab]").forEach((candidate) => {
-      candidate.classList.toggle("is-active", candidate === button);
-    });
+    setActiveTab(button.getAttribute("data-tab") || "layouts");
     render();
   });
 });
@@ -164,6 +157,7 @@ search.addEventListener("input", () => {
 try {
   const response = await fetch("./registry.json", { cache: "no-store" });
   state.registry = await response.json();
+  setActiveTab(state.tab);
   render();
 } catch (error) {
   summary.textContent = `Could not load registry.json: ${error.message || error}`;
