@@ -2,11 +2,277 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T01:13:41.542Z",
+  "generatedAt": "2026-04-23T02:00:27.170Z",
   "name": "Vibe Research BuildingHub",
-  "packageCount": 4,
+  "packageCount": 35,
   "layoutCount": 4,
   "packages": [
+    {
+      "id": "agent-inbox",
+      "name": "Agent Inbox",
+      "category": "Vibe Research",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "9989f70e76e0b976f3df322c74227152e726ceebcee85e4ded7a5e49a074eeb2",
+      "source": {
+        "manifestPath": "buildings/agent-inbox/building.json",
+        "readmePath": "buildings/agent-inbox/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "9989f70e76e0b976f3df322c74227152e726ceebcee85e4ded7a5e49a074eeb2",
+          "manifestPath": "buildings/agent-inbox/building.json"
+        }
+      ]
+    },
+    {
+      "id": "agentmail",
+      "name": "AgentMail",
+      "category": "Communication",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "84cd092994b20b37d1ad6201f7dcb4f9f2a822ca5f6f9d960effcf99ea2dbb09",
+      "source": {
+        "manifestPath": "buildings/agentmail/building.json",
+        "readmePath": "buildings/agentmail/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "84cd092994b20b37d1ad6201f7dcb4f9f2a822ca5f6f9d960effcf99ea2dbb09",
+          "manifestPath": "buildings/agentmail/building.json"
+        }
+      ]
+    },
+    {
+      "id": "agentmall",
+      "name": "AgentMall",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "1301306c69ac97b35b8458031b5a95e2f6f6c7be989974bb3a96597756573ec9",
+      "source": {
+        "manifestPath": "buildings/agentmall/building.json",
+        "readmePath": "buildings/agentmall/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "1301306c69ac97b35b8458031b5a95e2f6f6c7be989974bb3a96597756573ec9",
+          "manifestPath": "buildings/agentmall/building.json"
+        }
+      ]
+    },
+    {
+      "id": "automations",
+      "name": "Automations",
+      "category": "Planning",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "b67c472b1ba4c961961cec044a6465ecc492b727b4d1c5886bfa575b4799fa10",
+      "source": {
+        "manifestPath": "buildings/automations/building.json",
+        "readmePath": "buildings/automations/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "b67c472b1ba4c961961cec044a6465ecc492b727b4d1c5886bfa575b4799fa10",
+          "manifestPath": "buildings/automations/building.json"
+        }
+      ]
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "category": "Vibe Research",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "8331508dd1cd11f173bcad19664f5575a2ae311ef25cb8494df65f3f1e838a65",
+      "source": {
+        "manifestPath": "buildings/browser-use/building.json",
+        "readmePath": "buildings/browser-use/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "8331508dd1cd11f173bcad19664f5575a2ae311ef25cb8494df65f3f1e838a65",
+          "manifestPath": "buildings/browser-use/building.json"
+        }
+      ]
+    },
+    {
+      "id": "buildinghub",
+      "name": "BuildingHub",
+      "category": "Community",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "e7b145d5f31782a9a76f13a5eb392079047ae51932c27eabb7f314798663185b",
+      "source": {
+        "manifestPath": "buildings/buildinghub/building.json",
+        "readmePath": "buildings/buildinghub/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "e7b145d5f31782a9a76f13a5eb392079047ae51932c27eabb7f314798663185b",
+          "manifestPath": "buildings/buildinghub/building.json"
+        }
+      ]
+    },
+    {
+      "id": "ci-repair-shop",
+      "name": "CI Repair Shop",
+      "category": "Coding",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "14e22d547c405c31c55783eff5eb44dab06246a3f0d7722e142c149dc18f7d0e",
+      "source": {
+        "manifestPath": "buildings/ci-repair-shop/building.json",
+        "readmePath": "buildings/ci-repair-shop/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "14e22d547c405c31c55783eff5eb44dab06246a3f0d7722e142c149dc18f7d0e",
+          "manifestPath": "buildings/ci-repair-shop/building.json"
+        }
+      ]
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "category": "Communication",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "b87ccb12187707bb5ea11b78881cc09a863a50341709fb0e5e0024ecdf468128",
+      "source": {
+        "manifestPath": "buildings/discord/building.json",
+        "readmePath": "buildings/discord/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "b87ccb12187707bb5ea11b78881cc09a863a50341709fb0e5e0024ecdf468128",
+          "manifestPath": "buildings/discord/building.json"
+        }
+      ]
+    },
+    {
+      "id": "doghouse",
+      "name": "Doghouse",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "7345ec8b1752561cbacdab63db345f757b68d16306672809d220692c1451c2b8",
+      "source": {
+        "manifestPath": "buildings/doghouse/building.json",
+        "readmePath": "buildings/doghouse/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "7345ec8b1752561cbacdab63db345f757b68d16306672809d220692c1451c2b8",
+          "manifestPath": "buildings/doghouse/building.json"
+        }
+      ]
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "category": "Coding",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "e0a4ce4b9c2f668091992c3718e22c8f015b837f4437cea89d3cf45978815e8c",
+      "source": {
+        "manifestPath": "buildings/github/building.json",
+        "readmePath": "buildings/github/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "e0a4ce4b9c2f668091992c3718e22c8f015b837f4437cea89d3cf45978815e8c",
+          "manifestPath": "buildings/github/building.json"
+        }
+      ]
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar",
+      "category": "Planning",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "7ab0a669ba5efb897ff07c5cc8a153db9d6024d4dc18a8873a3170d6f0299286",
+      "source": {
+        "manifestPath": "buildings/google-calendar/building.json",
+        "readmePath": "buildings/google-calendar/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "7ab0a669ba5efb897ff07c5cc8a153db9d6024d4dc18a8873a3170d6f0299286",
+          "manifestPath": "buildings/google-calendar/building.json"
+        }
+      ]
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "category": "Knowledge",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "fd5a1a7be23326e4d9a86f8901de13cb347cfc2547b15105451682558d70762f",
+      "source": {
+        "manifestPath": "buildings/google-drive/building.json",
+        "readmePath": "buildings/google-drive/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "fd5a1a7be23326e4d9a86f8901de13cb347cfc2547b15105451682558d70762f",
+          "manifestPath": "buildings/google-drive/building.json"
+        }
+      ]
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor",
+      "category": "Evals",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "493109af862b75d4e5cf57622ef3d728a6420057b9c3f9859217f65846f15c50",
+      "source": {
+        "manifestPath": "buildings/harbor/building.json",
+        "readmePath": "buildings/harbor/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "493109af862b75d4e5cf57622ef3d728a6420057b9c3f9859217f65846f15c50",
+          "manifestPath": "buildings/harbor/building.json"
+        }
+      ]
+    },
+    {
+      "id": "home-automation",
+      "name": "Home Automation",
+      "category": "Home",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "325071a49ed694e923cf3250a730a4582165447e9f59c965f67f85bd690dcc56",
+      "source": {
+        "manifestPath": "buildings/home-automation/building.json",
+        "readmePath": "buildings/home-automation/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "325071a49ed694e923cf3250a730a4582165447e9f59c965f67f85bd690dcc56",
+          "manifestPath": "buildings/home-automation/building.json"
+        }
+      ]
+    },
     {
       "id": "instacart",
       "name": "Instacart",
@@ -23,6 +289,25 @@
           "version": "0.1.0",
           "manifestSha256": "63540abe39112b3d4fb23d98513c9733a85d8623a5382bddef76125fb3c43944",
           "manifestPath": "buildings/instacart/building.json"
+        }
+      ]
+    },
+    {
+      "id": "knowledge-base",
+      "name": "Library",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "eb5a2c02946a0a6d9d6c2ff33f42e2e5b5dd582272d9850d74ce4690b302008a",
+      "source": {
+        "manifestPath": "buildings/knowledge-base/building.json",
+        "readmePath": "buildings/knowledge-base/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "eb5a2c02946a0a6d9d6c2ff33f42e2e5b5dd582272d9850d74ce4690b302008a",
+          "manifestPath": "buildings/knowledge-base/building.json"
         }
       ]
     },
@@ -46,6 +331,158 @@
       ]
     },
     {
+      "id": "localhost-apps",
+      "name": "Localhost Apps",
+      "category": "Vibe Research",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "d62bfc5b95da822a22b3e06d2335f1a4f7ec0797e0966e4034ebdca244eaaa24",
+      "source": {
+        "manifestPath": "buildings/localhost-apps/building.json",
+        "readmePath": "buildings/localhost-apps/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "d62bfc5b95da822a22b3e06d2335f1a4f7ec0797e0966e4034ebdca244eaaa24",
+          "manifestPath": "buildings/localhost-apps/building.json"
+        }
+      ]
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "category": "Compute",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "63b79883452509516a13ae45b3087ef18b91f1d102db3c544ea37b7df79283f0",
+      "source": {
+        "manifestPath": "buildings/modal/building.json",
+        "readmePath": "buildings/modal/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "63b79883452509516a13ae45b3087ef18b91f1d102db3c544ea37b7df79283f0",
+          "manifestPath": "buildings/modal/building.json"
+        }
+      ]
+    },
+    {
+      "id": "moltbook",
+      "name": "Moltbook",
+      "category": "Knowledge",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "58f574f1454e049a2c867670c186ca45d6ae16202aa057b78ccae5cc6eee1c13",
+      "source": {
+        "manifestPath": "buildings/moltbook/building.json",
+        "readmePath": "buildings/moltbook/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "58f574f1454e049a2c867670c186ca45d6ae16202aa057b78ccae5cc6eee1c13",
+          "manifestPath": "buildings/moltbook/building.json"
+        }
+      ]
+    },
+    {
+      "id": "nano-banana",
+      "name": "Nano Banana",
+      "category": "Generative Media",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "21d24e4e230e8b71ef50825d9cdebf1d62df99ad4b42c78cbfd7929efbded05b",
+      "source": {
+        "manifestPath": "buildings/nano-banana/building.json",
+        "readmePath": "buildings/nano-banana/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "21d24e4e230e8b71ef50825d9cdebf1d62df99ad4b42c78cbfd7929efbded05b",
+          "manifestPath": "buildings/nano-banana/building.json"
+        }
+      ]
+    },
+    {
+      "id": "occupations",
+      "name": "Occupations",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "8993e8100dee044cdb6bdd6181cf1f4f6d27de86a4fee106ee7931d15e12085e",
+      "source": {
+        "manifestPath": "buildings/occupations/building.json",
+        "readmePath": "buildings/occupations/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "8993e8100dee044cdb6bdd6181cf1f4f6d27de86a4fee106ee7931d15e12085e",
+          "manifestPath": "buildings/occupations/building.json"
+        }
+      ]
+    },
+    {
+      "id": "ottoauth",
+      "name": "OttoAuth",
+      "category": "Commerce",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "9d498e6f165af4e493c7400920056a8701885fa4c600e61becbb4d77c5a116fd",
+      "source": {
+        "manifestPath": "buildings/ottoauth/building.json",
+        "readmePath": "buildings/ottoauth/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "9d498e6f165af4e493c7400920056a8701885fa4c600e61becbb4d77c5a116fd",
+          "manifestPath": "buildings/ottoauth/building.json"
+        }
+      ]
+    },
+    {
+      "id": "phone-imessage",
+      "name": "Phone / iMessage",
+      "category": "Communication",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "63655f0e7876c2d2d6272369e64d7266b7a19a200b57fcfc8526b5cef9fc49b4",
+      "source": {
+        "manifestPath": "buildings/phone-imessage/building.json",
+        "readmePath": "buildings/phone-imessage/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "63655f0e7876c2d2d6272369e64d7266b7a19a200b57fcfc8526b5cef9fc49b4",
+          "manifestPath": "buildings/phone-imessage/building.json"
+        }
+      ]
+    },
+    {
+      "id": "rentahuman",
+      "name": "RentAHuman",
+      "category": "Commerce",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "1b166b0701f9b2b47573af880c6ba941306b9acd9689fdbbff97656922daf479",
+      "source": {
+        "manifestPath": "buildings/rentahuman/building.json",
+        "readmePath": "buildings/rentahuman/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "1b166b0701f9b2b47573af880c6ba941306b9acd9689fdbbff97656922daf479",
+          "manifestPath": "buildings/rentahuman/building.json"
+        }
+      ]
+    },
+    {
       "id": "runpod",
       "name": "RunPod",
       "category": "Compute",
@@ -65,6 +502,25 @@
       ]
     },
     {
+      "id": "sora",
+      "name": "Sora",
+      "category": "Generative Media",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "8e67c221f893f666d8a3f0c3168bc0e6d2c4c74b4255f65b333b400dbe6726ca",
+      "source": {
+        "manifestPath": "buildings/sora/building.json",
+        "readmePath": "buildings/sora/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "8e67c221f893f666d8a3f0c3168bc0e6d2c4c74b4255f65b333b400dbe6726ca",
+          "manifestPath": "buildings/sora/building.json"
+        }
+      ]
+    },
+    {
       "id": "supabase",
       "name": "Supabase",
       "category": "Data",
@@ -80,6 +536,139 @@
           "version": "0.1.0",
           "manifestSha256": "1e66597ef7dbbb5f3d4f6095de59e8b52fe4d5b52df4aa967c978c109799cb98",
           "manifestPath": "buildings/supabase/building.json"
+        }
+      ]
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "bcc140b2ab56581d09cef5bde532c933ed5560eb81f708628212ae5ef3d6afdd",
+      "source": {
+        "manifestPath": "buildings/system/building.json",
+        "readmePath": "buildings/system/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "bcc140b2ab56581d09cef5bde532c933ed5560eb81f708628212ae5ef3d6afdd",
+          "manifestPath": "buildings/system/building.json"
+        }
+      ]
+    },
+    {
+      "id": "tailscale",
+      "name": "Tailscale",
+      "category": "Networking",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "db5b6452f1b155bbb7a81d20ec1b982dc7b8d609f4804747f704f3036d2c7163",
+      "source": {
+        "manifestPath": "buildings/tailscale/building.json",
+        "readmePath": "buildings/tailscale/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "db5b6452f1b155bbb7a81d20ec1b982dc7b8d609f4804747f704f3036d2c7163",
+          "manifestPath": "buildings/tailscale/building.json"
+        }
+      ]
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "category": "Communication",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "dd58fc5c051086a6142999914c704969ebf8ae41115f416c1540d163eaa1c915",
+      "source": {
+        "manifestPath": "buildings/telegram/building.json",
+        "readmePath": "buildings/telegram/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "dd58fc5c051086a6142999914c704969ebf8ae41115f416c1540d163eaa1c915",
+          "manifestPath": "buildings/telegram/building.json"
+        }
+      ]
+    },
+    {
+      "id": "toolshed",
+      "name": "Toolshed",
+      "category": "Vibe Research",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "1678d80e0dca2a43e038e8ba0d54c9ef544c93560b695218a0802fff0a36086a",
+      "source": {
+        "manifestPath": "buildings/toolshed/building.json",
+        "readmePath": "buildings/toolshed/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "1678d80e0dca2a43e038e8ba0d54c9ef544c93560b695218a0802fff0a36086a",
+          "manifestPath": "buildings/toolshed/building.json"
+        }
+      ]
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "category": "Social",
+      "trust": "mcp",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "5c228ba8ea54c2776e4d8c9301a700a54b55c362899ada6833cc388edf2ad54d",
+      "source": {
+        "manifestPath": "buildings/twitter/building.json",
+        "readmePath": "buildings/twitter/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "5c228ba8ea54c2776e4d8c9301a700a54b55c362899ada6833cc388edf2ad54d",
+          "manifestPath": "buildings/twitter/building.json"
+        }
+      ]
+    },
+    {
+      "id": "videomemory",
+      "name": "VideoMemory",
+      "category": "Vibe Research",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "c53bb0a349f4638ec96f94036abb05d4d2dc7579a3f8b9c265a21a28ec781c94",
+      "source": {
+        "manifestPath": "buildings/videomemory/building.json",
+        "readmePath": "buildings/videomemory/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "c53bb0a349f4638ec96f94036abb05d4d2dc7579a3f8b9c265a21a28ec781c94",
+          "manifestPath": "buildings/videomemory/building.json"
+        }
+      ]
+    },
+    {
+      "id": "wandb",
+      "name": "W&B",
+      "category": "Observability",
+      "trust": "manifest-only",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "1d71f69c6a1042a962072413e941baec0875cfafa53cffc34c41cfe5cefcfac2",
+      "source": {
+        "manifestPath": "buildings/wandb/building.json",
+        "readmePath": "buildings/wandb/README.md"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "1d71f69c6a1042a962072413e941baec0875cfafa53cffc34c41cfe5cefcfac2",
+          "manifestPath": "buildings/wandb/building.json"
         }
       ]
     }
@@ -159,6 +748,1424 @@
     }
   ],
   "buildings": [
+    {
+      "id": "agent-inbox",
+      "name": "Agent Inbox",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Review agent sessions that are working, finished, exited, or ready for human attention.",
+      "status": "built in",
+      "trust": "helper-command",
+      "icon": "post",
+      "keywords": [
+        "agent",
+        "inbox",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "post",
+        "VIBE_RESEARCH_AGENT_TOWN_API",
+        "VIBE_RESEARCH_AGENT_CANVAS_HELP",
+        "vr-agent-canvas",
+        "Sessions",
+        "local Vibe Research sessions",
+        "Read markers",
+        "browser-local attention state",
+        "Notifications",
+        "AgentMail, Telegram, or browser push later",
+        "Open the inbox",
+        "Use the Agent Inbox workspace to see working, unread, and exited sessions.",
+        "installed",
+        "Review finished work",
+        "Open unread sessions, inspect the result, and mark them read.",
+        "Jump back to context",
+        "Each inbox row opens the underlying terminal session."
+      ],
+      "visual": {
+        "shape": "post"
+      },
+      "access": {
+        "label": "Session stream",
+        "detail": "Uses local Vibe Research session state, read markers, background task summaries, and subagent status. No extra credentials are required."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_TOWN_API",
+          "detail": "Base URL for the local Agent Town API, such as http://127.0.0.1:4123/api/agent-town.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_CANVAS_HELP",
+          "detail": "Example command for publishing the current session's visible canvas image.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-agent-canvas",
+          "command": "vr-agent-canvas",
+          "detail": "Shows a generated image in the selected agent's terminal chat canvas.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Sessions",
+            "value": "local Vibe Research sessions",
+            "required": true
+          },
+          {
+            "label": "Read markers",
+            "value": "browser-local attention state",
+            "required": true
+          },
+          {
+            "label": "Notifications",
+            "value": "AgentMail, Telegram, or browser push later",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open the inbox",
+            "detail": "Use the Agent Inbox workspace to see working, unread, and exited sessions.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Review finished work",
+            "detail": "Open unread sessions, inspect the result, and mark them read."
+          },
+          {
+            "title": "Jump back to context",
+            "detail": "Each inbox row opens the underlying terminal session."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Agent Inbox when an agent needs to create bite-sized UI action items, wait for Agent Town predicates, or direct the human back to a specific session.",
+        "useCases": [
+          "Guide onboarding one action at a time without overloading the human.",
+          "Create an actionable Agent Inbox card that opens Agent Town or another workspace and names its target object.",
+          "Request a human approval with priority and capability metadata before sensitive work continues.",
+          "Publish an agent canvas image, such as the best qualitative result so far, a generated graph, or experiment output, for the terminal chat profile.",
+          "Wait for Agent Town state changes such as placing the first building, clicking an agent, creating an automation, or saving a Library note."
+        ],
+        "setup": [
+          "Keep action items short: one concrete action, one CTA, and one predicate when possible.",
+          "For researcher agents, keep the canvas pointed at the most significant qualitative result or graph the human should inspect next.",
+          "Use approvals for messages, purchases, credentials, publishing, deletes, and other sensitive capabilities.",
+          "Read the state endpoint before creating duplicate tutorial cards."
+        ],
+        "commands": [
+          {
+            "command": "curl -s \"$VIBE_RESEARCH_AGENT_TOWN_API/state\"",
+            "label": "Read Agent Town state",
+            "detail": "Shows layout summary, open action items, recent events, and tutorial signals."
+          },
+          {
+            "command": "vr-agent-canvas --image results/chart.png --title \"Latest graph\" --caption \"Best qualitative result so far.\"",
+            "label": "Set agent canvas",
+            "detail": "Shows a generated image in the selected agent's terminal chat canvas."
+          },
+          {
+            "command": "curl -s \"$VIBE_RESEARCH_AGENT_TOWN_API/action-items\" -H 'Content-Type: application/json' -d '{\"id\":\"onboarding-first-building\",\"kind\":\"setup\",\"priority\":\"normal\",\"title\":\"Place your first building\",\"detail\":\"Open Agent Town and place one cosmetic or functional building.\",\"href\":\"?view=swarm\",\"cta\":\"Open Agent Town\",\"predicate\":\"first_building_placed\",\"source\":\"onboarding\",\"target\":{\"type\":\"building\",\"id\":\"buildinghub\",\"label\":\"BuildingHub\"},\"capabilityIds\":[\"ui-guidance\"]}'",
+            "label": "Create first-building action",
+            "detail": "Adds a small Agent Inbox card the user can act on."
+          },
+          {
+            "command": "curl -s \"$VIBE_RESEARCH_AGENT_TOWN_API/action-items\" -H 'Content-Type: application/json' -d '{\"kind\":\"approval\",\"priority\":\"high\",\"title\":\"Approve outbound message\",\"detail\":\"Review the draft before the agent sends it.\",\"cta\":\"Review\",\"href\":\"?view=agent-inbox\",\"capabilityIds\":[\"sends-messages\"]}'",
+            "label": "Create approval action",
+            "detail": "Use before a sensitive action that should stop for human consent."
+          },
+          {
+            "command": "curl -s \"$VIBE_RESEARCH_AGENT_TOWN_API/wait\" -H 'Content-Type: application/json' -d '{\"predicate\":\"first_building_placed\",\"timeoutMs\":30000}'",
+            "label": "Wait for first building",
+            "detail": "Long-polls until the browser mirrors a placed building or the timeout expires."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_AGENT_TOWN_API",
+            "detail": "Base URL for the local Agent Town API, such as http://127.0.0.1:4123/api/agent-town.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_AGENT_CANVAS_HELP",
+            "detail": "Example command for publishing the current session's visible canvas image.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "agentmail",
+      "name": "AgentMail",
+      "version": "0.1.0",
+      "category": "Communication",
+      "description": "Give Vibe Research an email inbox handled by one dedicated communications agent.",
+      "status": "setup available",
+      "trust": "manifest-only",
+      "icon": "agentmail",
+      "keywords": [
+        "agentmail",
+        "vibe-research",
+        "setup available",
+        "Communication",
+        "plugin",
+        "API",
+        ".communications-plugin-card",
+        "AgentMail API key",
+        "agentMailApiKey",
+        "agentMailApiKeyConfigured",
+        "Inbox ID",
+        "agentMailInboxId",
+        "Communications agent",
+        "agentMailProviderId",
+        "Enable the building",
+        "Turn on the AgentMail listener.",
+        "installed",
+        "Save mail variables",
+        "Add the API key and inbox the listener should watch.",
+        "Reply from one session",
+        "Incoming email is routed into the dedicated AgentMail communications session."
+      ],
+      "visual": {
+        "logo": "agentmail",
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "AgentMail is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by AgentMail setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "AgentMail API key",
+            "value": "Vibe Research setting: agentMailApiKey",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Inbox ID",
+            "value": "Vibe Research setting: agentMailInboxId",
+            "required": true
+          },
+          {
+            "label": "Communications agent",
+            "value": "Vibe Research setting: agentMailProviderId",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enable the building",
+            "detail": "Turn on the AgentMail listener.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Save mail variables",
+            "detail": "Add the API key and inbox the listener should watch.",
+            "completeWhen": {
+              "allConfigured": [
+                "agentMailApiKeyConfigured",
+                "agentMailInboxId"
+              ]
+            }
+          },
+          {
+            "title": "Reply from one session",
+            "detail": "Incoming email is routed into the dedicated AgentMail communications session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "agentmall",
+      "name": "AgentMall",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Browse Agent Town theme skins and switch the game between the default, snowy, and desert looks.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "market",
+      "keywords": [
+        "agentmall",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "market",
+        "Theme catalog",
+        "default, snowy, desert",
+        "Persistence",
+        "browser local storage",
+        "Open AgentMall",
+        "Pick a theme from the Agent Town building panel.",
+        "Apply a theme",
+        "The selected look is saved for this browser and used by the game canvas."
+      ],
+      "visual": {
+        "shape": "market"
+      },
+      "access": {
+        "label": "Local browser theme",
+        "detail": "Uses browser-local Agent Town preferences only. No credentials or external services are required."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Theme catalog",
+            "value": "default, snowy, desert",
+            "required": true
+          },
+          {
+            "label": "Persistence",
+            "value": "browser local storage",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open AgentMall",
+            "detail": "Pick a theme from the Agent Town building panel."
+          },
+          {
+            "title": "Apply a theme",
+            "detail": "The selected look is saved for this browser and used by the game canvas."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use AgentMall when work involves Agent Town visual themes, game skins, or theme catalog behavior.",
+        "useCases": [
+          "Check which built-in Agent Town themes are available.",
+          "Modify theme palettes for the visual game canvas.",
+          "Verify the selected theme persists in browser-local preferences."
+        ],
+        "setup": [
+          "Open Agent Town and use the AgentMall building panel to change the active theme.",
+          "Keep theme data client-side unless a future task explicitly asks for shared settings."
+        ]
+      }
+    },
+    {
+      "id": "automations",
+      "name": "Automations",
+      "version": "0.1.0",
+      "category": "Planning",
+      "description": "Schedule recurring Vibe Research helpers from the Berkeley Campanile-inspired clock tower.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "campanile",
+      "keywords": [
+        "automations",
+        "vibe-research",
+        "built in",
+        "Planning",
+        "campanile",
+        "Default workspace",
+        "current project folder",
+        "Cadence",
+        "daily, weekly, or hourly schedule",
+        "Prompt",
+        "helper task instructions",
+        "Open the tower",
+        "Use the Automations tab from the Campanile building in Agent Town.",
+        "Choose a schedule",
+        "Pick the cadence and workspace where the helper should run.",
+        "Write the task",
+        "Describe the recurring helper work and save it."
+      ],
+      "visual": {
+        "shape": "campanile"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "Automations is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Default workspace",
+            "value": "current project folder",
+            "required": true
+          },
+          {
+            "label": "Cadence",
+            "value": "daily, weekly, or hourly schedule",
+            "required": true
+          },
+          {
+            "label": "Prompt",
+            "value": "helper task instructions",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open the tower",
+            "detail": "Use the Automations tab from the Campanile building in Agent Town."
+          },
+          {
+            "title": "Choose a schedule",
+            "detail": "Pick the cadence and workspace where the helper should run."
+          },
+          {
+            "title": "Write the task",
+            "detail": "Describe the recurring helper work and save it."
+          }
+        ]
+      }
+    },
+    {
+      "id": "browser-use",
+      "name": "Browser Use",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Start an OttoAuth browser fulfillment agent from a coding-agent session.",
+      "status": "setup available",
+      "trust": "helper-command",
+      "icon": "browser",
+      "keywords": [
+        "browser",
+        "use",
+        "vibe-research",
+        "setup available",
+        "Vibe Research",
+        "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+        "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "API",
+        "vr-browser-use",
+        ".browser-use-plugin-card",
+        "Anthropic API key",
+        "browserUseAnthropicApiKey",
+        "browserUseAnthropicApiKeyConfigured",
+        "Worker folder",
+        "browserUseWorkerPath",
+        "Profile folder",
+        "browserUseProfileDir",
+        "Max steps",
+        "browserUseMaxTurns",
+        "Enable the building",
+        "Turn on browser-use requests.",
+        "installed",
+        "Save browser variables",
+        "Add the API key, worker folder, profile folder, and run defaults."
+      ],
+      "visual": {
+        "shape": "browser"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "Browser Use is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Generated per-building guide directory.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Browser Use setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-browser-use",
+          "command": "vr-browser-use",
+          "detail": "Starts the configured worker and waits for completion.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Anthropic API key",
+            "value": "Vibe Research setting: browserUseAnthropicApiKey",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Worker folder",
+            "value": "Vibe Research setting: browserUseWorkerPath",
+            "required": true
+          },
+          {
+            "label": "Profile folder",
+            "value": "Vibe Research setting: browserUseProfileDir",
+            "required": true
+          },
+          {
+            "label": "Max steps",
+            "value": "Vibe Research setting: browserUseMaxTurns",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enable the building",
+            "detail": "Turn on browser-use requests.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Save browser variables",
+            "detail": "Add the API key, worker folder, profile folder, and run defaults.",
+            "completeWhen": {
+              "allConfigured": [
+                "browserUseAnthropicApiKeyConfigured",
+                "browserUseWorkerPath",
+                "browserUseProfileDir"
+              ]
+            }
+          },
+          {
+            "title": "Call the helper",
+            "detail": "Agents can run vr-browser-use --task \"...\" from a session."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Browser Use when a coding agent needs a separate browser-fulfillment worker for long or delegated web tasks.",
+        "useCases": [
+          "Start a browser worker from an existing agent session.",
+          "Hand off a web task that needs OttoAuth browser state or an Anthropic-backed worker.",
+          "Check missing setup before asking the human for an API key or profile path."
+        ],
+        "commands": [
+          {
+            "command": "vr-browser-use --task \"Describe the task here\" --wait",
+            "label": "Run a browser-use task",
+            "detail": "Starts the configured worker and waits for completion."
+          },
+          {
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/browser-use.md\"",
+            "label": "Check generated guide",
+            "detail": "Read the local setup checklist first."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+            "detail": "Canonical helper command for local agents.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+            "detail": "Generated per-building guide directory.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "buildinghub",
+      "name": "BuildingHub",
+      "version": "0.1.0",
+      "category": "Community",
+      "description": "Load manifest-only community buildings from a local or remote BuildingHub catalog.",
+      "status": "catalog ready",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "buildinghub",
+        "vibe-research",
+        "catalog ready",
+        "Community",
+        "plugin",
+        "JSON",
+        "URL",
+        "Local catalog",
+        "buildingHubCatalogPath",
+        "Remote catalog",
+        "buildingHubCatalogUrl",
+        "Open BuildingHub",
+        "Use the BuildingHub building for the local building catalog.",
+        "installed",
+        "Enable community catalogs",
+        "Turn on reviewed community catalog loading only when you want shared manifest-only buildings.",
+        "buildingHubEnabled",
+        "Choose a source",
+        "Point Vibe Research at a local BuildingHub checkout or a reviewed registry JSON URL.",
+        "Review manifests",
+        "Install community buildings after checking their setup notes and required capabilities."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Manifest catalog",
+        "detail": "BuildingHub catalogs contribute setup guides and visual buildings only. They do not run executable code inside Vibe Research."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "JSON",
+          "detail": "Environment variable referenced by BuildingHub setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by BuildingHub setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Local catalog",
+            "value": "Vibe Research setting: buildingHubCatalogPath",
+            "required": false
+          },
+          {
+            "label": "Remote catalog",
+            "value": "Vibe Research setting: buildingHubCatalogUrl",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open BuildingHub",
+            "detail": "Use the BuildingHub building for the local building catalog.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Enable community catalogs",
+            "detail": "Turn on reviewed community catalog loading only when you want shared manifest-only buildings.",
+            "completeWhen": {
+              "setting": "buildingHubEnabled"
+            }
+          },
+          {
+            "title": "Choose a source",
+            "detail": "Point Vibe Research at a local BuildingHub checkout or a reviewed registry JSON URL.",
+            "completeWhen": {
+              "anyConfigured": [
+                "buildingHubCatalogPath",
+                "buildingHubCatalogUrl"
+              ]
+            }
+          },
+          {
+            "title": "Review manifests",
+            "detail": "Install community buildings after checking their setup notes and required capabilities."
+          }
+        ]
+      }
+    },
+    {
+      "id": "ci-repair-shop",
+      "name": "CI Repair Shop",
+      "version": "0.1.0",
+      "category": "Coding",
+      "description": "Turn failing GitHub checks into focused repair-agent sessions with logs, repro commands, and PR updates.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "ci",
+        "repair",
+        "shop",
+        "vibe-research",
+        "built in",
+        "Coding",
+        "plugin",
+        "SHA",
+        "GitHub access",
+        "Codex connector or gh auth",
+        "Repository checkout",
+        "local workspace folder",
+        "Repro command",
+        "project test or check command",
+        "Connect GitHub",
+        "Make sure the host agent or local shell can read PR checks and logs.",
+        "Pick a failing check",
+        "Start from the PR check summary, job log, and branch SHA.",
+        "Repair locally",
+        "Have an agent reproduce the failure, patch, rerun the focused command, and prepare the PR update."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "GitHub + local tests",
+        "detail": "Uses the GitHub connector or gh authentication plus the checked-out repository's test commands. Local terminal agents still need repo and GitHub access where they run."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "SHA",
+          "detail": "Environment variable referenced by CI Repair Shop setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "GitHub access",
+            "value": "Codex connector or gh auth",
+            "required": true
+          },
+          {
+            "label": "Repository checkout",
+            "value": "local workspace folder",
+            "required": true
+          },
+          {
+            "label": "Repro command",
+            "value": "project test or check command",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect GitHub",
+            "detail": "Make sure the host agent or local shell can read PR checks and logs."
+          },
+          {
+            "title": "Pick a failing check",
+            "detail": "Start from the PR check summary, job log, and branch SHA."
+          },
+          {
+            "title": "Repair locally",
+            "detail": "Have an agent reproduce the failure, patch, rerun the focused command, and prepare the PR update."
+          }
+        ]
+      }
+    },
+    {
+      "id": "discord",
+      "name": "Discord",
+      "version": "0.1.0",
+      "category": "Communication",
+      "description": "Route Discord server or DM activity through a dedicated provider connector.",
+      "status": "connector-ready",
+      "trust": "mcp",
+      "icon": "post",
+      "keywords": [
+        "discord",
+        "external",
+        "connector-ready",
+        "Communication",
+        "post",
+        "MCP",
+        "Discord MCP",
+        "Discord app",
+        "bot or webhook",
+        "Server scope",
+        "channels and DMs to monitor",
+        "Agent access",
+        "provider MCP or local bridge",
+        "Create an app",
+        "Create a Discord bot or webhook with the narrow channel permissions agents need.",
+        "Connect the provider",
+        "Add the Discord connector to the host/provider that will handle messages.",
+        "Install the building",
+        "Add this building to Agent Town once the external connector is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "post"
+      },
+      "access": {
+        "label": "External connector",
+        "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Discord setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Discord MCP",
+          "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Discord app",
+            "value": "bot or webhook",
+            "required": false
+          },
+          {
+            "label": "Server scope",
+            "value": "channels and DMs to monitor",
+            "required": false
+          },
+          {
+            "label": "Agent access",
+            "value": "provider MCP or local bridge",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Create an app",
+            "detail": "Create a Discord bot or webhook with the narrow channel permissions agents need."
+          },
+          {
+            "title": "Connect the provider",
+            "detail": "Add the Discord connector to the host/provider that will handle messages."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add this building to Agent Town once the external connector is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "doghouse",
+      "name": "Doghouse",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Adds a tiny doghouse to Agent Town with a dog that wanders around the map.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "doghouse",
+      "keywords": [
+        "doghouse",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "Town canvas",
+        "local Agent Town visual interface",
+        "Open Agent Town",
+        "The doghouse appears on the map automatically.",
+        "installed",
+        "Watch the patrol",
+        "The town dog leaves the doghouse and wanders nearby while the map is open."
+      ],
+      "visual": {
+        "shape": "doghouse"
+      },
+      "access": {
+        "label": "Agent Town companion",
+        "detail": "Uses only the local Agent Town canvas. No setup, network access, or credentials are required."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Town canvas",
+            "value": "local Agent Town visual interface",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open Agent Town",
+            "detail": "The doghouse appears on the map automatically.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Watch the patrol",
+            "detail": "The town dog leaves the doghouse and wanders nearby while the map is open."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Doghouse when work involves the decorative Agent Town doghouse or roaming dog animation.",
+        "useCases": [
+          "Verify Agent Town decorative sprites render correctly.",
+          "Adjust the doghouse placement or dog patrol route.",
+          "Check that map hit areas still open the Doghouse building panel."
+        ]
+      }
+    },
+    {
+      "id": "github",
+      "name": "GitHub",
+      "version": "0.1.0",
+      "category": "Coding",
+      "description": "Triage PRs, inspect issues, and publish changes from agent sessions.",
+      "status": "available in Codex",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "github",
+        "plugin",
+        "available in Codex",
+        "Coding",
+        "GitHub account",
+        "Codex connector or gh auth",
+        "Repository access",
+        "granted in host agent",
+        "Connect GitHub",
+        "Enable the GitHub plugin or authenticate gh where agents run.",
+        "Start a session",
+        "Agents can inspect repositories, issues, pull requests, and checks."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Host connector",
+        "detail": "Available to host agents that have the GitHub connector or gh authentication. Local terminal agents need their own GitHub auth."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "GitHub account",
+            "value": "Codex connector or gh auth",
+            "required": true
+          },
+          {
+            "label": "Repository access",
+            "value": "granted in host agent",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect GitHub",
+            "detail": "Enable the GitHub plugin or authenticate gh where agents run."
+          },
+          {
+            "title": "Start a session",
+            "detail": "Agents can inspect repositories, issues, pull requests, and checks."
+          }
+        ]
+      }
+    },
+    {
+      "id": "google-calendar",
+      "name": "Google Calendar",
+      "version": "0.1.0",
+      "category": "Planning",
+      "description": "Look up events and availability from connected agent tooling.",
+      "status": "MCP-ready",
+      "trust": "mcp",
+      "icon": "plugin",
+      "keywords": [
+        "google",
+        "calendar",
+        "mcp",
+        "MCP-ready",
+        "Planning",
+        "plugin",
+        "Google Calendar MCP",
+        "Google account",
+        "connected MCP account",
+        "Calendar scope",
+        "event and availability access",
+        "Connect the MCP",
+        "Authorize Calendar in the agent host that will run this building.",
+        "Pick calendars",
+        "Keep the account scope narrow enough for agents to reason about."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Host connector",
+        "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Google Calendar setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Google Calendar MCP",
+          "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Google account",
+            "value": "connected MCP account",
+            "required": true
+          },
+          {
+            "label": "Calendar scope",
+            "value": "event and availability access",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect the MCP",
+            "detail": "Authorize Calendar in the agent host that will run this building."
+          },
+          {
+            "title": "Pick calendars",
+            "detail": "Keep the account scope narrow enough for agents to reason about."
+          }
+        ]
+      }
+    },
+    {
+      "id": "google-drive",
+      "name": "Google Drive",
+      "version": "0.1.0",
+      "category": "Knowledge",
+      "description": "Search Docs, Sheets, Slides, and shared project files when the host agent supports it.",
+      "status": "MCP-ready",
+      "trust": "mcp",
+      "icon": "plugin",
+      "keywords": [
+        "google",
+        "drive",
+        "mcp",
+        "MCP-ready",
+        "Knowledge",
+        "plugin",
+        "CLI",
+        "Google Drive MCP",
+        "Google account",
+        "connected host MCP account",
+        "Shared drive scope",
+        "docs/sheets/slides access",
+        "Local terminal agents",
+        "provider MCP required",
+        "Connect the MCP",
+        "Authorize Drive in the host agent that will use this building.",
+        "Name the source",
+        "Tell agents which folders, docs, or sheets are relevant.",
+        "Local agents",
+        "Configure Google Drive in the local CLI/provider separately if a terminal agent needs direct access."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Host connector",
+        "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Google Drive setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Google Drive setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Google Drive MCP",
+          "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Google account",
+            "value": "connected host MCP account",
+            "required": true
+          },
+          {
+            "label": "Shared drive scope",
+            "value": "docs/sheets/slides access",
+            "required": false
+          },
+          {
+            "label": "Local terminal agents",
+            "value": "provider MCP required",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect the MCP",
+            "detail": "Authorize Drive in the host agent that will use this building."
+          },
+          {
+            "title": "Name the source",
+            "detail": "Tell agents which folders, docs, or sheets are relevant."
+          },
+          {
+            "title": "Local agents",
+            "detail": "Configure Google Drive in the local CLI/provider separately if a terminal agent needs direct access."
+          }
+        ]
+      }
+    },
+    {
+      "id": "harbor",
+      "name": "Harbor",
+      "version": "0.1.0",
+      "category": "Evals",
+      "description": "Evaluate agents and models in sandboxed Harbor tasks, datasets, and jobs.",
+      "status": "CLI install required",
+      "trust": "helper-command",
+      "icon": "lab",
+      "keywords": [
+        "harbor",
+        "external",
+        "CLI install required",
+        "Evals",
+        "lab",
+        "OPENAI_API_KEY",
+        "ANTHROPIC_API_KEY",
+        "GEMINI_API_KEY",
+        "DAYTONA_API_KEY",
+        "MODAL_TOKEN_ID",
+        "MODAL_TOKEN_SECRET",
+        "CLI",
+        "PATH",
+        "E2B",
+        "API",
+        "Harbor CLI",
+        "harbor on PATH, usually from uv tool install harbor",
+        "Sandbox runtime",
+        "Docker locally, or Daytona, Modal, E2B, or Runloop for cloud runs",
+        "Model credentials",
+        "OPENAI_API_KEY, ANTHROPIC_API_KEY, GEMINI_API_KEY, or provider-specific env",
+        "Dataset or task",
+        "Harbor registry dataset, local task directory, local dataset path, or job config",
+        "Install Harbor"
+      ],
+      "visual": {
+        "shape": "lab"
+      },
+      "access": {
+        "label": "Harbor CLI + sandbox runtime",
+        "detail": "Requires the harbor CLI where the agent runs, plus Docker or a configured cloud sandbox provider. Model and sandbox provider API credentials must live in the agent runtime; Vibe Research only tracks the building and generated guide."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "OPENAI_API_KEY",
+          "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "ANTHROPIC_API_KEY",
+          "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI_API_KEY",
+          "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "DAYTONA_API_KEY",
+          "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_ID",
+          "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_SECRET",
+          "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "PATH",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "E2B",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "harbor",
+          "command": "harbor",
+          "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Harbor CLI",
+            "value": "harbor on PATH, usually from uv tool install harbor",
+            "required": true
+          },
+          {
+            "label": "Sandbox runtime",
+            "value": "Docker locally, or Daytona, Modal, E2B, or Runloop for cloud runs",
+            "required": true
+          },
+          {
+            "label": "Model credentials",
+            "value": "OPENAI_API_KEY, ANTHROPIC_API_KEY, GEMINI_API_KEY, or provider-specific env",
+            "required": true
+          },
+          {
+            "label": "Dataset or task",
+            "value": "Harbor registry dataset, local task directory, local dataset path, or job config",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Install Harbor",
+            "detail": "Install the CLI in the agent environment and confirm harbor --help works."
+          },
+          {
+            "title": "Choose the eval",
+            "detail": "Pick a registry dataset, local task path, local dataset, or job config before starting a run."
+          },
+          {
+            "title": "Confirm runtime",
+            "detail": "Verify Docker or the selected cloud sandbox credentials are available."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add the Harbor lab once agents should consider Harbor evals for this project.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Harbor when an agent needs to evaluate or optimize agents/models in sandboxed task environments, especially when the answer should be backed by reproducible trials instead of an ad hoc local run.",
+        "useCases": [
+          "Run a registered benchmark dataset against a named agent and model.",
+          "Run a local Harbor task or dataset to test an agent in a containerized sandbox.",
+          "Compare CLI agents such as Codex, Claude Code, Gemini CLI, OpenHands, or a custom Harbor agent import.",
+          "Generate rollouts, trajectories, or rewards for eval, prompt optimization, SFT, or RL workflows.",
+          "Create reproducible evidence for an agent-evaluation result before admitting it into project memory.",
+          "Scale an eval across cloud sandboxes after checking quota, credentials, and cost approval."
+        ],
+        "setup": [
+          "Read the Harbor docs for the task shape before creating or adapting datasets.",
+          "Run command -v harbor and harbor --help before assuming the CLI is installed.",
+          "Use Harbor only when sandboxed agent evaluation is warranted; keep quick local checks outside Harbor.",
+          "Record dataset or task version, agent, model, sandbox provider, command, output directory, and commit in result docs.",
+          "Ask before running expensive cloud sandboxes or broad benchmark sweeps.",
+          "Do not print or store model keys, sandbox provider keys, or private task data in the Library or generated guides."
+        ],
+        "commands": [
+          {
+            "command": "command -v harbor && harbor --help",
+            "label": "Check Harbor CLI",
+            "detail": "Confirms the CLI is installed in the current agent environment."
+          },
+          {
+            "command": "harbor dataset list || harbor datasets list",
+            "label": "List datasets",
+            "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands."
+          },
+          {
+            "command": "harbor run -d \"<org/name>\" -m \"<model>\" -a \"<agent>\"",
+            "label": "Run registered dataset",
+            "detail": "Runs a registry-backed eval for the chosen model and agent."
+          },
+          {
+            "command": "harbor run -p \"<path/to/dataset>\" -m \"<model>\" -a \"<agent>\"",
+            "label": "Run local dataset",
+            "detail": "Runs a local Harbor task or dataset directory."
+          },
+          {
+            "command": "harbor run -c \"<path/to/job.yaml>\"",
+            "label": "Run job config",
+            "detail": "Runs a multi-trial Harbor job configuration."
+          },
+          {
+            "command": "harbor run -d \"<org/name>\" -m \"<model>\" -a \"<agent>\" --env \"daytona\" -n 32",
+            "label": "Run cloud sandbox",
+            "detail": "Example horizontal cloud run; verify provider credentials, quota, and cost approval first."
+          },
+          {
+            "command": "harbor run -d \"<dataset@version>\" --agent-import-path path.to.agent:SomeAgent",
+            "label": "Run custom agent",
+            "detail": "Uses Harbor's custom agent import hook without modifying Harbor source."
+          }
+        ],
+        "docs": [
+          {
+            "label": "Harbor docs",
+            "url": "https://www.harborframework.com/docs"
+          },
+          {
+            "label": "Getting started",
+            "url": "https://www.harborframework.com/docs/getting-started"
+          },
+          {
+            "label": "Agents",
+            "url": "https://www.harborframework.com/docs/agents"
+          },
+          {
+            "label": "Tasks",
+            "url": "https://www.harborframework.com/docs/tasks"
+          },
+          {
+            "label": "Registry",
+            "url": "https://registry.harborframework.com/"
+          },
+          {
+            "label": "Trajectory format",
+            "url": "https://www.harborframework.com/docs/trajectory-format"
+          }
+        ],
+        "env": [
+          {
+            "name": "OPENAI_API_KEY",
+            "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+            "required": false
+          },
+          {
+            "name": "ANTHROPIC_API_KEY",
+            "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+            "required": false
+          },
+          {
+            "name": "GEMINI_API_KEY",
+            "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+            "required": false
+          },
+          {
+            "name": "DAYTONA_API_KEY",
+            "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+            "required": false
+          },
+          {
+            "name": "MODAL_TOKEN_ID / MODAL_TOKEN_SECRET",
+            "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "home-automation",
+      "name": "Home Automation",
+      "version": "0.1.0",
+      "category": "Home",
+      "description": "Control lights and home devices through Home Assistant, HomeKit, Matter, or a similar bridge.",
+      "status": "bridge required",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "home",
+        "automation",
+        "external",
+        "bridge required",
+        "plugin",
+        "Controller",
+        "Home Assistant, HomeKit, or Matter",
+        "Device scope",
+        "lights, switches, scenes",
+        "Safety",
+        "confirm destructive actions",
+        "Connect a controller",
+        "Expose only the lights, switches, or scenes the agent should control.",
+        "Add safety rules",
+        "Require confirmation for locks, alarms, appliances, or anything safety-critical.",
+        "Install the building",
+        "Add this building once the local bridge is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Local bridge",
+        "detail": "Requires a Home Assistant, HomeKit, Matter, or device-specific bridge configured where the agent runs. Vibe Research does not grant device control by itself."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Controller",
+            "value": "Home Assistant, HomeKit, or Matter",
+            "required": false
+          },
+          {
+            "label": "Device scope",
+            "value": "lights, switches, scenes",
+            "required": false
+          },
+          {
+            "label": "Safety",
+            "value": "confirm destructive actions",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect a controller",
+            "detail": "Expose only the lights, switches, or scenes the agent should control."
+          },
+          {
+            "title": "Add safety rules",
+            "detail": "Require confirmation for locks, alarms, appliances, or anything safety-critical."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add this building once the local bridge is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
     {
       "id": "instacart",
       "name": "Instacart",
@@ -357,6 +2364,70 @@
       }
     },
     {
+      "id": "knowledge-base",
+      "name": "Library",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Search and edit the shared markdown Library that agents receive in their prompt.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "library",
+      "keywords": [
+        "knowledge",
+        "base",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "library",
+        "Library folder",
+        "wikiPath",
+        "Library backup",
+        "wikiGitBackupEnabled",
+        "Remote",
+        "wikiGitRemoteUrl",
+        "Choose a Library",
+        "Select the markdown Library agents receive in their prompt.",
+        "Enable backup",
+        "Connect a git remote when this knowledge should travel between machines."
+      ],
+      "visual": {
+        "shape": "library"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "Library is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Library folder",
+            "value": "Vibe Research setting: wikiPath",
+            "required": true
+          },
+          {
+            "label": "Library backup",
+            "value": "Vibe Research setting: wikiGitBackupEnabled",
+            "required": false
+          },
+          {
+            "label": "Remote",
+            "value": "Vibe Research setting: wikiGitRemoteUrl",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Choose a Library",
+            "detail": "Select the markdown Library agents receive in their prompt."
+          },
+          {
+            "title": "Enable backup",
+            "detail": "Connect a git remote when this knowledge should travel between machines."
+          }
+        ]
+      }
+    },
+    {
       "id": "linear",
       "name": "Linear",
       "version": "0.1.0",
@@ -416,6 +2487,1051 @@
             "completeWhen": {
               "type": "installed"
             }
+          }
+        ]
+      }
+    },
+    {
+      "id": "localhost-apps",
+      "name": "Localhost Apps",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Preview web apps from discovered ports without leaving the current session.",
+      "status": "built in",
+      "trust": "helper-command",
+      "icon": "dock",
+      "keywords": [
+        "localhost",
+        "apps",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "dock",
+        "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+        "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+        "vr-playwright",
+        "Port scan",
+        "local workspace ports",
+        "Proxy path",
+        "/proxy/<port>/",
+        "Enable the dock",
+        "Installed sessions show discovered local app ports.",
+        "Open a preview",
+        "Pick a detected port to inspect the running app."
+      ],
+      "visual": {
+        "shape": "dock"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "Localhost Apps is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+          "detail": "Canonical Playwright helper command.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+          "detail": "Visual fallback helper for screenshots/images.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-playwright",
+          "command": "vr-playwright",
+          "detail": "Inspect a local app with a real browser.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Port scan",
+            "value": "local workspace ports",
+            "required": true
+          },
+          {
+            "label": "Proxy path",
+            "value": "/proxy/<port>/",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enable the dock",
+            "detail": "Installed sessions show discovered local app ports."
+          },
+          {
+            "title": "Open a preview",
+            "detail": "Pick a detected port to inspect the running app."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Localhost Apps when an agent needs to discover, rename, preview, or expose web apps running from the workspace.",
+        "useCases": [
+          "Find development servers discovered by Vibe Research.",
+          "Preview a local app through the Vibe Research proxy or direct URL.",
+          "Expose eligible localhost-only ports through the Tailscale portal when available."
+        ],
+        "commands": [
+          {
+            "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/ports -H 'X-Vibe-Research-API: 1'",
+            "label": "List discovered ports",
+            "detail": "Use the runtime app port if it differs from 4123."
+          },
+          {
+            "command": "vr-playwright open http://127.0.0.1:4173 && vr-playwright snapshot",
+            "label": "Open with Playwright",
+            "detail": "Inspect a local app with a real browser."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+            "detail": "Canonical Playwright helper command.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+            "detail": "Visual fallback helper for screenshots/images.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "modal",
+      "name": "Modal",
+      "version": "0.1.0",
+      "category": "Compute",
+      "description": "Run Python functions, jobs, web endpoints, and sandboxes on Modal cloud infrastructure.",
+      "status": "setup available",
+      "trust": "helper-command",
+      "icon": "compute",
+      "docsUrl": "https://modal.com/docs",
+      "homepageUrl": "https://modal.com/",
+      "keywords": [
+        "modal",
+        "compute",
+        "gpu",
+        "sandbox",
+        "python",
+        "serverless",
+        "jobs",
+        "functions",
+        "web endpoints",
+        "cloud"
+      ],
+      "visual": {
+        "shape": "factory"
+      },
+      "access": {
+        "label": "Modal CLI/Python SDK",
+        "detail": "Requires a Modal account plus token credentials where the agent runs. BuildingHub records setup metadata only and does not run Modal code."
+      },
+      "capabilities": [
+        {
+          "type": "helper-command",
+          "name": "modal",
+          "command": "modal",
+          "detail": "Modal CLI for token inspection, app runs, deployments, and sandbox workflows.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_ID",
+          "detail": "Modal account token id for automated CLI or SDK access.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_SECRET",
+          "detail": "Modal account token secret for automated CLI or SDK access.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "MODAL_ENVIRONMENT",
+          "detail": "Optional Modal Environment name when agents should target dev, prod, or another workspace environment.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Modal token id",
+            "value": "MODAL_TOKEN_ID in agent environment or modal token set profile",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Modal token secret",
+            "value": "MODAL_TOKEN_SECRET in agent environment or modal token set profile",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Modal environment",
+            "value": "MODAL_ENVIRONMENT or default Modal profile environment",
+            "required": false
+          },
+          {
+            "label": "Budget guardrail",
+            "value": "allowed GPU classes, runtime, deployment scope, and teardown expectations",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Install Modal tooling",
+            "detail": "Make the Modal Python package and modal CLI available in the agent runtime."
+          },
+          {
+            "title": "Configure credentials",
+            "detail": "Use modal token set or MODAL_TOKEN_ID and MODAL_TOKEN_SECRET in the environment that will run Modal work."
+          },
+          {
+            "title": "Choose environment and budget",
+            "detail": "Pin the target Modal Environment and write cost, GPU, runtime, and deployment guardrails before agents launch jobs."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add Modal to Agent Town after credentials and budget rules are documented.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Modal when an agent needs to run Python functions, jobs, web endpoints, or sandbox workloads on Modal after credentials and cost guardrails are approved.",
+        "useCases": [
+          "Run remote Python jobs that need GPUs or serverless scaling.",
+          "Deploy or inspect Modal Apps, Functions, web endpoints, Volumes, Secrets, and Sandboxes.",
+          "Check whether Modal token credentials or Environment selection are blocking a cloud run."
+        ],
+        "setup": [
+          "Read the generated BuildingHub manifest and Modal docs before launching paid cloud workloads.",
+          "Run modal token info or modal config show to confirm authentication without printing secrets.",
+          "Ask for approval before deploying persistent services, broad parallel jobs, expensive GPUs, or long-running work.",
+          "Record Modal app name, environment, command, commit, output paths, and cost-relevant settings in result docs when they matter."
+        ],
+        "commands": [
+          {
+            "label": "Check Modal CLI",
+            "command": "modal --help",
+            "detail": "Confirms the Modal CLI is installed."
+          },
+          {
+            "label": "Check token profile",
+            "command": "modal token info",
+            "detail": "Shows the active Modal token profile without exposing the token secret."
+          },
+          {
+            "label": "Show redacted config",
+            "command": "modal config show",
+            "detail": "Inspects the active Modal configuration with secret redaction enabled by default."
+          }
+        ],
+        "docs": [
+          {
+            "label": "Modal docs",
+            "url": "https://modal.com/docs"
+          },
+          {
+            "label": "Modal token CLI",
+            "url": "https://modal.com/docs/reference/cli/token"
+          },
+          {
+            "label": "Modal configuration",
+            "url": "https://modal.com/docs/reference/modal.config"
+          },
+          {
+            "label": "Modal Environments",
+            "url": "https://modal.com/docs/guide/environments"
+          },
+          {
+            "label": "Modal Secrets",
+            "url": "https://modal.com/docs/guide/secrets"
+          }
+        ],
+        "env": [
+          {
+            "name": "MODAL_TOKEN_ID",
+            "detail": "Modal token id for automated CLI or SDK access; keep paired with the secret.",
+            "required": true
+          },
+          {
+            "name": "MODAL_TOKEN_SECRET",
+            "detail": "Modal token secret for automated CLI or SDK access; never print it.",
+            "required": true
+          },
+          {
+            "name": "MODAL_ENVIRONMENT",
+            "detail": "Optional target Modal Environment for CLI and SDK operations.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "moltbook",
+      "name": "Moltbook",
+      "version": "0.1.0",
+      "category": "Knowledge",
+      "description": "Keep a social notebook or research log connector visible for agents.",
+      "status": "connector-ready",
+      "trust": "mcp",
+      "icon": "library",
+      "keywords": [
+        "moltbook",
+        "external",
+        "connector-ready",
+        "Knowledge",
+        "library",
+        "MCP",
+        "API",
+        "Moltbook MCP",
+        "Workspace",
+        "Moltbook notebook or team",
+        "Sync scope",
+        "notes, posts, or research logs",
+        "Agent access",
+        "provider MCP or API bridge",
+        "Pick the notebook",
+        "Choose which Moltbook space agents should read or update.",
+        "Configure access",
+        "Connect the API or MCP in the host/provider that will use it.",
+        "Install the building",
+        "Add the building once the external connector is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "library"
+      },
+      "access": {
+        "label": "External connector",
+        "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Moltbook setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Moltbook setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Moltbook MCP",
+          "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Workspace",
+            "value": "Moltbook notebook or team",
+            "required": false
+          },
+          {
+            "label": "Sync scope",
+            "value": "notes, posts, or research logs",
+            "required": false
+          },
+          {
+            "label": "Agent access",
+            "value": "provider MCP or API bridge",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Pick the notebook",
+            "detail": "Choose which Moltbook space agents should read or update."
+          },
+          {
+            "title": "Configure access",
+            "detail": "Connect the API or MCP in the host/provider that will use it."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add the building once the external connector is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "nano-banana",
+      "name": "Nano Banana",
+      "version": "0.1.0",
+      "category": "Generative Media",
+      "description": "Generate, edit, and iterate on Gemini images with Nano Banana models.",
+      "status": "connector-ready",
+      "trust": "manifest-only",
+      "icon": "studio",
+      "keywords": [
+        "nano",
+        "banana",
+        "external",
+        "connector-ready",
+        "Generative Media",
+        "studio",
+        "API",
+        "GEMINI_API_KEY",
+        "Gemini API key",
+        "GEMINI_API_KEY in agent environment",
+        "Model family",
+        "Nano Banana 2, Nano Banana Pro, or Gemini 2.5 Flash Image",
+        "Artifact policy",
+        "save prompts, source images, output paths, and watermarked assets",
+        "Choose the model",
+        "Pick the Nano Banana model that matches speed, fidelity, and editing needs.",
+        "Connect Gemini",
+        "Provide Gemini API access to the provider or local environment that will generate images.",
+        "Install the building",
+        "Add the Nano Banana studio once the external API or connector is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "studio"
+      },
+      "access": {
+        "label": "Gemini image API",
+        "detail": "Requires GEMINI_API_KEY, Google AI Studio, or Vertex AI access where the agent runs. Use this building for Nano Banana 2, Nano Banana Pro, and Gemini 2.5 Flash Image workflows."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Nano Banana setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI_API_KEY",
+          "detail": "Environment variable referenced by Nano Banana setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Gemini API key",
+            "value": "GEMINI_API_KEY in agent environment",
+            "required": true
+          },
+          {
+            "label": "Model family",
+            "value": "Nano Banana 2, Nano Banana Pro, or Gemini 2.5 Flash Image",
+            "required": true
+          },
+          {
+            "label": "Artifact policy",
+            "value": "save prompts, source images, output paths, and watermarked assets",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Choose the model",
+            "detail": "Pick the Nano Banana model that matches speed, fidelity, and editing needs."
+          },
+          {
+            "title": "Connect Gemini",
+            "detail": "Provide Gemini API access to the provider or local environment that will generate images."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add the Nano Banana studio once the external API or connector is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "occupations",
+      "name": "Occupations",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Edit the school of system prompt roles that shape new agents before they start work.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "school",
+      "keywords": [
+        "occupations",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "school",
+        "VIBE_RESEARCH_AGENT_PROMPT_PATH",
+        "AGENTS",
+        "CLAUDE",
+        "GEMINI",
+        "Selected occupation",
+        "Researcher, Engineer, or Custom",
+        "Prompt source",
+        ".vibe-research/agent-prompt.md",
+        "Managed files",
+        "AGENTS.md, CLAUDE.md, GEMINI.md",
+        "Choose an occupation",
+        "Pick the role prompt that should shape newly launched agents.",
+        "installed",
+        "Edit custom guidance",
+        "Use the custom occupation when the built-in researcher or engineer prompt needs project-specific instructions.",
+        "Review managed files",
+        "Check conflicts before overwriting AGENTS.md, CLAUDE.md, or GEMINI.md."
+      ],
+      "visual": {
+        "shape": "school"
+      },
+      "access": {
+        "label": "Managed prompts",
+        "detail": "Uses the local Occupations prompt store and syncs managed instructions into AGENTS.md, CLAUDE.md, and GEMINI.md so Codex, Claude, OpenClaw, Gemini, and OpenCode sessions receive the same role guidance."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",
+          "detail": "Path to the active Occupations prompt file for this session.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "AGENTS",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLAUDE",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Selected occupation",
+            "value": "Researcher, Engineer, or Custom",
+            "required": true
+          },
+          {
+            "label": "Prompt source",
+            "value": ".vibe-research/agent-prompt.md",
+            "required": true
+          },
+          {
+            "label": "Managed files",
+            "value": "AGENTS.md, CLAUDE.md, GEMINI.md",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Choose an occupation",
+            "detail": "Pick the role prompt that should shape newly launched agents.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Edit custom guidance",
+            "detail": "Use the custom occupation when the built-in researcher or engineer prompt needs project-specific instructions."
+          },
+          {
+            "title": "Review managed files",
+            "detail": "Check conflicts before overwriting AGENTS.md, CLAUDE.md, or GEMINI.md."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Occupations when an agent needs to inspect or explain the shared role prompt that will be injected into new sessions.",
+        "useCases": [
+          "Check which occupation is selected before starting a new agent.",
+          "Inspect the managed prompt source and synced AGENTS.md, CLAUDE.md, and GEMINI.md files.",
+          "Diagnose prompt sync conflicts without writing secrets or credentials into managed instruction files."
+        ],
+        "commands": [
+          {
+            "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/agent-prompt -H 'X-Vibe-Research-API: 1'",
+            "label": "Read current occupation",
+            "detail": "Shows the selected occupation, source path, and managed target files."
+          },
+          {
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_AGENT_PROMPT_PATH\"",
+            "label": "Open prompt source",
+            "detail": "Read the active prompt file from the agent environment when available."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",
+            "detail": "Path to the active Occupations prompt file for this session.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "ottoauth",
+      "name": "OttoAuth",
+      "version": "0.1.0",
+      "category": "Commerce",
+      "description": "Let agents buy things through OttoAuth's hosted, human-linked service layer.",
+      "status": "setup available",
+      "trust": "helper-command",
+      "icon": "market",
+      "keywords": [
+        "ottoauth",
+        "vibe-research",
+        "setup available",
+        "Commerce",
+        "market",
+        "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+        "URL",
+        "vr-ottoauth",
+        ".ottoauth-plugin-card",
+        "Username",
+        "ottoAuthUsername",
+        "Private key",
+        "ottoAuthPrivateKey",
+        "ottoAuthPrivateKeyConfigured",
+        "Service URL",
+        "ottoAuthBaseUrl",
+        "Default spend cap",
+        "ottoAuthDefaultMaxChargeCents",
+        "cents",
+        "Callback URL",
+        "ottoAuthCallbackUrl",
+        "Enable the building",
+        "Turn on OttoAuth requests.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "market"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "OttoAuth is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by OttoAuth setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-ottoauth",
+          "command": "vr-ottoauth",
+          "detail": "Use an explicit spending bound for commerce requests.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Username",
+            "value": "Vibe Research setting: ottoAuthUsername",
+            "required": true
+          },
+          {
+            "label": "Private key",
+            "value": "Vibe Research setting: ottoAuthPrivateKey",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Service URL",
+            "value": "Vibe Research setting: ottoAuthBaseUrl",
+            "required": true
+          },
+          {
+            "label": "Default spend cap",
+            "value": "Vibe Research setting: ottoAuthDefaultMaxChargeCents",
+            "required": false
+          },
+          {
+            "label": "Callback URL",
+            "value": "Vibe Research setting: ottoAuthCallbackUrl",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enable the building",
+            "detail": "Turn on OttoAuth requests.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Save commerce variables",
+            "detail": "Add the username, private key, service URL, and spend defaults.",
+            "completeWhen": {
+              "allConfigured": [
+                "ottoAuthUsername",
+                "ottoAuthPrivateKeyConfigured",
+                "ottoAuthBaseUrl"
+              ]
+            }
+          },
+          {
+            "title": "Call the helper",
+            "detail": "Agents can run vr-ottoauth --task \"...\" --max-charge-cents 2500 --wait."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use OttoAuth when an agent needs human-linked checkout or purchase help through a bounded service request.",
+        "useCases": [
+          "Create an OttoAuth task from an agent session.",
+          "Respect spend caps and callback setup before asking a human to approve commerce actions.",
+          "Diagnose missing username, private key, service URL, or default spend cap setup."
+        ],
+        "commands": [
+          {
+            "command": "vr-ottoauth --task \"Describe the purchase or checkout task\" --max-charge-cents 2500 --wait",
+            "label": "Start an OttoAuth task",
+            "detail": "Use an explicit spending bound for commerce requests."
+          },
+          {
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/ottoauth.md\"",
+            "label": "Read OttoAuth guide",
+            "detail": "Review setup and safety expectations first."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+            "detail": "Canonical helper command for local agents.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "phone-imessage",
+      "name": "Phone / iMessage",
+      "version": "0.1.0",
+      "category": "Communication",
+      "description": "Coordinate SMS, calls, or iMessage-style conversations through a local bridge.",
+      "status": "bridge required",
+      "trust": "manifest-only",
+      "icon": "post",
+      "keywords": [
+        "phone",
+        "imessage",
+        "external",
+        "bridge required",
+        "Communication",
+        "post",
+        "SMS",
+        "MCP",
+        "Bridge",
+        "SMS, phone, or Messages relay",
+        "Allowed contacts",
+        "explicit allowlist recommended",
+        "Agent access",
+        "provider MCP or local helper",
+        "Choose a relay",
+        "Set up the SMS, call, or Messages bridge outside Vibe Research.",
+        "Restrict contacts",
+        "Use explicit allowlists and confirmation flows for outbound communication.",
+        "Install the building",
+        "Add this building once the bridge is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "post"
+      },
+      "access": {
+        "label": "Local bridge",
+        "detail": "Requires a phone, SMS, or Apple Messages bridge configured on the machine/provider that will send messages. Vibe Research does not inject phone or iMessage access into agents."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "SMS",
+          "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Bridge",
+            "value": "SMS, phone, or Messages relay",
+            "required": false
+          },
+          {
+            "label": "Allowed contacts",
+            "value": "explicit allowlist recommended",
+            "required": false
+          },
+          {
+            "label": "Agent access",
+            "value": "provider MCP or local helper",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Choose a relay",
+            "detail": "Set up the SMS, call, or Messages bridge outside Vibe Research."
+          },
+          {
+            "title": "Restrict contacts",
+            "detail": "Use explicit allowlists and confirmation flows for outbound communication."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add this building once the bridge is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "rentahuman",
+      "name": "RentAHuman",
+      "version": "0.1.0",
+      "category": "Commerce",
+      "description": "Let AI agents hire humans for real-world tasks through RentAHuman's MCP server or REST API.",
+      "status": "MCP-ready",
+      "trust": "mcp",
+      "icon": "rentahuman",
+      "keywords": [
+        "rentahuman",
+        "external",
+        "MCP-ready",
+        "Commerce",
+        "market",
+        "RENTAHUMAN_API_URL",
+        "RENTAHUMAN_API_KEY",
+        "MCP",
+        "API",
+        "URL",
+        "REST",
+        "npx",
+        "RentAHuman MCP",
+        "MCP server",
+        "npx rentahuman-mcp",
+        "API URL",
+        "https://rentahuman.ai/api",
+        "API key or operator pairing",
+        "required for posting bounties, hiring, messaging, or payments",
+        "Spend policy",
+        "budget, escrow, and release approval rules",
+        "Read the agent docs",
+        "Review the MCP guide, REST API docs, and task/payment model before giving agents write access.",
+        "Connect RentAHuman"
+      ],
+      "visual": {
+        "logo": "rentahuman",
+        "shape": "market"
+      },
+      "access": {
+        "label": "RentAHuman MCP/API",
+        "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "RENTAHUMAN_API_URL",
+          "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "RENTAHUMAN_API_KEY",
+          "detail": "Account credential for authenticated write/payment actions; never print it.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "REST",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "npx",
+          "command": "npx",
+          "detail": "Confirms the MCP package can run in the current agent environment.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "RentAHuman MCP",
+          "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "MCP server",
+            "value": "npx rentahuman-mcp",
+            "required": false
+          },
+          {
+            "label": "API URL",
+            "value": "https://rentahuman.ai/api",
+            "required": false
+          },
+          {
+            "label": "API key or operator pairing",
+            "value": "required for posting bounties, hiring, messaging, or payments",
+            "required": true
+          },
+          {
+            "label": "Spend policy",
+            "value": "budget, escrow, and release approval rules",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Read the agent docs",
+            "detail": "Review the MCP guide, REST API docs, and task/payment model before giving agents write access."
+          },
+          {
+            "title": "Connect RentAHuman",
+            "detail": "Configure the MCP server or REST API in the provider or local environment that will use it."
+          },
+          {
+            "title": "Set approval rules",
+            "detail": "Require explicit human approval before posting paid bounties, funding escrow, releasing payment, or exposing private data."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add RentAHuman to Agent Town once the MCP or API path is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use RentAHuman when an agent needs a human workforce for physical-world tasks through RentAHuman's MCP server or REST API.",
+        "useCases": [
+          "Search humans by skill, rate, location, city, or country.",
+          "Post bounties for field research, errands, delivery, media capture, QA, or local presence tasks.",
+          "Book services, manage applications, and track escrow-backed completion when the account is approved.",
+          "Inspect public bounties or profiles before asking the human for credentials, spend approval, or operator pairing."
+        ],
+        "setup": [
+          "Start with read-only search and browsing unless the user has explicitly approved posting or spending.",
+          "Keep RentAHuman API keys, generated identities, pairing codes, prepaid card details, and Stripe data out of prompts, Library notes, logs, and screenshots.",
+          "Record task scope, budget, location, deadline, evidence requirements, and approval points before creating paid bounties.",
+          "Ask for human approval before posting paid work, accepting applications, funding escrow, releasing payment, sending money, or sharing private user data."
+        ],
+        "commands": [
+          {
+            "command": "npx -y rentahuman-mcp --help",
+            "label": "Check MCP package help",
+            "detail": "Confirms the MCP package can run in the current agent environment."
+          },
+          {
+            "command": "curl -L https://rentahuman.ai/llms.txt",
+            "label": "Read agent quickstart",
+            "detail": "Shows the current MCP package name, public endpoints, and tool list."
+          },
+          {
+            "command": "curl -s \"https://rentahuman.ai/api/humans?skill=Photography&limit=3\"",
+            "label": "Try public human search",
+            "detail": "Uses a no-auth endpoint to validate basic network access without spending money."
+          }
+        ],
+        "docs": [
+          {
+            "label": "RentAHuman",
+            "url": "https://rentahuman.ai/"
+          },
+          {
+            "label": "MCP guide",
+            "url": "https://rentahuman.ai/mcp"
+          },
+          {
+            "label": "API docs",
+            "url": "https://rentahuman.ai/api-docs"
+          },
+          {
+            "label": "OpenAPI spec",
+            "url": "https://rentahuman.ai/.well-known/openapi.yaml"
+          },
+          {
+            "label": "Agent quickstart",
+            "url": "https://rentahuman.ai/llms.txt"
+          }
+        ],
+        "env": [
+          {
+            "name": "RENTAHUMAN_API_URL",
+            "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+            "required": false
+          },
+          {
+            "name": "RENTAHUMAN_API_KEY",
+            "detail": "Account credential for authenticated write/payment actions; never print it.",
+            "required": false
           }
         ]
       }
@@ -486,6 +3602,95 @@
       }
     },
     {
+      "id": "sora",
+      "name": "Sora",
+      "version": "0.1.0",
+      "category": "Generative Media",
+      "description": "Create, edit, and extend OpenAI video generations through a Videos API or provider connector.",
+      "status": "API sunset 2026-09-24",
+      "trust": "manifest-only",
+      "icon": "studio",
+      "keywords": [
+        "sora",
+        "external",
+        "API sunset 2026-09-24",
+        "Generative Media",
+        "studio",
+        "API",
+        "OPENAI_API_KEY",
+        "OpenAI API key",
+        "OPENAI_API_KEY in agent environment",
+        "Model",
+        "sora-2 or sora-2-pro while available",
+        "Artifact scope",
+        "video IDs, downloads, thumbnails, and prompts",
+        "Confirm availability",
+        "Check that the account still has Videos API access before assigning Sora work.",
+        "Connect OpenAI",
+        "Provide OPENAI_API_KEY to the provider or local environment that will generate videos.",
+        "Install the building",
+        "Add the Sora studio once the external API or connector is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "studio"
+      },
+      "access": {
+        "label": "OpenAI Videos API",
+        "detail": "Requires OPENAI_API_KEY and account access to the OpenAI Videos API where the agent runs. Sora 2 and the Videos API are deprecated and scheduled to shut down on September 24, 2026."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Sora setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "OPENAI_API_KEY",
+          "detail": "Environment variable referenced by Sora setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "OpenAI API key",
+            "value": "OPENAI_API_KEY in agent environment",
+            "required": true
+          },
+          {
+            "label": "Model",
+            "value": "sora-2 or sora-2-pro while available",
+            "required": true
+          },
+          {
+            "label": "Artifact scope",
+            "value": "video IDs, downloads, thumbnails, and prompts",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Confirm availability",
+            "detail": "Check that the account still has Videos API access before assigning Sora work."
+          },
+          {
+            "title": "Connect OpenAI",
+            "detail": "Provide OPENAI_API_KEY to the provider or local environment that will generate videos."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add the Sora studio once the external API or connector is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
       "id": "supabase",
       "name": "Supabase",
       "version": "0.1.0",
@@ -543,6 +3748,806 @@
           {
             "title": "Install the building",
             "detail": "Add Supabase to Agent Town once project boundaries are clear.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "system",
+      "name": "System",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Inspect this host's storage, CPU, memory, GPU utilization, accelerators, and agent usage.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "system",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "plugin",
+        "VIBE_RESEARCH_PORT",
+        "VIBE_RESEARCH_SYSTEM_DIR",
+        "CPU",
+        "GPU",
+        "Metrics endpoint",
+        "/api/system",
+        "History endpoint",
+        "/api/system/history",
+        "Open System",
+        "Use the System building to inspect host storage, CPU, memory, GPU, accelerator, and agent usage metrics.",
+        "installed",
+        "Check GPU ownership",
+        "Review which GPU processes belong to Vibe Research sessions before scheduling heavy work."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Host metrics",
+        "detail": "Uses the local system metrics sampler for host storage, CPU, memory, GPU, accelerator, and Vibe Research agent usage data. No extra credentials are required."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_PORT",
+          "detail": "Current Vibe Research server port when available.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_SYSTEM_DIR",
+          "detail": "Local system workspace directory for generated guides and communication state.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CPU",
+          "detail": "Environment variable referenced by System setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GPU",
+          "detail": "Environment variable referenced by System setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Metrics endpoint",
+            "value": "/api/system",
+            "required": true
+          },
+          {
+            "label": "History endpoint",
+            "value": "/api/system/history",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Open System",
+            "detail": "Use the System building to inspect host storage, CPU, memory, GPU, accelerator, and agent usage metrics.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Check GPU ownership",
+            "detail": "Review which GPU processes belong to Vibe Research sessions before scheduling heavy work."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use System when an agent needs to inspect host capacity, GPU availability, storage pressure, or local Vibe Research agent usage.",
+        "useCases": [
+          "Check GPU utilization and ownership before starting heavy experiments.",
+          "Review CPU, memory, storage, and accelerator inventory for the local machine.",
+          "Inspect recent system metric history when diagnosing host pressure."
+        ],
+        "commands": [
+          {
+            "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/system -H 'X-Vibe-Research-API: 1'",
+            "label": "Read current metrics",
+            "detail": "Shows current storage, CPU, memory, GPU, accelerator, and agent usage metrics."
+          },
+          {
+            "command": "curl -s 'http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/system/history?range=1h' -H 'X-Vibe-Research-API: 1'",
+            "label": "Read one-hour history",
+            "detail": "Shows the sampled history backing the System charts."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_PORT",
+            "detail": "Current Vibe Research server port when available.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_SYSTEM_DIR",
+            "detail": "Local system workspace directory for generated guides and communication state.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "tailscale",
+      "name": "Tailscale",
+      "version": "0.1.0",
+      "category": "Networking",
+      "description": "Open Vibe Research and localhost app ports through a tailnet portal.",
+      "status": "auto-detected",
+      "trust": "helper-command",
+      "icon": "portal",
+      "keywords": [
+        "tailscale",
+        "vibe-research",
+        "auto-detected",
+        "Networking",
+        "portal",
+        "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+        "CLI",
+        "URL",
+        "Tailscale CLI",
+        "installed and logged in on this machine",
+        "Tailnet URL",
+        "auto-detected when Tailscale is connected",
+        "Serve permissions",
+        "local tailscale serve access",
+        "Connect Tailscale",
+        "Sign in with the local Tailscale CLI if tailnet URLs are not appearing.",
+        "Use the portal",
+        "Open Vibe Research from the Tailscale URL shown in startup output or port previews.",
+        "Expose local apps",
+        "Use the Localhost Apps dock to publish eligible localhost-only ports with Tailscale Serve."
+      ],
+      "visual": {
+        "shape": "portal"
+      },
+      "access": {
+        "label": "Tailnet portal",
+        "detail": "Uses the local Tailscale CLI when available to show tailnet URLs and expose localhost-only ports with Tailscale Serve. Vibe Research does not store Tailscale credentials."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Directory containing all generated building guides.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+          "detail": "Index of generated building guides.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Tailscale setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by Tailscale setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "tailscale",
+          "command": "tailscale",
+          "detail": "Shows whether the machine is logged into a tailnet.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Tailscale CLI",
+            "value": "installed and logged in on this machine",
+            "required": false
+          },
+          {
+            "label": "Tailnet URL",
+            "value": "auto-detected when Tailscale is connected",
+            "required": false
+          },
+          {
+            "label": "Serve permissions",
+            "value": "local tailscale serve access",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Connect Tailscale",
+            "detail": "Sign in with the local Tailscale CLI if tailnet URLs are not appearing."
+          },
+          {
+            "title": "Use the portal",
+            "detail": "Open Vibe Research from the Tailscale URL shown in startup output or port previews."
+          },
+          {
+            "title": "Expose local apps",
+            "detail": "Use the Localhost Apps dock to publish eligible localhost-only ports with Tailscale Serve."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Tailscale when an agent needs to understand private remote access, tailnet URLs, or why a localhost app can be exposed safely through Tailscale Serve.",
+        "useCases": [
+          "Check whether this Vibe Research instance has a tailnet URL.",
+          "Diagnose why a localhost-only app is not reachable from another device.",
+          "Explain to a human what Tailscale Serve setup is missing without asking for credentials unless login is required."
+        ],
+        "commands": [
+          {
+            "command": "tailscale status",
+            "label": "Check local Tailscale status",
+            "detail": "Shows whether the machine is logged into a tailnet."
+          },
+          {
+            "command": "tailscale serve status",
+            "label": "Check Serve config",
+            "detail": "Shows active Tailscale Serve forwards."
+          },
+          {
+            "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/ports -H 'X-Vibe-Research-API: 1'",
+            "label": "List app ports",
+            "detail": "Use the current app port when known; browser UI usually exposes ports directly."
+          }
+        ],
+        "docs": [
+          {
+            "label": "Tailscale Serve docs",
+            "url": "https://tailscale.com/kb/1242/tailscale-serve"
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+            "detail": "Directory containing all generated building guides.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+            "detail": "Index of generated building guides.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "telegram",
+      "name": "Telegram",
+      "version": "0.1.0",
+      "category": "Communication",
+      "description": "Route Telegram bot messages into one dedicated communications agent session.",
+      "status": "setup available",
+      "trust": "manifest-only",
+      "icon": "telegram",
+      "keywords": [
+        "telegram",
+        "vibe-research",
+        "setup available",
+        "Communication",
+        "plugin",
+        ".communications-plugin-card",
+        "Bot token",
+        "telegramBotToken",
+        "telegramBotTokenConfigured",
+        "Allowed chat IDs",
+        "telegramAllowedChatIds",
+        "Communications agent",
+        "telegramProviderId",
+        "Create a bot",
+        "Use BotFather to get a Telegram bot token.",
+        "installed",
+        "Save Telegram variables",
+        "Add the bot token and optionally limit which chat IDs the bot may answer.",
+        "Reply from one session",
+        "Incoming Telegram messages are routed into the dedicated Telegram communications session."
+      ],
+      "visual": {
+        "logo": "telegram",
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "Telegram is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Bot token",
+            "value": "Vibe Research setting: telegramBotToken",
+            "required": true,
+            "secret": true
+          },
+          {
+            "label": "Allowed chat IDs",
+            "value": "Vibe Research setting: telegramAllowedChatIds",
+            "required": false
+          },
+          {
+            "label": "Communications agent",
+            "value": "Vibe Research setting: telegramProviderId",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Create a bot",
+            "detail": "Use BotFather to get a Telegram bot token.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Save Telegram variables",
+            "detail": "Add the bot token and optionally limit which chat IDs the bot may answer.",
+            "completeWhen": {
+              "allConfigured": [
+                "telegramBotTokenConfigured"
+              ]
+            }
+          },
+          {
+            "title": "Reply from one session",
+            "detail": "Incoming Telegram messages are routed into the dedicated Telegram communications session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "toolshed",
+      "name": "Toolshed",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Build new Agent Town buildings, prepare BuildingHub submissions, and keep the Vibe Research operating map close at hand.",
+      "status": "built in",
+      "trust": "manifest-only",
+      "icon": "plugin",
+      "keywords": [
+        "toolshed",
+        "vibe-research",
+        "built in",
+        "Vibe Research",
+        "plugin",
+        "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+        "SDK",
+        "Building docs",
+        "docs/buildings.md",
+        "Starter catalog",
+        "BuildingHub checkout or template",
+        "Publish path",
+        "GitHub PR to BuildingHub",
+        "Read the map",
+        "Understand buildings, Library memory, settings, occupations, automations, and communications before adding new surfaces.",
+        "Draft a manifest",
+        "Copy a BuildingHub template or add a first-party manifest with a stable id, setup variables, and Agent Town visual shape.",
+        "Validate and publish",
+        "Run the catalog validator, rebuild registry.json, and open a reviewed BuildingHub pull request when the building is community-safe."
+      ],
+      "visual": {
+        "shape": "plugin"
+      },
+      "access": {
+        "label": "Building SDK + BuildingHub",
+        "detail": "Uses the local building docs, core manifest registry, and optional BuildingHub catalog workflow. Community buildings stay manifest-only until reviewed."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Generated per-building guide directory.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+          "detail": "Generated building guide index.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "SDK",
+          "detail": "Environment variable referenced by Toolshed setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Building docs",
+            "value": "docs/buildings.md",
+            "required": true
+          },
+          {
+            "label": "Starter catalog",
+            "value": "BuildingHub checkout or template",
+            "required": false
+          },
+          {
+            "label": "Publish path",
+            "value": "GitHub PR to BuildingHub",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Read the map",
+            "detail": "Understand buildings, Library memory, settings, occupations, automations, and communications before adding new surfaces."
+          },
+          {
+            "title": "Draft a manifest",
+            "detail": "Copy a BuildingHub template or add a first-party manifest with a stable id, setup variables, and Agent Town visual shape."
+          },
+          {
+            "title": "Validate and publish",
+            "detail": "Run the catalog validator, rebuild registry.json, and open a reviewed BuildingHub pull request when the building is community-safe."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Toolshed when an agent needs to create, review, or extend a building manifest and its generated setup guide.",
+        "useCases": [
+          "Draft a first-party building manifest with setup, access, and agentGuide fields.",
+          "Create or review a manifest-only BuildingHub entry.",
+          "Find the generated building guide index that Codex and Claude Code sessions can read."
+        ],
+        "commands": [
+          {
+            "command": "sed -n '1,220p' docs/buildings.md",
+            "label": "Read building docs",
+            "detail": "Start here before changing building contracts."
+          },
+          {
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_INDEX\"",
+            "label": "Read generated guide index",
+            "detail": "Shows every building guide available to the current agent."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+            "detail": "Generated per-building guide directory.",
+            "required": false
+          },
+          {
+            "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+            "detail": "Generated building guide index.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "twitter",
+      "name": "Twitter / X",
+      "version": "0.1.0",
+      "category": "Social",
+      "description": "Let agents monitor posts, draft replies, or manage social updates through a provider connector.",
+      "status": "connector-ready",
+      "trust": "mcp",
+      "icon": "post",
+      "keywords": [
+        "twitter",
+        "external",
+        "connector-ready",
+        "Social",
+        "post",
+        "MCP",
+        "API",
+        "Twitter / X MCP",
+        "Account",
+        "Twitter/X account or app",
+        "Permissions",
+        "read, draft, or post",
+        "Agent access",
+        "provider MCP or API bridge",
+        "Create API access",
+        "Prepare the Twitter/X account, app, and scopes the agent should use.",
+        "Connect the provider",
+        "Configure the API or MCP in the agent host, not in a prompt.",
+        "Install the building",
+        "Add this building once the external connector is ready.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "post"
+      },
+      "access": {
+        "label": "External connector",
+        "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Twitter / X setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Twitter / X setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Twitter / X MCP",
+          "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Account",
+            "value": "Twitter/X account or app",
+            "required": false
+          },
+          {
+            "label": "Permissions",
+            "value": "read, draft, or post",
+            "required": false
+          },
+          {
+            "label": "Agent access",
+            "value": "provider MCP or API bridge",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Create API access",
+            "detail": "Prepare the Twitter/X account, app, and scopes the agent should use."
+          },
+          {
+            "title": "Connect the provider",
+            "detail": "Configure the API or MCP in the agent host, not in a prompt."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add this building once the external connector is ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      }
+    },
+    {
+      "id": "videomemory",
+      "name": "VideoMemory",
+      "version": "0.1.0",
+      "category": "Vibe Research",
+      "description": "Let coding agents create video monitors that wake their own Vibe Research sessions.",
+      "status": "setup available",
+      "trust": "helper-command",
+      "icon": "camera",
+      "keywords": [
+        "videomemory",
+        "vibe-research",
+        "setup available",
+        "Vibe Research",
+        "camera",
+        "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+        "URL",
+        "vr-videomemory",
+        ".videomemory-plugin-card",
+        "VideoMemory URL",
+        "videoMemoryBaseUrl",
+        "Wake provider",
+        "videoMemoryProviderId",
+        "Camera permission",
+        "browser permission",
+        "Enable the building",
+        "Turn on camera monitors.",
+        "installed",
+        "Save monitor variables",
+        "Set the service URL and provider agents should wake.",
+        "Grant camera access",
+        "Start a monitor and allow camera access when the browser asks."
+      ],
+      "visual": {
+        "shape": "camera"
+      },
+      "access": {
+        "label": "vibe-research catalog",
+        "detail": "VideoMemory is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by VideoMemory setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-videomemory",
+          "command": "vr-videomemory",
+          "detail": "Read helper options before creating a monitor.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "VideoMemory URL",
+            "value": "Vibe Research setting: videoMemoryBaseUrl",
+            "required": true
+          },
+          {
+            "label": "Wake provider",
+            "value": "Vibe Research setting: videoMemoryProviderId",
+            "required": true
+          },
+          {
+            "label": "Camera permission",
+            "value": "browser permission",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Enable the building",
+            "detail": "Turn on camera monitors.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Save monitor variables",
+            "detail": "Set the service URL and provider agents should wake.",
+            "completeWhen": {
+              "allConfigured": [
+                "videoMemoryBaseUrl",
+                "videoMemoryProviderId"
+              ]
+            }
+          },
+          {
+            "title": "Grant camera access",
+            "detail": "Start a monitor and allow camera access when the browser asks."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use VideoMemory when an agent needs a camera or video monitor that can wake a Vibe Research session later.",
+        "useCases": [
+          "Create a monitor that watches a browser/camera condition and wakes an agent.",
+          "Check whether camera permission or service URL setup is blocking monitors.",
+          "Record monitor IDs, task URLs, and artifact paths in the Library when they matter."
+        ],
+        "commands": [
+          {
+            "command": "vr-videomemory --help",
+            "label": "Start a monitor",
+            "detail": "Read helper options before creating a monitor."
+          },
+          {
+            "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/videomemory.md\"",
+            "label": "Read VideoMemory guide",
+            "detail": "Review setup and camera permission expectations first."
+          }
+        ],
+        "env": [
+          {
+            "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+            "detail": "Canonical helper command for local agents.",
+            "required": false
+          }
+        ]
+      }
+    },
+    {
+      "id": "wandb",
+      "name": "W&B",
+      "version": "0.1.0",
+      "category": "Observability",
+      "description": "Track training runs, sweeps, metrics, and artifacts from research-agent experiments.",
+      "status": "connector-ready",
+      "trust": "manifest-only",
+      "icon": "studio",
+      "keywords": [
+        "wandb",
+        "external",
+        "connector-ready",
+        "Observability",
+        "studio",
+        "API",
+        "WANDB_API_KEY",
+        "URL",
+        "W&B API key",
+        "WANDB_API_KEY in agent environment",
+        "Entity / project",
+        "wandb entity and project name",
+        "Artifact policy",
+        "run URLs, configs, checkpoints, tables, and plots",
+        "Authenticate wandb",
+        "Log in or provide WANDB_API_KEY in the environment used by the training agent.",
+        "Declare the project",
+        "Tell agents which entity/project to log to before long runs start.",
+        "Install the building",
+        "Add W&B to Agent Town once experiment logging is configured.",
+        "installed"
+      ],
+      "visual": {
+        "shape": "studio"
+      },
+      "access": {
+        "label": "Weights & Biases API",
+        "detail": "Requires WANDB_API_KEY or an existing wandb login where the agent runs, plus explicit entity/project scope for experiment logging."
+      },
+      "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "WANDB_API_KEY",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "W&B API key",
+            "value": "WANDB_API_KEY in agent environment",
+            "required": true
+          },
+          {
+            "label": "Entity / project",
+            "value": "wandb entity and project name",
+            "required": true
+          },
+          {
+            "label": "Artifact policy",
+            "value": "run URLs, configs, checkpoints, tables, and plots",
+            "required": false
+          }
+        ],
+        "steps": [
+          {
+            "title": "Authenticate wandb",
+            "detail": "Log in or provide WANDB_API_KEY in the environment used by the training agent."
+          },
+          {
+            "title": "Declare the project",
+            "detail": "Tell agents which entity/project to log to before long runs start."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add W&B to Agent Town once experiment logging is configured.",
             "completeWhen": {
               "type": "installed"
             }

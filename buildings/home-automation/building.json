@@ -1,0 +1,73 @@
+{
+  "id": "home-automation",
+  "name": "Home Automation",
+  "version": "0.1.0",
+  "category": "Home",
+  "description": "Control lights and home devices through Home Assistant, HomeKit, Matter, or a similar bridge.",
+  "status": "bridge required",
+  "trust": "manifest-only",
+  "icon": "plugin",
+  "keywords": [
+    "home",
+    "automation",
+    "external",
+    "bridge required",
+    "plugin",
+    "Controller",
+    "Home Assistant, HomeKit, or Matter",
+    "Device scope",
+    "lights, switches, scenes",
+    "Safety",
+    "confirm destructive actions",
+    "Connect a controller",
+    "Expose only the lights, switches, or scenes the agent should control.",
+    "Add safety rules",
+    "Require confirmation for locks, alarms, appliances, or anything safety-critical.",
+    "Install the building",
+    "Add this building once the local bridge is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Local bridge",
+    "detail": "Requires a Home Assistant, HomeKit, Matter, or device-specific bridge configured where the agent runs. Vibe Research does not grant device control by itself."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Controller",
+        "value": "Home Assistant, HomeKit, or Matter",
+        "required": false
+      },
+      {
+        "label": "Device scope",
+        "value": "lights, switches, scenes",
+        "required": false
+      },
+      {
+        "label": "Safety",
+        "value": "confirm destructive actions",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect a controller",
+        "detail": "Expose only the lights, switches, or scenes the agent should control."
+      },
+      {
+        "title": "Add safety rules",
+        "detail": "Require confirmation for locks, alarms, appliances, or anything safety-critical."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add this building once the local bridge is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

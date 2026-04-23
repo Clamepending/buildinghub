@@ -1,0 +1,151 @@
+{
+  "id": "browser-use",
+  "name": "Browser Use",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Start an OttoAuth browser fulfillment agent from a coding-agent session.",
+  "status": "setup available",
+  "trust": "helper-command",
+  "icon": "browser",
+  "keywords": [
+    "browser",
+    "use",
+    "vibe-research",
+    "setup available",
+    "Vibe Research",
+    "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+    "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+    "API",
+    "vr-browser-use",
+    ".browser-use-plugin-card",
+    "Anthropic API key",
+    "browserUseAnthropicApiKey",
+    "browserUseAnthropicApiKeyConfigured",
+    "Worker folder",
+    "browserUseWorkerPath",
+    "Profile folder",
+    "browserUseProfileDir",
+    "Max steps",
+    "browserUseMaxTurns",
+    "Enable the building",
+    "Turn on browser-use requests.",
+    "installed",
+    "Save browser variables",
+    "Add the API key, worker folder, profile folder, and run defaults."
+  ],
+  "visual": {
+    "shape": "browser"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "Browser Use is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+      "detail": "Canonical helper command for local agents.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Generated per-building guide directory.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Browser Use setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-browser-use",
+      "command": "vr-browser-use",
+      "detail": "Starts the configured worker and waits for completion.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Anthropic API key",
+        "value": "Vibe Research setting: browserUseAnthropicApiKey",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Worker folder",
+        "value": "Vibe Research setting: browserUseWorkerPath",
+        "required": true
+      },
+      {
+        "label": "Profile folder",
+        "value": "Vibe Research setting: browserUseProfileDir",
+        "required": true
+      },
+      {
+        "label": "Max steps",
+        "value": "Vibe Research setting: browserUseMaxTurns",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Enable the building",
+        "detail": "Turn on browser-use requests.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Save browser variables",
+        "detail": "Add the API key, worker folder, profile folder, and run defaults.",
+        "completeWhen": {
+          "allConfigured": [
+            "browserUseAnthropicApiKeyConfigured",
+            "browserUseWorkerPath",
+            "browserUseProfileDir"
+          ]
+        }
+      },
+      {
+        "title": "Call the helper",
+        "detail": "Agents can run vr-browser-use --task \"...\" from a session."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Browser Use when a coding agent needs a separate browser-fulfillment worker for long or delegated web tasks.",
+    "useCases": [
+      "Start a browser worker from an existing agent session.",
+      "Hand off a web task that needs OttoAuth browser state or an Anthropic-backed worker.",
+      "Check missing setup before asking the human for an API key or profile path."
+    ],
+    "commands": [
+      {
+        "command": "vr-browser-use --task \"Describe the task here\" --wait",
+        "label": "Run a browser-use task",
+        "detail": "Starts the configured worker and waits for completion."
+      },
+      {
+        "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/browser-use.md\"",
+        "label": "Check generated guide",
+        "detail": "Read the local setup checklist first."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+        "detail": "Canonical helper command for local agents.",
+        "required": false
+      },
+      {
+        "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "detail": "Generated per-building guide directory.",
+        "required": false
+      }
+    ]
+  }
+}

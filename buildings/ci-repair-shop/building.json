@@ -1,0 +1,80 @@
+{
+  "id": "ci-repair-shop",
+  "name": "CI Repair Shop",
+  "version": "0.1.0",
+  "category": "Coding",
+  "description": "Turn failing GitHub checks into focused repair-agent sessions with logs, repro commands, and PR updates.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "plugin",
+  "keywords": [
+    "ci",
+    "repair",
+    "shop",
+    "vibe-research",
+    "built in",
+    "Coding",
+    "plugin",
+    "SHA",
+    "GitHub access",
+    "Codex connector or gh auth",
+    "Repository checkout",
+    "local workspace folder",
+    "Repro command",
+    "project test or check command",
+    "Connect GitHub",
+    "Make sure the host agent or local shell can read PR checks and logs.",
+    "Pick a failing check",
+    "Start from the PR check summary, job log, and branch SHA.",
+    "Repair locally",
+    "Have an agent reproduce the failure, patch, rerun the focused command, and prepare the PR update."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "GitHub + local tests",
+    "detail": "Uses the GitHub connector or gh authentication plus the checked-out repository's test commands. Local terminal agents still need repo and GitHub access where they run."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "SHA",
+      "detail": "Environment variable referenced by CI Repair Shop setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "GitHub access",
+        "value": "Codex connector or gh auth",
+        "required": true
+      },
+      {
+        "label": "Repository checkout",
+        "value": "local workspace folder",
+        "required": true
+      },
+      {
+        "label": "Repro command",
+        "value": "project test or check command",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect GitHub",
+        "detail": "Make sure the host agent or local shell can read PR checks and logs."
+      },
+      {
+        "title": "Pick a failing check",
+        "detail": "Start from the PR check summary, job log, and branch SHA."
+      },
+      {
+        "title": "Repair locally",
+        "detail": "Have an agent reproduce the failure, patch, rerun the focused command, and prepare the PR update."
+      }
+    ]
+  }
+}

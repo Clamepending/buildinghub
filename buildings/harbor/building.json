@@ -1,0 +1,266 @@
+{
+  "id": "harbor",
+  "name": "Harbor",
+  "version": "0.1.0",
+  "category": "Evals",
+  "description": "Evaluate agents and models in sandboxed Harbor tasks, datasets, and jobs.",
+  "status": "CLI install required",
+  "trust": "helper-command",
+  "icon": "lab",
+  "keywords": [
+    "harbor",
+    "external",
+    "CLI install required",
+    "Evals",
+    "lab",
+    "OPENAI_API_KEY",
+    "ANTHROPIC_API_KEY",
+    "GEMINI_API_KEY",
+    "DAYTONA_API_KEY",
+    "MODAL_TOKEN_ID",
+    "MODAL_TOKEN_SECRET",
+    "CLI",
+    "PATH",
+    "E2B",
+    "API",
+    "Harbor CLI",
+    "harbor on PATH, usually from uv tool install harbor",
+    "Sandbox runtime",
+    "Docker locally, or Daytona, Modal, E2B, or Runloop for cloud runs",
+    "Model credentials",
+    "OPENAI_API_KEY, ANTHROPIC_API_KEY, GEMINI_API_KEY, or provider-specific env",
+    "Dataset or task",
+    "Harbor registry dataset, local task directory, local dataset path, or job config",
+    "Install Harbor"
+  ],
+  "visual": {
+    "shape": "lab"
+  },
+  "access": {
+    "label": "Harbor CLI + sandbox runtime",
+    "detail": "Requires the harbor CLI where the agent runs, plus Docker or a configured cloud sandbox provider. Model and sandbox provider API credentials must live in the agent runtime; Vibe Research only tracks the building and generated guide."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "OPENAI_API_KEY",
+      "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "ANTHROPIC_API_KEY",
+      "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GEMINI_API_KEY",
+      "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "DAYTONA_API_KEY",
+      "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_ID",
+      "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_SECRET",
+      "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "PATH",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "E2B",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "harbor",
+      "command": "harbor",
+      "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Harbor CLI",
+        "value": "harbor on PATH, usually from uv tool install harbor",
+        "required": true
+      },
+      {
+        "label": "Sandbox runtime",
+        "value": "Docker locally, or Daytona, Modal, E2B, or Runloop for cloud runs",
+        "required": true
+      },
+      {
+        "label": "Model credentials",
+        "value": "OPENAI_API_KEY, ANTHROPIC_API_KEY, GEMINI_API_KEY, or provider-specific env",
+        "required": true
+      },
+      {
+        "label": "Dataset or task",
+        "value": "Harbor registry dataset, local task directory, local dataset path, or job config",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Install Harbor",
+        "detail": "Install the CLI in the agent environment and confirm harbor --help works."
+      },
+      {
+        "title": "Choose the eval",
+        "detail": "Pick a registry dataset, local task path, local dataset, or job config before starting a run."
+      },
+      {
+        "title": "Confirm runtime",
+        "detail": "Verify Docker or the selected cloud sandbox credentials are available."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add the Harbor lab once agents should consider Harbor evals for this project.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Harbor when an agent needs to evaluate or optimize agents/models in sandboxed task environments, especially when the answer should be backed by reproducible trials instead of an ad hoc local run.",
+    "useCases": [
+      "Run a registered benchmark dataset against a named agent and model.",
+      "Run a local Harbor task or dataset to test an agent in a containerized sandbox.",
+      "Compare CLI agents such as Codex, Claude Code, Gemini CLI, OpenHands, or a custom Harbor agent import.",
+      "Generate rollouts, trajectories, or rewards for eval, prompt optimization, SFT, or RL workflows.",
+      "Create reproducible evidence for an agent-evaluation result before admitting it into project memory.",
+      "Scale an eval across cloud sandboxes after checking quota, credentials, and cost approval."
+    ],
+    "setup": [
+      "Read the Harbor docs for the task shape before creating or adapting datasets.",
+      "Run command -v harbor and harbor --help before assuming the CLI is installed.",
+      "Use Harbor only when sandboxed agent evaluation is warranted; keep quick local checks outside Harbor.",
+      "Record dataset or task version, agent, model, sandbox provider, command, output directory, and commit in result docs.",
+      "Ask before running expensive cloud sandboxes or broad benchmark sweeps.",
+      "Do not print or store model keys, sandbox provider keys, or private task data in the Library or generated guides."
+    ],
+    "commands": [
+      {
+        "command": "command -v harbor && harbor --help",
+        "label": "Check Harbor CLI",
+        "detail": "Confirms the CLI is installed in the current agent environment."
+      },
+      {
+        "command": "harbor dataset list || harbor datasets list",
+        "label": "List datasets",
+        "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands."
+      },
+      {
+        "command": "harbor run -d \"<org/name>\" -m \"<model>\" -a \"<agent>\"",
+        "label": "Run registered dataset",
+        "detail": "Runs a registry-backed eval for the chosen model and agent."
+      },
+      {
+        "command": "harbor run -p \"<path/to/dataset>\" -m \"<model>\" -a \"<agent>\"",
+        "label": "Run local dataset",
+        "detail": "Runs a local Harbor task or dataset directory."
+      },
+      {
+        "command": "harbor run -c \"<path/to/job.yaml>\"",
+        "label": "Run job config",
+        "detail": "Runs a multi-trial Harbor job configuration."
+      },
+      {
+        "command": "harbor run -d \"<org/name>\" -m \"<model>\" -a \"<agent>\" --env \"daytona\" -n 32",
+        "label": "Run cloud sandbox",
+        "detail": "Example horizontal cloud run; verify provider credentials, quota, and cost approval first."
+      },
+      {
+        "command": "harbor run -d \"<dataset@version>\" --agent-import-path path.to.agent:SomeAgent",
+        "label": "Run custom agent",
+        "detail": "Uses Harbor's custom agent import hook without modifying Harbor source."
+      }
+    ],
+    "docs": [
+      {
+        "label": "Harbor docs",
+        "url": "https://www.harborframework.com/docs"
+      },
+      {
+        "label": "Getting started",
+        "url": "https://www.harborframework.com/docs/getting-started"
+      },
+      {
+        "label": "Agents",
+        "url": "https://www.harborframework.com/docs/agents"
+      },
+      {
+        "label": "Tasks",
+        "url": "https://www.harborframework.com/docs/tasks"
+      },
+      {
+        "label": "Registry",
+        "url": "https://registry.harborframework.com/"
+      },
+      {
+        "label": "Trajectory format",
+        "url": "https://www.harborframework.com/docs/trajectory-format"
+      }
+    ],
+    "env": [
+      {
+        "name": "OPENAI_API_KEY",
+        "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+        "required": false
+      },
+      {
+        "name": "ANTHROPIC_API_KEY",
+        "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+        "required": false
+      },
+      {
+        "name": "GEMINI_API_KEY",
+        "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+        "required": false
+      },
+      {
+        "name": "DAYTONA_API_KEY",
+        "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+        "required": false
+      },
+      {
+        "name": "MODAL_TOKEN_ID / MODAL_TOKEN_SECRET",
+        "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+        "required": false
+      }
+    ]
+  }
+}

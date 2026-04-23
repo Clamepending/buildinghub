@@ -1,0 +1,89 @@
+{
+  "id": "sora",
+  "name": "Sora",
+  "version": "0.1.0",
+  "category": "Generative Media",
+  "description": "Create, edit, and extend OpenAI video generations through a Videos API or provider connector.",
+  "status": "API sunset 2026-09-24",
+  "trust": "manifest-only",
+  "icon": "studio",
+  "keywords": [
+    "sora",
+    "external",
+    "API sunset 2026-09-24",
+    "Generative Media",
+    "studio",
+    "API",
+    "OPENAI_API_KEY",
+    "OpenAI API key",
+    "OPENAI_API_KEY in agent environment",
+    "Model",
+    "sora-2 or sora-2-pro while available",
+    "Artifact scope",
+    "video IDs, downloads, thumbnails, and prompts",
+    "Confirm availability",
+    "Check that the account still has Videos API access before assigning Sora work.",
+    "Connect OpenAI",
+    "Provide OPENAI_API_KEY to the provider or local environment that will generate videos.",
+    "Install the building",
+    "Add the Sora studio once the external API or connector is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "studio"
+  },
+  "access": {
+    "label": "OpenAI Videos API",
+    "detail": "Requires OPENAI_API_KEY and account access to the OpenAI Videos API where the agent runs. Sora 2 and the Videos API are deprecated and scheduled to shut down on September 24, 2026."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Sora setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "OPENAI_API_KEY",
+      "detail": "Environment variable referenced by Sora setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "OpenAI API key",
+        "value": "OPENAI_API_KEY in agent environment",
+        "required": true
+      },
+      {
+        "label": "Model",
+        "value": "sora-2 or sora-2-pro while available",
+        "required": true
+      },
+      {
+        "label": "Artifact scope",
+        "value": "video IDs, downloads, thumbnails, and prompts",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Confirm availability",
+        "detail": "Check that the account still has Videos API access before assigning Sora work."
+      },
+      {
+        "title": "Connect OpenAI",
+        "detail": "Provide OPENAI_API_KEY to the provider or local environment that will generate videos."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add the Sora studio once the external API or connector is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

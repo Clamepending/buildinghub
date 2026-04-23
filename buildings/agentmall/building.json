@@ -1,0 +1,68 @@
+{
+  "id": "agentmall",
+  "name": "AgentMall",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Browse Agent Town theme skins and switch the game between the default, snowy, and desert looks.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "market",
+  "keywords": [
+    "agentmall",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "market",
+    "Theme catalog",
+    "default, snowy, desert",
+    "Persistence",
+    "browser local storage",
+    "Open AgentMall",
+    "Pick a theme from the Agent Town building panel.",
+    "Apply a theme",
+    "The selected look is saved for this browser and used by the game canvas."
+  ],
+  "visual": {
+    "shape": "market"
+  },
+  "access": {
+    "label": "Local browser theme",
+    "detail": "Uses browser-local Agent Town preferences only. No credentials or external services are required."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Theme catalog",
+        "value": "default, snowy, desert",
+        "required": true
+      },
+      {
+        "label": "Persistence",
+        "value": "browser local storage",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open AgentMall",
+        "detail": "Pick a theme from the Agent Town building panel."
+      },
+      {
+        "title": "Apply a theme",
+        "detail": "The selected look is saved for this browser and used by the game canvas."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use AgentMall when work involves Agent Town visual themes, game skins, or theme catalog behavior.",
+    "useCases": [
+      "Check which built-in Agent Town themes are available.",
+      "Modify theme palettes for the visual game canvas.",
+      "Verify the selected theme persists in browser-local preferences."
+    ],
+    "setup": [
+      "Open Agent Town and use the AgentMall building panel to change the active theme.",
+      "Keep theme data client-side unless a future task explicitly asks for shared settings."
+    ]
+  }
+}

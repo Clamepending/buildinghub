@@ -9,6 +9,7 @@
   "scripts": {
     "build": "node bin/buildinghub.mjs build",
     "doctor": "node bin/buildinghub.mjs doctor",
+    "sync:vibe-research": "node scripts/sync-vibe-research-buildings.mjs",
     "list": "node bin/buildinghub.mjs list",
     "site": "node bin/buildinghub.mjs site",
     "pack": "node bin/buildinghub.mjs pack --all",

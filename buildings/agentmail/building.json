@@ -1,0 +1,92 @@
+{
+  "id": "agentmail",
+  "name": "AgentMail",
+  "version": "0.1.0",
+  "category": "Communication",
+  "description": "Give Vibe Research an email inbox handled by one dedicated communications agent.",
+  "status": "setup available",
+  "trust": "manifest-only",
+  "icon": "agentmail",
+  "keywords": [
+    "agentmail",
+    "vibe-research",
+    "setup available",
+    "Communication",
+    "plugin",
+    "API",
+    ".communications-plugin-card",
+    "AgentMail API key",
+    "agentMailApiKey",
+    "agentMailApiKeyConfigured",
+    "Inbox ID",
+    "agentMailInboxId",
+    "Communications agent",
+    "agentMailProviderId",
+    "Enable the building",
+    "Turn on the AgentMail listener.",
+    "installed",
+    "Save mail variables",
+    "Add the API key and inbox the listener should watch.",
+    "Reply from one session",
+    "Incoming email is routed into the dedicated AgentMail communications session."
+  ],
+  "visual": {
+    "logo": "agentmail",
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "AgentMail is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by AgentMail setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "AgentMail API key",
+        "value": "Vibe Research setting: agentMailApiKey",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Inbox ID",
+        "value": "Vibe Research setting: agentMailInboxId",
+        "required": true
+      },
+      {
+        "label": "Communications agent",
+        "value": "Vibe Research setting: agentMailProviderId",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Enable the building",
+        "detail": "Turn on the AgentMail listener.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Save mail variables",
+        "detail": "Add the API key and inbox the listener should watch.",
+        "completeWhen": {
+          "allConfigured": [
+            "agentMailApiKeyConfigured",
+            "agentMailInboxId"
+          ]
+        }
+      },
+      {
+        "title": "Reply from one session",
+        "detail": "Incoming email is routed into the dedicated AgentMail communications session."
+      }
+    ]
+  }
+}

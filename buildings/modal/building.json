@@ -1,0 +1,175 @@
+{
+  "id": "modal",
+  "name": "Modal",
+  "version": "0.1.0",
+  "category": "Compute",
+  "description": "Run Python functions, jobs, web endpoints, and sandboxes on Modal cloud infrastructure.",
+  "status": "setup available",
+  "trust": "helper-command",
+  "icon": "compute",
+  "docsUrl": "https://modal.com/docs",
+  "homepageUrl": "https://modal.com/",
+  "keywords": [
+    "modal",
+    "compute",
+    "gpu",
+    "sandbox",
+    "python",
+    "serverless",
+    "jobs",
+    "functions",
+    "web endpoints",
+    "cloud"
+  ],
+  "visual": {
+    "shape": "factory"
+  },
+  "access": {
+    "label": "Modal CLI/Python SDK",
+    "detail": "Requires a Modal account plus token credentials where the agent runs. BuildingHub records setup metadata only and does not run Modal code."
+  },
+  "capabilities": [
+    {
+      "type": "helper-command",
+      "name": "modal",
+      "command": "modal",
+      "detail": "Modal CLI for token inspection, app runs, deployments, and sandbox workflows.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_ID",
+      "detail": "Modal account token id for automated CLI or SDK access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_SECRET",
+      "detail": "Modal account token secret for automated CLI or SDK access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "MODAL_ENVIRONMENT",
+      "detail": "Optional Modal Environment name when agents should target dev, prod, or another workspace environment.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Modal token id",
+        "value": "MODAL_TOKEN_ID in agent environment or modal token set profile",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Modal token secret",
+        "value": "MODAL_TOKEN_SECRET in agent environment or modal token set profile",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Modal environment",
+        "value": "MODAL_ENVIRONMENT or default Modal profile environment",
+        "required": false
+      },
+      {
+        "label": "Budget guardrail",
+        "value": "allowed GPU classes, runtime, deployment scope, and teardown expectations",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Install Modal tooling",
+        "detail": "Make the Modal Python package and modal CLI available in the agent runtime."
+      },
+      {
+        "title": "Configure credentials",
+        "detail": "Use modal token set or MODAL_TOKEN_ID and MODAL_TOKEN_SECRET in the environment that will run Modal work."
+      },
+      {
+        "title": "Choose environment and budget",
+        "detail": "Pin the target Modal Environment and write cost, GPU, runtime, and deployment guardrails before agents launch jobs."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add Modal to Agent Town after credentials and budget rules are documented.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Modal when an agent needs to run Python functions, jobs, web endpoints, or sandbox workloads on Modal after credentials and cost guardrails are approved.",
+    "useCases": [
+      "Run remote Python jobs that need GPUs or serverless scaling.",
+      "Deploy or inspect Modal Apps, Functions, web endpoints, Volumes, Secrets, and Sandboxes.",
+      "Check whether Modal token credentials or Environment selection are blocking a cloud run."
+    ],
+    "setup": [
+      "Read the generated BuildingHub manifest and Modal docs before launching paid cloud workloads.",
+      "Run modal token info or modal config show to confirm authentication without printing secrets.",
+      "Ask for approval before deploying persistent services, broad parallel jobs, expensive GPUs, or long-running work.",
+      "Record Modal app name, environment, command, commit, output paths, and cost-relevant settings in result docs when they matter."
+    ],
+    "commands": [
+      {
+        "label": "Check Modal CLI",
+        "command": "modal --help",
+        "detail": "Confirms the Modal CLI is installed."
+      },
+      {
+        "label": "Check token profile",
+        "command": "modal token info",
+        "detail": "Shows the active Modal token profile without exposing the token secret."
+      },
+      {
+        "label": "Show redacted config",
+        "command": "modal config show",
+        "detail": "Inspects the active Modal configuration with secret redaction enabled by default."
+      }
+    ],
+    "docs": [
+      {
+        "label": "Modal docs",
+        "url": "https://modal.com/docs"
+      },
+      {
+        "label": "Modal token CLI",
+        "url": "https://modal.com/docs/reference/cli/token"
+      },
+      {
+        "label": "Modal configuration",
+        "url": "https://modal.com/docs/reference/modal.config"
+      },
+      {
+        "label": "Modal Environments",
+        "url": "https://modal.com/docs/guide/environments"
+      },
+      {
+        "label": "Modal Secrets",
+        "url": "https://modal.com/docs/guide/secrets"
+      }
+    ],
+    "env": [
+      {
+        "name": "MODAL_TOKEN_ID",
+        "detail": "Modal token id for automated CLI or SDK access; keep paired with the secret.",
+        "required": true
+      },
+      {
+        "name": "MODAL_TOKEN_SECRET",
+        "detail": "Modal token secret for automated CLI or SDK access; never print it.",
+        "required": true
+      },
+      {
+        "name": "MODAL_ENVIRONMENT",
+        "detail": "Optional target Modal Environment for CLI and SDK operations.",
+        "required": false
+      }
+    ]
+  }
+}

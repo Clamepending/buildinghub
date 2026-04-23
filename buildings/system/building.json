@@ -1,0 +1,122 @@
+{
+  "id": "system",
+  "name": "System",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Inspect this host's storage, CPU, memory, GPU utilization, accelerators, and agent usage.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "plugin",
+  "keywords": [
+    "system",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "plugin",
+    "VIBE_RESEARCH_PORT",
+    "VIBE_RESEARCH_SYSTEM_DIR",
+    "CPU",
+    "GPU",
+    "Metrics endpoint",
+    "/api/system",
+    "History endpoint",
+    "/api/system/history",
+    "Open System",
+    "Use the System building to inspect host storage, CPU, memory, GPU, accelerator, and agent usage metrics.",
+    "installed",
+    "Check GPU ownership",
+    "Review which GPU processes belong to Vibe Research sessions before scheduling heavy work."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Host metrics",
+    "detail": "Uses the local system metrics sampler for host storage, CPU, memory, GPU, accelerator, and Vibe Research agent usage data. No extra credentials are required."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_PORT",
+      "detail": "Current Vibe Research server port when available.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_SYSTEM_DIR",
+      "detail": "Local system workspace directory for generated guides and communication state.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CPU",
+      "detail": "Environment variable referenced by System setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GPU",
+      "detail": "Environment variable referenced by System setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Metrics endpoint",
+        "value": "/api/system",
+        "required": true
+      },
+      {
+        "label": "History endpoint",
+        "value": "/api/system/history",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open System",
+        "detail": "Use the System building to inspect host storage, CPU, memory, GPU, accelerator, and agent usage metrics.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Check GPU ownership",
+        "detail": "Review which GPU processes belong to Vibe Research sessions before scheduling heavy work."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use System when an agent needs to inspect host capacity, GPU availability, storage pressure, or local Vibe Research agent usage.",
+    "useCases": [
+      "Check GPU utilization and ownership before starting heavy experiments.",
+      "Review CPU, memory, storage, and accelerator inventory for the local machine.",
+      "Inspect recent system metric history when diagnosing host pressure."
+    ],
+    "commands": [
+      {
+        "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/system -H 'X-Vibe-Research-API: 1'",
+        "label": "Read current metrics",
+        "detail": "Shows current storage, CPU, memory, GPU, accelerator, and agent usage metrics."
+      },
+      {
+        "command": "curl -s 'http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/system/history?range=1h' -H 'X-Vibe-Research-API: 1'",
+        "label": "Read one-hour history",
+        "detail": "Shows the sampled history backing the System charts."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_PORT",
+        "detail": "Current Vibe Research server port when available.",
+        "required": false
+      },
+      {
+        "name": "VIBE_RESEARCH_SYSTEM_DIR",
+        "detail": "Local system workspace directory for generated guides and communication state.",
+        "required": false
+      }
+    ]
+  }
+}

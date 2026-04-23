@@ -1,0 +1,149 @@
+{
+  "id": "tailscale",
+  "name": "Tailscale",
+  "version": "0.1.0",
+  "category": "Networking",
+  "description": "Open Vibe Research and localhost app ports through a tailnet portal.",
+  "status": "auto-detected",
+  "trust": "helper-command",
+  "icon": "portal",
+  "keywords": [
+    "tailscale",
+    "vibe-research",
+    "auto-detected",
+    "Networking",
+    "portal",
+    "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+    "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+    "CLI",
+    "URL",
+    "Tailscale CLI",
+    "installed and logged in on this machine",
+    "Tailnet URL",
+    "auto-detected when Tailscale is connected",
+    "Serve permissions",
+    "local tailscale serve access",
+    "Connect Tailscale",
+    "Sign in with the local Tailscale CLI if tailnet URLs are not appearing.",
+    "Use the portal",
+    "Open Vibe Research from the Tailscale URL shown in startup output or port previews.",
+    "Expose local apps",
+    "Use the Localhost Apps dock to publish eligible localhost-only ports with Tailscale Serve."
+  ],
+  "visual": {
+    "shape": "portal"
+  },
+  "access": {
+    "label": "Tailnet portal",
+    "detail": "Uses the local Tailscale CLI when available to show tailnet URLs and expose localhost-only ports with Tailscale Serve. Vibe Research does not store Tailscale credentials."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Directory containing all generated building guides.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+      "detail": "Index of generated building guides.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Tailscale setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by Tailscale setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "tailscale",
+      "command": "tailscale",
+      "detail": "Shows whether the machine is logged into a tailnet.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Tailscale CLI",
+        "value": "installed and logged in on this machine",
+        "required": false
+      },
+      {
+        "label": "Tailnet URL",
+        "value": "auto-detected when Tailscale is connected",
+        "required": false
+      },
+      {
+        "label": "Serve permissions",
+        "value": "local tailscale serve access",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect Tailscale",
+        "detail": "Sign in with the local Tailscale CLI if tailnet URLs are not appearing."
+      },
+      {
+        "title": "Use the portal",
+        "detail": "Open Vibe Research from the Tailscale URL shown in startup output or port previews."
+      },
+      {
+        "title": "Expose local apps",
+        "detail": "Use the Localhost Apps dock to publish eligible localhost-only ports with Tailscale Serve."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Tailscale when an agent needs to understand private remote access, tailnet URLs, or why a localhost app can be exposed safely through Tailscale Serve.",
+    "useCases": [
+      "Check whether this Vibe Research instance has a tailnet URL.",
+      "Diagnose why a localhost-only app is not reachable from another device.",
+      "Explain to a human what Tailscale Serve setup is missing without asking for credentials unless login is required."
+    ],
+    "commands": [
+      {
+        "command": "tailscale status",
+        "label": "Check local Tailscale status",
+        "detail": "Shows whether the machine is logged into a tailnet."
+      },
+      {
+        "command": "tailscale serve status",
+        "label": "Check Serve config",
+        "detail": "Shows active Tailscale Serve forwards."
+      },
+      {
+        "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/ports -H 'X-Vibe-Research-API: 1'",
+        "label": "List app ports",
+        "detail": "Use the current app port when known; browser UI usually exposes ports directly."
+      }
+    ],
+    "docs": [
+      {
+        "label": "Tailscale Serve docs",
+        "url": "https://tailscale.com/kb/1242/tailscale-serve"
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "detail": "Directory containing all generated building guides.",
+        "required": false
+      },
+      {
+        "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+        "detail": "Index of generated building guides.",
+        "required": false
+      }
+    ]
+  }
+}

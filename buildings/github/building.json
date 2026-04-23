@@ -1,0 +1,55 @@
+{
+  "id": "github",
+  "name": "GitHub",
+  "version": "0.1.0",
+  "category": "Coding",
+  "description": "Triage PRs, inspect issues, and publish changes from agent sessions.",
+  "status": "available in Codex",
+  "trust": "manifest-only",
+  "icon": "plugin",
+  "keywords": [
+    "github",
+    "plugin",
+    "available in Codex",
+    "Coding",
+    "GitHub account",
+    "Codex connector or gh auth",
+    "Repository access",
+    "granted in host agent",
+    "Connect GitHub",
+    "Enable the GitHub plugin or authenticate gh where agents run.",
+    "Start a session",
+    "Agents can inspect repositories, issues, pull requests, and checks."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Host connector",
+    "detail": "Available to host agents that have the GitHub connector or gh authentication. Local terminal agents need their own GitHub auth."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "GitHub account",
+        "value": "Codex connector or gh auth",
+        "required": true
+      },
+      {
+        "label": "Repository access",
+        "value": "granted in host agent",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect GitHub",
+        "detail": "Enable the GitHub plugin or authenticate gh where agents run."
+      },
+      {
+        "title": "Start a session",
+        "detail": "Agents can inspect repositories, issues, pull requests, and checks."
+      }
+    ]
+  }
+}

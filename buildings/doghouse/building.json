@@ -1,0 +1,60 @@
+{
+  "id": "doghouse",
+  "name": "Doghouse",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Adds a tiny doghouse to Agent Town with a dog that wanders around the map.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "doghouse",
+  "keywords": [
+    "doghouse",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "Town canvas",
+    "local Agent Town visual interface",
+    "Open Agent Town",
+    "The doghouse appears on the map automatically.",
+    "installed",
+    "Watch the patrol",
+    "The town dog leaves the doghouse and wanders nearby while the map is open."
+  ],
+  "visual": {
+    "shape": "doghouse"
+  },
+  "access": {
+    "label": "Agent Town companion",
+    "detail": "Uses only the local Agent Town canvas. No setup, network access, or credentials are required."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Town canvas",
+        "value": "local Agent Town visual interface",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open Agent Town",
+        "detail": "The doghouse appears on the map automatically.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Watch the patrol",
+        "detail": "The town dog leaves the doghouse and wanders nearby while the map is open."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Doghouse when work involves the decorative Agent Town doghouse or roaming dog animation.",
+    "useCases": [
+      "Verify Agent Town decorative sprites render correctly.",
+      "Adjust the doghouse placement or dog patrol route.",
+      "Check that map hit areas still open the Doghouse building panel."
+    ]
+  }
+}

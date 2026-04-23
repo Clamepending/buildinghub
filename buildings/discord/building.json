@@ -1,0 +1,89 @@
+{
+  "id": "discord",
+  "name": "Discord",
+  "version": "0.1.0",
+  "category": "Communication",
+  "description": "Route Discord server or DM activity through a dedicated provider connector.",
+  "status": "connector-ready",
+  "trust": "mcp",
+  "icon": "post",
+  "keywords": [
+    "discord",
+    "external",
+    "connector-ready",
+    "Communication",
+    "post",
+    "MCP",
+    "Discord MCP",
+    "Discord app",
+    "bot or webhook",
+    "Server scope",
+    "channels and DMs to monitor",
+    "Agent access",
+    "provider MCP or local bridge",
+    "Create an app",
+    "Create a Discord bot or webhook with the narrow channel permissions agents need.",
+    "Connect the provider",
+    "Add the Discord connector to the host/provider that will handle messages.",
+    "Install the building",
+    "Add this building to Agent Town once the external connector is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "post"
+  },
+  "access": {
+    "label": "External connector",
+    "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Discord setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Discord MCP",
+      "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Discord app",
+        "value": "bot or webhook",
+        "required": false
+      },
+      {
+        "label": "Server scope",
+        "value": "channels and DMs to monitor",
+        "required": false
+      },
+      {
+        "label": "Agent access",
+        "value": "provider MCP or local bridge",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create an app",
+        "detail": "Create a Discord bot or webhook with the narrow channel permissions agents need."
+      },
+      {
+        "title": "Connect the provider",
+        "detail": "Add the Discord connector to the host/provider that will handle messages."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add this building to Agent Town once the external connector is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

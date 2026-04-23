@@ -1,0 +1,131 @@
+{
+  "id": "videomemory",
+  "name": "VideoMemory",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Let coding agents create video monitors that wake their own Vibe Research sessions.",
+  "status": "setup available",
+  "trust": "helper-command",
+  "icon": "camera",
+  "keywords": [
+    "videomemory",
+    "vibe-research",
+    "setup available",
+    "Vibe Research",
+    "camera",
+    "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+    "URL",
+    "vr-videomemory",
+    ".videomemory-plugin-card",
+    "VideoMemory URL",
+    "videoMemoryBaseUrl",
+    "Wake provider",
+    "videoMemoryProviderId",
+    "Camera permission",
+    "browser permission",
+    "Enable the building",
+    "Turn on camera monitors.",
+    "installed",
+    "Save monitor variables",
+    "Set the service URL and provider agents should wake.",
+    "Grant camera access",
+    "Start a monitor and allow camera access when the browser asks."
+  ],
+  "visual": {
+    "shape": "camera"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "VideoMemory is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+      "detail": "Canonical helper command for local agents.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by VideoMemory setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-videomemory",
+      "command": "vr-videomemory",
+      "detail": "Read helper options before creating a monitor.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "VideoMemory URL",
+        "value": "Vibe Research setting: videoMemoryBaseUrl",
+        "required": true
+      },
+      {
+        "label": "Wake provider",
+        "value": "Vibe Research setting: videoMemoryProviderId",
+        "required": true
+      },
+      {
+        "label": "Camera permission",
+        "value": "browser permission",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Enable the building",
+        "detail": "Turn on camera monitors.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Save monitor variables",
+        "detail": "Set the service URL and provider agents should wake.",
+        "completeWhen": {
+          "allConfigured": [
+            "videoMemoryBaseUrl",
+            "videoMemoryProviderId"
+          ]
+        }
+      },
+      {
+        "title": "Grant camera access",
+        "detail": "Start a monitor and allow camera access when the browser asks."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use VideoMemory when an agent needs a camera or video monitor that can wake a Vibe Research session later.",
+    "useCases": [
+      "Create a monitor that watches a browser/camera condition and wakes an agent.",
+      "Check whether camera permission or service URL setup is blocking monitors.",
+      "Record monitor IDs, task URLs, and artifact paths in the Library when they matter."
+    ],
+    "commands": [
+      {
+        "command": "vr-videomemory --help",
+        "label": "Start a monitor",
+        "detail": "Read helper options before creating a monitor."
+      },
+      {
+        "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/videomemory.md\"",
+        "label": "Read VideoMemory guide",
+        "detail": "Review setup and camera permission expectations first."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+        "detail": "Canonical helper command for local agents.",
+        "required": false
+      }
+    ]
+  }
+}

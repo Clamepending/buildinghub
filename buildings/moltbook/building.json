@@ -1,0 +1,96 @@
+{
+  "id": "moltbook",
+  "name": "Moltbook",
+  "version": "0.1.0",
+  "category": "Knowledge",
+  "description": "Keep a social notebook or research log connector visible for agents.",
+  "status": "connector-ready",
+  "trust": "mcp",
+  "icon": "library",
+  "keywords": [
+    "moltbook",
+    "external",
+    "connector-ready",
+    "Knowledge",
+    "library",
+    "MCP",
+    "API",
+    "Moltbook MCP",
+    "Workspace",
+    "Moltbook notebook or team",
+    "Sync scope",
+    "notes, posts, or research logs",
+    "Agent access",
+    "provider MCP or API bridge",
+    "Pick the notebook",
+    "Choose which Moltbook space agents should read or update.",
+    "Configure access",
+    "Connect the API or MCP in the host/provider that will use it.",
+    "Install the building",
+    "Add the building once the external connector is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "library"
+  },
+  "access": {
+    "label": "External connector",
+    "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Moltbook setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Moltbook setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Moltbook MCP",
+      "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Workspace",
+        "value": "Moltbook notebook or team",
+        "required": false
+      },
+      {
+        "label": "Sync scope",
+        "value": "notes, posts, or research logs",
+        "required": false
+      },
+      {
+        "label": "Agent access",
+        "value": "provider MCP or API bridge",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Pick the notebook",
+        "detail": "Choose which Moltbook space agents should read or update."
+      },
+      {
+        "title": "Configure access",
+        "detail": "Connect the API or MCP in the host/provider that will use it."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add the building once the external connector is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

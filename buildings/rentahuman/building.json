@@ -1,0 +1,206 @@
+{
+  "id": "rentahuman",
+  "name": "RentAHuman",
+  "version": "0.1.0",
+  "category": "Commerce",
+  "description": "Let AI agents hire humans for real-world tasks through RentAHuman's MCP server or REST API.",
+  "status": "MCP-ready",
+  "trust": "mcp",
+  "icon": "rentahuman",
+  "keywords": [
+    "rentahuman",
+    "external",
+    "MCP-ready",
+    "Commerce",
+    "market",
+    "RENTAHUMAN_API_URL",
+    "RENTAHUMAN_API_KEY",
+    "MCP",
+    "API",
+    "URL",
+    "REST",
+    "npx",
+    "RentAHuman MCP",
+    "MCP server",
+    "npx rentahuman-mcp",
+    "API URL",
+    "https://rentahuman.ai/api",
+    "API key or operator pairing",
+    "required for posting bounties, hiring, messaging, or payments",
+    "Spend policy",
+    "budget, escrow, and release approval rules",
+    "Read the agent docs",
+    "Review the MCP guide, REST API docs, and task/payment model before giving agents write access.",
+    "Connect RentAHuman"
+  ],
+  "visual": {
+    "logo": "rentahuman",
+    "shape": "market"
+  },
+  "access": {
+    "label": "RentAHuman MCP/API",
+    "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "RENTAHUMAN_API_URL",
+      "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "RENTAHUMAN_API_KEY",
+      "detail": "Account credential for authenticated write/payment actions; never print it.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "REST",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "npx",
+      "command": "npx",
+      "detail": "Confirms the MCP package can run in the current agent environment.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "RentAHuman MCP",
+      "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "MCP server",
+        "value": "npx rentahuman-mcp",
+        "required": false
+      },
+      {
+        "label": "API URL",
+        "value": "https://rentahuman.ai/api",
+        "required": false
+      },
+      {
+        "label": "API key or operator pairing",
+        "value": "required for posting bounties, hiring, messaging, or payments",
+        "required": true
+      },
+      {
+        "label": "Spend policy",
+        "value": "budget, escrow, and release approval rules",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Read the agent docs",
+        "detail": "Review the MCP guide, REST API docs, and task/payment model before giving agents write access."
+      },
+      {
+        "title": "Connect RentAHuman",
+        "detail": "Configure the MCP server or REST API in the provider or local environment that will use it."
+      },
+      {
+        "title": "Set approval rules",
+        "detail": "Require explicit human approval before posting paid bounties, funding escrow, releasing payment, or exposing private data."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add RentAHuman to Agent Town once the MCP or API path is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use RentAHuman when an agent needs a human workforce for physical-world tasks through RentAHuman's MCP server or REST API.",
+    "useCases": [
+      "Search humans by skill, rate, location, city, or country.",
+      "Post bounties for field research, errands, delivery, media capture, QA, or local presence tasks.",
+      "Book services, manage applications, and track escrow-backed completion when the account is approved.",
+      "Inspect public bounties or profiles before asking the human for credentials, spend approval, or operator pairing."
+    ],
+    "setup": [
+      "Start with read-only search and browsing unless the user has explicitly approved posting or spending.",
+      "Keep RentAHuman API keys, generated identities, pairing codes, prepaid card details, and Stripe data out of prompts, Library notes, logs, and screenshots.",
+      "Record task scope, budget, location, deadline, evidence requirements, and approval points before creating paid bounties.",
+      "Ask for human approval before posting paid work, accepting applications, funding escrow, releasing payment, sending money, or sharing private user data."
+    ],
+    "commands": [
+      {
+        "command": "npx -y rentahuman-mcp --help",
+        "label": "Check MCP package help",
+        "detail": "Confirms the MCP package can run in the current agent environment."
+      },
+      {
+        "command": "curl -L https://rentahuman.ai/llms.txt",
+        "label": "Read agent quickstart",
+        "detail": "Shows the current MCP package name, public endpoints, and tool list."
+      },
+      {
+        "command": "curl -s \"https://rentahuman.ai/api/humans?skill=Photography&limit=3\"",
+        "label": "Try public human search",
+        "detail": "Uses a no-auth endpoint to validate basic network access without spending money."
+      }
+    ],
+    "docs": [
+      {
+        "label": "RentAHuman",
+        "url": "https://rentahuman.ai/"
+      },
+      {
+        "label": "MCP guide",
+        "url": "https://rentahuman.ai/mcp"
+      },
+      {
+        "label": "API docs",
+        "url": "https://rentahuman.ai/api-docs"
+      },
+      {
+        "label": "OpenAPI spec",
+        "url": "https://rentahuman.ai/.well-known/openapi.yaml"
+      },
+      {
+        "label": "Agent quickstart",
+        "url": "https://rentahuman.ai/llms.txt"
+      }
+    ],
+    "env": [
+      {
+        "name": "RENTAHUMAN_API_URL",
+        "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+        "required": false
+      },
+      {
+        "name": "RENTAHUMAN_API_KEY",
+        "detail": "Account credential for authenticated write/payment actions; never print it.",
+        "required": false
+      }
+    ]
+  }
+}

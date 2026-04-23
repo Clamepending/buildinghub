@@ -1,0 +1,96 @@
+{
+  "id": "wandb",
+  "name": "W&B",
+  "version": "0.1.0",
+  "category": "Observability",
+  "description": "Track training runs, sweeps, metrics, and artifacts from research-agent experiments.",
+  "status": "connector-ready",
+  "trust": "manifest-only",
+  "icon": "studio",
+  "keywords": [
+    "wandb",
+    "external",
+    "connector-ready",
+    "Observability",
+    "studio",
+    "API",
+    "WANDB_API_KEY",
+    "URL",
+    "W&B API key",
+    "WANDB_API_KEY in agent environment",
+    "Entity / project",
+    "wandb entity and project name",
+    "Artifact policy",
+    "run URLs, configs, checkpoints, tables, and plots",
+    "Authenticate wandb",
+    "Log in or provide WANDB_API_KEY in the environment used by the training agent.",
+    "Declare the project",
+    "Tell agents which entity/project to log to before long runs start.",
+    "Install the building",
+    "Add W&B to Agent Town once experiment logging is configured.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "studio"
+  },
+  "access": {
+    "label": "Weights & Biases API",
+    "detail": "Requires WANDB_API_KEY or an existing wandb login where the agent runs, plus explicit entity/project scope for experiment logging."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "WANDB_API_KEY",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "W&B API key",
+        "value": "WANDB_API_KEY in agent environment",
+        "required": true
+      },
+      {
+        "label": "Entity / project",
+        "value": "wandb entity and project name",
+        "required": true
+      },
+      {
+        "label": "Artifact policy",
+        "value": "run URLs, configs, checkpoints, tables, and plots",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Authenticate wandb",
+        "detail": "Log in or provide WANDB_API_KEY in the environment used by the training agent."
+      },
+      {
+        "title": "Declare the project",
+        "detail": "Tell agents which entity/project to log to before long runs start."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add W&B to Agent Town once experiment logging is configured.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

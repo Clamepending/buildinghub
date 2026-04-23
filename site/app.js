@@ -1,6 +1,6 @@
 const state = {
   registry: null,
-  tab: "layouts",
+  tab: "buildings",
   query: "",
 };
 
@@ -13,22 +13,59 @@ function text(value) {
 }
 
 function matches(entry, query) {
-  if (!query) {
-    return true;
+  return searchScore(entry, query) > 0;
+}
+
+function searchScore(entry, query) {
+  const normalizedQuery = text(query).trim().toLowerCase();
+  if (!normalizedQuery) {
+    return 1;
   }
 
-  const haystack = [
-    entry.id,
-    entry.name,
-    entry.category,
-    entry.description,
-    entry.status,
-    entry.trust,
+  const id = text(entry.id).toLowerCase();
+  const name = text(entry.name).toLowerCase();
+  const category = text(entry.category).toLowerCase();
+  const status = text(entry.status).toLowerCase();
+  const source = text(entry.source).toLowerCase();
+  const direct = [id, name];
+  const tags = [
     ...(Array.isArray(entry.tags) ? entry.tags : []),
     ...(Array.isArray(entry.keywords) ? entry.keywords : []),
     ...(Array.isArray(entry.requiredBuildings) ? entry.requiredBuildings : []),
-  ].join(" ").toLowerCase();
-  return haystack.includes(query.toLowerCase());
+  ].map((value) => text(value).toLowerCase());
+  const nested = collectSearchText(entry).join(" ").toLowerCase();
+
+  if (direct.some((value) => value === normalizedQuery)) {
+    return 120;
+  }
+  if (direct.some((value) => value.startsWith(normalizedQuery))) {
+    return 100;
+  }
+  if (direct.some((value) => value.includes(normalizedQuery))) {
+    return 86;
+  }
+  if ([category, status, source].some((value) => value.includes(normalizedQuery))) {
+    return 58;
+  }
+  if (tags.some((value) => value.includes(normalizedQuery))) {
+    return 50;
+  }
+  return nested.includes(normalizedQuery) ? 18 : 0;
+}
+
+function collectSearchText(value, output = []) {
+  if (typeof value === "string" || typeof value === "number" || typeof value === "boolean") {
+    output.push(String(value));
+    return output;
+  }
+  if (Array.isArray(value)) {
+    value.forEach((entry) => collectSearchText(entry, output));
+    return output;
+  }
+  if (value && typeof value === "object") {
+    Object.values(value).forEach((entry) => collectSearchText(entry, output));
+  }
+  return output;
 }
 
 function escapeHtml(value) {
@@ -53,8 +90,23 @@ function renderTags(tags) {
   return tags.map((tag) => `<span class="pill">${escapeHtml(tag)}</span>`).join("");
 }
 
+function getDisplayTags(tags, limit = 6) {
+  const readable = tags.filter((tag) => {
+    const value = text(tag);
+    return value.length <= 24 && !/^[A-Z0-9_]{12,}$/.test(value);
+  });
+  return (readable.length ? readable : tags).slice(0, limit);
+}
+
+function normalizeClassName(value) {
+  return text(value)
+    .toLowerCase()
+    .replace(/[^a-z0-9]+/g, "-")
+    .replace(/^-+|-+$/g, "") || "building";
+}
+
 function renderLayoutCard(layout) {
-  const tags = (Array.isArray(layout.tags) ? layout.tags : []).slice(0, 6);
+  const tags = getDisplayTags(Array.isArray(layout.tags) ? layout.tags : []);
   const decorations = Array.isArray(layout.layout?.decorations) ? layout.layout.decorations : [];
   const functionalCount = Object.keys(layout.layout?.functional || {}).length;
   const shot = `./assets/layouts/${encodeURIComponent(layout.id)}.svg`;
@@ -80,13 +132,20 @@ function renderLayoutCard(layout) {
 }
 
 function renderBuildingCard(building) {
-  const tags = (Array.isArray(building.keywords) ? building.keywords : []).slice(0, 6);
-  const initial = text(building.name || building.id).slice(0, 1).toUpperCase();
+  const tags = getDisplayTags(Array.isArray(building.keywords) ? building.keywords : []);
+  const shape = normalizeClassName(building.visual?.shape || building.icon || "plugin");
   return `
     <article class="card">
-      <div class="building-mark" aria-hidden="true">
-        <div class="building-icon">${escapeHtml(initial)}</div>
-        <span>${escapeHtml(building.category || "Building")}</span>
+      <div class="building-mark building-shape-${escapeHtml(shape)}" aria-hidden="true">
+        <span class="building-mark-grid"></span>
+        <span class="building-mark-shadow"></span>
+        <span class="building-mark-roof"></span>
+        <span class="building-mark-body">
+          <span class="building-mark-window"></span>
+          <span class="building-mark-window"></span>
+          <span class="building-mark-door"></span>
+        </span>
+        <span class="building-mark-sign">${escapeHtml(building.category || "Building")}</span>
       </div>
       <div class="meta">
         <span class="pill is-accent">${escapeHtml(building.category || "Building")}</span>
@@ -117,7 +176,15 @@ function render() {
   const entries = state.tab === "layouts"
     ? (Array.isArray(registry.layouts) ? registry.layouts : [])
     : (Array.isArray(registry.buildings) ? registry.buildings : []);
-  const filtered = entries.filter((entry) => matches(entry, state.query));
+  const filtered = entries
+    .map((entry, index) => ({ entry, index, score: searchScore(entry, state.query) }))
+    .filter((result) => result.score > 0)
+    .sort((left, right) => (
+      right.score - left.score
+      || text(left.entry.name).localeCompare(text(right.entry.name))
+      || left.index - right.index
+    ))
+    .map((result) => result.entry);
   const totalLayouts = Array.isArray(registry.layouts) ? registry.layouts.length : 0;
   const totalBuildings = Array.isArray(registry.buildings) ? registry.buildings.length : 0;
   summary.textContent = `${filtered.length} ${state.tab} shown · ${totalLayouts} layouts · ${totalBuildings} buildings`;

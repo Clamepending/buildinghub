@@ -1,0 +1,145 @@
+{
+  "id": "ottoauth",
+  "name": "OttoAuth",
+  "version": "0.1.0",
+  "category": "Commerce",
+  "description": "Let agents buy things through OttoAuth's hosted, human-linked service layer.",
+  "status": "setup available",
+  "trust": "helper-command",
+  "icon": "market",
+  "keywords": [
+    "ottoauth",
+    "vibe-research",
+    "setup available",
+    "Commerce",
+    "market",
+    "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+    "URL",
+    "vr-ottoauth",
+    ".ottoauth-plugin-card",
+    "Username",
+    "ottoAuthUsername",
+    "Private key",
+    "ottoAuthPrivateKey",
+    "ottoAuthPrivateKeyConfigured",
+    "Service URL",
+    "ottoAuthBaseUrl",
+    "Default spend cap",
+    "ottoAuthDefaultMaxChargeCents",
+    "cents",
+    "Callback URL",
+    "ottoAuthCallbackUrl",
+    "Enable the building",
+    "Turn on OttoAuth requests.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "market"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "OttoAuth is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+      "detail": "Canonical helper command for local agents.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by OttoAuth setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-ottoauth",
+      "command": "vr-ottoauth",
+      "detail": "Use an explicit spending bound for commerce requests.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Username",
+        "value": "Vibe Research setting: ottoAuthUsername",
+        "required": true
+      },
+      {
+        "label": "Private key",
+        "value": "Vibe Research setting: ottoAuthPrivateKey",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Service URL",
+        "value": "Vibe Research setting: ottoAuthBaseUrl",
+        "required": true
+      },
+      {
+        "label": "Default spend cap",
+        "value": "Vibe Research setting: ottoAuthDefaultMaxChargeCents",
+        "required": false
+      },
+      {
+        "label": "Callback URL",
+        "value": "Vibe Research setting: ottoAuthCallbackUrl",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Enable the building",
+        "detail": "Turn on OttoAuth requests.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Save commerce variables",
+        "detail": "Add the username, private key, service URL, and spend defaults.",
+        "completeWhen": {
+          "allConfigured": [
+            "ottoAuthUsername",
+            "ottoAuthPrivateKeyConfigured",
+            "ottoAuthBaseUrl"
+          ]
+        }
+      },
+      {
+        "title": "Call the helper",
+        "detail": "Agents can run vr-ottoauth --task \"...\" --max-charge-cents 2500 --wait."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use OttoAuth when an agent needs human-linked checkout or purchase help through a bounded service request.",
+    "useCases": [
+      "Create an OttoAuth task from an agent session.",
+      "Respect spend caps and callback setup before asking a human to approve commerce actions.",
+      "Diagnose missing username, private key, service URL, or default spend cap setup."
+    ],
+    "commands": [
+      {
+        "command": "vr-ottoauth --task \"Describe the purchase or checkout task\" --max-charge-cents 2500 --wait",
+        "label": "Start an OttoAuth task",
+        "detail": "Use an explicit spending bound for commerce requests."
+      },
+      {
+        "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_DIR/ottoauth.md\"",
+        "label": "Read OttoAuth guide",
+        "detail": "Review setup and safety expectations first."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+        "detail": "Canonical helper command for local agents.",
+        "required": false
+      }
+    ]
+  }
+}

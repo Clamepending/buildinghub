@@ -1,0 +1,124 @@
+{
+  "id": "toolshed",
+  "name": "Toolshed",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Build new Agent Town buildings, prepare BuildingHub submissions, and keep the Vibe Research operating map close at hand.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "plugin",
+  "keywords": [
+    "toolshed",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "plugin",
+    "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+    "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+    "SDK",
+    "Building docs",
+    "docs/buildings.md",
+    "Starter catalog",
+    "BuildingHub checkout or template",
+    "Publish path",
+    "GitHub PR to BuildingHub",
+    "Read the map",
+    "Understand buildings, Library memory, settings, occupations, automations, and communications before adding new surfaces.",
+    "Draft a manifest",
+    "Copy a BuildingHub template or add a first-party manifest with a stable id, setup variables, and Agent Town visual shape.",
+    "Validate and publish",
+    "Run the catalog validator, rebuild registry.json, and open a reviewed BuildingHub pull request when the building is community-safe."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Building SDK + BuildingHub",
+    "detail": "Uses the local building docs, core manifest registry, and optional BuildingHub catalog workflow. Community buildings stay manifest-only until reviewed."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Generated per-building guide directory.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+      "detail": "Generated building guide index.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "SDK",
+      "detail": "Environment variable referenced by Toolshed setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Building docs",
+        "value": "docs/buildings.md",
+        "required": true
+      },
+      {
+        "label": "Starter catalog",
+        "value": "BuildingHub checkout or template",
+        "required": false
+      },
+      {
+        "label": "Publish path",
+        "value": "GitHub PR to BuildingHub",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Read the map",
+        "detail": "Understand buildings, Library memory, settings, occupations, automations, and communications before adding new surfaces."
+      },
+      {
+        "title": "Draft a manifest",
+        "detail": "Copy a BuildingHub template or add a first-party manifest with a stable id, setup variables, and Agent Town visual shape."
+      },
+      {
+        "title": "Validate and publish",
+        "detail": "Run the catalog validator, rebuild registry.json, and open a reviewed BuildingHub pull request when the building is community-safe."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Toolshed when an agent needs to create, review, or extend a building manifest and its generated setup guide.",
+    "useCases": [
+      "Draft a first-party building manifest with setup, access, and agentGuide fields.",
+      "Create or review a manifest-only BuildingHub entry.",
+      "Find the generated building guide index that Codex and Claude Code sessions can read."
+    ],
+    "commands": [
+      {
+        "command": "sed -n '1,220p' docs/buildings.md",
+        "label": "Read building docs",
+        "detail": "Start here before changing building contracts."
+      },
+      {
+        "command": "sed -n '1,220p' \"$VIBE_RESEARCH_BUILDING_GUIDES_INDEX\"",
+        "label": "Read generated guide index",
+        "detail": "Shows every building guide available to the current agent."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+        "detail": "Generated per-building guide directory.",
+        "required": false
+      },
+      {
+        "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+        "detail": "Generated building guide index.",
+        "required": false
+      }
+    ]
+  }
+}

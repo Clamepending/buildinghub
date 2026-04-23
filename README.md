@@ -32,9 +32,12 @@ npm run doctor            # print local repo + registry health
 
 node bin/buildinghub.mjs init notion --name "Notion"
 node bin/buildinghub.mjs publish notion
+npm run sync:vibe-research -- --source /path/to/remote-vibes
 ```
 
 `npm run site` also regenerates screenshot-style layout preview assets under `site/assets/layouts/`. GitHub Pages deploys the `site/` folder from `.github/workflows/pages.yml`.
+
+`npm run sync:vibe-research` mirrors Vibe Research's first-party building catalog into declarative BuildingHub manifests and adds curated companion entries such as Modal. The generated entries are still manifest-only: they can be searched, copied, reviewed, and loaded as catalog metadata, but they do not grant credentials or install executable code.
 
 `publish` is intentionally a local review prep step right now. It validates the repo, regenerates `registry.json`, writes a package bundle into ignored `dist/`, prints the bundle checksum, and tells the contributor to open a PR. A future hosted BuildingHub can replace that final PR step with authenticated upload without changing the manifest format.
 

@@ -1,0 +1,64 @@
+{
+  "id": "knowledge-base",
+  "name": "Library",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Search and edit the shared markdown Library that agents receive in their prompt.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "library",
+  "keywords": [
+    "knowledge",
+    "base",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "library",
+    "Library folder",
+    "wikiPath",
+    "Library backup",
+    "wikiGitBackupEnabled",
+    "Remote",
+    "wikiGitRemoteUrl",
+    "Choose a Library",
+    "Select the markdown Library agents receive in their prompt.",
+    "Enable backup",
+    "Connect a git remote when this knowledge should travel between machines."
+  ],
+  "visual": {
+    "shape": "library"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "Library is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Library folder",
+        "value": "Vibe Research setting: wikiPath",
+        "required": true
+      },
+      {
+        "label": "Library backup",
+        "value": "Vibe Research setting: wikiGitBackupEnabled",
+        "required": false
+      },
+      {
+        "label": "Remote",
+        "value": "Vibe Research setting: wikiGitRemoteUrl",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Choose a Library",
+        "detail": "Select the markdown Library agents receive in their prompt."
+      },
+      {
+        "title": "Enable backup",
+        "detail": "Connect a git remote when this knowledge should travel between machines."
+      }
+    ]
+  }
+}

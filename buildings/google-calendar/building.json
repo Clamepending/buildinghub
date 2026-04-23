@@ -1,0 +1,72 @@
+{
+  "id": "google-calendar",
+  "name": "Google Calendar",
+  "version": "0.1.0",
+  "category": "Planning",
+  "description": "Look up events and availability from connected agent tooling.",
+  "status": "MCP-ready",
+  "trust": "mcp",
+  "icon": "plugin",
+  "keywords": [
+    "google",
+    "calendar",
+    "mcp",
+    "MCP-ready",
+    "Planning",
+    "plugin",
+    "Google Calendar MCP",
+    "Google account",
+    "connected MCP account",
+    "Calendar scope",
+    "event and availability access",
+    "Connect the MCP",
+    "Authorize Calendar in the agent host that will run this building.",
+    "Pick calendars",
+    "Keep the account scope narrow enough for agents to reason about."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Host connector",
+    "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Google Calendar setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Google Calendar MCP",
+      "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Google account",
+        "value": "connected MCP account",
+        "required": true
+      },
+      {
+        "label": "Calendar scope",
+        "value": "event and availability access",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect the MCP",
+        "detail": "Authorize Calendar in the agent host that will run this building."
+      },
+      {
+        "title": "Pick calendars",
+        "detail": "Keep the account scope narrow enough for agents to reason about."
+      }
+    ]
+  }
+}

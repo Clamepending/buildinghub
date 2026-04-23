@@ -1,0 +1,96 @@
+{
+  "id": "twitter",
+  "name": "Twitter / X",
+  "version": "0.1.0",
+  "category": "Social",
+  "description": "Let agents monitor posts, draft replies, or manage social updates through a provider connector.",
+  "status": "connector-ready",
+  "trust": "mcp",
+  "icon": "post",
+  "keywords": [
+    "twitter",
+    "external",
+    "connector-ready",
+    "Social",
+    "post",
+    "MCP",
+    "API",
+    "Twitter / X MCP",
+    "Account",
+    "Twitter/X account or app",
+    "Permissions",
+    "read, draft, or post",
+    "Agent access",
+    "provider MCP or API bridge",
+    "Create API access",
+    "Prepare the Twitter/X account, app, and scopes the agent should use.",
+    "Connect the provider",
+    "Configure the API or MCP in the agent host, not in a prompt.",
+    "Install the building",
+    "Add this building once the external connector is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "post"
+  },
+  "access": {
+    "label": "External connector",
+    "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Twitter / X setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Twitter / X setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Twitter / X MCP",
+      "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Account",
+        "value": "Twitter/X account or app",
+        "required": false
+      },
+      {
+        "label": "Permissions",
+        "value": "read, draft, or post",
+        "required": false
+      },
+      {
+        "label": "Agent access",
+        "value": "provider MCP or API bridge",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create API access",
+        "detail": "Prepare the Twitter/X account, app, and scopes the agent should use."
+      },
+      {
+        "title": "Connect the provider",
+        "detail": "Configure the API or MCP in the agent host, not in a prompt."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add this building once the external connector is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

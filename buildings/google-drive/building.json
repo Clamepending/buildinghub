@@ -1,0 +1,92 @@
+{
+  "id": "google-drive",
+  "name": "Google Drive",
+  "version": "0.1.0",
+  "category": "Knowledge",
+  "description": "Search Docs, Sheets, Slides, and shared project files when the host agent supports it.",
+  "status": "MCP-ready",
+  "trust": "mcp",
+  "icon": "plugin",
+  "keywords": [
+    "google",
+    "drive",
+    "mcp",
+    "MCP-ready",
+    "Knowledge",
+    "plugin",
+    "CLI",
+    "Google Drive MCP",
+    "Google account",
+    "connected host MCP account",
+    "Shared drive scope",
+    "docs/sheets/slides access",
+    "Local terminal agents",
+    "provider MCP required",
+    "Connect the MCP",
+    "Authorize Drive in the host agent that will use this building.",
+    "Name the source",
+    "Tell agents which folders, docs, or sheets are relevant.",
+    "Local agents",
+    "Configure Google Drive in the local CLI/provider separately if a terminal agent needs direct access."
+  ],
+  "visual": {
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "Host connector",
+    "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Google Drive setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Google Drive setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Google Drive MCP",
+      "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Google account",
+        "value": "connected host MCP account",
+        "required": true
+      },
+      {
+        "label": "Shared drive scope",
+        "value": "docs/sheets/slides access",
+        "required": false
+      },
+      {
+        "label": "Local terminal agents",
+        "value": "provider MCP required",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Connect the MCP",
+        "detail": "Authorize Drive in the host agent that will use this building."
+      },
+      {
+        "title": "Name the source",
+        "detail": "Tell agents which folders, docs, or sheets are relevant."
+      },
+      {
+        "title": "Local agents",
+        "detail": "Configure Google Drive in the local CLI/provider separately if a terminal agent needs direct access."
+      }
+    ]
+  }
+}

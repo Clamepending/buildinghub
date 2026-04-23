@@ -1,0 +1,90 @@
+{
+  "id": "phone-imessage",
+  "name": "Phone / iMessage",
+  "version": "0.1.0",
+  "category": "Communication",
+  "description": "Coordinate SMS, calls, or iMessage-style conversations through a local bridge.",
+  "status": "bridge required",
+  "trust": "manifest-only",
+  "icon": "post",
+  "keywords": [
+    "phone",
+    "imessage",
+    "external",
+    "bridge required",
+    "Communication",
+    "post",
+    "SMS",
+    "MCP",
+    "Bridge",
+    "SMS, phone, or Messages relay",
+    "Allowed contacts",
+    "explicit allowlist recommended",
+    "Agent access",
+    "provider MCP or local helper",
+    "Choose a relay",
+    "Set up the SMS, call, or Messages bridge outside Vibe Research.",
+    "Restrict contacts",
+    "Use explicit allowlists and confirmation flows for outbound communication.",
+    "Install the building",
+    "Add this building once the bridge is ready.",
+    "installed"
+  ],
+  "visual": {
+    "shape": "post"
+  },
+  "access": {
+    "label": "Local bridge",
+    "detail": "Requires a phone, SMS, or Apple Messages bridge configured on the machine/provider that will send messages. Vibe Research does not inject phone or iMessage access into agents."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "SMS",
+      "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Bridge",
+        "value": "SMS, phone, or Messages relay",
+        "required": false
+      },
+      {
+        "label": "Allowed contacts",
+        "value": "explicit allowlist recommended",
+        "required": false
+      },
+      {
+        "label": "Agent access",
+        "value": "provider MCP or local helper",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Choose a relay",
+        "detail": "Set up the SMS, call, or Messages bridge outside Vibe Research."
+      },
+      {
+        "title": "Restrict contacts",
+        "detail": "Use explicit allowlists and confirmation flows for outbound communication."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add this building once the bridge is ready.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  }
+}

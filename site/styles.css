@@ -224,38 +224,128 @@ h1 {
 }
 
 .building-mark {
+  position: relative;
   min-height: 148px;
-  display: grid;
-  align-content: end;
-  gap: 14px;
+  overflow: hidden;
   padding: 18px;
   border: 1px solid rgba(245, 241, 236, 0.12);
   border-radius: 8px;
   background:
-    linear-gradient(135deg, rgba(255, 140, 95, 0.12), transparent 42%),
-    linear-gradient(90deg, rgba(122, 199, 183, 0.12), transparent 54%),
+    linear-gradient(135deg, rgba(255, 140, 95, 0.14), transparent 42%),
+    linear-gradient(90deg, rgba(122, 199, 183, 0.13), transparent 54%),
     #0d0f14;
 }
 
-.building-icon {
-  width: 54px;
-  height: 54px;
-  border: 1px solid rgba(245, 241, 236, 0.14);
-  border-radius: 8px;
-  display: grid;
-  place-items: center;
-  background: #23242b;
-  color: var(--accent);
-  font-size: 1.35rem;
-  font-weight: 850;
+.building-mark-grid {
+  position: absolute;
+  inset: 0;
+  opacity: 0.32;
+  background-image:
+    linear-gradient(rgba(245, 241, 236, 0.08) 1px, transparent 1px),
+    linear-gradient(90deg, rgba(245, 241, 236, 0.06) 1px, transparent 1px);
+  background-size: 24px 24px;
 }
 
-.building-mark span {
+.building-mark-shadow {
+  position: absolute;
+  left: 50%;
+  bottom: 30px;
+  width: 132px;
+  height: 20px;
+  transform: translateX(-50%);
+  border-radius: 999px;
+  background: rgba(0, 0, 0, 0.34);
+}
+
+.building-mark-roof {
+  position: absolute;
+  left: 50%;
+  bottom: 82px;
+  width: 112px;
+  height: 38px;
+  transform: translateX(-50%);
+  clip-path: polygon(50% 0, 100% 100%, 0 100%);
+  background: #8f5865;
+}
+
+.building-mark-body {
+  position: absolute;
+  left: 50%;
+  bottom: 42px;
+  width: 98px;
+  height: 50px;
+  transform: translateX(-50%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  border: 1px solid rgba(245, 241, 236, 0.14);
+  border-radius: 8px;
+  background: #735f3e;
+  box-shadow: inset 0 4px 0 rgba(245, 241, 236, 0.08);
+}
+
+.building-mark-window,
+.building-mark-door {
+  display: block;
+  border-radius: 3px;
+  background: #f1d98f;
+}
+
+.building-mark-window {
+  width: 15px;
+  height: 14px;
+}
+
+.building-mark-door {
+  width: 17px;
+  height: 28px;
+  align-self: flex-end;
+  background: #342b25;
+}
+
+.building-mark-sign {
+  position: absolute;
+  left: 14px;
+  right: 14px;
+  bottom: 12px;
   color: var(--muted);
   font-size: 0.78rem;
   font-weight: 790;
   letter-spacing: 0.14em;
   text-transform: uppercase;
+  white-space: nowrap;
+  overflow: hidden;
+  text-overflow: ellipsis;
+}
+
+.building-shape-market .building-mark-body {
+  background: #7a4e44;
+}
+
+.building-shape-market .building-mark-roof,
+.building-shape-studio .building-mark-roof {
+  background: #ff8c5f;
+}
+
+.building-shape-lab .building-mark-body,
+.building-shape-factory .building-mark-body {
+  background: #4f6868;
+}
+
+.building-shape-library .building-mark-body,
+.building-shape-school .building-mark-body {
+  background: #665f8a;
+}
+
+.building-shape-post .building-mark-body,
+.building-shape-dock .building-mark-body {
+  background: #465d7e;
+}
+
+.building-shape-portal .building-mark-roof,
+.building-shape-browser .building-mark-roof {
+  background: #7ac7b7;
 }
 
 .meta,

@@ -1,0 +1,113 @@
+{
+  "id": "localhost-apps",
+  "name": "Localhost Apps",
+  "version": "0.1.0",
+  "category": "Vibe Research",
+  "description": "Preview web apps from discovered ports without leaving the current session.",
+  "status": "built in",
+  "trust": "helper-command",
+  "icon": "dock",
+  "keywords": [
+    "localhost",
+    "apps",
+    "vibe-research",
+    "built in",
+    "Vibe Research",
+    "dock",
+    "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+    "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+    "vr-playwright",
+    "Port scan",
+    "local workspace ports",
+    "Proxy path",
+    "/proxy/<port>/",
+    "Enable the dock",
+    "Installed sessions show discovered local app ports.",
+    "Open a preview",
+    "Pick a detected port to inspect the running app."
+  ],
+  "visual": {
+    "shape": "dock"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "Localhost Apps is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+      "detail": "Canonical Playwright helper command.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+      "detail": "Visual fallback helper for screenshots/images.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-playwright",
+      "command": "vr-playwright",
+      "detail": "Inspect a local app with a real browser.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Port scan",
+        "value": "local workspace ports",
+        "required": true
+      },
+      {
+        "label": "Proxy path",
+        "value": "/proxy/<port>/",
+        "required": false
+      }
+    ],
+    "steps": [
+      {
+        "title": "Enable the dock",
+        "detail": "Installed sessions show discovered local app ports."
+      },
+      {
+        "title": "Open a preview",
+        "detail": "Pick a detected port to inspect the running app."
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Localhost Apps when an agent needs to discover, rename, preview, or expose web apps running from the workspace.",
+    "useCases": [
+      "Find development servers discovered by Vibe Research.",
+      "Preview a local app through the Vibe Research proxy or direct URL.",
+      "Expose eligible localhost-only ports through the Tailscale portal when available."
+    ],
+    "commands": [
+      {
+        "command": "curl -s http://127.0.0.1:${VIBE_RESEARCH_PORT:-4123}/api/ports -H 'X-Vibe-Research-API: 1'",
+        "label": "List discovered ports",
+        "detail": "Use the runtime app port if it differs from 4123."
+      },
+      {
+        "command": "vr-playwright open http://127.0.0.1:4173 && vr-playwright snapshot",
+        "label": "Open with Playwright",
+        "detail": "Inspect a local app with a real browser."
+      }
+    ],
+    "env": [
+      {
+        "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+        "detail": "Canonical Playwright helper command.",
+        "required": false
+      },
+      {
+        "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+        "detail": "Visual fallback helper for screenshots/images.",
+        "required": false
+      }
+    ]
+  }
+}

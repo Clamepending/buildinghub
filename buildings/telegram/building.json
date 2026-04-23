@@ -1,0 +1,82 @@
+{
+  "id": "telegram",
+  "name": "Telegram",
+  "version": "0.1.0",
+  "category": "Communication",
+  "description": "Route Telegram bot messages into one dedicated communications agent session.",
+  "status": "setup available",
+  "trust": "manifest-only",
+  "icon": "telegram",
+  "keywords": [
+    "telegram",
+    "vibe-research",
+    "setup available",
+    "Communication",
+    "plugin",
+    ".communications-plugin-card",
+    "Bot token",
+    "telegramBotToken",
+    "telegramBotTokenConfigured",
+    "Allowed chat IDs",
+    "telegramAllowedChatIds",
+    "Communications agent",
+    "telegramProviderId",
+    "Create a bot",
+    "Use BotFather to get a Telegram bot token.",
+    "installed",
+    "Save Telegram variables",
+    "Add the bot token and optionally limit which chat IDs the bot may answer.",
+    "Reply from one session",
+    "Incoming Telegram messages are routed into the dedicated Telegram communications session."
+  ],
+  "visual": {
+    "logo": "telegram",
+    "shape": "plugin"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "Telegram is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Bot token",
+        "value": "Vibe Research setting: telegramBotToken",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Allowed chat IDs",
+        "value": "Vibe Research setting: telegramAllowedChatIds",
+        "required": false
+      },
+      {
+        "label": "Communications agent",
+        "value": "Vibe Research setting: telegramProviderId",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create a bot",
+        "detail": "Use BotFather to get a Telegram bot token.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      },
+      {
+        "title": "Save Telegram variables",
+        "detail": "Add the bot token and optionally limit which chat IDs the bot may answer.",
+        "completeWhen": {
+          "allConfigured": [
+            "telegramBotTokenConfigured"
+          ]
+        }
+      },
+      {
+        "title": "Reply from one session",
+        "detail": "Incoming Telegram messages are routed into the dedicated Telegram communications session."
+      }
+    ]
+  }
+}

@@ -1,0 +1,69 @@
+{
+  "id": "automations",
+  "name": "Automations",
+  "version": "0.1.0",
+  "category": "Planning",
+  "description": "Schedule recurring Vibe Research helpers from the Berkeley Campanile-inspired clock tower.",
+  "status": "built in",
+  "trust": "manifest-only",
+  "icon": "campanile",
+  "keywords": [
+    "automations",
+    "vibe-research",
+    "built in",
+    "Planning",
+    "campanile",
+    "Default workspace",
+    "current project folder",
+    "Cadence",
+    "daily, weekly, or hourly schedule",
+    "Prompt",
+    "helper task instructions",
+    "Open the tower",
+    "Use the Automations tab from the Campanile building in Agent Town.",
+    "Choose a schedule",
+    "Pick the cadence and workspace where the helper should run.",
+    "Write the task",
+    "Describe the recurring helper work and save it."
+  ],
+  "visual": {
+    "shape": "campanile"
+  },
+  "access": {
+    "label": "vibe-research catalog",
+    "detail": "Automations is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
+  },
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Default workspace",
+        "value": "current project folder",
+        "required": true
+      },
+      {
+        "label": "Cadence",
+        "value": "daily, weekly, or hourly schedule",
+        "required": true
+      },
+      {
+        "label": "Prompt",
+        "value": "helper task instructions",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Open the tower",
+        "detail": "Use the Automations tab from the Campanile building in Agent Town."
+      },
+      {
+        "title": "Choose a schedule",
+        "detail": "Pick the cadence and workspace where the helper should run."
+      },
+      {
+        "title": "Write the task",
+        "detail": "Describe the recurring helper work and save it."
+      }
+    ]
+  }
+}
