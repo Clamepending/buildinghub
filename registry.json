@@ -2,9 +2,9 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T07:49:05.053Z",
+  "generatedAt": "2026-04-23T07:58:45.737Z",
   "name": "Vibe Research BuildingHub",
-  "packageCount": 37,
+  "packageCount": 38,
   "layoutCount": 4,
   "recipeCount": 1,
   "packages": [
@@ -629,6 +629,45 @@
           "manifestSha256": "f0effbcdfb33f57e553059eba3aecc4e1f462da61bb6ea9290cd22122cd0ce19",
           "manifestPath": "buildings/knowledge-base/building.json",
           "repositoryUrl": "https://github.com/Clamepending/knowledge-base-building"
+        }
+      ]
+    },
+    {
+      "id": "lerobot",
+      "name": "LeRobot",
+      "category": "Robotics",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "cf1637f433c109d38fc9bc41b2114161002313609fb364106b71f972130d1632",
+      "source": {
+        "manifestPath": "buildings/lerobot/building.json",
+        "readmePath": "buildings/lerobot/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/lerobot-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/lerobot-building/main/assets/thumbnail.svg",
+        "alt": "LeRobot Building thumbnail"
+      },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "lab",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "cf1637f433c109d38fc9bc41b2114161002313609fb364106b71f972130d1632",
+          "manifestPath": "buildings/lerobot/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/lerobot-building"
         }
       ]
     },
@@ -4007,6 +4046,284 @@
           {
             "title": "Enable backup",
             "detail": "Connect a git remote when this knowledge should travel between machines."
+          }
+        ]
+      }
+    },
+    {
+      "id": "lerobot",
+      "name": "LeRobot",
+      "version": "0.1.0",
+      "category": "Robotics",
+      "description": "Operate a real SO-101 workflow end-to-end: procurement, assembly, teleop recording, and ACT policy training.",
+      "status": "hardware setup required",
+      "trust": "helper-command",
+      "icon": "lab",
+      "docsUrl": "https://huggingface.co/docs/lerobot/en/index",
+      "homepageUrl": "https://huggingface.co/docs/lerobot/en/index",
+      "repo": {
+        "url": "https://github.com/Clamepending/lerobot-building",
+        "owner": "Clamepending",
+        "name": "lerobot-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/lerobot-building/main/assets/thumbnail.svg",
+          "alt": "LeRobot Building thumbnail"
+        }
+      },
+      "keywords": [
+        "lerobot",
+        "so-101",
+        "robotics",
+        "teleop",
+        "imitation learning",
+        "act policy",
+        "hugging face",
+        "hardware-in-the-loop"
+      ],
+      "visual": {
+        "shape": "lab"
+      },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "lab",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
+      "access": {
+        "label": "LeRobot CLI + connected SO-101 hardware",
+        "detail": "Requires LeRobot tooling in the runtime, a physically connected SO-101 leader/follower setup, and explicit human approval before purchases, hardware motion, and long GPU training jobs."
+      },
+      "tools": [
+        {
+          "type": "helper-command",
+          "name": "lerobot",
+          "command": "lerobot-info",
+          "detail": "LeRobot CLI entrypoint for hardware and training workflows.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "HF_TOKEN",
+          "detail": "Hugging Face token for dataset and policy upload; keep secret.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "HF_USER",
+          "detail": "Hugging Face user or org for dataset and policy repo IDs.",
+          "required": true
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "LeRobot docs index",
+          "url": "https://huggingface.co/docs/lerobot/en/index",
+          "auth": "none",
+          "detail": "Canonical LeRobot documentation index.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "SO-101 guide",
+          "url": "https://huggingface.co/docs/lerobot/en/so101",
+          "auth": "none",
+          "detail": "SO-101 assembly, motor config, and port setup guide.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "ACT policy guide",
+          "url": "https://huggingface.co/docs/lerobot/main/en/act",
+          "auth": "none",
+          "detail": "ACT training and evaluation reference.",
+          "required": false
+        },
+        {
+          "type": "local",
+          "name": "SO-101 serial ports",
+          "auth": "custom",
+          "detail": "Leader and follower serial ports configured on the host machine where teleop and evaluation run.",
+          "required": true
+        }
+      ],
+      "capabilities": [
+        {
+          "type": "helper-command",
+          "name": "lerobot",
+          "command": "lerobot-info",
+          "detail": "LeRobot CLI entrypoint for hardware and training workflows.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "HF_TOKEN",
+          "detail": "Hugging Face token for dataset and policy upload; keep secret.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "HF_USER",
+          "detail": "Hugging Face user or org for dataset and policy repo IDs.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "CUDA_VISIBLE_DEVICES",
+          "detail": "Optional GPU pinning for ACT training jobs.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Hugging Face account",
+            "value": "HF_USER and HF_TOKEN configured in the runtime used for recording and training",
+            "required": true
+          },
+          {
+            "label": "SO-101 order status",
+            "value": "ordered and shipped with recorded tracking number",
+            "required": true
+          },
+          {
+            "label": "Assembly state",
+            "value": "assembled and motors configured per LeRobot SO-101 docs",
+            "required": true
+          },
+          {
+            "label": "Robot connection",
+            "value": "leader/follower arms connected and visible on local serial ports",
+            "required": true
+          },
+          {
+            "label": "Teleop data target",
+            "value": "HF dataset repo_id for demonstrations",
+            "required": true
+          },
+          {
+            "label": "Training hardware",
+            "value": "single local GPU or approved cloud GPU for ACT",
+            "required": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Confirm procurement",
+            "detail": "Order SO-101 parts and record the tracking number in project notes before setup work starts."
+          },
+          {
+            "title": "Assemble and wire",
+            "detail": "Follow the SO-101 guide, configure motors, and connect leader/follower arms over USB."
+          },
+          {
+            "title": "Record teleop data",
+            "detail": "Collect quality demonstrations in a Hugging Face dataset repo for the target task."
+          },
+          {
+            "title": "Train ACT policy",
+            "detail": "Train and evaluate ACT on the recorded dataset, then publish the policy artifact.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use LeRobot when an agent must run the SO-101 hardware loop from setup through teleop data recording and ACT policy training with Hugging Face-hosted artifacts.",
+        "useCases": [
+          "Track SO-101 setup from procurement to assembled and connected arm control.",
+          "Record teleoperated demonstrations and push datasets to Hugging Face Hub.",
+          "Train and evaluate ACT policies for concrete SO-101 tasks.",
+          "Diagnose robot-port, camera, and runtime setup issues before expensive runs."
+        ],
+        "setup": [
+          "Read Hugging Face LeRobot docs first and keep hardware setup notes in shared project memory.",
+          "Before any arm motion, verify clear workspace, emergency-stop reachability, and supervised operation.",
+          "Treat purchases and cloud-GPU spend as approval-gated actions.",
+          "Record dataset repo_id, policy repo_id, command, port mapping, camera config, and commit when reporting results."
+        ],
+        "commands": [
+          {
+            "label": "Check LeRobot install",
+            "command": "lerobot-info",
+            "detail": "Confirms the LeRobot CLI is available in the current runtime."
+          },
+          {
+            "label": "Find SO-101 ports",
+            "command": "lerobot-find-port",
+            "detail": "Identify serial ports for SO-101 leader and follower buses."
+          },
+          {
+            "label": "Record teleop dataset",
+            "command": "lerobot-record --robot.type=so101_follower --robot.port=/dev/ttyACM0 --dataset.repo_id=${HF_USER}/so101_task_dataset --dataset.single_task=\"<task>\" --dataset.num_episodes=50",
+            "detail": "Collect demonstrations with consistent camera setup and task labeling."
+          },
+          {
+            "label": "Train ACT",
+            "command": "lerobot-train --dataset.repo_id=${HF_USER}/so101_task_dataset --policy.type=act --policy.device=cuda --output_dir=outputs/train/act_so101 --job_name=act_so101 --policy.repo_id=${HF_USER}/act_so101_policy",
+            "detail": "Baseline ACT recipe for single-GPU imitation learning."
+          },
+          {
+            "label": "Evaluate ACT",
+            "command": "lerobot-record --robot.type=so101_follower --robot.port=/dev/ttyACM0 --policy.path=${HF_USER}/act_so101_policy --dataset.repo_id=${HF_USER}/eval_act_so101 --dataset.num_episodes=10 --dataset.single_task=\"<task-eval>\"",
+            "detail": "Runs policy inference and records evaluation rollouts."
+          }
+        ],
+        "docs": [
+          {
+            "label": "LeRobot docs index",
+            "url": "https://huggingface.co/docs/lerobot/en/index"
+          },
+          {
+            "label": "Installation",
+            "url": "https://huggingface.co/docs/lerobot/en/installation"
+          },
+          {
+            "label": "SO-101 guide",
+            "url": "https://huggingface.co/docs/lerobot/en/so101"
+          },
+          {
+            "label": "Getting started with real robots",
+            "url": "https://huggingface.co/docs/lerobot/main/getting_started_real_world_robot"
+          },
+          {
+            "label": "Human-in-the-loop data collection",
+            "url": "https://huggingface.co/docs/lerobot/main/hil_data_collection"
+          },
+          {
+            "label": "ACT policy guide",
+            "url": "https://huggingface.co/docs/lerobot/main/en/act"
+          }
+        ],
+        "env": [
+          {
+            "name": "HF_TOKEN",
+            "detail": "Hugging Face access token for pushing datasets and policies; keep secret.",
+            "required": true
+          },
+          {
+            "name": "HF_USER",
+            "detail": "Hugging Face user or org used in dataset and policy repo IDs.",
+            "required": true
+          },
+          {
+            "name": "CUDA_VISIBLE_DEVICES",
+            "detail": "Optional GPU pinning for ACT training jobs.",
+            "required": false
           }
         ]
       }
