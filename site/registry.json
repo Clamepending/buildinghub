@@ -2,9 +2,9 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T05:31:13.967Z",
+  "generatedAt": "2026-04-23T07:49:05.053Z",
   "name": "Vibe Research BuildingHub",
-  "packageCount": 36,
+  "packageCount": 37,
   "layoutCount": 4,
   "recipeCount": 1,
   "packages": [
@@ -1214,6 +1214,44 @@
           "manifestSha256": "6fc993519595f853ee5e89257f109e41f423c363e6baa4e049ce8cf9143118d6",
           "manifestPath": "buildings/telegram/building.json",
           "repositoryUrl": "https://github.com/Clamepending/telegram-building"
+        }
+      ]
+    },
+    {
+      "id": "text-to-cad",
+      "name": "Text to CAD",
+      "category": "Design",
+      "trust": "helper-command",
+      "latestVersion": "0.1.0",
+      "manifestSha256": "e93d7390d199a4018eed95628245f80eea2d6854458513f1ecff6e4d3614be4a",
+      "source": {
+        "manifestPath": "buildings/text-to-cad/building.json",
+        "readmePath": "buildings/text-to-cad/README.md",
+        "repositoryUrl": "https://github.com/earthtojake/text-to-cad"
+      },
+      "thumbnail": {
+        "path": "assets/text-to-cad-demo.gif",
+        "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/710655fdbf8b6b0ae0f13a9a371ab3b5debab1f7/assets/text-to-cad-demo.gif",
+        "alt": "Text to CAD harness demo showing generated CAD geometry in the local viewer"
+      },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "manifestSha256": "e93d7390d199a4018eed95628245f80eea2d6854458513f1ecff6e4d3614be4a",
+          "manifestPath": "buildings/text-to-cad/building.json",
+          "repositoryUrl": "https://github.com/earthtojake/text-to-cad"
         }
       ]
     },
@@ -6497,6 +6535,351 @@
           {
             "title": "Reply from one session",
             "detail": "Incoming Telegram messages are routed into the dedicated Telegram communications session."
+          }
+        ]
+      }
+    },
+    {
+      "id": "text-to-cad",
+      "name": "Text to CAD",
+      "version": "0.1.0",
+      "category": "Design",
+      "description": "Use the open source text-to-cad harness to generate, regenerate, inspect, and review CAD models with coding agents.",
+      "status": "setup available",
+      "trust": "helper-command",
+      "icon": "studio",
+      "docsUrl": "https://github.com/earthtojake/text-to-cad/blob/main/README.md",
+      "homepageUrl": "https://github.com/earthtojake/text-to-cad",
+      "repo": {
+        "url": "https://github.com/earthtojake/text-to-cad",
+        "owner": "earthtojake",
+        "name": "text-to-cad",
+        "branch": "main",
+        "commit": "710655fdbf8b6b0ae0f13a9a371ab3b5debab1f7",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/text-to-cad-demo.gif",
+          "url": "https://raw.githubusercontent.com/earthtojake/text-to-cad/710655fdbf8b6b0ae0f13a9a371ab3b5debab1f7/assets/text-to-cad-demo.gif",
+          "alt": "Text to CAD harness demo showing generated CAD geometry in the local viewer"
+        }
+      },
+      "keywords": [
+        "text-to-cad",
+        "cad",
+        "computer-aided design",
+        "build123d",
+        "opencascade",
+        "step",
+        "stl",
+        "dxf",
+        "glb",
+        "urdf",
+        "cad explorer",
+        "viewer",
+        "models",
+        "python",
+        "vite",
+        "agent harness"
+      ],
+      "visual": {
+        "shape": "studio"
+      },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
+      "access": {
+        "label": "Local CAD harness",
+        "detail": "Requires a local checkout of earthtojake/text-to-cad, Python 3.11 with the CAD requirements installed, and npm for the CAD Explorer viewer. BuildingHub only records setup metadata; model-provider credentials and generated CAD artifacts stay in the agent workspace."
+      },
+      "tools": [
+        {
+          "type": "helper-command",
+          "name": "git",
+          "command": "git",
+          "detail": "Clone or inspect the text-to-cad harness repository.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "python3.11",
+          "command": "python3.11",
+          "detail": "Create the CAD virtual environment and run bundled CAD/URDF generation scripts.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "npm",
+          "command": "npm",
+          "detail": "Install and run the CAD Explorer viewer from the viewer/ package.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "CAD_DIR",
+          "detail": "Optional CAD Explorer scan directory for production builds; defaults to models.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIEWER_PORT",
+          "detail": "Optional CAD Explorer port; defaults to 4178.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Text to CAD README",
+          "url": "https://github.com/earthtojake/text-to-cad/blob/main/README.md",
+          "auth": "none",
+          "detail": "Upstream setup and workflow documentation.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "CAD skill guide",
+          "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md",
+          "auth": "none",
+          "detail": "Agent-facing CAD generation, validation, and prompt-reference rules.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "URDF skill guide",
+          "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/urdf/SKILL.md",
+          "auth": "none",
+          "detail": "Agent-facing URDF generation and validation rules.",
+          "required": false
+        },
+        {
+          "type": "local",
+          "name": "CAD Explorer viewer",
+          "url": "http://localhost:4178",
+          "auth": "none",
+          "detail": "Local Vite viewer for generated STEP, STL, DXF, GLB/topology, and URDF assets.",
+          "required": false
+        }
+      ],
+      "capabilities": [
+        {
+          "type": "helper-command",
+          "name": "git",
+          "command": "git",
+          "detail": "Clone or inspect the text-to-cad harness repository.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "python3.11",
+          "command": "python3.11",
+          "detail": "Create the CAD virtual environment and run bundled CAD/URDF generation scripts.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "npm",
+          "command": "npm",
+          "detail": "Install and run the CAD Explorer viewer from the viewer/ package.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "CAD_DIR",
+          "detail": "Optional CAD Explorer scan directory for production builds; defaults to models.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIEWER_PORT",
+          "detail": "Optional CAD Explorer port; defaults to 4178.",
+          "required": false
+        }
+      ],
+      "onboarding": {
+        "variables": [
+          {
+            "label": "Harness checkout",
+            "value": "git clone of earthtojake/text-to-cad at a reviewed commit or fork",
+            "required": true
+          },
+          {
+            "label": "Python CAD runtime",
+            "value": "python3.11 virtualenv with requirements-cad.txt installed",
+            "required": true
+          },
+          {
+            "label": "Viewer runtime",
+            "value": "npm dependencies installed under viewer/ and a local CAD Explorer port",
+            "required": true
+          },
+          {
+            "label": "CAD workspace",
+            "value": "models/ by default, or CAD_DIR for an alternate scan root",
+            "required": false
+          },
+          {
+            "label": "Model credentials",
+            "value": "only if the chosen coding agent/provider needs them; keep credentials outside BuildingHub",
+            "required": false,
+            "secret": true
+          }
+        ],
+        "steps": [
+          {
+            "title": "Clone or choose a harness",
+            "detail": "Use the upstream text-to-cad repo or a reviewed project fork as the CAD workspace."
+          },
+          {
+            "title": "Install CAD dependencies",
+            "detail": "Create the Python 3.11 virtualenv and install requirements-cad.txt before running CAD tools."
+          },
+          {
+            "title": "Install the viewer",
+            "detail": "Install npm dependencies under viewer/ and run the CAD Explorer locally when visual inspection is needed."
+          },
+          {
+            "title": "Install the building",
+            "detail": "Add Text to CAD to Agent Town once the harness, Python runtime, and viewer path are ready.",
+            "completeWhen": {
+              "type": "installed"
+            }
+          },
+          {
+            "title": "Route agents through the guide",
+            "detail": "Agents should read the generated Text to CAD building guide plus the repo AGENTS.md and bundled CAD/URDF skills before editing models."
+          }
+        ]
+      },
+      "agentGuide": {
+        "summary": "Use Text to CAD when an agent needs to turn design intent into source-controlled CAD, regenerate STEP/STL/DXF/GLB/topology artifacts, inspect `@cad[...]` references, or review geometry in the local CAD Explorer.",
+        "useCases": [
+          "Set up a local text-to-cad harness for a new CAD modeling task.",
+          "Create or edit Python generator sources under models/ and regenerate explicit CAD outputs.",
+          "Package imported STEP/STP files with viewer-ready GLB and topology artifacts.",
+          "Generate or validate URDF robot descriptions when the task is about links, joints, limits, or mesh references.",
+          "Open CAD Explorer to inspect generated STEP, STL, DXF, GLB/topology, or URDF assets.",
+          "Resolve `@cad[...]` refs from viewer feedback before making precise geometry edits."
+        ],
+        "setup": [
+          "Start from the harness root and read AGENTS.md, skills/cad/SKILL.md, and skills/urdf/SKILL.md before modifying models.",
+          "Prefer ./.venv/bin/python after creating the Python 3.11 CAD runtime from requirements-cad.txt.",
+          "Treat generator Python sources and imported STEP/STP files as source of truth; do not hand-edit generated STEP, STL, GLB, topology, DXF, URDF, or viewer artifacts.",
+          "Regenerate explicit targets only. Do not run directory-wide CAD generation.",
+          "Keep temporary review images outside models/, usually under /tmp/.",
+          "Use CAD Explorer at http://localhost:4178 for visual inspection and copied `@cad[...]` refs, then resolve refs with skills/cad/scripts/cadref before editing.",
+          "Record the harness commit, exact generation command, source path, generated artifact paths, and viewer/snapshot evidence when CAD output matters to a result."
+        ],
+        "commands": [
+          {
+            "label": "Clone harness",
+            "command": "git clone https://github.com/earthtojake/text-to-cad.git",
+            "detail": "Creates a local text-to-cad workspace."
+          },
+          {
+            "label": "Check harness commit",
+            "command": "git rev-parse HEAD",
+            "detail": "Run from the harness root to record the exact source revision."
+          },
+          {
+            "label": "Install CAD runtime",
+            "command": "python3.11 -m venv .venv && ./.venv/bin/pip install -r requirements-cad.txt",
+            "detail": "Creates the local Python environment for build123d, OCP, CAD scripts, and URDF helpers."
+          },
+          {
+            "label": "Install viewer deps",
+            "command": "cd viewer && npm install",
+            "detail": "Installs CAD Explorer dependencies."
+          },
+          {
+            "label": "Run CAD Explorer",
+            "command": "cd viewer && npm run dev -- --host 127.0.0.1 --port 4178",
+            "detail": "Starts the local viewer; open http://localhost:4178 and use ?dir=<repo-relative-dir> for a non-default CAD directory."
+          },
+          {
+            "label": "Regenerate STEP part",
+            "command": "./.venv/bin/python skills/cad/scripts/gen_step_part models/path/to/source.py --summary",
+            "detail": "Regenerates one explicit generated part source or imported STEP/STP target."
+          },
+          {
+            "label": "Regenerate STEP assembly",
+            "command": "./.venv/bin/python skills/cad/scripts/gen_step_assembly models/path/to/assembly.py --summary",
+            "detail": "Regenerates one explicit assembly source or imported assembly STEP/STP target."
+          },
+          {
+            "label": "Regenerate DXF",
+            "command": "./.venv/bin/python skills/cad/scripts/gen_dxf models/path/to/drawing.py",
+            "detail": "Regenerates a Python source that exposes gen_dxf()."
+          },
+          {
+            "label": "Regenerate URDF",
+            "command": "./.venv/bin/python skills/urdf/scripts/gen_urdf models/path/to/robot.py --summary",
+            "detail": "Regenerates an explicit URDF source and prints a compact robot/link/joint check."
+          },
+          {
+            "label": "Inspect CAD ref",
+            "command": "./.venv/bin/python skills/cad/scripts/cadref inspect '@cad[models/path/to/entry]' --json",
+            "detail": "Resolves a viewer-copied prompt reference from source STEP data."
+          },
+          {
+            "label": "Render review snapshot",
+            "command": "./.venv/bin/python skills/cad/scripts/snapshot models/path/to/source.py --view isometric --out /tmp/cad-review.png",
+            "detail": "Writes a quick PNG for visual review without storing temporary images under models/."
+          }
+        ],
+        "docs": [
+          {
+            "label": "Text to CAD repository",
+            "url": "https://github.com/earthtojake/text-to-cad"
+          },
+          {
+            "label": "Text to CAD README",
+            "url": "https://github.com/earthtojake/text-to-cad/blob/main/README.md"
+          },
+          {
+            "label": "CAD skill",
+            "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/cad/SKILL.md"
+          },
+          {
+            "label": "URDF skill",
+            "url": "https://github.com/earthtojake/text-to-cad/blob/main/skills/urdf/SKILL.md"
+          },
+          {
+            "label": "CAD Explorer viewer",
+            "url": "https://github.com/earthtojake/text-to-cad/blob/main/viewer/README.md"
+          }
+        ],
+        "env": [
+          {
+            "name": "CAD_DIR",
+            "detail": "Optional CAD Explorer build scan directory; defaults to models.",
+            "required": false
+          },
+          {
+            "name": "VIEWER_PORT",
+            "detail": "Optional CAD Explorer port; defaults to 4178.",
+            "required": false
+          },
+          {
+            "name": "GUI_PORT",
+            "detail": "Alternate viewer port variable accepted by the Vite config when VIEWER_PORT is unset.",
+            "required": false
+          },
+          {
+            "name": "PORT",
+            "detail": "Fallback viewer port variable accepted by the Vite config when VIEWER_PORT and GUI_PORT are unset.",
+            "required": false
           }
         ]
       }
