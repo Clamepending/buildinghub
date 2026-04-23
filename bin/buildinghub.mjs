@@ -10,6 +10,7 @@ import {
   packBuilding,
   readBuildingManifests,
   readLayoutManifests,
+  readRecipeManifests,
 } from "../lib/buildinghub.mjs";
 
 function usage() {
@@ -76,19 +77,20 @@ async function run() {
   if (command === "validate") {
     const entries = await readBuildingManifests({ root: options.root });
     const layouts = await readLayoutManifests({ root: options.root });
-    process.stdout.write(`validated ${entries.length} BuildingHub manifests and ${layouts.length} layouts\n`);
+    const recipes = await readRecipeManifests({ root: options.root });
+    process.stdout.write(`validated ${entries.length} BuildingHub manifests, ${layouts.length} layouts, and ${recipes.length} scaffolds\n`);
     return;
   }
 
   if (command === "build") {
     const { registry } = await buildRegistry({ root: options.root });
-    process.stdout.write(`wrote registry.json with ${registry.packageCount} buildings and ${registry.layoutCount} layouts\n`);
+    process.stdout.write(`wrote registry.json with ${registry.packageCount} buildings, ${registry.layoutCount} layouts, and ${registry.recipeCount} scaffolds\n`);
     return;
   }
 
   if (command === "site") {
     const { registry, siteDir } = await buildSite({ root: options.root });
-    process.stdout.write(`prepared ${siteDir} with ${registry.packageCount} buildings and ${registry.layoutCount} layouts\n`);
+    process.stdout.write(`prepared ${siteDir} with ${registry.packageCount} buildings, ${registry.layoutCount} layouts, and ${registry.recipeCount} scaffolds\n`);
     return;
   }
 
@@ -96,6 +98,14 @@ async function run() {
     const entries = await readBuildingManifests({ root: options.root });
     for (const { manifest } of entries) {
       process.stdout.write(`${manifest.id}\t${manifest.version}\t${manifest.trust || "manifest-only"}\t${manifest.name}\n`);
+    }
+    const layouts = await readLayoutManifests({ root: options.root });
+    for (const { layout } of layouts) {
+      process.stdout.write(`${layout.id}\t${layout.version}\tlayout\t${layout.name}\n`);
+    }
+    const recipes = await readRecipeManifests({ root: options.root });
+    for (const { recipe } of recipes) {
+      process.stdout.write(`${recipe.id}\t${recipe.version}\tscaffold\t${recipe.name}\n`);
     }
     return;
   }
@@ -137,6 +147,7 @@ async function run() {
   if (command === "doctor") {
     const entries = await readBuildingManifests({ root: options.root });
     const layouts = await readLayoutManifests({ root: options.root });
+    const recipes = await readRecipeManifests({ root: options.root });
     const { registry } = await buildRegistry({ root: options.root, write: false });
     process.stdout.write(
       [
@@ -144,8 +155,10 @@ async function run() {
         `cli: buildinghub/${BUILDINGHUB_VERSION}`,
         `buildings: ${entries.length}`,
         `layouts: ${layouts.length}`,
+        `scaffolds: ${recipes.length}`,
         `registry packages: ${registry.packageCount}`,
         `registry layout packages: ${registry.layoutCount}`,
+        `registry scaffold packages: ${registry.recipeCount}`,
         "safety: manifest-only loader, no executable package lane enabled",
         "",
       ].join("\n"),

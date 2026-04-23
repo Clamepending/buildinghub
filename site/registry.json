@@ -2,10 +2,11 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T03:08:56.074Z",
+  "generatedAt": "2026-04-23T05:25:55.824Z",
   "name": "Vibe Research BuildingHub",
   "packageCount": 36,
   "layoutCount": 4,
+  "recipeCount": 1,
   "packages": [
     {
       "id": "agent-inbox",
@@ -1482,6 +1483,28 @@
           "version": "0.1.0",
           "layoutSha256": "320181cba0627bc3d9c2caf049e30e8b71192e5137f6f2a8c36c033a674337b6",
           "layoutPath": "layouts/research-campus/layout.json"
+        }
+      ]
+    }
+  ],
+  "recipePackages": [
+    {
+      "id": "ml-research-bench",
+      "name": "ML Research Bench",
+      "category": "Scaffold",
+      "latestVersion": "0.1.0",
+      "recipeSha256": "f672ea15527b007d5ad4d47012fb059050a28bec597fb760b3a8d0c5c56de904",
+      "source": {
+        "recipePath": "recipes/ml-research-bench/recipe.json",
+        "readmePath": "recipes/ml-research-bench/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/buildinghub",
+        "recipeUrl": "https://clamepending.github.io/buildinghub/#/scaffolds/ml-research-bench"
+      },
+      "versions": [
+        {
+          "version": "0.1.0",
+          "recipeSha256": "f672ea15527b007d5ad4d47012fb059050a28bec597fb760b3a8d0c5c56de904",
+          "recipePath": "recipes/ml-research-bench/recipe.json"
         }
       ]
     }
@@ -7888,6 +7911,314 @@
           }
         ],
         "functional": {}
+      }
+    }
+  ],
+  "recipes": [
+    {
+      "schema": "vibe-research.scaffold.recipe.v1",
+      "id": "ml-research-bench",
+      "name": "ML Research Bench",
+      "version": "0.1.0",
+      "description": "A starter scaffold for benchmarking the normal Vibe Research research loop on ML tasks: Library ledger, BuildingHub catalog, Harbor/Modal-style sandbox assumptions, free-form auditable agent DMs, and a compact research-campus town layout.",
+      "tags": [
+        "ml",
+        "benchmark",
+        "research",
+        "harbor",
+        "modal"
+      ],
+      "compatibility": {
+        "recipeSchema": "vibe-research.scaffold.recipe.v1",
+        "vibeResearch": {
+          "range": ">=0.2.18"
+        }
+      },
+      "buildings": [
+        {
+          "id": "knowledge-base",
+          "name": "Library",
+          "category": "Knowledge",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": true,
+          "required": true
+        },
+        {
+          "id": "occupations",
+          "name": "Occupations",
+          "category": "Vibe Research",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": true,
+          "required": true
+        },
+        {
+          "id": "buildinghub",
+          "name": "BuildingHub",
+          "category": "Community",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": true,
+          "required": true
+        },
+        {
+          "id": "scaffold-recipes",
+          "name": "Scaffold Recipes",
+          "category": "Research Ops",
+          "source": "core",
+          "version": "0.1.0",
+          "enabled": true,
+          "required": true
+        },
+        {
+          "id": "harbor",
+          "name": "Harbor",
+          "category": "Compute",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": true,
+          "required": false
+        },
+        {
+          "id": "modal",
+          "name": "Modal",
+          "category": "Compute",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": false,
+          "required": false
+        },
+        {
+          "id": "wandb",
+          "name": "W&B",
+          "category": "Observability",
+          "source": "buildinghub",
+          "version": "0.1.0",
+          "enabled": false,
+          "required": false
+        }
+      ],
+      "settings": {
+        "portable": {
+          "buildingHubEnabled": true,
+          "browserUseEnabled": false,
+          "preventSleepEnabled": true,
+          "wikiGitBackupEnabled": true,
+          "agentCommunicationDmEnabled": true,
+          "agentCommunicationDmBody": "freeform",
+          "agentCommunicationDmVisibility": "workspace",
+          "agentCommunicationRequireRelatedObject": true,
+          "agentCommunicationMaxThreadDepth": 8,
+          "agentCommunicationMaxUnrepliedPerAgent": 1,
+          "agentCommunicationGroupInboxes": "gpu-desk,review-hall",
+          "agentCommunicationCaptureMessages": true,
+          "agentCommunicationCaptureMessageReads": true
+        },
+        "localBindingsRequired": [
+          {
+            "key": "workspaceRootPath",
+            "label": "Workspace root",
+            "sensitivity": "local",
+            "configured": false,
+            "required": true
+          },
+          {
+            "key": "wikiPath",
+            "label": "Library folder",
+            "sensitivity": "local",
+            "configured": false,
+            "required": true
+          }
+        ],
+        "personal": [
+          {
+            "key": "wikiGitRemoteUrl",
+            "label": "Private Library git remote",
+            "sensitivity": "personal",
+            "configured": false,
+            "required": false
+          }
+        ],
+        "secrets": [
+          {
+            "key": "agentOpenAiApiKey",
+            "label": "OpenAI API key",
+            "sensitivity": "secret",
+            "configured": false,
+            "required": false
+          },
+          {
+            "key": "agentAnthropicApiKey",
+            "label": "Anthropic API key",
+            "sensitivity": "secret",
+            "configured": false,
+            "required": false
+          }
+        ]
+      },
+      "communication": {
+        "dm": {
+          "enabled": true,
+          "body": "freeform",
+          "visibility": "workspace",
+          "requireRelatedObject": true,
+          "maxThreadDepth": 8,
+          "maxUnrepliedPerAgent": 1
+        },
+        "groupInboxes": [
+          "gpu-desk",
+          "review-hall"
+        ],
+        "logging": {
+          "captureMessages": true,
+          "captureMessageReads": true
+        }
+      },
+      "agents": {
+        "defaultProvider": "claude",
+        "allowedProviders": [
+          "claude",
+          "codex",
+          "shell"
+        ],
+        "defaultOccupation": "researcher",
+        "canSpawnAgents": true,
+        "canCreateSubagents": true,
+        "maxConcurrentAgents": 6
+      },
+      "sandbox": {
+        "provider": "harbor",
+        "isolation": "workspace",
+        "network": "default",
+        "gpu": {
+          "enabled": true,
+          "provider": "local-or-modal",
+          "count": 1
+        },
+        "config": {
+          "artifactRoot": "results",
+          "timeoutMinutes": 120,
+          "benchmarkMode": "normal-system"
+        },
+        "localBindingsRequired": []
+      },
+      "permissions": {
+        "requireApproval": [
+          "uses-credentials",
+          "spends-money",
+          "publishes-code",
+          "sends-messages-external"
+        ],
+        "deny": [
+          "writes-outside-workspace"
+        ]
+      },
+      "library": {
+        "mode": "configured",
+        "gitRemoteConfigured": false,
+        "backupEnabled": true,
+        "localBindingsRequired": [
+          {
+            "key": "wikiPath",
+            "label": "Library folder",
+            "sensitivity": "local",
+            "configured": false,
+            "required": true
+          }
+        ]
+      },
+      "occupation": {
+        "selectedPromptId": "researcher",
+        "label": "Vibe Research Researcher",
+        "editable": false,
+        "promptSha256": ""
+      },
+      "layout": {
+        "decorations": [
+          {
+            "id": "road-1",
+            "itemId": "road-square",
+            "x": 240,
+            "y": 280
+          },
+          {
+            "id": "road-2",
+            "itemId": "road-square",
+            "x": 288,
+            "y": 280
+          },
+          {
+            "id": "planter-1",
+            "itemId": "planter",
+            "x": 336,
+            "y": 224
+          }
+        ],
+        "functional": {
+          "knowledge-base": {
+            "x": 160,
+            "y": 176
+          },
+          "occupations": {
+            "x": 248,
+            "y": 168
+          },
+          "buildinghub": {
+            "x": 344,
+            "y": 168
+          },
+          "scaffold-recipes": {
+            "x": 432,
+            "y": 176
+          },
+          "harbor": {
+            "x": 520,
+            "y": 224
+          }
+        },
+        "themeId": "green-field",
+        "dogName": "Scout"
+      },
+      "localBindingsRequired": [
+        {
+          "key": "workspaceRootPath",
+          "label": "Workspace root",
+          "sensitivity": "local",
+          "configured": false,
+          "required": true
+        },
+        {
+          "key": "wikiPath",
+          "label": "Library folder",
+          "sensitivity": "local",
+          "configured": false,
+          "required": true
+        },
+        {
+          "key": "agentOpenAiApiKey",
+          "label": "OpenAI API key",
+          "sensitivity": "secret",
+          "configured": false,
+          "required": false
+        },
+        {
+          "key": "agentAnthropicApiKey",
+          "label": "Anthropic API key",
+          "sensitivity": "secret",
+          "configured": false,
+          "required": false
+        }
+      ],
+      "redactions": [
+        "Local paths are supplied by the receiving Vibe Research install.",
+        "Provider API keys are intentionally omitted.",
+        "Private Library remotes are intentionally omitted."
+      ],
+      "source": {
+        "kind": "buildinghub",
+        "repositoryUrl": "https://github.com/Clamepending/buildinghub",
+        "recipeUrl": "https://clamepending.github.io/buildinghub/#/scaffolds/ml-research-bench"
       }
     }
   ]

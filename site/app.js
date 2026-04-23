@@ -73,6 +73,15 @@ function collectPackageFacets(entry) {
   if (entry?.media?.thumbnail) {
     facets.push("thumbnail", "media");
   }
+  if (Array.isArray(entry?.buildings) && entry.buildings.length) {
+    facets.push("scaffold", "recipe", `${entry.buildings.length} buildings`);
+  }
+  if (entry?.communication?.dm?.enabled) {
+    facets.push("dm", "agent communication", "messages");
+  }
+  if (entry?.sandbox?.provider) {
+    facets.push("sandbox", entry.sandbox.provider);
+  }
   return facets;
 }
 
@@ -137,13 +146,13 @@ function getRepoUrl(building) {
 }
 
 function getRegistrySnapshotUrl(entry, type = "building") {
-  const folder = type === "layout" ? "layouts" : "buildings";
+  const folder = type === "layout" ? "layouts" : type === "scaffold" || type === "recipe" ? "recipes" : "buildings";
   return `${CENTRAL_REPO_URL}/tree/main/${folder}/${encodeURIComponent(entry.id)}`;
 }
 
 function getManifestSourceUrl(entry, type = "building") {
-  const folder = type === "layout" ? "layouts" : "buildings";
-  const filename = type === "layout" ? "layout.json" : "building.json";
+  const folder = type === "layout" ? "layouts" : type === "scaffold" || type === "recipe" ? "recipes" : "buildings";
+  const filename = type === "layout" ? "layout.json" : type === "scaffold" || type === "recipe" ? "recipe.json" : "building.json";
   return `${CENTRAL_REPO_URL}/blob/main/${folder}/${encodeURIComponent(entry.id)}/${filename}`;
 }
 
@@ -241,6 +250,53 @@ function renderLayoutCard(layout) {
   `;
 }
 
+function renderScaffoldVisual(recipe, sizeClass = "") {
+  const requiredCount = Array.isArray(recipe.buildings)
+    ? recipe.buildings.filter((building) => building.required !== false).length
+    : 0;
+  return `
+    <div class="building-mark building-shape-campus ${escapeAttribute(sizeClass)}" aria-hidden="true">
+      <span class="building-mark-grid"></span>
+      <span class="building-mark-shadow"></span>
+      <span class="building-mark-roof"></span>
+      <span class="building-mark-body">
+        <span class="building-mark-window"></span>
+        <span class="building-mark-window"></span>
+        <span class="building-mark-door"></span>
+      </span>
+      <span class="building-mark-sign">${escapeHtml(requiredCount ? `${requiredCount} bldgs` : "Scaffold")}</span>
+    </div>
+  `;
+}
+
+function renderScaffoldCard(recipe) {
+  const tags = getDisplayTags(Array.isArray(recipe.tags) ? recipe.tags : []);
+  const buildingCount = Array.isArray(recipe.buildings) ? recipe.buildings.length : 0;
+  const bindingCount = Array.isArray(recipe.localBindingsRequired) ? recipe.localBindingsRequired.length : 0;
+  const hasLayout = Boolean(recipe.layout);
+  const dmLabel = recipe.communication?.dm?.enabled ? "DMs on" : "DMs off";
+  return `
+    <article class="card is-clickable" tabindex="0" data-card-href="#/scaffolds/${escapeAttribute(recipe.id)}" aria-label="Open ${escapeAttribute(recipe.name)} scaffold page">
+      ${renderScaffoldVisual(recipe)}
+      <div class="meta">
+        <span class="pill is-accent">${escapeHtml(recipe.category || "Scaffold")}</span>
+        <span class="pill">${escapeHtml(countLabel(buildingCount, "building"))}</span>
+        ${bindingCount ? `<span class="pill">${escapeHtml(countLabel(bindingCount, "binding"))}</span>` : ""}
+        ${hasLayout ? `<span class="pill">layout</span>` : ""}
+        <span class="pill">${escapeHtml(dmLabel)}</span>
+        <span class="pill">${escapeHtml(recipe.version || "0.1.0")}</span>
+      </div>
+      <h2><a href="#/scaffolds/${escapeAttribute(recipe.id)}">${escapeHtml(recipe.name)}</a></h2>
+      <p>${escapeHtml(recipe.description)}</p>
+      <div class="tags">${renderTags(tags)}</div>
+      <div class="actions">
+        <a class="copy" href="#/scaffolds/${escapeAttribute(recipe.id)}">Open page</a>
+        <button class="copy" type="button" data-copy-scaffold="${escapeHtml(recipe.id)}">Copy recipe</button>
+      </div>
+    </article>
+  `;
+}
+
 function renderBuildingCard(building) {
   const tags = getDisplayTags(Array.isArray(building.keywords) ? building.keywords : []);
   const repoUrl = getRepoUrl(building);
@@ -277,6 +333,9 @@ function renderBuildingCard(building) {
 
 function parseRoute() {
   const parts = location.hash.replace(/^#\/?/, "").split("/").filter(Boolean).map(decodeURIComponent);
+  if ((parts[0] === "scaffolds" || parts[0] === "recipes") && parts[1]) {
+    return { view: "scaffold", id: parts[1], tab: "scaffolds" };
+  }
   if (parts[0] === "layouts" && parts[1]) {
     return { view: "layout", id: parts[1], tab: "layouts" };
   }
@@ -285,6 +344,9 @@ function parseRoute() {
   }
   if (parts[0] === "layouts") {
     return { view: "catalog", tab: "layouts" };
+  }
+  if (parts[0] === "scaffolds" || parts[0] === "recipes") {
+    return { view: "catalog", tab: "scaffolds" };
   }
   return { view: "catalog", tab: "buildings" };
 }
@@ -477,6 +539,93 @@ function renderLayoutDetail(layout) {
   setTitle(layout.name);
 }
 
+function renderScaffoldDetail(recipe) {
+  const buildings = Array.isArray(recipe.buildings) ? recipe.buildings : [];
+  const requiredBuildings = buildings.filter((building) => building.required !== false);
+  const localBindings = Array.isArray(recipe.localBindingsRequired) ? recipe.localBindingsRequired : [];
+  const redactions = Array.isArray(recipe.redactions) ? recipe.redactions : [];
+  const groupInboxes = Array.isArray(recipe.communication?.groupInboxes) ? recipe.communication.groupInboxes : [];
+  const layout = recipe.layout || {};
+  const decorations = Array.isArray(layout.decorations) ? layout.decorations : [];
+  const functional = Object.keys(layout.functional || {});
+
+  catalog.classList.add("is-detail");
+  summary.innerHTML = `<a class="copy back-link" href="#/scaffolds">Back to scaffolds</a>`;
+  cards.innerHTML = `
+    <article class="detail">
+      <section class="detail-hero">
+        ${renderScaffoldVisual(recipe, "is-large")}
+        <div class="detail-heading">
+          <div class="meta">
+            <span class="pill is-accent">${escapeHtml(recipe.category || "Scaffold")}</span>
+            <span class="pill">${escapeHtml(countLabel(buildings.length, "building"))}</span>
+            <span class="pill">${escapeHtml(countLabel(localBindings.length, "local binding"))}</span>
+            <span class="pill">${escapeHtml(recipe.communication?.dm?.enabled ? "DMs enabled" : "DMs disabled")}</span>
+            <span class="pill">${escapeHtml(recipe.version || "0.1.0")}</span>
+          </div>
+          <h2>${escapeHtml(recipe.name)}</h2>
+          <p>${escapeHtml(recipe.description)}</p>
+          <div class="actions detail-actions">
+            <button class="copy" type="button" data-copy-scaffold="${escapeAttribute(recipe.id)}">Copy recipe</button>
+            ${renderExternalLink(getRegistrySnapshotUrl(recipe, "scaffold"), "Registry snapshot")}
+            ${renderExternalLink(getManifestSourceUrl(recipe, "scaffold"), "Recipe JSON")}
+            ${renderExternalLink(recipe.source?.recipeUrl, "Published page")}
+            ${renderExternalLink(recipe.source?.repositoryUrl, "Source repo")}
+          </div>
+        </div>
+      </section>
+
+      <section class="detail-grid">
+        <section class="detail-panel">
+          <h3>Communication</h3>
+          <dl class="kv">
+            ${renderKeyValue("DM body", recipe.communication?.dm?.body || "freeform")}
+            ${renderKeyValue("Visibility", recipe.communication?.dm?.visibility || "workspace")}
+            ${renderKeyValue("Requires related object", recipe.communication?.dm?.requireRelatedObject ? "yes" : "no")}
+            ${renderKeyValue("Group inboxes", groupInboxes.join(", "))}
+          </dl>
+        </section>
+        <section class="detail-panel">
+          <h3>Sandbox</h3>
+          <dl class="kv">
+            ${renderKeyValue("Provider", recipe.sandbox?.provider || "local")}
+            ${renderKeyValue("Isolation", recipe.sandbox?.isolation || "workspace")}
+            ${renderKeyValue("Network", recipe.sandbox?.network || "default")}
+            ${renderKeyValue("GPU", recipe.sandbox?.gpu?.enabled ? `${recipe.sandbox.gpu.count || 1} ${recipe.sandbox.gpu.provider || "GPU"}` : "not required")}
+          </dl>
+        </section>
+        <section class="detail-panel">
+          <h3>Layout</h3>
+          <dl class="kv">
+            ${renderKeyValue("Theme", layout.themeId || "")}
+            ${renderKeyValue("Decorations", decorations.length ? String(decorations.length) : "")}
+            ${renderKeyValue("Functional buildings", functional.length ? String(functional.length) : "")}
+          </dl>
+        </section>
+        <section class="detail-panel">
+          <h3>Local bindings</h3>
+          <div class="tags">${renderTags(localBindings.map((binding) => `${binding.key}${binding.required ? " required" : ""}`)) || "<p>No local bindings listed.</p>"}</div>
+        </section>
+      </section>
+
+      ${renderListPanel("Buildings", requiredBuildings, (building) => `
+        <section class="interface-row">
+          <h4>${escapeHtml(building.name || building.id)}</h4>
+          <p>${escapeHtml(building.category || building.source || "")}</p>
+          <div class="meta">${renderPills([building.id, building.source, building.version, building.enabled ? "enabled" : "", building.required === false ? "optional" : "required"])}</div>
+        </section>
+      `, "No required buildings are listed.")}
+
+      ${redactions.length ? renderListPanel("Redactions", redactions, (entry) => `
+        <section class="interface-row">
+          <p>${escapeHtml(entry)}</p>
+        </section>
+      `, "") : ""}
+    </article>
+  `;
+  setTitle(recipe.name);
+}
+
 function setActiveTab(tab) {
   state.tab = tab;
   document.querySelectorAll("[data-tab]").forEach((button) => {
@@ -512,11 +661,23 @@ function render() {
     return;
   }
 
+  if (route.view === "scaffold") {
+    const recipe = (registry.recipes || []).find((candidate) => candidate.id === route.id);
+    if (recipe) {
+      renderScaffoldDetail(recipe);
+    } else {
+      renderNotFound(route);
+    }
+    return;
+  }
+
   catalog.classList.remove("is-detail");
   setTitle("");
   const entries = state.tab === "layouts"
     ? (Array.isArray(registry.layouts) ? registry.layouts : [])
-    : (Array.isArray(registry.buildings) ? registry.buildings : []);
+    : state.tab === "scaffolds"
+      ? (Array.isArray(registry.recipes) ? registry.recipes : [])
+      : (Array.isArray(registry.buildings) ? registry.buildings : []);
   const filtered = entries
     .map((entry, index) => ({ entry, index, score: searchScore(entry, state.query) }))
     .filter((result) => result.score > 0)
@@ -528,9 +689,15 @@ function render() {
     .map((result) => result.entry);
   const totalLayouts = Array.isArray(registry.layouts) ? registry.layouts.length : 0;
   const totalBuildings = Array.isArray(registry.buildings) ? registry.buildings.length : 0;
-  summary.textContent = `${filtered.length} ${state.tab} shown · ${totalLayouts} layouts · ${totalBuildings} buildings`;
+  const totalScaffolds = Array.isArray(registry.recipes) ? registry.recipes.length : 0;
+  const activeLabel = state.tab === "scaffolds"
+    ? countLabel(filtered.length, "scaffold")
+    : state.tab === "layouts"
+      ? countLabel(filtered.length, "layout")
+      : countLabel(filtered.length, "building");
+  summary.textContent = `${activeLabel} shown · ${countLabel(totalBuildings, "building")} · ${countLabel(totalLayouts, "layout")} · ${countLabel(totalScaffolds, "scaffold")}`;
   cards.innerHTML = filtered.length
-    ? filtered.map((entry) => state.tab === "layouts" ? renderLayoutCard(entry) : renderBuildingCard(entry)).join("")
+    ? filtered.map((entry) => state.tab === "layouts" ? renderLayoutCard(entry) : state.tab === "scaffolds" ? renderScaffoldCard(entry) : renderBuildingCard(entry)).join("")
     : `<article class="card empty-card"><h2>No matches</h2><p>Try a broader search.</p></article>`;
 }
 
@@ -557,6 +724,15 @@ cards.addEventListener("click", (event) => {
     const building = (state.registry?.buildings || []).find((candidate) => candidate.id === copyBuildingButton.getAttribute("data-copy-building"));
     if (building) {
       void copyJson(building);
+    }
+    return;
+  }
+
+  const copyScaffoldButton = event.target.closest("[data-copy-scaffold]");
+  if (copyScaffoldButton) {
+    const recipe = (state.registry?.recipes || []).find((candidate) => candidate.id === copyScaffoldButton.getAttribute("data-copy-scaffold"));
+    if (recipe) {
+      void copyJson(recipe);
     }
     return;
   }

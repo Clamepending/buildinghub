@@ -131,7 +131,7 @@ h1 {
 
 .tabs {
   display: inline-grid;
-  grid-template-columns: repeat(2, minmax(112px, 1fr));
+  grid-template-columns: repeat(3, minmax(112px, 1fr));
   gap: 8px;
   min-width: 0;
 }
@@ -387,6 +387,14 @@ h1 {
 .building-shape-portal .building-mark-roof,
 .building-shape-browser .building-mark-roof {
   background: #7ac7b7;
+}
+
+.building-shape-campus .building-mark-body {
+  background: #536e55;
+}
+
+.building-shape-campus .building-mark-roof {
+  background: #f2c66d;
 }
 
 .meta,

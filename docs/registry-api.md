@@ -26,10 +26,13 @@ Top-level `registry.json` fields:
 | `name` | string | Human-readable registry name. |
 | `packageCount` | number | Number of building packages. |
 | `layoutCount` | number | Number of layout packages. |
+| `recipeCount` | number | Number of scaffold recipe packages. |
 | `packages[]` | array | Package index for buildings. |
 | `layoutPackages[]` | array | Package index for layouts. |
+| `recipePackages[]` | array | Package index for scaffold recipes. |
 | `buildings[]` | array | Full building manifests and Vibe Research compatibility layer. |
 | `layouts[]` | array | Full layout manifests. |
+| `recipes[]` | array | Full scaffold recipes. |
 
 ## Compatibility Contract
 
@@ -114,6 +117,19 @@ Use these fields for package-page UI:
 
 `layoutPackages[]` mirrors the building package lane for layout metadata and checksums.
 
+## Scaffold Recipes
+
+`recipes[]` is the full scaffold recipe gallery. Each recipe uses the Vibe Research recipe schema `vibe-research.scaffold.recipe.v1` and can include:
+
+- `buildings[]` for required and optional capabilities.
+- `settings.portable` for portable settings only.
+- `communication` for agent DM/body/visibility/group inbox policy.
+- `sandbox`, `agents`, `library`, `occupation`, and `permissions` metadata.
+- `layout` for an optional Agent Town arrangement.
+- `localBindingsRequired[]` for local paths, personal values, and secrets that the receiving machine must supply.
+
+Recipes must not include secret values, local file paths, private remotes, transcripts, or executable commands. `recipePackages[]` mirrors the building package lane for recipe metadata and checksums.
+
 ## CLI Interface
 
 The contributor CLI lives at `bin/buildinghub.mjs`.
@@ -142,7 +158,7 @@ Command behavior:
 - `validate`: validates every building and layout manifest.
 - `build`: regenerates root `registry.json`.
 - `site`: regenerates `registry.json`, layout SVG previews, and `site/registry.json`.
-- `list`: prints id, version, trust, and name for buildings and layouts.
+- `list`: prints id, version, type/trust, and name for buildings, layouts, and scaffolds.
 - `pack`: emits deterministic ignored bundles under `dist/<id>/<version>/`.
 - `publish`: local PR-prep flow; validates, builds, bundles, and prints the bundle checksum.
 - `init`: creates a manifest from the basic building template.
@@ -155,6 +171,7 @@ The future hosted API should keep this static contract as its read model:
 - `GET /registry.json` remains the compatibility feed.
 - `GET /packages` can expose the `packages[]` lane with pagination and search.
 - `GET /packages/:id` can expose one manifest, package metadata, versions, screenshots, reports, stars, and install counts.
+- `GET /recipes` can expose the `recipePackages[]` lane with pagination and search.
 - `POST /submissions` can accept a GitHub repo URL, fetch `buildinghub/building.json` at a pinned commit, validate it, and queue moderator review.
 
 The safety boundary stays the same: BuildingHub describes packages and external interfaces, but Vibe Research does not execute code from the registry.

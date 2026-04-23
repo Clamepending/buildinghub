@@ -9,14 +9,17 @@ import {
   initBuilding,
   packBuilding,
   readLayoutManifests,
+  readRecipeManifests,
   validateManifest,
   validateLayoutManifest,
+  validateRecipeManifest,
 } from "../lib/buildinghub.mjs";
 
 async function createFixtureRoot() {
   const root = await mkdtemp(path.join(os.tmpdir(), "buildinghub-test-"));
   await mkdir(path.join(root, "buildings", "example"), { recursive: true });
   await mkdir(path.join(root, "layouts", "main-street"), { recursive: true });
+  await mkdir(path.join(root, "recipes", "research-bench"), { recursive: true });
   await mkdir(path.join(root, "templates", "basic-building"), { recursive: true });
   const manifest = {
     id: "example",
@@ -113,6 +116,92 @@ async function createFixtureRoot() {
   );
   await writeFile(path.join(root, "layouts", "main-street", "README.md"), "# Main Street\n");
   await writeFile(
+    path.join(root, "recipes", "research-bench", "recipe.json"),
+    `${JSON.stringify(
+      {
+        schema: "vibe-research.scaffold.recipe.v1",
+        id: "research-bench",
+        name: "Research Bench",
+        version: "0.1.0",
+        description: "A portable scaffold fixture.",
+        tags: ["research", "fixture"],
+        buildings: [
+          {
+            id: "example",
+            name: "Example",
+            category: "Community",
+            source: "buildinghub",
+            version: "0.1.0",
+            enabled: true,
+            required: true,
+          },
+        ],
+        settings: {
+          portable: {
+            buildingHubEnabled: true,
+            agentCommunicationDmEnabled: true,
+          },
+          localBindingsRequired: [
+            {
+              key: "workspaceRootPath",
+              label: "Workspace root",
+              sensitivity: "local",
+              required: true,
+            },
+          ],
+          personal: [],
+          secrets: [
+            {
+              key: "agentOpenAiApiKey",
+              label: "OpenAI API key",
+              sensitivity: "secret",
+              required: false,
+            },
+          ],
+        },
+        communication: {
+          dm: {
+            enabled: true,
+            body: "freeform",
+            visibility: "workspace",
+          },
+          groupInboxes: ["review-hall"],
+        },
+        sandbox: {
+          provider: "local",
+          isolation: "workspace",
+          network: "default",
+          gpu: {
+            enabled: false,
+            count: 0,
+          },
+          localBindingsRequired: [],
+        },
+        layout: {
+          decorations: [
+            { id: "road-1", itemId: "road-square", x: 100, y: 120 },
+          ],
+          functional: {
+            example: { x: 130, y: 150 },
+          },
+          themeId: "default",
+        },
+        localBindingsRequired: [
+          {
+            key: "workspaceRootPath",
+            label: "Workspace root",
+            sensitivity: "local",
+            required: true,
+          },
+        ],
+        redactions: ["Secrets are not exported."],
+      },
+      null,
+      2,
+    )}\n`,
+  );
+  await writeFile(path.join(root, "recipes", "research-bench", "README.md"), "# Research Bench\n");
+  await writeFile(
     path.join(root, "templates", "basic-building", "building.json"),
     `${JSON.stringify({ ...manifest, id: "example-building", name: "Example Building" }, null, 2)}\n`,
   );
@@ -125,16 +214,20 @@ test("buildRegistry emits compatibility buildings and package metadata", async (
     const { registry } = await buildRegistry({ root, write: false });
     assert.equal(registry.packageCount, 1);
     assert.equal(registry.layoutCount, 1);
+    assert.equal(registry.recipeCount, 1);
     assert.equal(registry.buildings[0].id, "example");
     assert.equal(registry.layouts[0].id, "main-street");
+    assert.equal(registry.recipes[0].id, "research-bench");
     assert.equal(registry.packages[0].id, "example");
     assert.equal(registry.layoutPackages[0].id, "main-street");
+    assert.equal(registry.recipePackages[0].id, "research-bench");
     assert.equal(registry.packages[0].latestVersion, "0.1.0");
     assert.equal(registry.packages[0].source.repositoryUrl, "https://github.com/example/example-building");
     assert.equal(registry.packages[0].thumbnail.path, "assets/thumbnail.png");
     assert.equal(registry.packages[0].footprint.width, 2);
     assert.match(registry.packages[0].manifestSha256, /^[a-f0-9]{64}$/);
     assert.match(registry.layoutPackages[0].layoutSha256, /^[a-f0-9]{64}$/);
+    assert.match(registry.recipePackages[0].recipeSha256, /^[a-f0-9]{64}$/);
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -149,8 +242,20 @@ test("buildSite copies registry into the static site folder", async () => {
     const preview = await readFile(path.join(result.layoutAssetsDir, "main-street.svg"), "utf8");
     assert.equal(registry.layouts[0].id, "main-street");
     assert.equal(registry.buildings[0].id, "example");
+    assert.equal(registry.recipes[0].id, "research-bench");
     assert.match(preview, /Main Street Agent Town layout preview/);
     assert.match(preview, /#b99a5f/);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("readRecipeManifests validates portable scaffold recipes", async () => {
+  const root = await createFixtureRoot();
+  try {
+    const recipes = await readRecipeManifests({ root });
+    assert.equal(recipes.length, 1);
+    assert.equal(recipes[0].recipe.name, "Research Bench");
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -258,5 +363,29 @@ test("validateLayoutManifest rejects unsafe or empty layouts", () => {
   assert.throws(
     () => validateLayoutManifest({ ...baseLayout, requiredBuildings: ["Bad ID"] }, "bad-layout"),
     /requiredBuildings entries/,
+  );
+});
+
+test("validateRecipeManifest rejects secret-bearing portable settings", () => {
+  const baseRecipe = {
+    schema: "vibe-research.scaffold.recipe.v1",
+    id: "bad-recipe",
+    name: "Bad Recipe",
+    version: "0.1.0",
+    description: "Bad scaffold recipe",
+    buildings: [{ id: "example", name: "Example" }],
+  };
+
+  assert.throws(
+    () => validateRecipeManifest({ ...baseRecipe, settings: { portable: { agentOpenAiApiKey: "sk-test" } } }, "bad-recipe"),
+    /looks like a secret-bearing key/,
+  );
+  assert.throws(
+    () => validateRecipeManifest({ ...baseRecipe, localBindingsRequired: [{ key: "agentOpenAiApiKey", value: "sk-test" }] }, "bad-recipe"),
+    /must not include secret values/,
+  );
+  assert.throws(
+    () => validateRecipeManifest({ ...baseRecipe, communication: { dm: { body: "json-only" } } }, "bad-recipe"),
+    /communication\.dm\.body/,
   );
 });

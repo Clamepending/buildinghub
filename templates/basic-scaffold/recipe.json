@@ -1,0 +1,122 @@
+{
+  "schema": "vibe-research.scaffold.recipe.v1",
+  "id": "example-scaffold",
+  "name": "Example Scaffold",
+  "version": "0.1.0",
+  "description": "A portable Vibe Research setup recipe. Replace this with the buildings, layout, communication policy, and local bindings your setup needs.",
+  "tags": ["example", "starter"],
+  "compatibility": {
+    "recipeSchema": "vibe-research.scaffold.recipe.v1",
+    "vibeResearch": {
+      "range": ">=0.2.18"
+    }
+  },
+  "buildings": [
+    {
+      "id": "buildinghub",
+      "name": "BuildingHub",
+      "category": "Community",
+      "source": "core",
+      "enabled": true,
+      "required": true
+    },
+    {
+      "id": "scaffold-recipes",
+      "name": "Scaffold Recipes",
+      "category": "Research Ops",
+      "source": "core",
+      "enabled": true,
+      "required": true
+    }
+  ],
+  "settings": {
+    "portable": {
+      "buildingHubEnabled": true,
+      "agentCommunicationDmEnabled": true,
+      "agentCommunicationDmBody": "freeform",
+      "agentCommunicationDmVisibility": "workspace"
+    },
+    "localBindingsRequired": [
+      {
+        "key": "workspaceRootPath",
+        "label": "Workspace root",
+        "sensitivity": "local",
+        "required": true
+      }
+    ],
+    "personal": [],
+    "secrets": []
+  },
+  "communication": {
+    "dm": {
+      "enabled": true,
+      "body": "freeform",
+      "visibility": "workspace",
+      "requireRelatedObject": true,
+      "maxThreadDepth": 6,
+      "maxUnrepliedPerAgent": 2
+    },
+    "groupInboxes": ["review-hall"],
+    "logging": {
+      "captureMessages": true,
+      "captureMessageReads": true
+    }
+  },
+  "agents": {
+    "defaultProvider": "claude",
+    "allowedProviders": ["claude", "codex", "shell"],
+    "defaultOccupation": "researcher",
+    "canSpawnAgents": true,
+    "canCreateSubagents": true,
+    "maxConcurrentAgents": 6
+  },
+  "sandbox": {
+    "provider": "local",
+    "isolation": "workspace",
+    "network": "default",
+    "gpu": {
+      "enabled": false,
+      "count": 0
+    },
+    "config": {},
+    "localBindingsRequired": []
+  },
+  "permissions": {
+    "requireApproval": ["uses-credentials", "spends-money", "publishes-code", "sends-messages-external"],
+    "deny": ["writes-outside-workspace"]
+  },
+  "library": {
+    "mode": "configured",
+    "gitRemoteConfigured": false,
+    "backupEnabled": true,
+    "localBindingsRequired": [
+      {
+        "key": "wikiPath",
+        "label": "Library folder",
+        "sensitivity": "local",
+        "required": true
+      }
+    ]
+  },
+  "occupation": {
+    "selectedPromptId": "researcher",
+    "label": "Vibe Research Researcher",
+    "editable": false,
+    "promptSha256": ""
+  },
+  "localBindingsRequired": [
+    {
+      "key": "workspaceRootPath",
+      "label": "Workspace root",
+      "sensitivity": "local",
+      "required": true
+    },
+    {
+      "key": "wikiPath",
+      "label": "Library folder",
+      "sensitivity": "local",
+      "required": true
+    }
+  ],
+  "redactions": ["Local paths and credentials are supplied by the receiving machine."]
+}
