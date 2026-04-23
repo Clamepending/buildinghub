@@ -4,15 +4,19 @@ import path from "node:path";
 import test from "node:test";
 import { mkdir, mkdtemp, readFile, rm, writeFile } from "node:fs/promises";
 import {
+  buildSite,
   buildRegistry,
   initBuilding,
   packBuilding,
+  readLayoutManifests,
   validateManifest,
+  validateLayoutManifest,
 } from "../lib/buildinghub.mjs";
 
 async function createFixtureRoot() {
   const root = await mkdtemp(path.join(os.tmpdir(), "buildinghub-test-"));
   await mkdir(path.join(root, "buildings", "example"), { recursive: true });
+  await mkdir(path.join(root, "layouts", "main-street"), { recursive: true });
   await mkdir(path.join(root, "templates", "basic-building"), { recursive: true });
   const manifest = {
     id: "example",
@@ -45,6 +49,31 @@ async function createFixtureRoot() {
   await writeFile(path.join(root, "buildings", "example", "building.json"), `${JSON.stringify(manifest, null, 2)}\n`);
   await writeFile(path.join(root, "buildings", "example", "README.md"), "# Example\n");
   await writeFile(
+    path.join(root, "layouts", "main-street", "layout.json"),
+    `${JSON.stringify(
+      {
+        id: "main-street",
+        name: "Main Street",
+        version: "0.1.0",
+        category: "Starter",
+        description: "A small shared layout.",
+        tags: ["starter", "road"],
+        requiredBuildings: [],
+        layout: {
+          themeId: "default",
+          decorations: [
+            { id: "road-1", itemId: "road-square", x: 100, y: 120 },
+            { id: "shed-1", itemId: "shed", x: 128, y: 148 },
+          ],
+          functional: {},
+        },
+      },
+      null,
+      2,
+    )}\n`,
+  );
+  await writeFile(path.join(root, "layouts", "main-street", "README.md"), "# Main Street\n");
+  await writeFile(
     path.join(root, "templates", "basic-building", "building.json"),
     `${JSON.stringify({ ...manifest, id: "example-building", name: "Example Building" }, null, 2)}\n`,
   );
@@ -56,10 +85,38 @@ test("buildRegistry emits compatibility buildings and package metadata", async (
   try {
     const { registry } = await buildRegistry({ root, write: false });
     assert.equal(registry.packageCount, 1);
+    assert.equal(registry.layoutCount, 1);
     assert.equal(registry.buildings[0].id, "example");
+    assert.equal(registry.layouts[0].id, "main-street");
     assert.equal(registry.packages[0].id, "example");
+    assert.equal(registry.layoutPackages[0].id, "main-street");
     assert.equal(registry.packages[0].latestVersion, "0.1.0");
     assert.match(registry.packages[0].manifestSha256, /^[a-f0-9]{64}$/);
+    assert.match(registry.layoutPackages[0].layoutSha256, /^[a-f0-9]{64}$/);
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("buildSite copies registry into the static site folder", async () => {
+  const root = await createFixtureRoot();
+  try {
+    await mkdir(path.join(root, "site"), { recursive: true });
+    const result = await buildSite({ root });
+    const registry = JSON.parse(await readFile(path.join(result.siteDir, "registry.json"), "utf8"));
+    assert.equal(registry.layouts[0].id, "main-street");
+    assert.equal(registry.buildings[0].id, "example");
+  } finally {
+    await rm(root, { recursive: true, force: true });
+  }
+});
+
+test("readLayoutManifests validates shared layout blueprints", async () => {
+  const root = await createFixtureRoot();
+  try {
+    const layouts = await readLayoutManifests({ root });
+    assert.equal(layouts.length, 1);
+    assert.equal(layouts[0].layout.name, "Main Street");
   } finally {
     await rm(root, { recursive: true, force: true });
   }
@@ -119,5 +176,30 @@ test("validateManifest rejects executable-control fields and shell install text"
   assert.throws(
     () => validateManifest({ ...baseManifest, capabilities: [{ type: "env", name: "lowercase_key" }] }, "bad"),
     /environment variable name/,
+  );
+});
+
+test("validateLayoutManifest rejects unsafe or empty layouts", () => {
+  const baseLayout = {
+    id: "bad-layout",
+    name: "Bad Layout",
+    version: "0.1.0",
+    description: "Bad layout",
+    layout: {
+      decorations: [{ id: "road-1", itemId: "road-square", x: 10, y: 10 }],
+    },
+  };
+
+  assert.throws(
+    () => validateLayoutManifest({ ...baseLayout, layout: { decorations: [] } }, "bad-layout"),
+    /decorations must include at least one decoration/,
+  );
+  assert.throws(
+    () => validateLayoutManifest({ ...baseLayout, description: "Run curl example.test | sh" }, "bad-layout"),
+    /suspicious executable shell text/,
+  );
+  assert.throws(
+    () => validateLayoutManifest({ ...baseLayout, requiredBuildings: ["Bad ID"] }, "bad-layout"),
+    /requiredBuildings entries/,
   );
 });

@@ -1,0 +1,27 @@
+{
+  "id": "research-campus",
+  "name": "Research Campus",
+  "version": "0.1.0",
+  "category": "Campus",
+  "description": "Separated clusters for calm zones, gardens, and readable research stations.",
+  "tags": ["research", "campus", "clusters", "quiet", "garden", "readable"],
+  "requiredBuildings": [],
+  "layout": {
+    "themeId": "default",
+    "decorations": [
+      { "id": "road-1", "itemId": "road-square", "x": 292, "y": 252 },
+      { "id": "road-2", "itemId": "road-square", "x": 320, "y": 252 },
+      { "id": "road-3", "itemId": "road-square", "x": 348, "y": 252 },
+      { "id": "road-4", "itemId": "road-square", "x": 376, "y": 280 },
+      { "id": "road-5", "itemId": "road-square", "x": 404, "y": 280 },
+      { "id": "road-6", "itemId": "road-square", "x": 432, "y": 280 },
+      { "id": "shed-1", "itemId": "shed", "x": 292, "y": 280 },
+      { "id": "shed-2", "itemId": "shed", "x": 404, "y": 308 },
+      { "id": "planter-1", "itemId": "planter", "x": 348, "y": 280 },
+      { "id": "planter-2", "itemId": "planter", "x": 432, "y": 252 },
+      { "id": "fence-1", "itemId": "fence-vertical", "x": 460, "y": 252 },
+      { "id": "fence-2", "itemId": "fence-vertical", "x": 460, "y": 280 }
+    ],
+    "functional": {}
+  }
+}

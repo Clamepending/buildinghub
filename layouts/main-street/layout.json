@@ -1,0 +1,27 @@
+{
+  "id": "main-street",
+  "name": "Main Street",
+  "version": "0.1.0",
+  "category": "Starter",
+  "description": "A readable starter road with side accents and a tiny town anchor.",
+  "tags": ["road", "street", "linear", "clear", "starter", "readable"],
+  "requiredBuildings": [],
+  "layout": {
+    "themeId": "default",
+    "decorations": [
+      { "id": "road-1", "itemId": "road-square", "x": 272, "y": 264 },
+      { "id": "road-2", "itemId": "road-square", "x": 300, "y": 264 },
+      { "id": "road-3", "itemId": "road-square", "x": 328, "y": 264 },
+      { "id": "road-4", "itemId": "road-square", "x": 356, "y": 264 },
+      { "id": "road-5", "itemId": "road-square", "x": 384, "y": 264 },
+      { "id": "road-6", "itemId": "road-square", "x": 412, "y": 264 },
+      { "id": "road-7", "itemId": "road-square", "x": 440, "y": 264 },
+      { "id": "planter-1", "itemId": "planter", "x": 300, "y": 292 },
+      { "id": "planter-2", "itemId": "planter", "x": 412, "y": 292 },
+      { "id": "shed-1", "itemId": "shed", "x": 356, "y": 292 },
+      { "id": "fence-1", "itemId": "fence-horizontal", "x": 272, "y": 236 },
+      { "id": "fence-2", "itemId": "fence-horizontal", "x": 440, "y": 236 }
+    ],
+    "functional": {}
+  }
+}

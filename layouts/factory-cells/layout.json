@@ -1,0 +1,27 @@
+{
+  "id": "factory-cells",
+  "name": "Factory Cells",
+  "version": "0.1.0",
+  "category": "Factory",
+  "description": "Repeated cells and a central service spine for bottleneck-friendly scanning.",
+  "tags": ["factory", "grid", "cells", "factorio", "modules", "scannable"],
+  "requiredBuildings": [],
+  "layout": {
+    "themeId": "default",
+    "decorations": [
+      { "id": "road-a1", "itemId": "road-square", "x": 300, "y": 236 },
+      { "id": "road-a2", "itemId": "road-square", "x": 328, "y": 236 },
+      { "id": "road-a3", "itemId": "road-square", "x": 356, "y": 236 },
+      { "id": "road-a4", "itemId": "road-square", "x": 384, "y": 236 },
+      { "id": "road-a5", "itemId": "road-square", "x": 412, "y": 236 },
+      { "id": "road-b1", "itemId": "road-square", "x": 356, "y": 264 },
+      { "id": "road-b2", "itemId": "road-square", "x": 356, "y": 292 },
+      { "id": "road-b3", "itemId": "road-square", "x": 356, "y": 320 },
+      { "id": "shed-1", "itemId": "shed", "x": 300, "y": 264 },
+      { "id": "shed-2", "itemId": "shed", "x": 384, "y": 264 },
+      { "id": "planter-1", "itemId": "planter", "x": 300, "y": 320 },
+      { "id": "planter-2", "itemId": "planter", "x": 412, "y": 320 }
+    ],
+    "functional": {}
+  }
+}

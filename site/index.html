@@ -1,0 +1,33 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <title>BuildingHub</title>
+    <link rel="stylesheet" href="./styles.css" />
+  </head>
+  <body>
+    <main class="shell">
+      <header class="hero">
+        <p>Vibe Research community catalog</p>
+        <h1>BuildingHub</h1>
+        <span>Discover safe manifest-only buildings and remixable Agent Town layouts.</span>
+      </header>
+
+      <section class="toolbar" aria-label="BuildingHub search">
+        <div class="tabs" role="tablist" aria-label="Catalog sections">
+          <button class="tab is-active" type="button" data-tab="layouts">Layouts</button>
+          <button class="tab" type="button" data-tab="buildings">Buildings</button>
+        </div>
+        <label class="search">
+          <span>Search</span>
+          <input id="search" type="search" placeholder="factory, starter, github, mcp..." autocomplete="off" />
+        </label>
+      </section>
+
+      <section id="summary" class="summary" aria-live="polite"></section>
+      <section id="cards" class="grid" aria-label="Catalog results"></section>
+    </main>
+    <script type="module" src="./app.js"></script>
+  </body>
+</html>

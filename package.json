@@ -10,6 +10,7 @@
     "build": "node bin/buildinghub.mjs build",
     "doctor": "node bin/buildinghub.mjs doctor",
     "list": "node bin/buildinghub.mjs list",
+    "site": "node bin/buildinghub.mjs site",
     "pack": "node bin/buildinghub.mjs pack --all",
     "test": "node --test test/*.test.mjs && node bin/buildinghub.mjs validate"
   }

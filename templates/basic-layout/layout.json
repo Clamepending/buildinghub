@@ -1,0 +1,18 @@
+{
+  "id": "example-layout",
+  "name": "Example Layout",
+  "version": "0.1.0",
+  "category": "Starter",
+  "description": "A small Agent Town base layout that can be remixed.",
+  "tags": ["starter", "example"],
+  "requiredBuildings": [],
+  "layout": {
+    "themeId": "default",
+    "decorations": [
+      { "id": "road-1", "itemId": "road-square", "x": 328, "y": 264 },
+      { "id": "road-2", "itemId": "road-square", "x": 356, "y": 264 },
+      { "id": "planter-1", "itemId": "planter", "x": 328, "y": 292 }
+    ],
+    "functional": {}
+  }
+}

@@ -4,10 +4,12 @@ import {
   BUILDINGHUB_VERSION,
   DEFAULT_ROOT,
   buildRegistry,
+  buildSite,
   initBuilding,
   packAllBuildings,
   packBuilding,
   readBuildingManifests,
+  readLayoutManifests,
 } from "../lib/buildinghub.mjs";
 
 function usage() {
@@ -16,6 +18,7 @@ function usage() {
 Usage:
   buildinghub validate [--root <path>]
   buildinghub build [--root <path>]
+  buildinghub site [--root <path>]
   buildinghub list [--root <path>]
   buildinghub pack <id|--all> [--root <path>] [--out <path>]
   buildinghub init <id> [--name <name>] [--root <path>]
@@ -72,13 +75,20 @@ async function run() {
 
   if (command === "validate") {
     const entries = await readBuildingManifests({ root: options.root });
-    process.stdout.write(`validated ${entries.length} BuildingHub manifests\n`);
+    const layouts = await readLayoutManifests({ root: options.root });
+    process.stdout.write(`validated ${entries.length} BuildingHub manifests and ${layouts.length} layouts\n`);
     return;
   }
 
   if (command === "build") {
     const { registry } = await buildRegistry({ root: options.root });
-    process.stdout.write(`wrote registry.json with ${registry.packageCount} buildings\n`);
+    process.stdout.write(`wrote registry.json with ${registry.packageCount} buildings and ${registry.layoutCount} layouts\n`);
+    return;
+  }
+
+  if (command === "site") {
+    const { registry, siteDir } = await buildSite({ root: options.root });
+    process.stdout.write(`prepared ${siteDir} with ${registry.packageCount} buildings and ${registry.layoutCount} layouts\n`);
     return;
   }
 
@@ -126,13 +136,16 @@ async function run() {
 
   if (command === "doctor") {
     const entries = await readBuildingManifests({ root: options.root });
+    const layouts = await readLayoutManifests({ root: options.root });
     const { registry } = await buildRegistry({ root: options.root, write: false });
     process.stdout.write(
       [
         `root: ${options.root}`,
         `cli: buildinghub/${BUILDINGHUB_VERSION}`,
         `buildings: ${entries.length}`,
+        `layouts: ${layouts.length}`,
         `registry packages: ${registry.packageCount}`,
+        `registry layout packages: ${registry.layoutCount}`,
         "safety: manifest-only loader, no executable package lane enabled",
         "",
       ].join("\n"),
