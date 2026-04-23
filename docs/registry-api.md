@@ -6,9 +6,9 @@ BuildingHub is a static registry today. The public interface is the generated `r
 
 | surface | URL | purpose |
 | --- | --- | --- |
-| Gallery | `https://clamepending.github.io/buildinghub/` | Searchable BuildingHub website. |
-| Registry JSON | `https://clamepending.github.io/buildinghub/registry.json` | Machine-readable catalog consumed by Vibe Research and future package UIs. |
-| Layout previews | `https://clamepending.github.io/buildinghub/assets/layouts/<layout-id>.svg` | Generated static layout preview assets. |
+| Gallery | `https://buildinghub.vibe-research.net/` | Searchable BuildingHub website. |
+| Registry JSON | `https://buildinghub.vibe-research.net/registry.json` | Machine-readable catalog consumed by Vibe Research and future package UIs. |
+| Layout previews | `https://buildinghub.vibe-research.net/assets/layouts/<layout-id>.svg` | Generated static layout preview assets. |
 | Source repo | `https://github.com/Clamepending/buildinghub` | Central registry, validation, docs, and Pages deployment. |
 
 The registry URL is static JSON. Consumers can use normal HTTP caching and append a cache-busting query string during verification, for example `registry.json?verify=<commit>`.

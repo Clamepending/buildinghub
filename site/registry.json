@@ -2,7 +2,7 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T05:25:55.824Z",
+  "generatedAt": "2026-04-23T05:31:13.967Z",
   "name": "Vibe Research BuildingHub",
   "packageCount": 36,
   "layoutCount": 4,
@@ -1493,17 +1493,17 @@
       "name": "ML Research Bench",
       "category": "Scaffold",
       "latestVersion": "0.1.0",
-      "recipeSha256": "f672ea15527b007d5ad4d47012fb059050a28bec597fb760b3a8d0c5c56de904",
+      "recipeSha256": "5fb908ae08b2d74db63c0cf0444499255e013585a3c776c76cbe7599b7d03766",
       "source": {
         "recipePath": "recipes/ml-research-bench/recipe.json",
         "readmePath": "recipes/ml-research-bench/README.md",
         "repositoryUrl": "https://github.com/Clamepending/buildinghub",
-        "recipeUrl": "https://clamepending.github.io/buildinghub/#/scaffolds/ml-research-bench"
+        "recipeUrl": "https://buildinghub.vibe-research.net/#/scaffolds/ml-research-bench"
       },
       "versions": [
         {
           "version": "0.1.0",
-          "recipeSha256": "f672ea15527b007d5ad4d47012fb059050a28bec597fb760b3a8d0c5c56de904",
+          "recipeSha256": "5fb908ae08b2d74db63c0cf0444499255e013585a3c776c76cbe7599b7d03766",
           "recipePath": "recipes/ml-research-bench/recipe.json"
         }
       ]
@@ -8218,7 +8218,7 @@
       "source": {
         "kind": "buildinghub",
         "repositoryUrl": "https://github.com/Clamepending/buildinghub",
-        "recipeUrl": "https://clamepending.github.io/buildinghub/#/scaffolds/ml-research-bench"
+        "recipeUrl": "https://buildinghub.vibe-research.net/#/scaffolds/ml-research-bench"
       }
     }
   ]

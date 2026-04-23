@@ -281,6 +281,6 @@
   "source": {
     "kind": "buildinghub",
     "repositoryUrl": "https://github.com/Clamepending/buildinghub",
-    "recipeUrl": "https://clamepending.github.io/buildinghub/#/scaffolds/ml-research-bench"
+    "recipeUrl": "https://buildinghub.vibe-research.net/#/scaffolds/ml-research-bench"
   }
 }

@@ -4,6 +4,8 @@ Community building catalog for Vibe Research. The shape intentionally follows th
 
 BuildingHub packages **manifest-only** buildings, shared Agent Town layouts, and Vibe Research scaffold recipes: setup guides, visual town lots, access requirements, agent-facing capability notes, declarative base blueprints, and portable operating setups. Installing a BuildingHub entry, applying a layout, or applying a scaffold in Vibe Research does not execute code from this repository.
 
+Public catalog: `https://buildinghub.vibe-research.net/`
+
 ## Layout
 
 ```text
