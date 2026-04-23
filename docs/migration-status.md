@@ -6,6 +6,8 @@ This page answers the practical question: are the buildings organized well enoug
 
 Short answer: the central BuildingHub registry is organized into the new manifest/package structure, but the full app-store migration is only partially complete. Every building has a package record and town footprint. Only the first repo-first building snapshot has a source repo and thumbnail wired into the manifest.
 
+Every public building page exposes a GitHub source link today. When `repo.url` exists, the page links to the package repo. Until a building has its own package repo, the page links to the reviewed central registry snapshot under `buildings/<id>/`.
+
 ## Current Catalog
 
 | area | status |
