@@ -14,12 +14,24 @@ layouts/<layout-id>/README.md          # layout notes and remix context
 schemas/building.schema.json           # JSON schema for manifests
 schemas/layout.schema.json             # JSON schema for layouts
 docs/package-repos.md                  # repo-first package/app-store contract
+docs/manifest-reference.md             # building.json field contract
+docs/registry-api.md                   # public registry, Pages, and CLI interfaces
+docs/migration-status.md               # structure migration audit
 scripts/validate-buildings.mjs         # local validation
 scripts/build-registry.mjs             # emits registry.json
 site/                                 # static BuildingHub gallery
 bin/buildinghub.mjs                    # contributor CLI
 registry.json                          # generated aggregate catalog
 ```
+
+## Docs
+
+- `docs/architecture.md` explains the registry, compatibility, package, and hosted API path.
+- `docs/package-repos.md` explains the repo-first community package model.
+- `docs/manifest-reference.md` documents the building manifest fields, validation rules, tools, endpoints, media, and footprints.
+- `docs/registry-api.md` documents the public GitHub Pages registry, JSON shape, and CLI interface.
+- `docs/migration-status.md` tracks which parts of the catalog are fully migrated and which still need package repos, thumbnails, or endpoint polish.
+- `docs/contributing.md` and `docs/security.md` cover PR and safety expectations.
 
 ## CLI
 

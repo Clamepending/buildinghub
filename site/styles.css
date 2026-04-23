@@ -99,6 +99,18 @@ h1 {
   line-height: 1.42;
 }
 
+.hero-links {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 8px;
+}
+
+.hero-link {
+  min-height: 38px;
+  color: var(--text);
+  background: rgba(13, 14, 18, 0.72);
+}
+
 .catalog {
   display: grid;
   gap: 14px;
