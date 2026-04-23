@@ -36,6 +36,18 @@
   "visual": {
     "shape": "lab"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "lab",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Harbor CLI + sandbox runtime",
     "detail": "Requires the harbor CLI where the agent runs, plus Docker or a configured cloud sandbox provider. Model and sandbox provider API credentials must live in the agent runtime; Vibe Research only tracks the building and generated guide."
@@ -106,6 +118,125 @@
       "name": "harbor",
       "command": "harbor",
       "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "OPENAI_API_KEY",
+      "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "ANTHROPIC_API_KEY",
+      "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GEMINI_API_KEY",
+      "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "DAYTONA_API_KEY",
+      "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_ID",
+      "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_SECRET",
+      "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "PATH",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "E2B",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Harbor setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "harbor",
+      "command": "harbor",
+      "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "Harbor docs",
+      "url": "https://www.harborframework.com/docs",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Getting started",
+      "url": "https://www.harborframework.com/docs/getting-started",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Agents",
+      "url": "https://www.harborframework.com/docs/agents",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Tasks",
+      "url": "https://www.harborframework.com/docs/tasks",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Registry",
+      "url": "https://registry.harborframework.com/",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Trajectory format",
+      "url": "https://www.harborframework.com/docs/trajectory-format",
+      "auth": "none",
+      "detail": "Documentation for Harbor.",
       "required": false
     }
   ],

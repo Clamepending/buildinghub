@@ -21,6 +21,23 @@ const HELPER_COMMAND_ALLOWLIST = new Set([
   "vr-videomemory",
 ]);
 
+const FOOTPRINT_BY_SHAPE = {
+  browser: { width: 3, height: 2 },
+  camera: { width: 2, height: 2 },
+  campanile: { width: 2, height: 3 },
+  dock: { width: 3, height: 1 },
+  doghouse: { width: 1, height: 1 },
+  factory: { width: 3, height: 2 },
+  lab: { width: 3, height: 2 },
+  library: { width: 3, height: 2 },
+  market: { width: 3, height: 2 },
+  plugin: { width: 2, height: 2 },
+  portal: { width: 2, height: 2 },
+  post: { width: 2, height: 2 },
+  school: { width: 3, height: 2 },
+  studio: { width: 3, height: 2 },
+};
+
 const EXTRA_MANIFESTS = [
   {
     id: "modal",
@@ -48,10 +65,60 @@ const EXTRA_MANIFESTS = [
     visual: {
       shape: "factory",
     },
+    footprint: {
+      width: 3,
+      height: 2,
+      shape: "factory",
+      snap: "grid",
+      entrances: [
+        {
+          side: "south",
+          offset: 1.5,
+        },
+      ],
+    },
     access: {
       label: "Modal CLI/Python SDK",
       detail: "Requires a Modal account plus token credentials where the agent runs. BuildingHub records setup metadata only and does not run Modal code.",
     },
+    tools: [
+      {
+        type: "helper-command",
+        name: "modal",
+        command: "modal",
+        detail: "Modal CLI for token inspection, app runs, deployments, and sandbox workflows.",
+        required: true,
+      },
+      {
+        type: "env",
+        name: "MODAL_TOKEN_ID",
+        detail: "Modal account token id for automated CLI or SDK access.",
+        required: true,
+      },
+      {
+        type: "env",
+        name: "MODAL_TOKEN_SECRET",
+        detail: "Modal account token secret for automated CLI or SDK access.",
+        required: true,
+      },
+    ],
+    endpoints: [
+      {
+        type: "docs",
+        name: "Modal docs",
+        url: "https://modal.com/docs",
+        auth: "none",
+        detail: "Canonical Modal documentation for setup and runtime behavior.",
+        required: false,
+      },
+      {
+        type: "local",
+        name: "Modal CLI profile",
+        auth: "api-key",
+        detail: "Local Modal CLI profile or MODAL_TOKEN_ID/MODAL_TOKEN_SECRET environment variables configured outside BuildingHub.",
+        required: true,
+      },
+    ],
     capabilities: [
       {
         type: "helper-command",
@@ -421,6 +488,96 @@ function inferTrust(building, capabilities) {
   return cleanString(building.trust) || "manifest-only";
 }
 
+function createFootprint(shape) {
+  const normalizedShape = normalizeId(shape || "plugin") || "plugin";
+  const size = FOOTPRINT_BY_SHAPE[normalizedShape] || FOOTPRINT_BY_SHAPE.plugin;
+  return {
+    ...size,
+    shape: normalizedShape,
+    snap: "grid",
+    entrances: [
+      {
+        side: "south",
+        offset: size.width / 2,
+      },
+    ],
+  };
+}
+
+function capabilityToTool(capability) {
+  const typeByCapability = {
+    api: "api",
+    env: "env",
+    "helper-command": "helper-command",
+    mcp: "mcp-tool",
+    oauth: "oauth-scope",
+    webhook: "webhook",
+  };
+  const type = typeByCapability[capability.type];
+  if (!type) {
+    return null;
+  }
+  return {
+    type,
+    name: capability.name,
+    ...(capability.command ? { command: capability.command } : {}),
+    detail: cleanString(capability.detail) || `${capability.name} capability for this building.`,
+    required: Boolean(capability.required),
+  };
+}
+
+function inferEndpoints(building, agentGuide, capabilities) {
+  const endpoints = [];
+  const add = (endpoint) => {
+    const name = cleanString(endpoint.name);
+    if (!name) {
+      return;
+    }
+    const key = `${endpoint.type}:${name.toLowerCase()}`;
+    if (endpoints.some((entry) => `${entry.type}:${entry.name.toLowerCase()}` === key)) {
+      return;
+    }
+    endpoints.push(endpoint);
+  };
+
+  for (const doc of Array.isArray(agentGuide.docs) ? agentGuide.docs : []) {
+    const url = cleanString(doc.url);
+    if (!/^https?:\/\//i.test(url)) {
+      continue;
+    }
+    add({
+      type: "docs",
+      name: cleanString(doc.label) || `${building.name} docs`,
+      url,
+      auth: "none",
+      detail: cleanString(doc.detail) || `Documentation for ${building.name}.`,
+      required: false,
+    });
+  }
+
+  for (const capability of capabilities) {
+    if (capability.type === "mcp") {
+      add({
+        type: "mcp",
+        name: capability.name,
+        auth: "mcp",
+        detail: capability.detail || `${building.name} MCP surface configured outside BuildingHub.`,
+        required: Boolean(capability.required),
+      });
+    } else if (capability.type === "api" || capability.type === "webhook" || capability.type === "oauth") {
+      add({
+        type: capability.type,
+        name: capability.name,
+        auth: capability.type === "oauth" ? "oauth" : "custom",
+        detail: capability.detail || `${building.name} ${capability.type} surface configured outside BuildingHub.`,
+        required: Boolean(capability.required),
+      });
+    }
+  }
+
+  return endpoints.slice(0, 12);
+}
+
 function sanitizeCoreBuilding(building) {
   const agentGuide = sanitizeAgentGuide(building.agentGuide || {});
   const capabilities = inferCapabilities(building, agentGuide);
@@ -451,6 +608,7 @@ function sanitizeCoreBuilding(building) {
       ...getNestedStrings(building.onboarding).slice(0, 20),
     ]).slice(0, 24),
     visual,
+    footprint: createFootprint(visual.shape),
     access: building.access && cleanString(building.access.label) && cleanString(building.access.detail)
       ? {
         label: cleanString(building.access.label),
@@ -459,8 +617,13 @@ function sanitizeCoreBuilding(building) {
       : {
         label: `${cleanString(building.source) || "Vibe Research"} catalog`,
         detail: `${cleanString(building.name)} is mirrored from the Vibe Research building catalog as manifest-only setup metadata.`,
-      },
+    },
     ...(capabilities.length ? { capabilities } : {}),
+    ...(capabilities.length ? { tools: capabilities.map(capabilityToTool).filter(Boolean).slice(0, 12) } : {}),
+    ...(() => {
+      const endpoints = inferEndpoints(building, agentGuide, capabilities);
+      return endpoints.length ? { endpoints } : {};
+    })(),
     onboarding: sanitizeOnboarding(building.onboarding || {}),
   };
 

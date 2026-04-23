@@ -25,10 +25,49 @@ async function createFixtureRoot() {
     category: "Community",
     description: "A manifest-only test building.",
     trust: "manifest-only",
+    repo: {
+      url: "https://github.com/example/example-building",
+      manifestPath: "buildinghub/building.json",
+      readmePath: "README.md",
+      assetsPath: "assets",
+    },
+    media: {
+      thumbnail: {
+        path: "assets/thumbnail.png",
+        alt: "Example building thumbnail",
+      },
+    },
+    footprint: {
+      width: 2,
+      height: 2,
+      shape: "plugin",
+      snap: "grid",
+      entrances: [{ side: "south", offset: 1 }],
+    },
     access: {
       label: "External service",
       detail: "Requires external setup.",
     },
+    tools: [
+      {
+        type: "api",
+        name: "example.search",
+        endpoint: "example-api",
+        detail: "Search the external service.",
+        required: false,
+      },
+    ],
+    endpoints: [
+      {
+        type: "api",
+        name: "example-api",
+        method: "POST",
+        urlTemplate: "https://api.example.test/v1/{resource}",
+        auth: "api-key",
+        detail: "Example API surface configured outside BuildingHub.",
+        required: true,
+      },
+    ],
     capabilities: [
       {
         type: "env",
@@ -91,6 +130,9 @@ test("buildRegistry emits compatibility buildings and package metadata", async (
     assert.equal(registry.packages[0].id, "example");
     assert.equal(registry.layoutPackages[0].id, "main-street");
     assert.equal(registry.packages[0].latestVersion, "0.1.0");
+    assert.equal(registry.packages[0].source.repositoryUrl, "https://github.com/example/example-building");
+    assert.equal(registry.packages[0].thumbnail.path, "assets/thumbnail.png");
+    assert.equal(registry.packages[0].footprint.width, 2);
     assert.match(registry.packages[0].manifestSha256, /^[a-f0-9]{64}$/);
     assert.match(registry.layoutPackages[0].layoutSha256, /^[a-f0-9]{64}$/);
   } finally {
@@ -179,6 +221,18 @@ test("validateManifest rejects executable-control fields and shell install text"
   assert.throws(
     () => validateManifest({ ...baseManifest, capabilities: [{ type: "env", name: "lowercase_key" }] }, "bad"),
     /environment variable name/,
+  );
+  assert.throws(
+    () => validateManifest({ ...baseManifest, media: { thumbnail: { path: "../secret.png", alt: "Bad" } } }, "bad"),
+    /safe repo-relative path/,
+  );
+  assert.throws(
+    () => validateManifest({ ...baseManifest, footprint: { width: 20, height: 1 } }, "bad"),
+    /footprint.width/,
+  );
+  assert.throws(
+    () => validateManifest({ ...baseManifest, endpoints: [{ type: "api", name: "bad", method: "TRACE", detail: "Bad" }] }, "bad"),
+    /endpoint method/,
   );
 });
 

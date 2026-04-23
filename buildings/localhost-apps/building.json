@@ -29,11 +29,44 @@
   "visual": {
     "shape": "dock"
   },
+  "footprint": {
+    "width": 3,
+    "height": 1,
+    "shape": "dock",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "vibe-research catalog",
     "detail": "Localhost Apps is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+      "detail": "Canonical Playwright helper command.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+      "detail": "Visual fallback helper for screenshots/images.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-playwright",
+      "command": "vr-playwright",
+      "detail": "Inspect a local app with a real browser.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",

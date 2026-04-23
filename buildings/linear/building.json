@@ -11,10 +11,53 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Linear connector",
     "detail": "Requires a Linear MCP, OAuth connector, or API token configured where the agent runs. BuildingHub only records the setup path."
   },
+  "tools": [
+    {
+      "type": "mcp-tool",
+      "name": "linear",
+      "detail": "Preferred MCP path for issue and project access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "LINEAR_API_KEY",
+      "detail": "Fallback API key for local helper commands.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "Linear API docs",
+      "url": "https://developers.linear.app/docs",
+      "auth": "none",
+      "detail": "Official Linear developer documentation.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Linear MCP",
+      "auth": "mcp",
+      "detail": "MCP surface configured outside BuildingHub for issue and project access.",
+      "required": true
+    }
+  ],
   "capabilities": [
     {
       "type": "mcp",

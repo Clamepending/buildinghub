@@ -28,6 +28,18 @@
   "visual": {
     "shape": "library"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "library",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "vibe-research catalog",
     "detail": "Library is mirrored from the Vibe Research building catalog as manifest-only setup metadata."

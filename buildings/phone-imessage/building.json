@@ -33,11 +33,37 @@
   "visual": {
     "shape": "post"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "post",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Local bridge",
     "detail": "Requires a phone, SMS, or Apple Messages bridge configured on the machine/provider that will send messages. Vibe Research does not inject phone or iMessage access into agents."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "SMS",
+      "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "SMS",

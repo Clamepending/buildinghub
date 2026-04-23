@@ -36,11 +36,44 @@
   "visual": {
     "shape": "market"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "market",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "vibe-research catalog",
     "detail": "OttoAuth is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+      "detail": "Canonical helper command for local agents.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by OttoAuth setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-ottoauth",
+      "command": "vr-ottoauth",
+      "detail": "Use an explicit spending bound for commerce requests.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",

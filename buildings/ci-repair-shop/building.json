@@ -32,11 +32,31 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "GitHub + local tests",
     "detail": "Uses the GitHub connector or gh authentication plus the checked-out repository's test commands. Local terminal agents still need repo and GitHub access where they run."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "SHA",
+      "detail": "Environment variable referenced by CI Repair Shop setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "SHA",

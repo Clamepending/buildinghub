@@ -25,6 +25,18 @@
   "visual": {
     "shape": "market"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "market",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Local browser theme",
     "detail": "Uses browser-local Agent Town preferences only. No credentials or external services are required."

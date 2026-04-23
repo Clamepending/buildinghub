@@ -2,6 +2,17 @@
 
 ## Create A Building
 
+For community packages, start in your own GitHub repo first:
+
+```text
+my-service/
+  README.md
+  buildinghub/building.json
+  assets/thumbnail.png
+```
+
+Then submit a reviewed snapshot to this central registry. The snapshot keeps BuildingHub searchable and moderated while your package repo remains the source users can inspect, star, fork, and contribute to.
+
 ```bash
 node bin/buildinghub.mjs init my-service --name "My Service"
 ```
@@ -12,6 +23,15 @@ Then edit:
 buildings/my-service/building.json
 buildings/my-service/README.md
 ```
+
+Fill in:
+
+- `repo.url`, `repo.manifestPath`, and optional `repo.assetsPath`
+- `media.thumbnail` and optional `media.screenshots`
+- `footprint.width`, `footprint.height`, `footprint.shape`, and entrances when known
+- `tools[]` for MCP tools, helper commands, API actions, webhook actions, OAuth scopes, or env surfaces agents can use
+- `endpoints[]` for API, webhook, OAuth, MCP, docs, or local callback surfaces the user configures outside BuildingHub
+- `capabilities[]` for the compatibility layer Vibe Research already loads
 
 ## Validate And Package
 
@@ -32,6 +52,9 @@ Allowed:
 - setup steps
 - required environment variable names
 - MCP or helper command names
+- API/webhook/OAuth endpoint templates
+- tool names and details
+- thumbnails, screenshots, and footprint metadata
 - docs/repository links
 - access and safety notes
 - visual metadata

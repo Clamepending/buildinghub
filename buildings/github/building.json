@@ -24,6 +24,18 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Host connector",
     "detail": "Available to host agents that have the GitHub connector or gh authentication. Local terminal agents need their own GitHub auth."

@@ -7,13 +7,57 @@
   "status": "community",
   "trust": "manifest-only",
   "icon": "plug",
+  "repo": {
+    "url": "https://github.com/you/example-building",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.png",
+      "alt": "Example Building thumbnail"
+    }
+  },
   "visual": {
     "shape": "plugin"
+  },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
   },
   "access": {
     "label": "External service",
     "detail": "Describe the API, MCP, account, or local helper that must already be configured."
   },
+  "tools": [
+    {
+      "type": "api",
+      "name": "example.search",
+      "detail": "Describe one agent-facing tool exposed by the service.",
+      "endpoint": "example-api",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "api",
+      "name": "example-api",
+      "method": "POST",
+      "urlTemplate": "https://api.example.com/v1/{resource}",
+      "auth": "api-key",
+      "detail": "Describe the API surface the user configures outside BuildingHub.",
+      "required": true
+    }
+  ],
   "capabilities": [
     {
       "type": "env",

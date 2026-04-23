@@ -33,6 +33,18 @@
   "visual": {
     "shape": "portal"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "portal",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Tailnet portal",
     "detail": "Uses the local Tailscale CLI when available to show tailnet URLs and expose localhost-only ports with Tailscale Serve. Vibe Research does not store Tailscale credentials."
@@ -67,6 +79,49 @@
       "name": "tailscale",
       "command": "tailscale",
       "detail": "Shows whether the machine is logged into a tailnet.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Directory containing all generated building guides.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+      "detail": "Index of generated building guides.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Tailscale setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by Tailscale setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "tailscale",
+      "command": "tailscale",
+      "detail": "Shows whether the machine is logged into a tailnet.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "Tailscale Serve docs",
+      "url": "https://tailscale.com/kb/1242/tailscale-serve",
+      "auth": "none",
+      "detail": "Documentation for Tailscale.",
       "required": false
     }
   ],

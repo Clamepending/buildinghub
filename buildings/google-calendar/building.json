@@ -27,6 +27,18 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Host connector",
     "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector."
@@ -41,6 +53,29 @@
     {
       "type": "mcp",
       "name": "Google Calendar MCP",
+      "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Google Calendar setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Google Calendar MCP",
+      "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Google Calendar MCP",
+      "auth": "mcp",
       "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
       "required": false
     }

@@ -11,10 +11,47 @@
   "visual": {
     "shape": "library"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "library",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Supabase CLI or MCP",
     "detail": "Requires Supabase CLI authentication, a provider MCP, or scoped database credentials where the agent runs."
   },
+  "tools": [
+    {
+      "type": "helper-command",
+      "name": "supabase",
+      "command": "supabase",
+      "detail": "Local CLI for migrations, branches, and project inspection.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "SUPABASE_ACCESS_TOKEN",
+      "detail": "Optional token for CLI automation.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "Supabase docs",
+      "url": "https://supabase.com/docs",
+      "auth": "none",
+      "detail": "Official Supabase documentation.",
+      "required": false
+    }
+  ],
   "capabilities": [
     {
       "type": "helper-command",

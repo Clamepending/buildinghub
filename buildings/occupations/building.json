@@ -34,11 +34,49 @@
   "visual": {
     "shape": "school"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "school",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Managed prompts",
     "detail": "Uses the local Occupations prompt store and syncs managed instructions into AGENTS.md, CLAUDE.md, and GEMINI.md so Codex, Claude, OpenClaw, Gemini, and OpenCode sessions receive the same role guidance."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",
+      "detail": "Path to the active Occupations prompt file for this session.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "AGENTS",
+      "detail": "Environment variable referenced by Occupations setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLAUDE",
+      "detail": "Environment variable referenced by Occupations setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GEMINI",
+      "detail": "Environment variable referenced by Occupations setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",

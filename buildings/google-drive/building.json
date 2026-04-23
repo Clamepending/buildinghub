@@ -32,6 +32,18 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Host connector",
     "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents."
@@ -52,6 +64,35 @@
     {
       "type": "mcp",
       "name": "Google Drive MCP",
+      "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Google Drive setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CLI",
+      "detail": "Environment variable referenced by Google Drive setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Google Drive MCP",
+      "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Google Drive MCP",
+      "auth": "mcp",
       "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
       "required": false
     }

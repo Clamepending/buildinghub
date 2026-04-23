@@ -18,10 +18,86 @@
   "visual": {
     "shape": "market"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "market",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Instacart Developer Platform",
     "detail": "Requires an Instacart Developer Platform API key where the agent or MCP client runs. The public Developer Platform and MCP path creates shoppable recipe or shopping-list pages; user checkout still happens on Instacart Marketplace. Direct order creation is a separate Instacart Connect retailer-partner workflow and must not be treated as a general consumer ordering API."
   },
+  "tools": [
+    {
+      "type": "env",
+      "name": "INSTACART_API_KEY",
+      "detail": "Instacart Developer Platform key used as a Bearer token.",
+      "required": true
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Instacart MCP server",
+      "detail": "Official Instacart MCP surface for recipe and shopping-list tools.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "Create shopping list page",
+      "endpoint": "products-link",
+      "detail": "Create a Marketplace shopping-list URL for human checkout review.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "Nearby retailers",
+      "endpoint": "nearby-retailers",
+      "detail": "List nearby retailer banners for planning.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Instacart MCP development",
+      "url": "https://mcp.dev.instacart.tools/mcp",
+      "auth": "api-key",
+      "detail": "Development MCP endpoint requiring an Authorization bearer token.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "Instacart MCP production",
+      "url": "https://mcp.instacart.com/mcp",
+      "auth": "api-key",
+      "detail": "Production MCP endpoint requiring approved production access.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "products-link",
+      "method": "POST",
+      "urlTemplate": "https://connect.dev.instacart.tools/idp/v1/products/products_link",
+      "auth": "api-key",
+      "detail": "Creates a Marketplace shopping-list page for human review.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "nearby-retailers",
+      "method": "GET",
+      "urlTemplate": "https://connect.dev.instacart.tools/idp/v1/retailers?postal_code={postal_code}&country_code={country_code}",
+      "auth": "api-key",
+      "detail": "Lists nearby retailer banners for planning.",
+      "required": false
+    }
+  ],
   "capabilities": [
     {
       "type": "env",

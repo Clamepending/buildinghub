@@ -37,6 +37,18 @@
     "logo": "rentahuman",
     "shape": "market"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "market",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "RentAHuman MCP/API",
     "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow."
@@ -88,6 +100,106 @@
     {
       "type": "mcp",
       "name": "RentAHuman MCP",
+      "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "RENTAHUMAN_API_URL",
+      "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "RENTAHUMAN_API_KEY",
+      "detail": "Account credential for authenticated write/payment actions; never print it.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "REST",
+      "detail": "Environment variable referenced by RentAHuman setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "npx",
+      "command": "npx",
+      "detail": "Confirms the MCP package can run in the current agent environment.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "RentAHuman MCP",
+      "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "RentAHuman",
+      "url": "https://rentahuman.ai/",
+      "auth": "none",
+      "detail": "Documentation for RentAHuman.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "MCP guide",
+      "url": "https://rentahuman.ai/mcp",
+      "auth": "none",
+      "detail": "Documentation for RentAHuman.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "API docs",
+      "url": "https://rentahuman.ai/api-docs",
+      "auth": "none",
+      "detail": "Documentation for RentAHuman.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "OpenAPI spec",
+      "url": "https://rentahuman.ai/.well-known/openapi.yaml",
+      "auth": "none",
+      "detail": "Documentation for RentAHuman.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Agent quickstart",
+      "url": "https://rentahuman.ai/llms.txt",
+      "auth": "none",
+      "detail": "Documentation for RentAHuman.",
+      "required": false
+    },
+    {
+      "type": "mcp",
+      "name": "RentAHuman MCP",
+      "auth": "mcp",
       "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
       "required": false
     }

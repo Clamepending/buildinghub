@@ -33,11 +33,37 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Manifest catalog",
     "detail": "BuildingHub catalogs contribute setup guides and visual buildings only. They do not run executable code inside Vibe Research."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "JSON",
+      "detail": "Environment variable referenced by BuildingHub setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by BuildingHub setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "JSON",

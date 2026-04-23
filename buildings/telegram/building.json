@@ -33,6 +33,18 @@
     "logo": "telegram",
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "vibe-research catalog",
     "detail": "Telegram is mirrored from the Vibe Research building catalog as manifest-only setup metadata."

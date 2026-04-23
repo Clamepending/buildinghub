@@ -30,11 +30,49 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Host metrics",
     "detail": "Uses the local system metrics sampler for host storage, CPU, memory, GPU, accelerator, and Vibe Research agent usage data. No extra credentials are required."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_PORT",
+      "detail": "Current Vibe Research server port when available.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_SYSTEM_DIR",
+      "detail": "Local system workspace directory for generated guides and communication state.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "CPU",
+      "detail": "Environment variable referenced by System setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GPU",
+      "detail": "Environment variable referenced by System setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_PORT",

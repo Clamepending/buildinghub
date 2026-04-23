@@ -2,7 +2,7 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T02:00:27.170Z",
+  "generatedAt": "2026-04-23T02:35:22.814Z",
   "name": "Vibe Research BuildingHub",
   "packageCount": 35,
   "layoutCount": 4,
@@ -13,15 +13,27 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "9989f70e76e0b976f3df322c74227152e726ceebcee85e4ded7a5e49a074eeb2",
+      "manifestSha256": "c5a3393b6046fa19214b2d52b8f52ecdb9a1d4ba07d7318f1d30c262957b5e17",
       "source": {
         "manifestPath": "buildings/agent-inbox/building.json",
         "readmePath": "buildings/agent-inbox/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "9989f70e76e0b976f3df322c74227152e726ceebcee85e4ded7a5e49a074eeb2",
+          "manifestSha256": "c5a3393b6046fa19214b2d52b8f52ecdb9a1d4ba07d7318f1d30c262957b5e17",
           "manifestPath": "buildings/agent-inbox/building.json"
         }
       ]
@@ -32,15 +44,27 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "84cd092994b20b37d1ad6201f7dcb4f9f2a822ca5f6f9d960effcf99ea2dbb09",
+      "manifestSha256": "e393525752176f586a73ed82310569c95aa6cf7c4409617702af39920f2bed18",
       "source": {
         "manifestPath": "buildings/agentmail/building.json",
         "readmePath": "buildings/agentmail/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "84cd092994b20b37d1ad6201f7dcb4f9f2a822ca5f6f9d960effcf99ea2dbb09",
+          "manifestSha256": "e393525752176f586a73ed82310569c95aa6cf7c4409617702af39920f2bed18",
           "manifestPath": "buildings/agentmail/building.json"
         }
       ]
@@ -51,15 +75,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1301306c69ac97b35b8458031b5a95e2f6f6c7be989974bb3a96597756573ec9",
+      "manifestSha256": "a966e1a12955579ae79de29fb04957d6af1b875166018bb08360b820e9eb98b9",
       "source": {
         "manifestPath": "buildings/agentmall/building.json",
         "readmePath": "buildings/agentmall/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1301306c69ac97b35b8458031b5a95e2f6f6c7be989974bb3a96597756573ec9",
+          "manifestSha256": "a966e1a12955579ae79de29fb04957d6af1b875166018bb08360b820e9eb98b9",
           "manifestPath": "buildings/agentmall/building.json"
         }
       ]
@@ -70,15 +106,27 @@
       "category": "Planning",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "b67c472b1ba4c961961cec044a6465ecc492b727b4d1c5886bfa575b4799fa10",
+      "manifestSha256": "51323838b20805db5d73077aa7f6dec50392ab6128dd2a30b7aff69e94a22f54",
       "source": {
         "manifestPath": "buildings/automations/building.json",
         "readmePath": "buildings/automations/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 3,
+        "shape": "campanile",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "b67c472b1ba4c961961cec044a6465ecc492b727b4d1c5886bfa575b4799fa10",
+          "manifestSha256": "51323838b20805db5d73077aa7f6dec50392ab6128dd2a30b7aff69e94a22f54",
           "manifestPath": "buildings/automations/building.json"
         }
       ]
@@ -89,15 +137,27 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "8331508dd1cd11f173bcad19664f5575a2ae311ef25cb8494df65f3f1e838a65",
+      "manifestSha256": "8d424fc5f865d6a68f4808add0038a1247c67bc0c8ae8cc7c967c7792a61b204",
       "source": {
         "manifestPath": "buildings/browser-use/building.json",
         "readmePath": "buildings/browser-use/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "browser",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "8331508dd1cd11f173bcad19664f5575a2ae311ef25cb8494df65f3f1e838a65",
+          "manifestSha256": "8d424fc5f865d6a68f4808add0038a1247c67bc0c8ae8cc7c967c7792a61b204",
           "manifestPath": "buildings/browser-use/building.json"
         }
       ]
@@ -108,15 +168,27 @@
       "category": "Community",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "e7b145d5f31782a9a76f13a5eb392079047ae51932c27eabb7f314798663185b",
+      "manifestSha256": "7df78aff3e01b6bd75ab04a2823d14740a289ca222f9228eba118266eba896b7",
       "source": {
         "manifestPath": "buildings/buildinghub/building.json",
         "readmePath": "buildings/buildinghub/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "e7b145d5f31782a9a76f13a5eb392079047ae51932c27eabb7f314798663185b",
+          "manifestSha256": "7df78aff3e01b6bd75ab04a2823d14740a289ca222f9228eba118266eba896b7",
           "manifestPath": "buildings/buildinghub/building.json"
         }
       ]
@@ -127,15 +199,27 @@
       "category": "Coding",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "14e22d547c405c31c55783eff5eb44dab06246a3f0d7722e142c149dc18f7d0e",
+      "manifestSha256": "2d71c1a484acc486f443bf0d10168ddbb49e295f2bb29a78b706c53ac65cc61e",
       "source": {
         "manifestPath": "buildings/ci-repair-shop/building.json",
         "readmePath": "buildings/ci-repair-shop/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "14e22d547c405c31c55783eff5eb44dab06246a3f0d7722e142c149dc18f7d0e",
+          "manifestSha256": "2d71c1a484acc486f443bf0d10168ddbb49e295f2bb29a78b706c53ac65cc61e",
           "manifestPath": "buildings/ci-repair-shop/building.json"
         }
       ]
@@ -146,15 +230,27 @@
       "category": "Communication",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "b87ccb12187707bb5ea11b78881cc09a863a50341709fb0e5e0024ecdf468128",
+      "manifestSha256": "d8531a9d1b2a304ffc299205f1e5e82ab966b50239d2de60b3df1955c55b0c76",
       "source": {
         "manifestPath": "buildings/discord/building.json",
         "readmePath": "buildings/discord/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "b87ccb12187707bb5ea11b78881cc09a863a50341709fb0e5e0024ecdf468128",
+          "manifestSha256": "d8531a9d1b2a304ffc299205f1e5e82ab966b50239d2de60b3df1955c55b0c76",
           "manifestPath": "buildings/discord/building.json"
         }
       ]
@@ -165,15 +261,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "7345ec8b1752561cbacdab63db345f757b68d16306672809d220692c1451c2b8",
+      "manifestSha256": "253155d3e7a9ea40d509d32307d858cc5ad1be51bf64bae4e56dd2df062856e3",
       "source": {
         "manifestPath": "buildings/doghouse/building.json",
         "readmePath": "buildings/doghouse/README.md"
       },
+      "footprint": {
+        "width": 1,
+        "height": 1,
+        "shape": "doghouse",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 0.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "7345ec8b1752561cbacdab63db345f757b68d16306672809d220692c1451c2b8",
+          "manifestSha256": "253155d3e7a9ea40d509d32307d858cc5ad1be51bf64bae4e56dd2df062856e3",
           "manifestPath": "buildings/doghouse/building.json"
         }
       ]
@@ -184,15 +292,27 @@
       "category": "Coding",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "e0a4ce4b9c2f668091992c3718e22c8f015b837f4437cea89d3cf45978815e8c",
+      "manifestSha256": "793fc7b5cbaa3c5dce4992e3ad95f92ec746a0074ed9a33533faba8f7332a482",
       "source": {
         "manifestPath": "buildings/github/building.json",
         "readmePath": "buildings/github/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "e0a4ce4b9c2f668091992c3718e22c8f015b837f4437cea89d3cf45978815e8c",
+          "manifestSha256": "793fc7b5cbaa3c5dce4992e3ad95f92ec746a0074ed9a33533faba8f7332a482",
           "manifestPath": "buildings/github/building.json"
         }
       ]
@@ -203,15 +323,27 @@
       "category": "Planning",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "7ab0a669ba5efb897ff07c5cc8a153db9d6024d4dc18a8873a3170d6f0299286",
+      "manifestSha256": "2d502ca5d529d95d72513a77ffafa4485f3de4482d0fb2188499f217e6d44a2c",
       "source": {
         "manifestPath": "buildings/google-calendar/building.json",
         "readmePath": "buildings/google-calendar/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "7ab0a669ba5efb897ff07c5cc8a153db9d6024d4dc18a8873a3170d6f0299286",
+          "manifestSha256": "2d502ca5d529d95d72513a77ffafa4485f3de4482d0fb2188499f217e6d44a2c",
           "manifestPath": "buildings/google-calendar/building.json"
         }
       ]
@@ -222,15 +354,27 @@
       "category": "Knowledge",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "fd5a1a7be23326e4d9a86f8901de13cb347cfc2547b15105451682558d70762f",
+      "manifestSha256": "49aa4c8474dc65a8db0df134b6568a510528488983f95ed944248dd89c9960be",
       "source": {
         "manifestPath": "buildings/google-drive/building.json",
         "readmePath": "buildings/google-drive/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "fd5a1a7be23326e4d9a86f8901de13cb347cfc2547b15105451682558d70762f",
+          "manifestSha256": "49aa4c8474dc65a8db0df134b6568a510528488983f95ed944248dd89c9960be",
           "manifestPath": "buildings/google-drive/building.json"
         }
       ]
@@ -241,15 +385,27 @@
       "category": "Evals",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "493109af862b75d4e5cf57622ef3d728a6420057b9c3f9859217f65846f15c50",
+      "manifestSha256": "e013e1aa5aa677bab893eb30623c3f1a44a65a14ad2ba7e46a2c09c11130f3c9",
       "source": {
         "manifestPath": "buildings/harbor/building.json",
         "readmePath": "buildings/harbor/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "lab",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "493109af862b75d4e5cf57622ef3d728a6420057b9c3f9859217f65846f15c50",
+          "manifestSha256": "e013e1aa5aa677bab893eb30623c3f1a44a65a14ad2ba7e46a2c09c11130f3c9",
           "manifestPath": "buildings/harbor/building.json"
         }
       ]
@@ -260,15 +416,27 @@
       "category": "Home",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "325071a49ed694e923cf3250a730a4582165447e9f59c965f67f85bd690dcc56",
+      "manifestSha256": "113138f43cb8a7e29b126c6919568f962a271a4f7f42fc2107cd7fc4ecbd5b3a",
       "source": {
         "manifestPath": "buildings/home-automation/building.json",
         "readmePath": "buildings/home-automation/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "325071a49ed694e923cf3250a730a4582165447e9f59c965f67f85bd690dcc56",
+          "manifestSha256": "113138f43cb8a7e29b126c6919568f962a271a4f7f42fc2107cd7fc4ecbd5b3a",
           "manifestPath": "buildings/home-automation/building.json"
         }
       ]
@@ -279,15 +447,27 @@
       "category": "Commerce",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "63540abe39112b3d4fb23d98513c9733a85d8623a5382bddef76125fb3c43944",
+      "manifestSha256": "c08ffad5065442320848e80ce84b17def5e89a03c93b66cdf59e8109072191ef",
       "source": {
         "manifestPath": "buildings/instacart/building.json",
         "readmePath": "buildings/instacart/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "63540abe39112b3d4fb23d98513c9733a85d8623a5382bddef76125fb3c43944",
+          "manifestSha256": "c08ffad5065442320848e80ce84b17def5e89a03c93b66cdf59e8109072191ef",
           "manifestPath": "buildings/instacart/building.json"
         }
       ]
@@ -298,15 +478,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "eb5a2c02946a0a6d9d6c2ff33f42e2e5b5dd582272d9850d74ce4690b302008a",
+      "manifestSha256": "a549493a43417f0f51427d89b6e2ec2a7d484eeb6e3d64f44e959935071721ec",
       "source": {
         "manifestPath": "buildings/knowledge-base/building.json",
         "readmePath": "buildings/knowledge-base/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "eb5a2c02946a0a6d9d6c2ff33f42e2e5b5dd582272d9850d74ce4690b302008a",
+          "manifestSha256": "a549493a43417f0f51427d89b6e2ec2a7d484eeb6e3d64f44e959935071721ec",
           "manifestPath": "buildings/knowledge-base/building.json"
         }
       ]
@@ -317,15 +509,27 @@
       "category": "Planning",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "0f16227ada7e6284f25d1c4f86a3cabbf93a9f447311ee5a41b571abdfd4e2be",
+      "manifestSha256": "b5d94a89987265f2f89f559bae5bd5a9489880a2dca3496a3e29637f32af956d",
       "source": {
         "manifestPath": "buildings/linear/building.json",
         "readmePath": "buildings/linear/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "0f16227ada7e6284f25d1c4f86a3cabbf93a9f447311ee5a41b571abdfd4e2be",
+          "manifestSha256": "b5d94a89987265f2f89f559bae5bd5a9489880a2dca3496a3e29637f32af956d",
           "manifestPath": "buildings/linear/building.json"
         }
       ]
@@ -336,15 +540,27 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "d62bfc5b95da822a22b3e06d2335f1a4f7ec0797e0966e4034ebdca244eaaa24",
+      "manifestSha256": "1eb010bf40ff9a8b642163a64e4ea84499ff6e35d5bfd163a8b61117fd913c02",
       "source": {
         "manifestPath": "buildings/localhost-apps/building.json",
         "readmePath": "buildings/localhost-apps/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 1,
+        "shape": "dock",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "d62bfc5b95da822a22b3e06d2335f1a4f7ec0797e0966e4034ebdca244eaaa24",
+          "manifestSha256": "1eb010bf40ff9a8b642163a64e4ea84499ff6e35d5bfd163a8b61117fd913c02",
           "manifestPath": "buildings/localhost-apps/building.json"
         }
       ]
@@ -355,15 +571,27 @@
       "category": "Compute",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "63b79883452509516a13ae45b3087ef18b91f1d102db3c544ea37b7df79283f0",
+      "manifestSha256": "72261a24a42e7e257fcabe2a460a30e1cddce9fb26d1c594d699ef61bed418c4",
       "source": {
         "manifestPath": "buildings/modal/building.json",
         "readmePath": "buildings/modal/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "factory",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "63b79883452509516a13ae45b3087ef18b91f1d102db3c544ea37b7df79283f0",
+          "manifestSha256": "72261a24a42e7e257fcabe2a460a30e1cddce9fb26d1c594d699ef61bed418c4",
           "manifestPath": "buildings/modal/building.json"
         }
       ]
@@ -374,15 +602,27 @@
       "category": "Knowledge",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "58f574f1454e049a2c867670c186ca45d6ae16202aa057b78ccae5cc6eee1c13",
+      "manifestSha256": "a56f89f3b5371f6756964aebc593551c921b23d2089d17688a90b1ae594916b3",
       "source": {
         "manifestPath": "buildings/moltbook/building.json",
         "readmePath": "buildings/moltbook/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "58f574f1454e049a2c867670c186ca45d6ae16202aa057b78ccae5cc6eee1c13",
+          "manifestSha256": "a56f89f3b5371f6756964aebc593551c921b23d2089d17688a90b1ae594916b3",
           "manifestPath": "buildings/moltbook/building.json"
         }
       ]
@@ -393,15 +633,27 @@
       "category": "Generative Media",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "21d24e4e230e8b71ef50825d9cdebf1d62df99ad4b42c78cbfd7929efbded05b",
+      "manifestSha256": "701fae9a162626fa483174a17954b4ace9925f06f0ed2d75efe2e3ca54b37bdd",
       "source": {
         "manifestPath": "buildings/nano-banana/building.json",
         "readmePath": "buildings/nano-banana/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "21d24e4e230e8b71ef50825d9cdebf1d62df99ad4b42c78cbfd7929efbded05b",
+          "manifestSha256": "701fae9a162626fa483174a17954b4ace9925f06f0ed2d75efe2e3ca54b37bdd",
           "manifestPath": "buildings/nano-banana/building.json"
         }
       ]
@@ -412,15 +664,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "8993e8100dee044cdb6bdd6181cf1f4f6d27de86a4fee106ee7931d15e12085e",
+      "manifestSha256": "3dda3b1dcd164efde4e1bcc3c53524bc2276897c1cd8d7e687b18b8e046c73a3",
       "source": {
         "manifestPath": "buildings/occupations/building.json",
         "readmePath": "buildings/occupations/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "school",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "8993e8100dee044cdb6bdd6181cf1f4f6d27de86a4fee106ee7931d15e12085e",
+          "manifestSha256": "3dda3b1dcd164efde4e1bcc3c53524bc2276897c1cd8d7e687b18b8e046c73a3",
           "manifestPath": "buildings/occupations/building.json"
         }
       ]
@@ -431,15 +695,27 @@
       "category": "Commerce",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "9d498e6f165af4e493c7400920056a8701885fa4c600e61becbb4d77c5a116fd",
+      "manifestSha256": "4f6ec8448959aebc884dac4edfa1a6cbd99a57f889daad90464d2d7c70712794",
       "source": {
         "manifestPath": "buildings/ottoauth/building.json",
         "readmePath": "buildings/ottoauth/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "9d498e6f165af4e493c7400920056a8701885fa4c600e61becbb4d77c5a116fd",
+          "manifestSha256": "4f6ec8448959aebc884dac4edfa1a6cbd99a57f889daad90464d2d7c70712794",
           "manifestPath": "buildings/ottoauth/building.json"
         }
       ]
@@ -450,15 +726,27 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "63655f0e7876c2d2d6272369e64d7266b7a19a200b57fcfc8526b5cef9fc49b4",
+      "manifestSha256": "45d9189fab4cd5aba04f26430110ffb4bda797d314214c0c1318e2e6eb1df6f0",
       "source": {
         "manifestPath": "buildings/phone-imessage/building.json",
         "readmePath": "buildings/phone-imessage/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "63655f0e7876c2d2d6272369e64d7266b7a19a200b57fcfc8526b5cef9fc49b4",
+          "manifestSha256": "45d9189fab4cd5aba04f26430110ffb4bda797d314214c0c1318e2e6eb1df6f0",
           "manifestPath": "buildings/phone-imessage/building.json"
         }
       ]
@@ -469,15 +757,27 @@
       "category": "Commerce",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1b166b0701f9b2b47573af880c6ba941306b9acd9689fdbbff97656922daf479",
+      "manifestSha256": "1b5da0cd50721838c26e79b719305c1289bfcae7a1142fc4aae64a463cc17910",
       "source": {
         "manifestPath": "buildings/rentahuman/building.json",
         "readmePath": "buildings/rentahuman/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1b166b0701f9b2b47573af880c6ba941306b9acd9689fdbbff97656922daf479",
+          "manifestSha256": "1b5da0cd50721838c26e79b719305c1289bfcae7a1142fc4aae64a463cc17910",
           "manifestPath": "buildings/rentahuman/building.json"
         }
       ]
@@ -488,15 +788,27 @@
       "category": "Compute",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "b99579ecd544c2addb7b98e36ab3344bc1e6a1250119b20322a2804f88ab267e",
+      "manifestSha256": "7dd0ac89fdb74666202fed9635dd213cf5b46cc7fa73f4231fbd4c8b1ad47408",
       "source": {
         "manifestPath": "buildings/runpod/building.json",
         "readmePath": "buildings/runpod/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "factory",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "b99579ecd544c2addb7b98e36ab3344bc1e6a1250119b20322a2804f88ab267e",
+          "manifestSha256": "7dd0ac89fdb74666202fed9635dd213cf5b46cc7fa73f4231fbd4c8b1ad47408",
           "manifestPath": "buildings/runpod/building.json"
         }
       ]
@@ -507,15 +819,27 @@
       "category": "Generative Media",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "8e67c221f893f666d8a3f0c3168bc0e6d2c4c74b4255f65b333b400dbe6726ca",
+      "manifestSha256": "7833432d3473c460d2d30d8d5ace95229edcda94a314d2001359bc5a2f06f907",
       "source": {
         "manifestPath": "buildings/sora/building.json",
         "readmePath": "buildings/sora/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "8e67c221f893f666d8a3f0c3168bc0e6d2c4c74b4255f65b333b400dbe6726ca",
+          "manifestSha256": "7833432d3473c460d2d30d8d5ace95229edcda94a314d2001359bc5a2f06f907",
           "manifestPath": "buildings/sora/building.json"
         }
       ]
@@ -526,15 +850,27 @@
       "category": "Data",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1e66597ef7dbbb5f3d4f6095de59e8b52fe4d5b52df4aa967c978c109799cb98",
+      "manifestSha256": "29cd742359c1f56cc861623d71616ff247c0318b37262ca878bf83b29de62770",
       "source": {
         "manifestPath": "buildings/supabase/building.json",
         "readmePath": "buildings/supabase/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1e66597ef7dbbb5f3d4f6095de59e8b52fe4d5b52df4aa967c978c109799cb98",
+          "manifestSha256": "29cd742359c1f56cc861623d71616ff247c0318b37262ca878bf83b29de62770",
           "manifestPath": "buildings/supabase/building.json"
         }
       ]
@@ -545,15 +881,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "bcc140b2ab56581d09cef5bde532c933ed5560eb81f708628212ae5ef3d6afdd",
+      "manifestSha256": "c8e14e8098b93214d1842f1d66357d700a3ab4eb0d1c66d241695dcc7385ceec",
       "source": {
         "manifestPath": "buildings/system/building.json",
         "readmePath": "buildings/system/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "bcc140b2ab56581d09cef5bde532c933ed5560eb81f708628212ae5ef3d6afdd",
+          "manifestSha256": "c8e14e8098b93214d1842f1d66357d700a3ab4eb0d1c66d241695dcc7385ceec",
           "manifestPath": "buildings/system/building.json"
         }
       ]
@@ -564,15 +912,27 @@
       "category": "Networking",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "db5b6452f1b155bbb7a81d20ec1b982dc7b8d609f4804747f704f3036d2c7163",
+      "manifestSha256": "3487fb250131d36c9929bfcc6496668c779038c9eac00f0310f9a28c34563e73",
       "source": {
         "manifestPath": "buildings/tailscale/building.json",
         "readmePath": "buildings/tailscale/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "portal",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "db5b6452f1b155bbb7a81d20ec1b982dc7b8d609f4804747f704f3036d2c7163",
+          "manifestSha256": "3487fb250131d36c9929bfcc6496668c779038c9eac00f0310f9a28c34563e73",
           "manifestPath": "buildings/tailscale/building.json"
         }
       ]
@@ -583,15 +943,27 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "dd58fc5c051086a6142999914c704969ebf8ae41115f416c1540d163eaa1c915",
+      "manifestSha256": "90e9211c8d08c356bfe3fd70a2be8792c39a3f641ef2704ebbbe2f72f6437df9",
       "source": {
         "manifestPath": "buildings/telegram/building.json",
         "readmePath": "buildings/telegram/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "dd58fc5c051086a6142999914c704969ebf8ae41115f416c1540d163eaa1c915",
+          "manifestSha256": "90e9211c8d08c356bfe3fd70a2be8792c39a3f641ef2704ebbbe2f72f6437df9",
           "manifestPath": "buildings/telegram/building.json"
         }
       ]
@@ -602,15 +974,27 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1678d80e0dca2a43e038e8ba0d54c9ef544c93560b695218a0802fff0a36086a",
+      "manifestSha256": "b953a15ad044064ab01141854bda36dd0050cb625e98c9454be4ef5d9797c4b2",
       "source": {
         "manifestPath": "buildings/toolshed/building.json",
         "readmePath": "buildings/toolshed/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1678d80e0dca2a43e038e8ba0d54c9ef544c93560b695218a0802fff0a36086a",
+          "manifestSha256": "b953a15ad044064ab01141854bda36dd0050cb625e98c9454be4ef5d9797c4b2",
           "manifestPath": "buildings/toolshed/building.json"
         }
       ]
@@ -621,15 +1005,27 @@
       "category": "Social",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "5c228ba8ea54c2776e4d8c9301a700a54b55c362899ada6833cc388edf2ad54d",
+      "manifestSha256": "5ba33186ac839b532d964f4dfd6a590c38303b0d9a5e111e9ac18d95794a5bf6",
       "source": {
         "manifestPath": "buildings/twitter/building.json",
         "readmePath": "buildings/twitter/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "5c228ba8ea54c2776e4d8c9301a700a54b55c362899ada6833cc388edf2ad54d",
+          "manifestSha256": "5ba33186ac839b532d964f4dfd6a590c38303b0d9a5e111e9ac18d95794a5bf6",
           "manifestPath": "buildings/twitter/building.json"
         }
       ]
@@ -640,15 +1036,27 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "c53bb0a349f4638ec96f94036abb05d4d2dc7579a3f8b9c265a21a28ec781c94",
+      "manifestSha256": "78e1e14af451658ec72bc59f1cde10a4b54c87a91185565d7254e5ca5fdfba85",
       "source": {
         "manifestPath": "buildings/videomemory/building.json",
         "readmePath": "buildings/videomemory/README.md"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "camera",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "c53bb0a349f4638ec96f94036abb05d4d2dc7579a3f8b9c265a21a28ec781c94",
+          "manifestSha256": "78e1e14af451658ec72bc59f1cde10a4b54c87a91185565d7254e5ca5fdfba85",
           "manifestPath": "buildings/videomemory/building.json"
         }
       ]
@@ -659,15 +1067,27 @@
       "category": "Observability",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1d71f69c6a1042a962072413e941baec0875cfafa53cffc34c41cfe5cefcfac2",
+      "manifestSha256": "4a672c12deb90ccf768b8347fae1dfea35abcddd149c0c0d1eaa622a75db31da",
       "source": {
         "manifestPath": "buildings/wandb/building.json",
         "readmePath": "buildings/wandb/README.md"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1d71f69c6a1042a962072413e941baec0875cfafa53cffc34c41cfe5cefcfac2",
+          "manifestSha256": "4a672c12deb90ccf768b8347fae1dfea35abcddd149c0c0d1eaa622a75db31da",
           "manifestPath": "buildings/wandb/building.json"
         }
       ]
@@ -784,11 +1204,44 @@
       "visual": {
         "shape": "post"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Session stream",
         "detail": "Uses local Vibe Research session state, read markers, background task summaries, and subagent status. No extra credentials are required."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_TOWN_API",
+          "detail": "Base URL for the local Agent Town API, such as http://127.0.0.1:4123/api/agent-town.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_CANVAS_HELP",
+          "detail": "Example command for publishing the current session's visible canvas image.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-agent-canvas",
+          "command": "vr-agent-canvas",
+          "detail": "Shows a generated image in the selected agent's terminal chat canvas.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_AGENT_TOWN_API",
@@ -937,11 +1390,31 @@
         "logo": "agentmail",
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "AgentMail is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by AgentMail setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "API",
@@ -1020,6 +1493,18 @@
       "visual": {
         "shape": "market"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Local browser theme",
         "detail": "Uses browser-local Agent Town preferences only. No credentials or external services are required."
@@ -1091,6 +1576,18 @@
       ],
       "visual": {
         "shape": "campanile"
+      },
+      "footprint": {
+        "width": 2,
+        "height": 3,
+        "shape": "campanile",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
       },
       "access": {
         "label": "vibe-research catalog",
@@ -1168,11 +1665,50 @@
       "visual": {
         "shape": "browser"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "browser",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "Browser Use is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Generated per-building guide directory.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Browser Use setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-browser-use",
+          "command": "vr-browser-use",
+          "detail": "Starts the configured worker and waits for completion.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
@@ -1316,11 +1852,37 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Manifest catalog",
         "detail": "BuildingHub catalogs contribute setup guides and visual buildings only. They do not run executable code inside Vibe Research."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "JSON",
+          "detail": "Environment variable referenced by BuildingHub setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by BuildingHub setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "JSON",
@@ -1413,11 +1975,31 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "GitHub + local tests",
         "detail": "Uses the GitHub connector or gh authentication plus the checked-out repository's test commands. Local terminal agents still need repo and GitHub access where they run."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "SHA",
+          "detail": "Environment variable referenced by CI Repair Shop setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "SHA",
@@ -1493,6 +2075,18 @@
       "visual": {
         "shape": "post"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "External connector",
         "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents."
@@ -1507,6 +2101,29 @@
         {
           "type": "mcp",
           "name": "Discord MCP",
+          "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Discord setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Discord MCP",
+          "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Discord MCP",
+          "auth": "mcp",
           "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
           "required": false
         }
@@ -1573,6 +2190,18 @@
       "visual": {
         "shape": "doghouse"
       },
+      "footprint": {
+        "width": 1,
+        "height": 1,
+        "shape": "doghouse",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 0.5
+          }
+        ]
+      },
       "access": {
         "label": "Agent Town companion",
         "detail": "Uses only the local Agent Town canvas. No setup, network access, or credentials are required."
@@ -1634,6 +2263,18 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Host connector",
         "detail": "Available to host agents that have the GitHub connector or gh authentication. Local terminal agents need their own GitHub auth."
@@ -1692,6 +2333,18 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Host connector",
         "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector."
@@ -1706,6 +2359,29 @@
         {
           "type": "mcp",
           "name": "Google Calendar MCP",
+          "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Google Calendar setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Google Calendar MCP",
+          "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Google Calendar MCP",
+          "auth": "mcp",
           "detail": "Available to host agents with the Google Calendar connector enabled. Local terminal agents need their own provider calendar connector.",
           "required": false
         }
@@ -1769,6 +2445,18 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Host connector",
         "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents."
@@ -1789,6 +2477,35 @@
         {
           "type": "mcp",
           "name": "Google Drive MCP",
+          "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Google Drive setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Google Drive setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Google Drive MCP",
+          "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Google Drive MCP",
+          "auth": "mcp",
           "detail": "Available to host agents with the Google Drive connector enabled. Vibe Research does not inject Drive tools into local terminal agents.",
           "required": false
         }
@@ -1865,6 +2582,18 @@
       "visual": {
         "shape": "lab"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "lab",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Harbor CLI + sandbox runtime",
         "detail": "Requires the harbor CLI where the agent runs, plus Docker or a configured cloud sandbox provider. Model and sandbox provider API credentials must live in the agent runtime; Vibe Research only tracks the building and generated guide."
@@ -1935,6 +2664,125 @@
           "name": "harbor",
           "command": "harbor",
           "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "OPENAI_API_KEY",
+          "detail": "Model provider key for OpenAI-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "ANTHROPIC_API_KEY",
+          "detail": "Model provider key for Anthropic-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI_API_KEY",
+          "detail": "Model provider key for Gemini-backed Harbor runs; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "DAYTONA_API_KEY",
+          "detail": "Cloud sandbox provider key when using Daytona environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_ID",
+          "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_SECRET",
+          "detail": "Cloud sandbox credentials when using Modal environments; keep secret.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "PATH",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "E2B",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Harbor setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "harbor",
+          "command": "harbor",
+          "detail": "Shows registry datasets; Harbor CLI versions may expose singular or plural dataset commands.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Harbor docs",
+          "url": "https://www.harborframework.com/docs",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Getting started",
+          "url": "https://www.harborframework.com/docs/getting-started",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Agents",
+          "url": "https://www.harborframework.com/docs/agents",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Tasks",
+          "url": "https://www.harborframework.com/docs/tasks",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Registry",
+          "url": "https://registry.harborframework.com/",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Trajectory format",
+          "url": "https://www.harborframework.com/docs/trajectory-format",
+          "auth": "none",
+          "detail": "Documentation for Harbor.",
           "required": false
         }
       ],
@@ -2125,6 +2973,18 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Local bridge",
         "detail": "Requires a Home Assistant, HomeKit, Matter, or device-specific bridge configured where the agent runs. Vibe Research does not grant device control by itself."
@@ -2186,10 +3046,86 @@
       "visual": {
         "shape": "market"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Instacart Developer Platform",
         "detail": "Requires an Instacart Developer Platform API key where the agent or MCP client runs. The public Developer Platform and MCP path creates shoppable recipe or shopping-list pages; user checkout still happens on Instacart Marketplace. Direct order creation is a separate Instacart Connect retailer-partner workflow and must not be treated as a general consumer ordering API."
       },
+      "tools": [
+        {
+          "type": "env",
+          "name": "INSTACART_API_KEY",
+          "detail": "Instacart Developer Platform key used as a Bearer token.",
+          "required": true
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Instacart MCP server",
+          "detail": "Official Instacart MCP surface for recipe and shopping-list tools.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "Create shopping list page",
+          "endpoint": "products-link",
+          "detail": "Create a Marketplace shopping-list URL for human checkout review.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "Nearby retailers",
+          "endpoint": "nearby-retailers",
+          "detail": "List nearby retailer banners for planning.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Instacart MCP development",
+          "url": "https://mcp.dev.instacart.tools/mcp",
+          "auth": "api-key",
+          "detail": "Development MCP endpoint requiring an Authorization bearer token.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Instacart MCP production",
+          "url": "https://mcp.instacart.com/mcp",
+          "auth": "api-key",
+          "detail": "Production MCP endpoint requiring approved production access.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "products-link",
+          "method": "POST",
+          "urlTemplate": "https://connect.dev.instacart.tools/idp/v1/products/products_link",
+          "auth": "api-key",
+          "detail": "Creates a Marketplace shopping-list page for human review.",
+          "required": false
+        },
+        {
+          "type": "api",
+          "name": "nearby-retailers",
+          "method": "GET",
+          "urlTemplate": "https://connect.dev.instacart.tools/idp/v1/retailers?postal_code={postal_code}&country_code={country_code}",
+          "auth": "api-key",
+          "detail": "Lists nearby retailer banners for planning.",
+          "required": false
+        }
+      ],
       "capabilities": [
         {
           "type": "env",
@@ -2393,6 +3329,18 @@
       "visual": {
         "shape": "library"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "Library is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
@@ -2440,10 +3388,53 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Linear connector",
         "detail": "Requires a Linear MCP, OAuth connector, or API token configured where the agent runs. BuildingHub only records the setup path."
       },
+      "tools": [
+        {
+          "type": "mcp-tool",
+          "name": "linear",
+          "detail": "Preferred MCP path for issue and project access.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "LINEAR_API_KEY",
+          "detail": "Fallback API key for local helper commands.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Linear API docs",
+          "url": "https://developers.linear.app/docs",
+          "auth": "none",
+          "detail": "Official Linear developer documentation.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "Linear MCP",
+          "auth": "mcp",
+          "detail": "MCP surface configured outside BuildingHub for issue and project access.",
+          "required": true
+        }
+      ],
       "capabilities": [
         {
           "type": "mcp",
@@ -2522,11 +3513,44 @@
       "visual": {
         "shape": "dock"
       },
+      "footprint": {
+        "width": 3,
+        "height": 1,
+        "shape": "dock",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "Localhost Apps is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
+          "detail": "Canonical Playwright helper command.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BROWSER_FALLBACK_COMMAND",
+          "detail": "Visual fallback helper for screenshots/images.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-playwright",
+          "command": "vr-playwright",
+          "detail": "Inspect a local app with a real browser.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_PLAYWRIGHT_COMMAND",
@@ -2630,10 +3654,60 @@
       "visual": {
         "shape": "factory"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "factory",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Modal CLI/Python SDK",
         "detail": "Requires a Modal account plus token credentials where the agent runs. BuildingHub records setup metadata only and does not run Modal code."
       },
+      "tools": [
+        {
+          "type": "helper-command",
+          "name": "modal",
+          "command": "modal",
+          "detail": "Modal CLI for token inspection, app runs, deployments, and sandbox workflows.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_ID",
+          "detail": "Modal account token id for automated CLI or SDK access.",
+          "required": true
+        },
+        {
+          "type": "env",
+          "name": "MODAL_TOKEN_SECRET",
+          "detail": "Modal account token secret for automated CLI or SDK access.",
+          "required": true
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Modal docs",
+          "url": "https://modal.com/docs",
+          "auth": "none",
+          "detail": "Canonical Modal documentation for setup and runtime behavior.",
+          "required": false
+        },
+        {
+          "type": "local",
+          "name": "Modal CLI profile",
+          "auth": "api-key",
+          "detail": "Local Modal CLI profile or MODAL_TOKEN_ID/MODAL_TOKEN_SECRET environment variables configured outside BuildingHub.",
+          "required": true
+        }
+      ],
       "capabilities": [
         {
           "type": "helper-command",
@@ -2814,6 +3888,18 @@
       "visual": {
         "shape": "library"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "External connector",
         "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state."
@@ -2834,6 +3920,35 @@
         {
           "type": "mcp",
           "name": "Moltbook MCP",
+          "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Moltbook setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Moltbook setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Moltbook MCP",
+          "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Moltbook MCP",
+          "auth": "mcp",
           "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
           "required": false
         }
@@ -2910,11 +4025,37 @@
       "visual": {
         "shape": "studio"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Gemini image API",
         "detail": "Requires GEMINI_API_KEY, Google AI Studio, or Vertex AI access where the agent runs. Use this building for Nano Banana 2, Nano Banana Pro, and Gemini 2.5 Flash Image workflows."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Nano Banana setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI_API_KEY",
+          "detail": "Environment variable referenced by Nano Banana setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "API",
@@ -3001,11 +4142,49 @@
       "visual": {
         "shape": "school"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "school",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Managed prompts",
         "detail": "Uses the local Occupations prompt store and syncs managed instructions into AGENTS.md, CLAUDE.md, and GEMINI.md so Codex, Claude, OpenClaw, Gemini, and OpenCode sessions receive the same role guidance."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",
+          "detail": "Path to the active Occupations prompt file for this session.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "AGENTS",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLAUDE",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GEMINI",
+          "detail": "Environment variable referenced by Occupations setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_AGENT_PROMPT_PATH",
@@ -3133,11 +4312,44 @@
       "visual": {
         "shape": "market"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "OttoAuth is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by OttoAuth setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-ottoauth",
+          "command": "vr-ottoauth",
+          "detail": "Use an explicit spending bound for commerce requests.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_OTTOAUTH_COMMAND",
@@ -3275,11 +4487,37 @@
       "visual": {
         "shape": "post"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Local bridge",
         "detail": "Requires a phone, SMS, or Apple Messages bridge configured on the machine/provider that will send messages. Vibe Research does not inject phone or iMessage access into agents."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "SMS",
+          "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Phone / iMessage setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "SMS",
@@ -3369,6 +4607,18 @@
         "logo": "rentahuman",
         "shape": "market"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "market",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "RentAHuman MCP/API",
         "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow."
@@ -3420,6 +4670,106 @@
         {
           "type": "mcp",
           "name": "RentAHuman MCP",
+          "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "RENTAHUMAN_API_URL",
+          "detail": "REST API base URL, usually https://rentahuman.ai/api.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "RENTAHUMAN_API_KEY",
+          "detail": "Account credential for authenticated write/payment actions; never print it.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "REST",
+          "detail": "Environment variable referenced by RentAHuman setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "npx",
+          "command": "npx",
+          "detail": "Confirms the MCP package can run in the current agent environment.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "RentAHuman MCP",
+          "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "RentAHuman",
+          "url": "https://rentahuman.ai/",
+          "auth": "none",
+          "detail": "Documentation for RentAHuman.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "MCP guide",
+          "url": "https://rentahuman.ai/mcp",
+          "auth": "none",
+          "detail": "Documentation for RentAHuman.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "API docs",
+          "url": "https://rentahuman.ai/api-docs",
+          "auth": "none",
+          "detail": "Documentation for RentAHuman.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "OpenAPI spec",
+          "url": "https://rentahuman.ai/.well-known/openapi.yaml",
+          "auth": "none",
+          "detail": "Documentation for RentAHuman.",
+          "required": false
+        },
+        {
+          "type": "docs",
+          "name": "Agent quickstart",
+          "url": "https://rentahuman.ai/llms.txt",
+          "auth": "none",
+          "detail": "Documentation for RentAHuman.",
+          "required": false
+        },
+        {
+          "type": "mcp",
+          "name": "RentAHuman MCP",
+          "auth": "mcp",
           "detail": "Requires RentAHuman MCP, REST API, or account setup where the agent runs. Vibe Research tracks the building and guide only; API keys, operator pairing, payments, and escrow approval stay with the agent runtime and human workflow.",
           "required": false
         }
@@ -3549,10 +4899,47 @@
       "visual": {
         "shape": "factory"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "factory",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "RunPod API or CLI",
         "detail": "Requires RUNPOD_API_KEY or a reviewed helper command where the agent runs. BuildingHub does not run pod lifecycle code itself."
       },
+      "tools": [
+        {
+          "type": "env",
+          "name": "RUNPOD_API_KEY",
+          "detail": "Required for API-backed pod and endpoint operations.",
+          "required": true
+        },
+        {
+          "type": "helper-command",
+          "name": "runpod",
+          "command": "runpod",
+          "detail": "Optional local CLI wrapper for reviewed workflows.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "RunPod docs",
+          "url": "https://docs.runpod.io/",
+          "auth": "none",
+          "detail": "Official RunPod documentation.",
+          "required": false
+        }
+      ],
       "capabilities": [
         {
           "type": "env",
@@ -3635,11 +5022,37 @@
       "visual": {
         "shape": "studio"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "OpenAI Videos API",
         "detail": "Requires OPENAI_API_KEY and account access to the OpenAI Videos API where the agent runs. Sora 2 and the Videos API are deprecated and scheduled to shut down on September 24, 2026."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Sora setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "OPENAI_API_KEY",
+          "detail": "Environment variable referenced by Sora setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "API",
@@ -3703,10 +5116,47 @@
       "visual": {
         "shape": "library"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "library",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Supabase CLI or MCP",
         "detail": "Requires Supabase CLI authentication, a provider MCP, or scoped database credentials where the agent runs."
       },
+      "tools": [
+        {
+          "type": "helper-command",
+          "name": "supabase",
+          "command": "supabase",
+          "detail": "Local CLI for migrations, branches, and project inspection.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "SUPABASE_ACCESS_TOKEN",
+          "detail": "Optional token for CLI automation.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Supabase docs",
+          "url": "https://supabase.com/docs",
+          "auth": "none",
+          "detail": "Official Supabase documentation.",
+          "required": false
+        }
+      ],
       "capabilities": [
         {
           "type": "helper-command",
@@ -3787,11 +5237,49 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Host metrics",
         "detail": "Uses the local system metrics sampler for host storage, CPU, memory, GPU, accelerator, and Vibe Research agent usage data. No extra credentials are required."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_PORT",
+          "detail": "Current Vibe Research server port when available.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_SYSTEM_DIR",
+          "detail": "Local system workspace directory for generated guides and communication state.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CPU",
+          "detail": "Environment variable referenced by System setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "GPU",
+          "detail": "Environment variable referenced by System setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_PORT",
@@ -3912,6 +5400,18 @@
       "visual": {
         "shape": "portal"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "portal",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Tailnet portal",
         "detail": "Uses the local Tailscale CLI when available to show tailnet URLs and expose localhost-only ports with Tailscale Serve. Vibe Research does not store Tailscale credentials."
@@ -3946,6 +5446,49 @@
           "name": "tailscale",
           "command": "tailscale",
           "detail": "Shows whether the machine is logged into a tailnet.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Directory containing all generated building guides.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+          "detail": "Index of generated building guides.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "CLI",
+          "detail": "Environment variable referenced by Tailscale setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by Tailscale setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "tailscale",
+          "command": "tailscale",
+          "detail": "Shows whether the machine is logged into a tailnet.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "docs",
+          "name": "Tailscale Serve docs",
+          "url": "https://tailscale.com/kb/1242/tailscale-serve",
+          "auth": "none",
+          "detail": "Documentation for Tailscale.",
           "required": false
         }
       ],
@@ -4061,6 +5604,18 @@
         "logo": "telegram",
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "Telegram is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
@@ -4142,11 +5697,43 @@
       "visual": {
         "shape": "plugin"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "plugin",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "Building SDK + BuildingHub",
         "detail": "Uses the local building docs, core manifest registry, and optional BuildingHub catalog workflow. Community buildings stay manifest-only until reviewed."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+          "detail": "Generated per-building guide directory.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+          "detail": "Generated building guide index.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "SDK",
+          "detail": "Environment variable referenced by Toolshed setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
@@ -4267,6 +5854,18 @@
       "visual": {
         "shape": "post"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "post",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "External connector",
         "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research."
@@ -4287,6 +5886,35 @@
         {
           "type": "mcp",
           "name": "Twitter / X MCP",
+          "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+          "required": false
+        }
+      ],
+      "tools": [
+        {
+          "type": "env",
+          "name": "MCP",
+          "detail": "Environment variable referenced by Twitter / X setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by Twitter / X setup notes.",
+          "required": false
+        },
+        {
+          "type": "mcp-tool",
+          "name": "Twitter / X MCP",
+          "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+          "required": false
+        }
+      ],
+      "endpoints": [
+        {
+          "type": "mcp",
+          "name": "Twitter / X MCP",
+          "auth": "mcp",
           "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
           "required": false
         }
@@ -4364,11 +5992,44 @@
       "visual": {
         "shape": "camera"
       },
+      "footprint": {
+        "width": 2,
+        "height": 2,
+        "shape": "camera",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1
+          }
+        ]
+      },
       "access": {
         "label": "vibe-research catalog",
         "detail": "VideoMemory is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
+          "detail": "Canonical helper command for local agents.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by VideoMemory setup notes.",
+          "required": false
+        },
+        {
+          "type": "helper-command",
+          "name": "vr-videomemory",
+          "command": "vr-videomemory",
+          "detail": "Read helper options before creating a monitor.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "VIBE_RESEARCH_VIDEOMEMORY_COMMAND",
@@ -4494,11 +6155,43 @@
       "visual": {
         "shape": "studio"
       },
+      "footprint": {
+        "width": 3,
+        "height": 2,
+        "shape": "studio",
+        "snap": "grid",
+        "entrances": [
+          {
+            "side": "south",
+            "offset": 1.5
+          }
+        ]
+      },
       "access": {
         "label": "Weights & Biases API",
         "detail": "Requires WANDB_API_KEY or an existing wandb login where the agent runs, plus explicit entity/project scope for experiment logging."
       },
       "capabilities": [
+        {
+          "type": "env",
+          "name": "API",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "WANDB_API_KEY",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        },
+        {
+          "type": "env",
+          "name": "URL",
+          "detail": "Environment variable referenced by W&B setup notes.",
+          "required": false
+        }
+      ],
+      "tools": [
         {
           "type": "env",
           "name": "API",

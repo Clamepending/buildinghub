@@ -23,6 +23,18 @@
   "visual": {
     "shape": "doghouse"
   },
+  "footprint": {
+    "width": 1,
+    "height": 1,
+    "shape": "doghouse",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 0.5
+      }
+    ]
+  },
   "access": {
     "label": "Agent Town companion",
     "detail": "Uses only the local Agent Town canvas. No setup, network access, or credentials are required."

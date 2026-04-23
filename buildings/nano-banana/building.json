@@ -33,11 +33,37 @@
   "visual": {
     "shape": "studio"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "studio",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Gemini image API",
     "detail": "Requires GEMINI_API_KEY, Google AI Studio, or Vertex AI access where the agent runs. Use this building for Nano Banana 2, Nano Banana Pro, and Gemini 2.5 Flash Image workflows."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Nano Banana setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "GEMINI_API_KEY",
+      "detail": "Environment variable referenced by Nano Banana setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "API",

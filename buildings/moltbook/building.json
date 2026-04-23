@@ -33,6 +33,18 @@
   "visual": {
     "shape": "library"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "library",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "External connector",
     "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state."
@@ -53,6 +65,35 @@
     {
       "type": "mcp",
       "name": "Moltbook MCP",
+      "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Moltbook setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Moltbook setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Moltbook MCP",
+      "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Moltbook MCP",
+      "auth": "mcp",
       "detail": "Requires a Moltbook-compatible API, MCP, or sync bridge configured in the agent provider. Vibe Research only tracks the building and setup state.",
       "required": false
     }

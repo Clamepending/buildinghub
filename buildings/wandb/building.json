@@ -33,11 +33,43 @@
   "visual": {
     "shape": "studio"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "studio",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Weights & Biases API",
     "detail": "Requires WANDB_API_KEY or an existing wandb login where the agent runs, plus explicit entity/project scope for experiment logging."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "WANDB_API_KEY",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "URL",
+      "detail": "Environment variable referenced by W&B setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "API",

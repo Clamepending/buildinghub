@@ -32,11 +32,43 @@
   "visual": {
     "shape": "plugin"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "plugin",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Building SDK + BuildingHub",
     "detail": "Uses the local building docs, core manifest registry, and optional BuildingHub catalog workflow. Community buildings stay manifest-only until reviewed."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Generated per-building guide directory.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_INDEX",
+      "detail": "Generated building guide index.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "SDK",
+      "detail": "Environment variable referenced by Toolshed setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",

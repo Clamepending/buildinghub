@@ -49,7 +49,8 @@ body::before {
 }
 
 button,
-input {
+input,
+.copy {
   font: inherit;
 }
 
@@ -319,6 +320,19 @@ h1 {
   text-overflow: ellipsis;
 }
 
+.building-mark.has-thumbnail {
+  display: block;
+  padding: 0;
+}
+
+.building-mark.has-thumbnail img {
+  display: block;
+  width: 100%;
+  height: 100%;
+  min-height: 148px;
+  object-fit: cover;
+}
+
 .building-shape-market .building-mark-body {
   background: #7a4e44;
 }
@@ -391,7 +405,11 @@ h1 {
 }
 
 .copy {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
   padding: 0 12px;
+  text-decoration: none;
 }
 
 .empty-card {

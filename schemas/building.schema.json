@@ -26,6 +26,63 @@
     "repositoryUrl": { "type": "string" },
     "docsUrl": { "type": "string" },
     "homepageUrl": { "type": "string" },
+    "repo": {
+      "type": "object",
+      "description": "Source GitHub repository for repo-first BuildingHub packages.",
+      "additionalProperties": true,
+      "properties": {
+        "url": { "type": "string" },
+        "owner": { "type": "string" },
+        "name": { "type": "string" },
+        "branch": { "type": "string" },
+        "tag": { "type": "string" },
+        "commit": { "type": "string" },
+        "manifestPath": { "type": "string" },
+        "readmePath": { "type": "string" },
+        "assetsPath": { "type": "string" },
+        "packagePath": { "type": "string" }
+      }
+    },
+    "media": {
+      "type": "object",
+      "description": "Images and app-store media. Paths are relative to the package repo unless they are absolute http(s) URLs.",
+      "additionalProperties": true,
+      "properties": {
+        "thumbnail": { "$ref": "#/$defs/mediaAsset" },
+        "screenshots": {
+          "type": "array",
+          "items": { "$ref": "#/$defs/mediaAsset" }
+        }
+      }
+    },
+    "footprint": {
+      "type": "object",
+      "description": "Suggested Agent Town placement footprint in grid cells.",
+      "additionalProperties": true,
+      "properties": {
+        "width": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "height": { "type": "integer", "minimum": 1, "maximum": 12 },
+        "shape": { "type": "string" },
+        "snap": {
+          "type": "string",
+          "enum": ["grid", "free"]
+        },
+        "entrances": {
+          "type": "array",
+          "items": {
+            "type": "object",
+            "required": ["side"],
+            "properties": {
+              "side": {
+                "type": "string",
+                "enum": ["north", "east", "south", "west"]
+              },
+              "offset": { "type": "number" }
+            }
+          }
+        }
+      }
+    },
     "keywords": {
       "type": "array",
       "items": { "type": "string" }
@@ -62,6 +119,16 @@
         }
       }
     },
+    "tools": {
+      "type": "array",
+      "description": "Concrete agent-facing tools exposed by the external repo, MCP, API, or helper.",
+      "items": { "$ref": "#/$defs/tool" }
+    },
+    "endpoints": {
+      "type": "array",
+      "description": "Declarative service endpoints or webhook surfaces the building needs configured elsewhere.",
+      "items": { "$ref": "#/$defs/endpoint" }
+    },
     "onboarding": {
       "type": "object",
       "properties": {
@@ -90,6 +157,63 @@
             }
           }
         }
+      }
+    }
+  },
+  "$defs": {
+    "mediaAsset": {
+      "type": "object",
+      "required": ["alt"],
+      "additionalProperties": true,
+      "properties": {
+        "url": { "type": "string" },
+        "path": { "type": "string" },
+        "alt": { "type": "string" },
+        "caption": { "type": "string" },
+        "kind": {
+          "type": "string",
+          "enum": ["thumbnail", "screenshot", "icon", "diagram"]
+        }
+      }
+    },
+    "tool": {
+      "type": "object",
+      "required": ["type", "name", "detail"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["mcp-tool", "helper-command", "api", "webhook", "oauth-scope", "env"]
+        },
+        "name": { "type": "string" },
+        "command": { "type": "string" },
+        "endpoint": { "type": "string" },
+        "detail": { "type": "string" },
+        "required": { "type": "boolean" }
+      }
+    },
+    "endpoint": {
+      "type": "object",
+      "required": ["type", "name", "detail"],
+      "additionalProperties": true,
+      "properties": {
+        "type": {
+          "type": "string",
+          "enum": ["api", "webhook", "oauth", "mcp", "docs", "local"]
+        },
+        "name": { "type": "string" },
+        "method": {
+          "type": "string",
+          "enum": ["GET", "POST", "PUT", "PATCH", "DELETE"]
+        },
+        "url": { "type": "string" },
+        "urlTemplate": { "type": "string" },
+        "auth": {
+          "type": "string",
+          "enum": ["none", "api-key", "oauth", "mcp", "custom"]
+        },
+        "detail": { "type": "string" },
+        "required": { "type": "boolean" }
       }
     }
   }

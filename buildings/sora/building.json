@@ -32,11 +32,37 @@
   "visual": {
     "shape": "studio"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "studio",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "OpenAI Videos API",
     "detail": "Requires OPENAI_API_KEY and account access to the OpenAI Videos API where the agent runs. Sora 2 and the Videos API are deprecated and scheduled to shut down on September 24, 2026."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Sora setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "OPENAI_API_KEY",
+      "detail": "Environment variable referenced by Sora setup notes.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "API",

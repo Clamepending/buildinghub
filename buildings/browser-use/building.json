@@ -36,11 +36,50 @@
   "visual": {
     "shape": "browser"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "browser",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "vibe-research catalog",
     "detail": "Browser Use is mirrored from the Vibe Research building catalog as manifest-only setup metadata."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",
+      "detail": "Canonical helper command for local agents.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_BUILDING_GUIDES_DIR",
+      "detail": "Generated per-building guide directory.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Browser Use setup notes.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-browser-use",
+      "command": "vr-browser-use",
+      "detail": "Starts the configured worker and waits for completion.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_BROWSER_USE_COMMAND",

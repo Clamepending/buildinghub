@@ -32,6 +32,18 @@
   "visual": {
     "shape": "post"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "post",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "External connector",
     "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents."
@@ -46,6 +58,29 @@
     {
       "type": "mcp",
       "name": "Discord MCP",
+      "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Discord setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Discord MCP",
+      "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Discord MCP",
+      "auth": "mcp",
       "detail": "Requires a Discord bot, webhook, or provider MCP configured where the agent runs. Vibe Research does not inject Discord credentials into local terminal agents.",
       "required": false
     }

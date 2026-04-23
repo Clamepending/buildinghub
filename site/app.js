@@ -33,7 +33,7 @@ function searchScore(entry, query) {
     ...(Array.isArray(entry.keywords) ? entry.keywords : []),
     ...(Array.isArray(entry.requiredBuildings) ? entry.requiredBuildings : []),
   ].map((value) => text(value).toLowerCase());
-  const nested = collectSearchText(entry).join(" ").toLowerCase();
+  const nested = [...collectSearchText(entry), ...collectPackageFacets(entry)].join(" ").toLowerCase();
 
   if (direct.some((value) => value === normalizedQuery)) {
     return 120;
@@ -51,6 +51,27 @@ function searchScore(entry, query) {
     return 50;
   }
   return nested.includes(normalizedQuery) ? 18 : 0;
+}
+
+function collectPackageFacets(entry) {
+  const facets = [];
+  const footprint = entry?.footprint || {};
+  if (Number(footprint.width) > 0 && Number(footprint.height) > 0) {
+    facets.push("footprint", "lot", `${Number(footprint.width)}x${Number(footprint.height)}`, `${Number(footprint.width)}x${Number(footprint.height)} lot`);
+  }
+  if (Array.isArray(entry?.tools) && entry.tools.length) {
+    facets.push("tool", "tools", `${entry.tools.length} tools`);
+  }
+  if (Array.isArray(entry?.endpoints) && entry.endpoints.length) {
+    facets.push("endpoint", "endpoints", `${entry.endpoints.length} endpoints`);
+  }
+  if (entry?.repo?.url || entry?.repositoryUrl) {
+    facets.push("repo", "repository", "source repo");
+  }
+  if (entry?.media?.thumbnail) {
+    facets.push("thumbnail", "media");
+  }
+  return facets;
 }
 
 function collectSearchText(value, output = []) {
@@ -105,6 +126,19 @@ function normalizeClassName(value) {
     .replace(/^-+|-+$/g, "") || "building";
 }
 
+function getRepoUrl(building) {
+  return text(building.repo?.url || building.repositoryUrl).trim();
+}
+
+function getThumbnailUrl(building) {
+  const url = text(building.media?.thumbnail?.url).trim();
+  return /^https?:\/\//i.test(url) ? url : "";
+}
+
+function countLabel(count, singular, plural = `${singular}s`) {
+  return `${count} ${count === 1 ? singular : plural}`;
+}
+
 function renderLayoutCard(layout) {
   const tags = getDisplayTags(Array.isArray(layout.tags) ? layout.tags : []);
   const decorations = Array.isArray(layout.layout?.decorations) ? layout.layout.decorations : [];
@@ -134,9 +168,20 @@ function renderLayoutCard(layout) {
 function renderBuildingCard(building) {
   const tags = getDisplayTags(Array.isArray(building.keywords) ? building.keywords : []);
   const shape = normalizeClassName(building.visual?.shape || building.icon || "plugin");
+  const thumbnailUrl = getThumbnailUrl(building);
+  const repoUrl = getRepoUrl(building);
+  const docsUrl = text(building.docsUrl).trim();
+  const footprint = building.footprint || {};
+  const footprintLabel = Number(footprint.width) > 0 && Number(footprint.height) > 0
+    ? `${Number(footprint.width)}x${Number(footprint.height)} lot`
+    : "";
+  const toolCount = Array.isArray(building.tools) ? building.tools.length : 0;
+  const endpointCount = Array.isArray(building.endpoints) ? building.endpoints.length : 0;
   return `
     <article class="card">
-      <div class="building-mark building-shape-${escapeHtml(shape)}" aria-hidden="true">
+      ${thumbnailUrl
+        ? `<div class="building-mark has-thumbnail"><img src="${escapeHtml(thumbnailUrl)}" alt="${escapeHtml(building.media.thumbnail.alt || `${building.name} thumbnail`)}" loading="lazy" /></div>`
+        : `<div class="building-mark building-shape-${escapeHtml(shape)}" aria-hidden="true">
         <span class="building-mark-grid"></span>
         <span class="building-mark-shadow"></span>
         <span class="building-mark-roof"></span>
@@ -146,10 +191,13 @@ function renderBuildingCard(building) {
           <span class="building-mark-door"></span>
         </span>
         <span class="building-mark-sign">${escapeHtml(building.category || "Building")}</span>
-      </div>
+      </div>`}
       <div class="meta">
         <span class="pill is-accent">${escapeHtml(building.category || "Building")}</span>
         <span class="pill">${escapeHtml(building.trust || "manifest-only")}</span>
+        ${footprintLabel ? `<span class="pill">${escapeHtml(footprintLabel)}</span>` : ""}
+        ${toolCount ? `<span class="pill">${escapeHtml(countLabel(toolCount, "tool"))}</span>` : ""}
+        ${endpointCount ? `<span class="pill">${escapeHtml(countLabel(endpointCount, "endpoint"))}</span>` : ""}
         <span class="pill">${escapeHtml(building.version || "0.1.0")}</span>
       </div>
       <h2>${escapeHtml(building.name)}</h2>
@@ -157,6 +205,8 @@ function renderBuildingCard(building) {
       <div class="tags">${renderTags(tags)}</div>
       <div class="actions">
         <button class="copy" type="button" data-copy-building="${escapeHtml(building.id)}">Copy manifest</button>
+        ${repoUrl ? `<a class="copy" href="${escapeHtml(repoUrl)}" target="_blank" rel="noreferrer">Repo</a>` : ""}
+        ${docsUrl ? `<a class="copy" href="${escapeHtml(docsUrl)}" target="_blank" rel="noreferrer">Docs</a>` : ""}
       </div>
     </article>
   `;

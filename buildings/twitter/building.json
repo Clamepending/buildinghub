@@ -33,6 +33,18 @@
   "visual": {
     "shape": "post"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "post",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "External connector",
     "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research."
@@ -53,6 +65,35 @@
     {
       "type": "mcp",
       "name": "Twitter / X MCP",
+      "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+      "required": false
+    }
+  ],
+  "tools": [
+    {
+      "type": "env",
+      "name": "MCP",
+      "detail": "Environment variable referenced by Twitter / X setup notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "API",
+      "detail": "Environment variable referenced by Twitter / X setup notes.",
+      "required": false
+    },
+    {
+      "type": "mcp-tool",
+      "name": "Twitter / X MCP",
+      "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "mcp",
+      "name": "Twitter / X MCP",
+      "auth": "mcp",
       "detail": "Requires Twitter/X API access or an MCP connector configured in the agent provider. Local terminal agents do not receive social credentials from Vibe Research.",
       "required": false
     }

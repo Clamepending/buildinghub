@@ -11,10 +11,47 @@
   "visual": {
     "shape": "factory"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "factory",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "RunPod API or CLI",
     "detail": "Requires RUNPOD_API_KEY or a reviewed helper command where the agent runs. BuildingHub does not run pod lifecycle code itself."
   },
+  "tools": [
+    {
+      "type": "env",
+      "name": "RUNPOD_API_KEY",
+      "detail": "Required for API-backed pod and endpoint operations.",
+      "required": true
+    },
+    {
+      "type": "helper-command",
+      "name": "runpod",
+      "command": "runpod",
+      "detail": "Optional local CLI wrapper for reviewed workflows.",
+      "required": false
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "RunPod docs",
+      "url": "https://docs.runpod.io/",
+      "auth": "none",
+      "detail": "Official RunPod documentation.",
+      "required": false
+    }
+  ],
   "capabilities": [
     {
       "type": "env",

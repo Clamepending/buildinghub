@@ -24,10 +24,60 @@
   "visual": {
     "shape": "factory"
   },
+  "footprint": {
+    "width": 3,
+    "height": 2,
+    "shape": "factory",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1.5
+      }
+    ]
+  },
   "access": {
     "label": "Modal CLI/Python SDK",
     "detail": "Requires a Modal account plus token credentials where the agent runs. BuildingHub records setup metadata only and does not run Modal code."
   },
+  "tools": [
+    {
+      "type": "helper-command",
+      "name": "modal",
+      "command": "modal",
+      "detail": "Modal CLI for token inspection, app runs, deployments, and sandbox workflows.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_ID",
+      "detail": "Modal account token id for automated CLI or SDK access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "MODAL_TOKEN_SECRET",
+      "detail": "Modal account token secret for automated CLI or SDK access.",
+      "required": true
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "docs",
+      "name": "Modal docs",
+      "url": "https://modal.com/docs",
+      "auth": "none",
+      "detail": "Canonical Modal documentation for setup and runtime behavior.",
+      "required": false
+    },
+    {
+      "type": "local",
+      "name": "Modal CLI profile",
+      "auth": "api-key",
+      "detail": "Local Modal CLI profile or MODAL_TOKEN_ID/MODAL_TOKEN_SECRET environment variables configured outside BuildingHub.",
+      "required": true
+    }
+  ],
   "capabilities": [
     {
       "type": "helper-command",

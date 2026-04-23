@@ -34,11 +34,44 @@
   "visual": {
     "shape": "post"
   },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "post",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
   "access": {
     "label": "Session stream",
     "detail": "Uses local Vibe Research session state, read markers, background task summaries, and subagent status. No extra credentials are required."
   },
   "capabilities": [
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_AGENT_TOWN_API",
+      "detail": "Base URL for the local Agent Town API, such as http://127.0.0.1:4123/api/agent-town.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "VIBE_RESEARCH_AGENT_CANVAS_HELP",
+      "detail": "Example command for publishing the current session's visible canvas image.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "vr-agent-canvas",
+      "command": "vr-agent-canvas",
+      "detail": "Shows a generated image in the selected agent's terminal chat canvas.",
+      "required": false
+    }
+  ],
+  "tools": [
     {
       "type": "env",
       "name": "VIBE_RESEARCH_AGENT_TOWN_API",
