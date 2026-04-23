@@ -1,0 +1,385 @@
+{
+  "id": "twilio",
+  "name": "Twilio",
+  "version": "0.1.0",
+  "category": "Communication",
+  "description": "Coordinate SMS, WhatsApp, voice, Verify, and webhook workflows through Twilio with explicit approvals, contact allowlists, and spend guardrails.",
+  "status": "setup available",
+  "trust": "manifest-only",
+  "icon": "post",
+  "docsUrl": "https://www.twilio.com/docs",
+  "homepageUrl": "https://www.twilio.com/",
+  "repo": {
+    "url": "https://github.com/Clamepending/twilio-building",
+    "owner": "Clamepending",
+    "name": "twilio-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/twilio-building/main/assets/thumbnail.svg",
+      "alt": "Twilio Building thumbnail"
+    }
+  },
+  "keywords": [
+    "twilio",
+    "sms",
+    "mms",
+    "whatsapp",
+    "voice",
+    "calls",
+    "verify",
+    "otp",
+    "webhooks",
+    "communications",
+    "approval required",
+    "allowlist"
+  ],
+  "visual": {
+    "shape": "post"
+  },
+  "footprint": {
+    "width": 2,
+    "height": 2,
+    "shape": "post",
+    "snap": "grid",
+    "entrances": [
+      {
+        "side": "south",
+        "offset": 1
+      }
+    ]
+  },
+  "access": {
+    "label": "Twilio account and reviewed connector",
+    "detail": "Requires Twilio API credentials, an approved sender or service, webhook handling where needed, and human-reviewed agent rules outside BuildingHub."
+  },
+  "tools": [
+    {
+      "type": "api",
+      "name": "twilio.messages.create",
+      "endpoint": "twilio-messages-api",
+      "detail": "Send SMS, MMS, WhatsApp, RCS, or channel messages after recipient, sender, content, approval, and spend checks pass.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "twilio.calls.create",
+      "endpoint": "twilio-calls-api",
+      "detail": "Start outbound voice calls only through an approved workflow with caller ID, TwiML URL, contact, and cost guardrails.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "twilio.verify.verifications.create",
+      "endpoint": "twilio-verify-api",
+      "detail": "Start verification challenges through a configured Verify Service.",
+      "required": false
+    },
+    {
+      "type": "webhook",
+      "name": "twilio.messaging.webhook",
+      "endpoint": "twilio-inbound-message-webhook",
+      "detail": "Receive inbound message and status callback events through a connector or hosted callback service.",
+      "required": false
+    },
+    {
+      "type": "helper-command",
+      "name": "twilio",
+      "command": "twilio",
+      "detail": "Optional Twilio CLI for profile inspection and manual setup tasks.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_ACCOUNT_SID",
+      "detail": "Twilio Account SID for the account or subaccount used by the connector.",
+      "required": true
+    }
+  ],
+  "endpoints": [
+    {
+      "type": "api",
+      "name": "twilio-rest-api",
+      "method": "POST",
+      "urlTemplate": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/{Resource}.json",
+      "auth": "api-key",
+      "detail": "Base Twilio REST API surface for account, messaging, voice, phone number, and related resources.",
+      "required": true
+    },
+    {
+      "type": "api",
+      "name": "twilio-messages-api",
+      "method": "POST",
+      "urlTemplate": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Messages.json",
+      "auth": "api-key",
+      "detail": "Messages resource for outbound SMS, MMS, WhatsApp, RCS, and messaging-channel sends.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "twilio-calls-api",
+      "method": "POST",
+      "urlTemplate": "https://api.twilio.com/2010-04-01/Accounts/{AccountSid}/Calls.json",
+      "auth": "api-key",
+      "detail": "Calls resource for outbound voice calls and status tracking.",
+      "required": false
+    },
+    {
+      "type": "api",
+      "name": "twilio-verify-api",
+      "method": "POST",
+      "urlTemplate": "https://verify.twilio.com/v2/Services/{ServiceSid}/Verifications",
+      "auth": "api-key",
+      "detail": "Verify API surface for starting verification challenges through a configured service.",
+      "required": false
+    },
+    {
+      "type": "webhook",
+      "name": "twilio-inbound-message-webhook",
+      "auth": "custom",
+      "detail": "HTTPS callback endpoint configured in Twilio for inbound messages, replies, and status callbacks.",
+      "required": false
+    },
+    {
+      "type": "docs",
+      "name": "Twilio docs",
+      "url": "https://www.twilio.com/docs",
+      "auth": "none",
+      "detail": "Official Twilio documentation.",
+      "required": false
+    }
+  ],
+  "capabilities": [
+    {
+      "type": "env",
+      "name": "TWILIO_ACCOUNT_SID",
+      "detail": "Twilio Account SID for the account or subaccount used by the connector.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_API_KEY",
+      "detail": "Preferred API Key SID for Twilio REST API access.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_API_SECRET",
+      "detail": "Preferred API Key secret for Twilio REST API access. Never print it.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_AUTH_TOKEN",
+      "detail": "Fallback account Auth Token only when API keys are not available. Keep this out of logs and durable notes.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_MESSAGING_SERVICE_SID",
+      "detail": "Optional Messaging Service SID for outbound messaging workflows.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_VERIFY_SERVICE_SID",
+      "detail": "Optional Verify Service SID for verification workflows.",
+      "required": false
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_ALLOWED_RECIPIENTS",
+      "detail": "Contact allowlist enforced by the connector or agent runtime before outbound messages or calls.",
+      "required": true
+    },
+    {
+      "type": "env",
+      "name": "TWILIO_SPEND_LIMIT",
+      "detail": "Human-defined spend or rate limit enforced outside BuildingHub.",
+      "required": true
+    },
+    {
+      "type": "helper-command",
+      "name": "twilio",
+      "command": "twilio",
+      "detail": "Optional Twilio CLI for profile inspection and setup checks.",
+      "required": false
+    }
+  ],
+  "onboarding": {
+    "variables": [
+      {
+        "label": "Account SID",
+        "value": "TWILIO_ACCOUNT_SID in agent environment or connector profile",
+        "required": true
+      },
+      {
+        "label": "API key SID",
+        "value": "TWILIO_API_KEY in agent environment or connector profile",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "API key secret",
+        "value": "TWILIO_API_SECRET in agent environment or connector profile",
+        "required": true,
+        "secret": true
+      },
+      {
+        "label": "Fallback auth token",
+        "value": "TWILIO_AUTH_TOKEN only when API keys are unavailable",
+        "required": false,
+        "secret": true
+      },
+      {
+        "label": "Sender or service",
+        "value": "Twilio phone number, Messaging Service SID, WhatsApp sender, or Verify Service SID",
+        "required": true
+      },
+      {
+        "label": "Webhook URL",
+        "value": "HTTPS endpoint for inbound messages and status callbacks",
+        "required": false
+      },
+      {
+        "label": "Allowed recipients",
+        "value": "TWILIO_ALLOWED_RECIPIENTS or connector-managed allowlist",
+        "required": true
+      },
+      {
+        "label": "Spend guardrail",
+        "value": "TWILIO_SPEND_LIMIT plus rate/channel limits",
+        "required": true
+      },
+      {
+        "label": "Approval policy",
+        "value": "Which outbound messages, calls, and verification attempts require human approval",
+        "required": true
+      }
+    ],
+    "steps": [
+      {
+        "title": "Create least-privilege access",
+        "detail": "Create a Twilio API key or connector credential for the specific account, subaccount, and capabilities agents may use."
+      },
+      {
+        "title": "Configure senders and services",
+        "detail": "Set up the phone number, Messaging Service, WhatsApp sender, voice caller ID, or Verify Service needed by the workflow."
+      },
+      {
+        "title": "Wire inbound events",
+        "detail": "Point Twilio webhooks at the reviewed callback service when the workflow needs inbound replies or delivery status."
+      },
+      {
+        "title": "Set guardrails",
+        "detail": "Document allowed contacts, allowed channels, message/call approval rules, rate limits, and spend limits before agent access."
+      },
+      {
+        "title": "Install the building",
+        "detail": "Add Twilio to Agent Town after credentials, senders, webhook handling, and guardrails have been reviewed.",
+        "completeWhen": {
+          "type": "installed"
+        }
+      }
+    ]
+  },
+  "agentGuide": {
+    "summary": "Use Twilio when an agent needs to coordinate SMS, WhatsApp, voice, Verify, or webhook communication through a reviewed Twilio connector with explicit human guardrails.",
+    "useCases": [
+      "Check whether Twilio credentials, senders, services, or webhooks are ready for a communication workflow.",
+      "Prepare outbound SMS, WhatsApp, voice, or Verify actions for human approval.",
+      "Inspect inbound message or status callback setup without exposing phone numbers, transcripts, or secrets."
+    ],
+    "setup": [
+      "Read the BuildingHub manifest and official Twilio docs before using any Twilio capability.",
+      "Prefer API keys over the primary Auth Token for automated access.",
+      "Confirm allowed recipients, allowed channels, rate limits, spend limits, and approval rules before sending messages or placing calls.",
+      "Do not print Twilio secrets, phone numbers, message bodies, call recordings, or transcripts into durable logs or Library notes.",
+      "Ask for human approval before any outbound communication unless a narrower workflow has already been approved."
+    ],
+    "commands": [
+      {
+        "label": "Check Twilio CLI",
+        "command": "twilio",
+        "detail": "Confirms the optional Twilio CLI is installed."
+      }
+    ],
+    "docs": [
+      {
+        "label": "Twilio docs",
+        "url": "https://www.twilio.com/docs"
+      },
+      {
+        "label": "Twilio API basics",
+        "url": "https://www.twilio.com/docs/iam/api/"
+      },
+      {
+        "label": "Twilio API keys",
+        "url": "https://www.twilio.com/docs/iam/api-keys"
+      },
+      {
+        "label": "Messages resource",
+        "url": "https://www.twilio.com/docs/messaging/api/message-resource"
+      },
+      {
+        "label": "Call resource",
+        "url": "https://www.twilio.com/docs/voice/api/call-resource"
+      },
+      {
+        "label": "Verify API",
+        "url": "https://www.twilio.com/docs/verify/api"
+      },
+      {
+        "label": "Twilio CLI profiles",
+        "url": "https://www.twilio.com/docs/twilio-cli/general-usage/profiles"
+      }
+    ],
+    "env": [
+      {
+        "name": "TWILIO_ACCOUNT_SID",
+        "detail": "Twilio Account SID for the account or subaccount used by the connector.",
+        "required": true
+      },
+      {
+        "name": "TWILIO_API_KEY",
+        "detail": "Preferred API Key SID for Twilio REST API access.",
+        "required": true
+      },
+      {
+        "name": "TWILIO_API_SECRET",
+        "detail": "Preferred API Key secret. Never print it.",
+        "required": true
+      },
+      {
+        "name": "TWILIO_AUTH_TOKEN",
+        "detail": "Fallback account Auth Token only when API keys are unavailable. Never print it.",
+        "required": false
+      },
+      {
+        "name": "TWILIO_MESSAGING_SERVICE_SID",
+        "detail": "Optional Messaging Service SID for outbound messaging.",
+        "required": false
+      },
+      {
+        "name": "TWILIO_VERIFY_SERVICE_SID",
+        "detail": "Optional Verify Service SID for verification workflows.",
+        "required": false
+      },
+      {
+        "name": "TWILIO_ALLOWED_RECIPIENTS",
+        "detail": "Required contact allowlist enforced by the connector or agent runtime.",
+        "required": true
+      },
+      {
+        "name": "TWILIO_SPEND_LIMIT",
+        "detail": "Required spend or rate guardrail enforced outside BuildingHub.",
+        "required": true
+      }
+    ]
+  }
+}
