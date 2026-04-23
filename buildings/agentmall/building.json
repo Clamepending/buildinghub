@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "market",
+  "repo": {
+    "url": "https://github.com/Clamepending/agentmall-building",
+    "owner": "Clamepending",
+    "name": "agentmall-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/agentmall-building/main/assets/thumbnail.svg",
+      "alt": "AgentMall Building thumbnail"
+    }
+  },
   "keywords": [
     "agentmall",
     "vibe-research",

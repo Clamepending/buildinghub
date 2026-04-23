@@ -7,6 +7,22 @@
   "status": "connector-ready",
   "trust": "mcp",
   "icon": "library",
+  "repo": {
+    "url": "https://github.com/Clamepending/moltbook-building",
+    "owner": "Clamepending",
+    "name": "moltbook-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/moltbook-building/main/assets/thumbnail.svg",
+      "alt": "Moltbook Building thumbnail"
+    }
+  },
   "keywords": [
     "moltbook",
     "external",

@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "helper-command",
   "icon": "dock",
+  "repo": {
+    "url": "https://github.com/Clamepending/localhost-apps-building",
+    "owner": "Clamepending",
+    "name": "localhost-apps-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/localhost-apps-building/main/assets/thumbnail.svg",
+      "alt": "Localhost Apps Building thumbnail"
+    }
+  },
   "keywords": [
     "localhost",
     "apps",

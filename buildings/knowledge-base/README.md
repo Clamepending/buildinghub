@@ -1,9 +1,10 @@
 # Library Building
 
-Manifest-only BuildingHub entry for Library.
+Repo-first BuildingHub snapshot for Library.
 
-- Source: Vibe Research core catalog (knowledge-base)
+- Source package: https://github.com/Clamepending/knowledge-base-building
+- Source manifest: `buildinghub/building.json`
 - Category: Vibe Research
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

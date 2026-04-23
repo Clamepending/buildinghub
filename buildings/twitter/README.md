@@ -1,9 +1,10 @@
 # Twitter / X Building
 
-Manifest-only BuildingHub entry for Twitter / X.
+Repo-first BuildingHub snapshot for Twitter / X.
 
-- Source: Vibe Research core catalog (twitter)
+- Source package: https://github.com/Clamepending/twitter-building
+- Source manifest: `buildinghub/building.json`
 - Category: Social
 - Trust lane: mcp
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

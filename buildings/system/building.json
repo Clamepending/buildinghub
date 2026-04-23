@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "plugin",
+  "repo": {
+    "url": "https://github.com/Clamepending/system-building",
+    "owner": "Clamepending",
+    "name": "system-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/system-building/main/assets/thumbnail.svg",
+      "alt": "System Building thumbnail"
+    }
+  },
   "keywords": [
     "system",
     "vibe-research",

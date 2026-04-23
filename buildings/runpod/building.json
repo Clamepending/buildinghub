@@ -8,6 +8,22 @@
   "trust": "helper-command",
   "icon": "gpu",
   "docsUrl": "https://docs.runpod.io/",
+  "repo": {
+    "url": "https://github.com/Clamepending/runpod-building",
+    "owner": "Clamepending",
+    "name": "runpod-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/runpod-building/main/assets/thumbnail.svg",
+      "alt": "RunPod Building thumbnail"
+    }
+  },
   "visual": {
     "shape": "factory"
   },

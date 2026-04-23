@@ -8,6 +8,22 @@
   "trust": "mcp",
   "icon": "notebook",
   "docsUrl": "https://developers.linear.app/docs",
+  "repo": {
+    "url": "https://github.com/Clamepending/linear-building",
+    "owner": "Clamepending",
+    "name": "linear-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/linear-building/main/assets/thumbnail.svg",
+      "alt": "Linear Building thumbnail"
+    }
+  },
   "visual": {
     "shape": "plugin"
   },

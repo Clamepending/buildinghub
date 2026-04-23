@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "library",
+  "repo": {
+    "url": "https://github.com/Clamepending/knowledge-base-building",
+    "owner": "Clamepending",
+    "name": "knowledge-base-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/knowledge-base-building/main/assets/thumbnail.svg",
+      "alt": "Library Building thumbnail"
+    }
+  },
   "keywords": [
     "knowledge",
     "base",

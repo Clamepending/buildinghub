@@ -7,6 +7,22 @@
   "status": "available in Codex",
   "trust": "manifest-only",
   "icon": "plugin",
+  "repo": {
+    "url": "https://github.com/Clamepending/github-building",
+    "owner": "Clamepending",
+    "name": "github-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/github-building/main/assets/thumbnail.svg",
+      "alt": "GitHub Building thumbnail"
+    }
+  },
   "keywords": [
     "github",
     "plugin",

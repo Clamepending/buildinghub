@@ -7,6 +7,22 @@
   "status": "catalog ready",
   "trust": "manifest-only",
   "icon": "plugin",
+  "repo": {
+    "url": "https://github.com/Clamepending/buildinghub-building",
+    "owner": "Clamepending",
+    "name": "buildinghub-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/buildinghub-building/main/assets/thumbnail.svg",
+      "alt": "BuildingHub Building thumbnail"
+    }
+  },
   "keywords": [
     "buildinghub",
     "vibe-research",

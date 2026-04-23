@@ -9,6 +9,22 @@
   "icon": "compute",
   "docsUrl": "https://modal.com/docs",
   "homepageUrl": "https://modal.com/",
+  "repo": {
+    "url": "https://github.com/Clamepending/modal-building",
+    "owner": "Clamepending",
+    "name": "modal-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/modal-building/main/assets/thumbnail.svg",
+      "alt": "Modal Building thumbnail"
+    }
+  },
   "keywords": [
     "modal",
     "compute",

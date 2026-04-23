@@ -7,6 +7,22 @@
   "status": "auto-detected",
   "trust": "helper-command",
   "icon": "portal",
+  "repo": {
+    "url": "https://github.com/Clamepending/tailscale-building",
+    "owner": "Clamepending",
+    "name": "tailscale-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/tailscale-building/main/assets/thumbnail.svg",
+      "alt": "Tailscale Building thumbnail"
+    }
+  },
   "keywords": [
     "tailscale",
     "vibe-research",

@@ -7,6 +7,22 @@
   "status": "connector-ready",
   "trust": "manifest-only",
   "icon": "studio",
+  "repo": {
+    "url": "https://github.com/Clamepending/wandb-building",
+    "owner": "Clamepending",
+    "name": "wandb-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/wandb-building/main/assets/thumbnail.svg",
+      "alt": "W&B Building thumbnail"
+    }
+  },
   "keywords": [
     "wandb",
     "external",

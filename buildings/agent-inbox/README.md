@@ -1,9 +1,10 @@
 # Agent Inbox Building
 
-Manifest-only BuildingHub entry for Agent Inbox.
+Repo-first BuildingHub snapshot for Agent Inbox.
 
-- Source: Vibe Research core catalog (agent-inbox)
+- Source package: https://github.com/Clamepending/agent-inbox-building
+- Source manifest: `buildinghub/building.json`
 - Category: Vibe Research
 - Trust lane: helper-command
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

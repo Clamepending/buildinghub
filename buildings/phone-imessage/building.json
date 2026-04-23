@@ -7,6 +7,22 @@
   "status": "bridge required",
   "trust": "manifest-only",
   "icon": "post",
+  "repo": {
+    "url": "https://github.com/Clamepending/phone-imessage-building",
+    "owner": "Clamepending",
+    "name": "phone-imessage-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/phone-imessage-building/main/assets/thumbnail.svg",
+      "alt": "Phone / iMessage Building thumbnail"
+    }
+  },
   "keywords": [
     "phone",
     "imessage",

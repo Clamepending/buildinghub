@@ -1,9 +1,10 @@
 # Modal Building
 
-Manifest-only BuildingHub entry for Modal.
+Repo-first BuildingHub snapshot for Modal.
 
-- Source: curated BuildingHub compute entry, using official Modal docs
+- Source package: https://github.com/Clamepending/modal-building
+- Source manifest: `buildinghub/building.json`
 - Category: Compute
 - Trust lane: helper-command
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

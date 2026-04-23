@@ -1,9 +1,10 @@
 # Automations Building
 
-Manifest-only BuildingHub entry for Automations.
+Repo-first BuildingHub snapshot for Automations.
 
-- Source: Vibe Research core catalog (automations)
+- Source package: https://github.com/Clamepending/automations-building
+- Source manifest: `buildinghub/building.json`
 - Category: Planning
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

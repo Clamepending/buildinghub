@@ -1,9 +1,10 @@
 # Nano Banana Building
 
-Manifest-only BuildingHub entry for Nano Banana.
+Repo-first BuildingHub snapshot for Nano Banana.
 
-- Source: Vibe Research core catalog (nano-banana)
+- Source package: https://github.com/Clamepending/nano-banana-building
+- Source manifest: `buildinghub/building.json`
 - Category: Generative Media
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

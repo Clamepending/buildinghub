@@ -7,6 +7,22 @@
   "status": "CLI install required",
   "trust": "helper-command",
   "icon": "lab",
+  "repo": {
+    "url": "https://github.com/Clamepending/harbor-building",
+    "owner": "Clamepending",
+    "name": "harbor-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/harbor-building/main/assets/thumbnail.svg",
+      "alt": "Harbor Building thumbnail"
+    }
+  },
   "keywords": [
     "harbor",
     "external",

@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "plugin",
+  "repo": {
+    "url": "https://github.com/Clamepending/ci-repair-shop-building",
+    "owner": "Clamepending",
+    "name": "ci-repair-shop-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/ci-repair-shop-building/main/assets/thumbnail.svg",
+      "alt": "CI Repair Shop Building thumbnail"
+    }
+  },
   "keywords": [
     "ci",
     "repair",

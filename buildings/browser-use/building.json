@@ -7,6 +7,22 @@
   "status": "setup available",
   "trust": "helper-command",
   "icon": "browser",
+  "repo": {
+    "url": "https://github.com/Clamepending/browser-use-building",
+    "owner": "Clamepending",
+    "name": "browser-use-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/browser-use-building/main/assets/thumbnail.svg",
+      "alt": "Browser Use Building thumbnail"
+    }
+  },
   "keywords": [
     "browser",
     "use",

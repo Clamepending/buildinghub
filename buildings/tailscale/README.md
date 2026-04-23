@@ -1,9 +1,10 @@
 # Tailscale Building
 
-Manifest-only BuildingHub entry for Tailscale.
+Repo-first BuildingHub snapshot for Tailscale.
 
-- Source: Vibe Research core catalog (tailscale)
+- Source package: https://github.com/Clamepending/tailscale-building
+- Source manifest: `buildinghub/building.json`
 - Category: Networking
 - Trust lane: helper-command
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

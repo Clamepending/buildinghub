@@ -8,6 +8,22 @@
   "trust": "helper-command",
   "icon": "database",
   "docsUrl": "https://supabase.com/docs",
+  "repo": {
+    "url": "https://github.com/Clamepending/supabase-building",
+    "owner": "Clamepending",
+    "name": "supabase-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/supabase-building/main/assets/thumbnail.svg",
+      "alt": "Supabase Building thumbnail"
+    }
+  },
   "visual": {
     "shape": "library"
   },

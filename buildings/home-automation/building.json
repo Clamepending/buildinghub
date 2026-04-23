@@ -7,6 +7,22 @@
   "status": "bridge required",
   "trust": "manifest-only",
   "icon": "plugin",
+  "repo": {
+    "url": "https://github.com/Clamepending/home-automation-building",
+    "owner": "Clamepending",
+    "name": "home-automation-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/home-automation-building/main/assets/thumbnail.svg",
+      "alt": "Home Automation Building thumbnail"
+    }
+  },
   "keywords": [
     "home",
     "automation",

@@ -1,9 +1,10 @@
 # AgentMall Building
 
-Manifest-only BuildingHub entry for AgentMall.
+Repo-first BuildingHub snapshot for AgentMall.
 
-- Source: Vibe Research core catalog (agentmall)
+- Source package: https://github.com/Clamepending/agentmall-building
+- Source manifest: `buildinghub/building.json`
 - Category: Vibe Research
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

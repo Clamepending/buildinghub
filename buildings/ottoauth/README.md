@@ -1,9 +1,10 @@
 # OttoAuth Building
 
-Manifest-only BuildingHub entry for OttoAuth.
+Repo-first BuildingHub snapshot for OttoAuth.
 
-- Source: Vibe Research core catalog (ottoauth)
+- Source package: https://github.com/Clamepending/ottoauth-building
+- Source manifest: `buildinghub/building.json`
 - Category: Commerce
 - Trust lane: helper-command
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

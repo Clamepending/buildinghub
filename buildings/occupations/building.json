@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "school",
+  "repo": {
+    "url": "https://github.com/Clamepending/occupations-building",
+    "owner": "Clamepending",
+    "name": "occupations-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/occupations-building/main/assets/thumbnail.svg",
+      "alt": "Occupations Building thumbnail"
+    }
+  },
   "keywords": [
     "occupations",
     "vibe-research",

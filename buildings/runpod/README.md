@@ -1,5 +1,10 @@
 # RunPod Building
 
-Manifest-only community building for GPU compute workflows.
+Repo-first BuildingHub snapshot for RunPod.
 
-This building should be paired with explicit budget and teardown instructions. It intentionally does not bundle pod lifecycle code.
+- Source package: https://github.com/Clamepending/runpod-building
+- Source manifest: `buildinghub/building.json`
+- Category: Compute
+- Trust lane: helper-command
+
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

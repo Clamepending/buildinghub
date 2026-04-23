@@ -2,7 +2,7 @@
   "registryVersion": 1,
   "manifestVersion": 1,
   "generatedBy": "buildinghub/0.2.0",
-  "generatedAt": "2026-04-23T02:45:02.222Z",
+  "generatedAt": "2026-04-23T03:08:56.074Z",
   "name": "Vibe Research BuildingHub",
   "packageCount": 36,
   "layoutCount": 4,
@@ -13,10 +13,17 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "c5a3393b6046fa19214b2d52b8f52ecdb9a1d4ba07d7318f1d30c262957b5e17",
+      "manifestSha256": "b458251af86e76ec599025876dfaeaeddc799f72292b883488d430c28a9e9a23",
       "source": {
         "manifestPath": "buildings/agent-inbox/building.json",
-        "readmePath": "buildings/agent-inbox/README.md"
+        "readmePath": "buildings/agent-inbox/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/agent-inbox-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/agent-inbox-building/main/assets/thumbnail.svg",
+        "alt": "Agent Inbox Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -33,8 +40,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "c5a3393b6046fa19214b2d52b8f52ecdb9a1d4ba07d7318f1d30c262957b5e17",
-          "manifestPath": "buildings/agent-inbox/building.json"
+          "manifestSha256": "b458251af86e76ec599025876dfaeaeddc799f72292b883488d430c28a9e9a23",
+          "manifestPath": "buildings/agent-inbox/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/agent-inbox-building"
         }
       ]
     },
@@ -44,10 +52,17 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "e393525752176f586a73ed82310569c95aa6cf7c4409617702af39920f2bed18",
+      "manifestSha256": "2c46cf3a610bc74f4fef01e1f9c292e51680449b816582e0ddefb8c0c4d4f178",
       "source": {
         "manifestPath": "buildings/agentmail/building.json",
-        "readmePath": "buildings/agentmail/README.md"
+        "readmePath": "buildings/agentmail/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/agentmail-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/agentmail-building/main/assets/thumbnail.svg",
+        "alt": "AgentMail Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -64,8 +79,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "e393525752176f586a73ed82310569c95aa6cf7c4409617702af39920f2bed18",
-          "manifestPath": "buildings/agentmail/building.json"
+          "manifestSha256": "2c46cf3a610bc74f4fef01e1f9c292e51680449b816582e0ddefb8c0c4d4f178",
+          "manifestPath": "buildings/agentmail/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/agentmail-building"
         }
       ]
     },
@@ -75,10 +91,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "a966e1a12955579ae79de29fb04957d6af1b875166018bb08360b820e9eb98b9",
+      "manifestSha256": "646c6c20fd7ff7f1abb364a9e12ecd67b489df37d5b4e6863fbad98173d2ba69",
       "source": {
         "manifestPath": "buildings/agentmall/building.json",
-        "readmePath": "buildings/agentmall/README.md"
+        "readmePath": "buildings/agentmall/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/agentmall-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/agentmall-building/main/assets/thumbnail.svg",
+        "alt": "AgentMall Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -95,8 +118,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "a966e1a12955579ae79de29fb04957d6af1b875166018bb08360b820e9eb98b9",
-          "manifestPath": "buildings/agentmall/building.json"
+          "manifestSha256": "646c6c20fd7ff7f1abb364a9e12ecd67b489df37d5b4e6863fbad98173d2ba69",
+          "manifestPath": "buildings/agentmall/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/agentmall-building"
         }
       ]
     },
@@ -106,10 +130,17 @@
       "category": "Planning",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "51323838b20805db5d73077aa7f6dec50392ab6128dd2a30b7aff69e94a22f54",
+      "manifestSha256": "934ff19894e7f8330aa5f4729a6443e53059130ba067a4e1f8fbbef2c4253d69",
       "source": {
         "manifestPath": "buildings/automations/building.json",
-        "readmePath": "buildings/automations/README.md"
+        "readmePath": "buildings/automations/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/automations-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/automations-building/main/assets/thumbnail.svg",
+        "alt": "Automations Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -126,8 +157,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "51323838b20805db5d73077aa7f6dec50392ab6128dd2a30b7aff69e94a22f54",
-          "manifestPath": "buildings/automations/building.json"
+          "manifestSha256": "934ff19894e7f8330aa5f4729a6443e53059130ba067a4e1f8fbbef2c4253d69",
+          "manifestPath": "buildings/automations/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/automations-building"
         }
       ]
     },
@@ -137,10 +169,17 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "8d424fc5f865d6a68f4808add0038a1247c67bc0c8ae8cc7c967c7792a61b204",
+      "manifestSha256": "8f475291a176431b74696a8f2cf8d750388590ecbc3bbce549ca4d6c83c5d28d",
       "source": {
         "manifestPath": "buildings/browser-use/building.json",
-        "readmePath": "buildings/browser-use/README.md"
+        "readmePath": "buildings/browser-use/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/browser-use-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/browser-use-building/main/assets/thumbnail.svg",
+        "alt": "Browser Use Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -157,8 +196,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "8d424fc5f865d6a68f4808add0038a1247c67bc0c8ae8cc7c967c7792a61b204",
-          "manifestPath": "buildings/browser-use/building.json"
+          "manifestSha256": "8f475291a176431b74696a8f2cf8d750388590ecbc3bbce549ca4d6c83c5d28d",
+          "manifestPath": "buildings/browser-use/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/browser-use-building"
         }
       ]
     },
@@ -168,10 +208,17 @@
       "category": "Community",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "7df78aff3e01b6bd75ab04a2823d14740a289ca222f9228eba118266eba896b7",
+      "manifestSha256": "54370c8abb306f1cbe760df3846b24a54c1416423cc9d186cca9aea663cd049f",
       "source": {
         "manifestPath": "buildings/buildinghub/building.json",
-        "readmePath": "buildings/buildinghub/README.md"
+        "readmePath": "buildings/buildinghub/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/buildinghub-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/buildinghub-building/main/assets/thumbnail.svg",
+        "alt": "BuildingHub Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -188,8 +235,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "7df78aff3e01b6bd75ab04a2823d14740a289ca222f9228eba118266eba896b7",
-          "manifestPath": "buildings/buildinghub/building.json"
+          "manifestSha256": "54370c8abb306f1cbe760df3846b24a54c1416423cc9d186cca9aea663cd049f",
+          "manifestPath": "buildings/buildinghub/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/buildinghub-building"
         }
       ]
     },
@@ -199,10 +247,17 @@
       "category": "Coding",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "2d71c1a484acc486f443bf0d10168ddbb49e295f2bb29a78b706c53ac65cc61e",
+      "manifestSha256": "5e7ccab2846ac1d6e84de72e011b4c6480d41c028e596ed37bddebaf1e28780e",
       "source": {
         "manifestPath": "buildings/ci-repair-shop/building.json",
-        "readmePath": "buildings/ci-repair-shop/README.md"
+        "readmePath": "buildings/ci-repair-shop/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/ci-repair-shop-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/ci-repair-shop-building/main/assets/thumbnail.svg",
+        "alt": "CI Repair Shop Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -219,8 +274,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "2d71c1a484acc486f443bf0d10168ddbb49e295f2bb29a78b706c53ac65cc61e",
-          "manifestPath": "buildings/ci-repair-shop/building.json"
+          "manifestSha256": "5e7ccab2846ac1d6e84de72e011b4c6480d41c028e596ed37bddebaf1e28780e",
+          "manifestPath": "buildings/ci-repair-shop/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/ci-repair-shop-building"
         }
       ]
     },
@@ -230,10 +286,17 @@
       "category": "Communication",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "d8531a9d1b2a304ffc299205f1e5e82ab966b50239d2de60b3df1955c55b0c76",
+      "manifestSha256": "d24a3d5d66be63cea6a465d15699d213fa01ae51f48c5ccaff6f46d146e3bcab",
       "source": {
         "manifestPath": "buildings/discord/building.json",
-        "readmePath": "buildings/discord/README.md"
+        "readmePath": "buildings/discord/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/discord-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/discord-building/main/assets/thumbnail.svg",
+        "alt": "Discord Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -250,8 +313,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "d8531a9d1b2a304ffc299205f1e5e82ab966b50239d2de60b3df1955c55b0c76",
-          "manifestPath": "buildings/discord/building.json"
+          "manifestSha256": "d24a3d5d66be63cea6a465d15699d213fa01ae51f48c5ccaff6f46d146e3bcab",
+          "manifestPath": "buildings/discord/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/discord-building"
         }
       ]
     },
@@ -261,10 +325,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "253155d3e7a9ea40d509d32307d858cc5ad1be51bf64bae4e56dd2df062856e3",
+      "manifestSha256": "81f3bb0ce8997d84a1f53b5d9855e953822c606482779f40fa03924085e0440a",
       "source": {
         "manifestPath": "buildings/doghouse/building.json",
-        "readmePath": "buildings/doghouse/README.md"
+        "readmePath": "buildings/doghouse/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/doghouse-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/doghouse-building/main/assets/thumbnail.svg",
+        "alt": "Doghouse Building thumbnail"
       },
       "footprint": {
         "width": 1,
@@ -281,8 +352,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "253155d3e7a9ea40d509d32307d858cc5ad1be51bf64bae4e56dd2df062856e3",
-          "manifestPath": "buildings/doghouse/building.json"
+          "manifestSha256": "81f3bb0ce8997d84a1f53b5d9855e953822c606482779f40fa03924085e0440a",
+          "manifestPath": "buildings/doghouse/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/doghouse-building"
         }
       ]
     },
@@ -292,10 +364,17 @@
       "category": "Coding",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "793fc7b5cbaa3c5dce4992e3ad95f92ec746a0074ed9a33533faba8f7332a482",
+      "manifestSha256": "28e6b7f68649d10c282a5a6ad90fd8493116ac7319762d35226ead8c9afadb3d",
       "source": {
         "manifestPath": "buildings/github/building.json",
-        "readmePath": "buildings/github/README.md"
+        "readmePath": "buildings/github/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/github-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/github-building/main/assets/thumbnail.svg",
+        "alt": "GitHub Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -312,8 +391,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "793fc7b5cbaa3c5dce4992e3ad95f92ec746a0074ed9a33533faba8f7332a482",
-          "manifestPath": "buildings/github/building.json"
+          "manifestSha256": "28e6b7f68649d10c282a5a6ad90fd8493116ac7319762d35226ead8c9afadb3d",
+          "manifestPath": "buildings/github/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/github-building"
         }
       ]
     },
@@ -323,10 +403,17 @@
       "category": "Planning",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "2d502ca5d529d95d72513a77ffafa4485f3de4482d0fb2188499f217e6d44a2c",
+      "manifestSha256": "a48f2c96c715c5f45081f98b4cacd9723caf16ddadfea2aec44aacbad686abde",
       "source": {
         "manifestPath": "buildings/google-calendar/building.json",
-        "readmePath": "buildings/google-calendar/README.md"
+        "readmePath": "buildings/google-calendar/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/google-calendar-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/google-calendar-building/main/assets/thumbnail.svg",
+        "alt": "Google Calendar Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -343,8 +430,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "2d502ca5d529d95d72513a77ffafa4485f3de4482d0fb2188499f217e6d44a2c",
-          "manifestPath": "buildings/google-calendar/building.json"
+          "manifestSha256": "a48f2c96c715c5f45081f98b4cacd9723caf16ddadfea2aec44aacbad686abde",
+          "manifestPath": "buildings/google-calendar/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/google-calendar-building"
         }
       ]
     },
@@ -354,10 +442,17 @@
       "category": "Knowledge",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "49aa4c8474dc65a8db0df134b6568a510528488983f95ed944248dd89c9960be",
+      "manifestSha256": "81a0722e889ed3fc510b8d5d819c117eddf4fd12734b1f8d8bc4eb9098693acc",
       "source": {
         "manifestPath": "buildings/google-drive/building.json",
-        "readmePath": "buildings/google-drive/README.md"
+        "readmePath": "buildings/google-drive/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/google-drive-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/google-drive-building/main/assets/thumbnail.svg",
+        "alt": "Google Drive Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -374,8 +469,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "49aa4c8474dc65a8db0df134b6568a510528488983f95ed944248dd89c9960be",
-          "manifestPath": "buildings/google-drive/building.json"
+          "manifestSha256": "81a0722e889ed3fc510b8d5d819c117eddf4fd12734b1f8d8bc4eb9098693acc",
+          "manifestPath": "buildings/google-drive/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/google-drive-building"
         }
       ]
     },
@@ -385,10 +481,17 @@
       "category": "Evals",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "e013e1aa5aa677bab893eb30623c3f1a44a65a14ad2ba7e46a2c09c11130f3c9",
+      "manifestSha256": "4782f9782ec0dbd31cb3752f6c5ceefbdb2ff5d82013f27a9f155d29be6cd956",
       "source": {
         "manifestPath": "buildings/harbor/building.json",
-        "readmePath": "buildings/harbor/README.md"
+        "readmePath": "buildings/harbor/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/harbor-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/harbor-building/main/assets/thumbnail.svg",
+        "alt": "Harbor Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -405,8 +508,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "e013e1aa5aa677bab893eb30623c3f1a44a65a14ad2ba7e46a2c09c11130f3c9",
-          "manifestPath": "buildings/harbor/building.json"
+          "manifestSha256": "4782f9782ec0dbd31cb3752f6c5ceefbdb2ff5d82013f27a9f155d29be6cd956",
+          "manifestPath": "buildings/harbor/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/harbor-building"
         }
       ]
     },
@@ -416,10 +520,17 @@
       "category": "Home",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "113138f43cb8a7e29b126c6919568f962a271a4f7f42fc2107cd7fc4ecbd5b3a",
+      "manifestSha256": "a3f57166aba5a6d84c97479f07ced87721651d4bd2d2b3ee4211de9488dc4e2f",
       "source": {
         "manifestPath": "buildings/home-automation/building.json",
-        "readmePath": "buildings/home-automation/README.md"
+        "readmePath": "buildings/home-automation/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/home-automation-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/home-automation-building/main/assets/thumbnail.svg",
+        "alt": "Home Automation Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -436,8 +547,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "113138f43cb8a7e29b126c6919568f962a271a4f7f42fc2107cd7fc4ecbd5b3a",
-          "manifestPath": "buildings/home-automation/building.json"
+          "manifestSha256": "a3f57166aba5a6d84c97479f07ced87721651d4bd2d2b3ee4211de9488dc4e2f",
+          "manifestPath": "buildings/home-automation/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/home-automation-building"
         }
       ]
     },
@@ -447,10 +559,17 @@
       "category": "Commerce",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "c08ffad5065442320848e80ce84b17def5e89a03c93b66cdf59e8109072191ef",
+      "manifestSha256": "36d5f0185df6bb18ded36e55818d2c36c399d4b4316d6865699470a3d31288c7",
       "source": {
         "manifestPath": "buildings/instacart/building.json",
-        "readmePath": "buildings/instacart/README.md"
+        "readmePath": "buildings/instacart/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/instacart-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/instacart-building/main/assets/thumbnail.svg",
+        "alt": "Instacart Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -467,8 +586,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "c08ffad5065442320848e80ce84b17def5e89a03c93b66cdf59e8109072191ef",
-          "manifestPath": "buildings/instacart/building.json"
+          "manifestSha256": "36d5f0185df6bb18ded36e55818d2c36c399d4b4316d6865699470a3d31288c7",
+          "manifestPath": "buildings/instacart/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/instacart-building"
         }
       ]
     },
@@ -478,10 +598,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "a549493a43417f0f51427d89b6e2ec2a7d484eeb6e3d64f44e959935071721ec",
+      "manifestSha256": "f0effbcdfb33f57e553059eba3aecc4e1f462da61bb6ea9290cd22122cd0ce19",
       "source": {
         "manifestPath": "buildings/knowledge-base/building.json",
-        "readmePath": "buildings/knowledge-base/README.md"
+        "readmePath": "buildings/knowledge-base/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/knowledge-base-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/knowledge-base-building/main/assets/thumbnail.svg",
+        "alt": "Library Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -498,8 +625,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "a549493a43417f0f51427d89b6e2ec2a7d484eeb6e3d64f44e959935071721ec",
-          "manifestPath": "buildings/knowledge-base/building.json"
+          "manifestSha256": "f0effbcdfb33f57e553059eba3aecc4e1f462da61bb6ea9290cd22122cd0ce19",
+          "manifestPath": "buildings/knowledge-base/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/knowledge-base-building"
         }
       ]
     },
@@ -509,10 +637,17 @@
       "category": "Planning",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "b5d94a89987265f2f89f559bae5bd5a9489880a2dca3496a3e29637f32af956d",
+      "manifestSha256": "10eaac7dc2ecd286d191ddbe145086bf9264b18d2bb14ddbde337c93a4613e3e",
       "source": {
         "manifestPath": "buildings/linear/building.json",
-        "readmePath": "buildings/linear/README.md"
+        "readmePath": "buildings/linear/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/linear-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/linear-building/main/assets/thumbnail.svg",
+        "alt": "Linear Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -529,8 +664,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "b5d94a89987265f2f89f559bae5bd5a9489880a2dca3496a3e29637f32af956d",
-          "manifestPath": "buildings/linear/building.json"
+          "manifestSha256": "10eaac7dc2ecd286d191ddbe145086bf9264b18d2bb14ddbde337c93a4613e3e",
+          "manifestPath": "buildings/linear/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/linear-building"
         }
       ]
     },
@@ -540,10 +676,17 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1eb010bf40ff9a8b642163a64e4ea84499ff6e35d5bfd163a8b61117fd913c02",
+      "manifestSha256": "430718a0c9cb79ea682b728c97a751377d6894f38906dec3126d85cc016e0d8b",
       "source": {
         "manifestPath": "buildings/localhost-apps/building.json",
-        "readmePath": "buildings/localhost-apps/README.md"
+        "readmePath": "buildings/localhost-apps/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/localhost-apps-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/localhost-apps-building/main/assets/thumbnail.svg",
+        "alt": "Localhost Apps Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -560,8 +703,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1eb010bf40ff9a8b642163a64e4ea84499ff6e35d5bfd163a8b61117fd913c02",
-          "manifestPath": "buildings/localhost-apps/building.json"
+          "manifestSha256": "430718a0c9cb79ea682b728c97a751377d6894f38906dec3126d85cc016e0d8b",
+          "manifestPath": "buildings/localhost-apps/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/localhost-apps-building"
         }
       ]
     },
@@ -571,10 +715,17 @@
       "category": "Compute",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "72261a24a42e7e257fcabe2a460a30e1cddce9fb26d1c594d699ef61bed418c4",
+      "manifestSha256": "f4171fa7ac1b2867d73b9ae0aedb34699dc61a5c69175b1437f6152804435073",
       "source": {
         "manifestPath": "buildings/modal/building.json",
-        "readmePath": "buildings/modal/README.md"
+        "readmePath": "buildings/modal/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/modal-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/modal-building/main/assets/thumbnail.svg",
+        "alt": "Modal Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -591,8 +742,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "72261a24a42e7e257fcabe2a460a30e1cddce9fb26d1c594d699ef61bed418c4",
-          "manifestPath": "buildings/modal/building.json"
+          "manifestSha256": "f4171fa7ac1b2867d73b9ae0aedb34699dc61a5c69175b1437f6152804435073",
+          "manifestPath": "buildings/modal/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/modal-building"
         }
       ]
     },
@@ -602,10 +754,17 @@
       "category": "Knowledge",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "a56f89f3b5371f6756964aebc593551c921b23d2089d17688a90b1ae594916b3",
+      "manifestSha256": "ff9c2fe34f12083e0464f9186d677207b8fdcf6bf78d2b139c20fbf4798e48e1",
       "source": {
         "manifestPath": "buildings/moltbook/building.json",
-        "readmePath": "buildings/moltbook/README.md"
+        "readmePath": "buildings/moltbook/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/moltbook-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/moltbook-building/main/assets/thumbnail.svg",
+        "alt": "Moltbook Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -622,8 +781,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "a56f89f3b5371f6756964aebc593551c921b23d2089d17688a90b1ae594916b3",
-          "manifestPath": "buildings/moltbook/building.json"
+          "manifestSha256": "ff9c2fe34f12083e0464f9186d677207b8fdcf6bf78d2b139c20fbf4798e48e1",
+          "manifestPath": "buildings/moltbook/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/moltbook-building"
         }
       ]
     },
@@ -633,10 +793,17 @@
       "category": "Generative Media",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "701fae9a162626fa483174a17954b4ace9925f06f0ed2d75efe2e3ca54b37bdd",
+      "manifestSha256": "4c13b3fdf27fe6d45b7a7329c5a4128022c0154eb53a5b2ba0896ca594c3ebbf",
       "source": {
         "manifestPath": "buildings/nano-banana/building.json",
-        "readmePath": "buildings/nano-banana/README.md"
+        "readmePath": "buildings/nano-banana/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/nano-banana-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/nano-banana-building/main/assets/thumbnail.svg",
+        "alt": "Nano Banana Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -653,8 +820,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "701fae9a162626fa483174a17954b4ace9925f06f0ed2d75efe2e3ca54b37bdd",
-          "manifestPath": "buildings/nano-banana/building.json"
+          "manifestSha256": "4c13b3fdf27fe6d45b7a7329c5a4128022c0154eb53a5b2ba0896ca594c3ebbf",
+          "manifestPath": "buildings/nano-banana/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/nano-banana-building"
         }
       ]
     },
@@ -664,10 +832,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "3dda3b1dcd164efde4e1bcc3c53524bc2276897c1cd8d7e687b18b8e046c73a3",
+      "manifestSha256": "06b17d3f1d161d7b0ed18c22bda9ac14943f4679fd3d0058db63e9acb531abb7",
       "source": {
         "manifestPath": "buildings/occupations/building.json",
-        "readmePath": "buildings/occupations/README.md"
+        "readmePath": "buildings/occupations/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/occupations-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/occupations-building/main/assets/thumbnail.svg",
+        "alt": "Occupations Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -684,8 +859,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "3dda3b1dcd164efde4e1bcc3c53524bc2276897c1cd8d7e687b18b8e046c73a3",
-          "manifestPath": "buildings/occupations/building.json"
+          "manifestSha256": "06b17d3f1d161d7b0ed18c22bda9ac14943f4679fd3d0058db63e9acb531abb7",
+          "manifestPath": "buildings/occupations/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/occupations-building"
         }
       ]
     },
@@ -695,10 +871,17 @@
       "category": "Commerce",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "4f6ec8448959aebc884dac4edfa1a6cbd99a57f889daad90464d2d7c70712794",
+      "manifestSha256": "271a0f2e366db883750e3d6651a4a8fe860779a6010fd2875f92a1f01adf0891",
       "source": {
         "manifestPath": "buildings/ottoauth/building.json",
-        "readmePath": "buildings/ottoauth/README.md"
+        "readmePath": "buildings/ottoauth/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/ottoauth-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/ottoauth-building/main/assets/thumbnail.svg",
+        "alt": "OttoAuth Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -715,8 +898,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "4f6ec8448959aebc884dac4edfa1a6cbd99a57f889daad90464d2d7c70712794",
-          "manifestPath": "buildings/ottoauth/building.json"
+          "manifestSha256": "271a0f2e366db883750e3d6651a4a8fe860779a6010fd2875f92a1f01adf0891",
+          "manifestPath": "buildings/ottoauth/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/ottoauth-building"
         }
       ]
     },
@@ -726,10 +910,17 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "45d9189fab4cd5aba04f26430110ffb4bda797d314214c0c1318e2e6eb1df6f0",
+      "manifestSha256": "0a5ffd49d4e503eb067c003fdcd86339888a6c7ea3056409567f21ff479f915b",
       "source": {
         "manifestPath": "buildings/phone-imessage/building.json",
-        "readmePath": "buildings/phone-imessage/README.md"
+        "readmePath": "buildings/phone-imessage/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/phone-imessage-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/phone-imessage-building/main/assets/thumbnail.svg",
+        "alt": "Phone / iMessage Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -746,8 +937,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "45d9189fab4cd5aba04f26430110ffb4bda797d314214c0c1318e2e6eb1df6f0",
-          "manifestPath": "buildings/phone-imessage/building.json"
+          "manifestSha256": "0a5ffd49d4e503eb067c003fdcd86339888a6c7ea3056409567f21ff479f915b",
+          "manifestPath": "buildings/phone-imessage/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/phone-imessage-building"
         }
       ]
     },
@@ -757,10 +949,17 @@
       "category": "Commerce",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "1b5da0cd50721838c26e79b719305c1289bfcae7a1142fc4aae64a463cc17910",
+      "manifestSha256": "0dde130a5dadb4ea5f6a8682b6701df985fe02134555617b8bb3a64ccd6f632b",
       "source": {
         "manifestPath": "buildings/rentahuman/building.json",
-        "readmePath": "buildings/rentahuman/README.md"
+        "readmePath": "buildings/rentahuman/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/rentahuman-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/rentahuman-building/main/assets/thumbnail.svg",
+        "alt": "RentAHuman Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -777,8 +976,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "1b5da0cd50721838c26e79b719305c1289bfcae7a1142fc4aae64a463cc17910",
-          "manifestPath": "buildings/rentahuman/building.json"
+          "manifestSha256": "0dde130a5dadb4ea5f6a8682b6701df985fe02134555617b8bb3a64ccd6f632b",
+          "manifestPath": "buildings/rentahuman/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/rentahuman-building"
         }
       ]
     },
@@ -788,10 +988,17 @@
       "category": "Compute",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "7dd0ac89fdb74666202fed9635dd213cf5b46cc7fa73f4231fbd4c8b1ad47408",
+      "manifestSha256": "b4f292eaceeeb439cd0ccfa42c5dbe9d81296af2900dee9c6be8d7dec5939c61",
       "source": {
         "manifestPath": "buildings/runpod/building.json",
-        "readmePath": "buildings/runpod/README.md"
+        "readmePath": "buildings/runpod/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/runpod-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/runpod-building/main/assets/thumbnail.svg",
+        "alt": "RunPod Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -808,8 +1015,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "7dd0ac89fdb74666202fed9635dd213cf5b46cc7fa73f4231fbd4c8b1ad47408",
-          "manifestPath": "buildings/runpod/building.json"
+          "manifestSha256": "b4f292eaceeeb439cd0ccfa42c5dbe9d81296af2900dee9c6be8d7dec5939c61",
+          "manifestPath": "buildings/runpod/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/runpod-building"
         }
       ]
     },
@@ -819,10 +1027,17 @@
       "category": "Generative Media",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "7833432d3473c460d2d30d8d5ace95229edcda94a314d2001359bc5a2f06f907",
+      "manifestSha256": "0915c78fcf4e0714c857ad577c11219e28ca81b2a2162e4f9780705b1aa078be",
       "source": {
         "manifestPath": "buildings/sora/building.json",
-        "readmePath": "buildings/sora/README.md"
+        "readmePath": "buildings/sora/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/sora-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/sora-building/main/assets/thumbnail.svg",
+        "alt": "Sora Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -839,8 +1054,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "7833432d3473c460d2d30d8d5ace95229edcda94a314d2001359bc5a2f06f907",
-          "manifestPath": "buildings/sora/building.json"
+          "manifestSha256": "0915c78fcf4e0714c857ad577c11219e28ca81b2a2162e4f9780705b1aa078be",
+          "manifestPath": "buildings/sora/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/sora-building"
         }
       ]
     },
@@ -850,10 +1066,17 @@
       "category": "Data",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "29cd742359c1f56cc861623d71616ff247c0318b37262ca878bf83b29de62770",
+      "manifestSha256": "8db52517ab204cb351a8bcf044d5e8a8e40b83f06dd52e75ec2f760c6753f361",
       "source": {
         "manifestPath": "buildings/supabase/building.json",
-        "readmePath": "buildings/supabase/README.md"
+        "readmePath": "buildings/supabase/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/supabase-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/supabase-building/main/assets/thumbnail.svg",
+        "alt": "Supabase Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -870,8 +1093,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "29cd742359c1f56cc861623d71616ff247c0318b37262ca878bf83b29de62770",
-          "manifestPath": "buildings/supabase/building.json"
+          "manifestSha256": "8db52517ab204cb351a8bcf044d5e8a8e40b83f06dd52e75ec2f760c6753f361",
+          "manifestPath": "buildings/supabase/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/supabase-building"
         }
       ]
     },
@@ -881,10 +1105,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "c8e14e8098b93214d1842f1d66357d700a3ab4eb0d1c66d241695dcc7385ceec",
+      "manifestSha256": "2cec8fc9ea53092aa7302cd5f664b67f72b25caa990f76ae1d4c8addde4c10ea",
       "source": {
         "manifestPath": "buildings/system/building.json",
-        "readmePath": "buildings/system/README.md"
+        "readmePath": "buildings/system/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/system-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/system-building/main/assets/thumbnail.svg",
+        "alt": "System Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -901,8 +1132,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "c8e14e8098b93214d1842f1d66357d700a3ab4eb0d1c66d241695dcc7385ceec",
-          "manifestPath": "buildings/system/building.json"
+          "manifestSha256": "2cec8fc9ea53092aa7302cd5f664b67f72b25caa990f76ae1d4c8addde4c10ea",
+          "manifestPath": "buildings/system/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/system-building"
         }
       ]
     },
@@ -912,10 +1144,17 @@
       "category": "Networking",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "3487fb250131d36c9929bfcc6496668c779038c9eac00f0310f9a28c34563e73",
+      "manifestSha256": "cd99475a09e3a59d0a65be8c56392ee97873ccaecef87867db91f40e9c9685c2",
       "source": {
         "manifestPath": "buildings/tailscale/building.json",
-        "readmePath": "buildings/tailscale/README.md"
+        "readmePath": "buildings/tailscale/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/tailscale-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/tailscale-building/main/assets/thumbnail.svg",
+        "alt": "Tailscale Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -932,8 +1171,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "3487fb250131d36c9929bfcc6496668c779038c9eac00f0310f9a28c34563e73",
-          "manifestPath": "buildings/tailscale/building.json"
+          "manifestSha256": "cd99475a09e3a59d0a65be8c56392ee97873ccaecef87867db91f40e9c9685c2",
+          "manifestPath": "buildings/tailscale/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/tailscale-building"
         }
       ]
     },
@@ -943,10 +1183,17 @@
       "category": "Communication",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "90e9211c8d08c356bfe3fd70a2be8792c39a3f641ef2704ebbbe2f72f6437df9",
+      "manifestSha256": "6fc993519595f853ee5e89257f109e41f423c363e6baa4e049ce8cf9143118d6",
       "source": {
         "manifestPath": "buildings/telegram/building.json",
-        "readmePath": "buildings/telegram/README.md"
+        "readmePath": "buildings/telegram/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/telegram-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/telegram-building/main/assets/thumbnail.svg",
+        "alt": "Telegram Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -963,8 +1210,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "90e9211c8d08c356bfe3fd70a2be8792c39a3f641ef2704ebbbe2f72f6437df9",
-          "manifestPath": "buildings/telegram/building.json"
+          "manifestSha256": "6fc993519595f853ee5e89257f109e41f423c363e6baa4e049ce8cf9143118d6",
+          "manifestPath": "buildings/telegram/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/telegram-building"
         }
       ]
     },
@@ -974,10 +1222,17 @@
       "category": "Vibe Research",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "b953a15ad044064ab01141854bda36dd0050cb625e98c9454be4ef5d9797c4b2",
+      "manifestSha256": "eda6ba7d09db60b5cdeb9ac973fb7d63599974aa45fc2ebd20334eb71f0446f2",
       "source": {
         "manifestPath": "buildings/toolshed/building.json",
-        "readmePath": "buildings/toolshed/README.md"
+        "readmePath": "buildings/toolshed/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/toolshed-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/toolshed-building/main/assets/thumbnail.svg",
+        "alt": "Toolshed Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -994,8 +1249,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "b953a15ad044064ab01141854bda36dd0050cb625e98c9454be4ef5d9797c4b2",
-          "manifestPath": "buildings/toolshed/building.json"
+          "manifestSha256": "eda6ba7d09db60b5cdeb9ac973fb7d63599974aa45fc2ebd20334eb71f0446f2",
+          "manifestPath": "buildings/toolshed/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/toolshed-building"
         }
       ]
     },
@@ -1044,10 +1300,17 @@
       "category": "Social",
       "trust": "mcp",
       "latestVersion": "0.1.0",
-      "manifestSha256": "5ba33186ac839b532d964f4dfd6a590c38303b0d9a5e111e9ac18d95794a5bf6",
+      "manifestSha256": "8ae76f66452dc217191d368ab4c034a44bd6a5a8f05960251cd0219f0d59cfaf",
       "source": {
         "manifestPath": "buildings/twitter/building.json",
-        "readmePath": "buildings/twitter/README.md"
+        "readmePath": "buildings/twitter/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/twitter-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/twitter-building/main/assets/thumbnail.svg",
+        "alt": "Twitter / X Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -1064,8 +1327,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "5ba33186ac839b532d964f4dfd6a590c38303b0d9a5e111e9ac18d95794a5bf6",
-          "manifestPath": "buildings/twitter/building.json"
+          "manifestSha256": "8ae76f66452dc217191d368ab4c034a44bd6a5a8f05960251cd0219f0d59cfaf",
+          "manifestPath": "buildings/twitter/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/twitter-building"
         }
       ]
     },
@@ -1075,10 +1339,17 @@
       "category": "Vibe Research",
       "trust": "helper-command",
       "latestVersion": "0.1.0",
-      "manifestSha256": "78e1e14af451658ec72bc59f1cde10a4b54c87a91185565d7254e5ca5fdfba85",
+      "manifestSha256": "ab3182eb86a95dc37eed70504fec16a3f060677f0a9659ce9a1ce8b4c39ea9b5",
       "source": {
         "manifestPath": "buildings/videomemory/building.json",
-        "readmePath": "buildings/videomemory/README.md"
+        "readmePath": "buildings/videomemory/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/videomemory-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/videomemory-building/main/assets/thumbnail.svg",
+        "alt": "VideoMemory Building thumbnail"
       },
       "footprint": {
         "width": 2,
@@ -1095,8 +1366,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "78e1e14af451658ec72bc59f1cde10a4b54c87a91185565d7254e5ca5fdfba85",
-          "manifestPath": "buildings/videomemory/building.json"
+          "manifestSha256": "ab3182eb86a95dc37eed70504fec16a3f060677f0a9659ce9a1ce8b4c39ea9b5",
+          "manifestPath": "buildings/videomemory/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/videomemory-building"
         }
       ]
     },
@@ -1106,10 +1378,17 @@
       "category": "Observability",
       "trust": "manifest-only",
       "latestVersion": "0.1.0",
-      "manifestSha256": "4a672c12deb90ccf768b8347fae1dfea35abcddd149c0c0d1eaa622a75db31da",
+      "manifestSha256": "ed981c8814ce15f17582591c62025330bd39237752971b3299e89d618bb3aa62",
       "source": {
         "manifestPath": "buildings/wandb/building.json",
-        "readmePath": "buildings/wandb/README.md"
+        "readmePath": "buildings/wandb/README.md",
+        "repositoryUrl": "https://github.com/Clamepending/wandb-building",
+        "upstreamManifestPath": "buildinghub/building.json"
+      },
+      "thumbnail": {
+        "path": "assets/thumbnail.svg",
+        "url": "https://raw.githubusercontent.com/Clamepending/wandb-building/main/assets/thumbnail.svg",
+        "alt": "W&B Building thumbnail"
       },
       "footprint": {
         "width": 3,
@@ -1126,8 +1405,9 @@
       "versions": [
         {
           "version": "0.1.0",
-          "manifestSha256": "4a672c12deb90ccf768b8347fae1dfea35abcddd149c0c0d1eaa622a75db31da",
-          "manifestPath": "buildings/wandb/building.json"
+          "manifestSha256": "ed981c8814ce15f17582591c62025330bd39237752971b3299e89d618bb3aa62",
+          "manifestPath": "buildings/wandb/building.json",
+          "repositoryUrl": "https://github.com/Clamepending/wandb-building"
         }
       ]
     }
@@ -1216,6 +1496,22 @@
       "status": "built in",
       "trust": "helper-command",
       "icon": "post",
+      "repo": {
+        "url": "https://github.com/Clamepending/agent-inbox-building",
+        "owner": "Clamepending",
+        "name": "agent-inbox-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/agent-inbox-building/main/assets/thumbnail.svg",
+          "alt": "Agent Inbox Building thumbnail"
+        }
+      },
       "keywords": [
         "agent",
         "inbox",
@@ -1402,6 +1698,22 @@
       "status": "setup available",
       "trust": "manifest-only",
       "icon": "agentmail",
+      "repo": {
+        "url": "https://github.com/Clamepending/agentmail-building",
+        "owner": "Clamepending",
+        "name": "agentmail-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/agentmail-building/main/assets/thumbnail.svg",
+          "alt": "AgentMail Building thumbnail"
+        }
+      },
       "keywords": [
         "agentmail",
         "vibe-research",
@@ -1514,6 +1826,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "market",
+      "repo": {
+        "url": "https://github.com/Clamepending/agentmall-building",
+        "owner": "Clamepending",
+        "name": "agentmall-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/agentmall-building/main/assets/thumbnail.svg",
+          "alt": "AgentMall Building thumbnail"
+        }
+      },
       "keywords": [
         "agentmall",
         "vibe-research",
@@ -1594,6 +1922,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "campanile",
+      "repo": {
+        "url": "https://github.com/Clamepending/automations-building",
+        "owner": "Clamepending",
+        "name": "automations-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/automations-building/main/assets/thumbnail.svg",
+          "alt": "Automations Building thumbnail"
+        }
+      },
       "keywords": [
         "automations",
         "vibe-research",
@@ -1675,6 +2019,22 @@
       "status": "setup available",
       "trust": "helper-command",
       "icon": "browser",
+      "repo": {
+        "url": "https://github.com/Clamepending/browser-use-building",
+        "owner": "Clamepending",
+        "name": "browser-use-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/browser-use-building/main/assets/thumbnail.svg",
+          "alt": "Browser Use Building thumbnail"
+        }
+      },
       "keywords": [
         "browser",
         "use",
@@ -1865,6 +2225,22 @@
       "status": "catalog ready",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/buildinghub-building",
+        "owner": "Clamepending",
+        "name": "buildinghub-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/buildinghub-building/main/assets/thumbnail.svg",
+          "alt": "BuildingHub Building thumbnail"
+        }
+      },
       "keywords": [
         "buildinghub",
         "vibe-research",
@@ -1989,6 +2365,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/ci-repair-shop-building",
+        "owner": "Clamepending",
+        "name": "ci-repair-shop-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/ci-repair-shop-building/main/assets/thumbnail.svg",
+          "alt": "CI Repair Shop Building thumbnail"
+        }
+      },
       "keywords": [
         "ci",
         "repair",
@@ -2089,6 +2481,22 @@
       "status": "connector-ready",
       "trust": "mcp",
       "icon": "post",
+      "repo": {
+        "url": "https://github.com/Clamepending/discord-building",
+        "owner": "Clamepending",
+        "name": "discord-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/discord-building/main/assets/thumbnail.svg",
+          "alt": "Discord Building thumbnail"
+        }
+      },
       "keywords": [
         "discord",
         "external",
@@ -2213,6 +2621,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "doghouse",
+      "repo": {
+        "url": "https://github.com/Clamepending/doghouse-building",
+        "owner": "Clamepending",
+        "name": "doghouse-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/doghouse-building/main/assets/thumbnail.svg",
+          "alt": "Doghouse Building thumbnail"
+        }
+      },
       "keywords": [
         "doghouse",
         "vibe-research",
@@ -2285,6 +2709,22 @@
       "status": "available in Codex",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/github-building",
+        "owner": "Clamepending",
+        "name": "github-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/github-building/main/assets/thumbnail.svg",
+          "alt": "GitHub Building thumbnail"
+        }
+      },
       "keywords": [
         "github",
         "plugin",
@@ -2352,6 +2792,22 @@
       "status": "MCP-ready",
       "trust": "mcp",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/google-calendar-building",
+        "owner": "Clamepending",
+        "name": "google-calendar-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/google-calendar-building/main/assets/thumbnail.svg",
+          "alt": "Google Calendar Building thumbnail"
+        }
+      },
       "keywords": [
         "google",
         "calendar",
@@ -2459,6 +2915,22 @@
       "status": "MCP-ready",
       "trust": "mcp",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/google-drive-building",
+        "owner": "Clamepending",
+        "name": "google-drive-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/google-drive-building/main/assets/thumbnail.svg",
+          "alt": "Google Drive Building thumbnail"
+        }
+      },
       "keywords": [
         "google",
         "drive",
@@ -2592,6 +3064,22 @@
       "status": "CLI install required",
       "trust": "helper-command",
       "icon": "lab",
+      "repo": {
+        "url": "https://github.com/Clamepending/harbor-building",
+        "owner": "Clamepending",
+        "name": "harbor-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/harbor-building/main/assets/thumbnail.svg",
+          "alt": "Harbor Building thumbnail"
+        }
+      },
       "keywords": [
         "harbor",
         "external",
@@ -2989,6 +3477,22 @@
       "status": "bridge required",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/home-automation-building",
+        "owner": "Clamepending",
+        "name": "home-automation-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/home-automation-building/main/assets/thumbnail.svg",
+          "alt": "Home Automation Building thumbnail"
+        }
+      },
       "keywords": [
         "home",
         "automation",
@@ -3075,6 +3579,22 @@
       "trust": "mcp",
       "icon": "shopping-cart",
       "docsUrl": "https://docs.instacart.com/developer_platform_api/guide/tutorials/mcp/",
+      "repo": {
+        "url": "https://github.com/Clamepending/instacart-building",
+        "owner": "Clamepending",
+        "name": "instacart-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/instacart-building/main/assets/thumbnail.svg",
+          "alt": "Instacart Building thumbnail"
+        }
+      },
       "keywords": [
         "groceries",
         "shopping",
@@ -3347,6 +3867,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "library",
+      "repo": {
+        "url": "https://github.com/Clamepending/knowledge-base-building",
+        "owner": "Clamepending",
+        "name": "knowledge-base-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/knowledge-base-building/main/assets/thumbnail.svg",
+          "alt": "Library Building thumbnail"
+        }
+      },
       "keywords": [
         "knowledge",
         "base",
@@ -3424,6 +3960,22 @@
       "trust": "mcp",
       "icon": "notebook",
       "docsUrl": "https://developers.linear.app/docs",
+      "repo": {
+        "url": "https://github.com/Clamepending/linear-building",
+        "owner": "Clamepending",
+        "name": "linear-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/linear-building/main/assets/thumbnail.svg",
+          "alt": "Linear Building thumbnail"
+        }
+      },
       "visual": {
         "shape": "plugin"
       },
@@ -3530,6 +4082,22 @@
       "status": "built in",
       "trust": "helper-command",
       "icon": "dock",
+      "repo": {
+        "url": "https://github.com/Clamepending/localhost-apps-building",
+        "owner": "Clamepending",
+        "name": "localhost-apps-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/localhost-apps-building/main/assets/thumbnail.svg",
+          "alt": "Localhost Apps Building thumbnail"
+        }
+      },
       "keywords": [
         "localhost",
         "apps",
@@ -3678,6 +4246,22 @@
       "icon": "compute",
       "docsUrl": "https://modal.com/docs",
       "homepageUrl": "https://modal.com/",
+      "repo": {
+        "url": "https://github.com/Clamepending/modal-building",
+        "owner": "Clamepending",
+        "name": "modal-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/modal-building/main/assets/thumbnail.svg",
+          "alt": "Modal Building thumbnail"
+        }
+      },
       "keywords": [
         "modal",
         "compute",
@@ -3901,6 +4485,22 @@
       "status": "connector-ready",
       "trust": "mcp",
       "icon": "library",
+      "repo": {
+        "url": "https://github.com/Clamepending/moltbook-building",
+        "owner": "Clamepending",
+        "name": "moltbook-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/moltbook-building/main/assets/thumbnail.svg",
+          "alt": "Moltbook Building thumbnail"
+        }
+      },
       "keywords": [
         "moltbook",
         "external",
@@ -4038,6 +4638,22 @@
       "status": "connector-ready",
       "trust": "manifest-only",
       "icon": "studio",
+      "repo": {
+        "url": "https://github.com/Clamepending/nano-banana-building",
+        "owner": "Clamepending",
+        "name": "nano-banana-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/nano-banana-building/main/assets/thumbnail.svg",
+          "alt": "Nano Banana Building thumbnail"
+        }
+      },
       "keywords": [
         "nano",
         "banana",
@@ -4154,6 +4770,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "school",
+      "repo": {
+        "url": "https://github.com/Clamepending/occupations-building",
+        "owner": "Clamepending",
+        "name": "occupations-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/occupations-building/main/assets/thumbnail.svg",
+          "alt": "Occupations Building thumbnail"
+        }
+      },
       "keywords": [
         "occupations",
         "vibe-research",
@@ -4322,6 +4954,22 @@
       "status": "setup available",
       "trust": "helper-command",
       "icon": "market",
+      "repo": {
+        "url": "https://github.com/Clamepending/ottoauth-building",
+        "owner": "Clamepending",
+        "name": "ottoauth-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/ottoauth-building/main/assets/thumbnail.svg",
+          "alt": "OttoAuth Building thumbnail"
+        }
+      },
       "keywords": [
         "ottoauth",
         "vibe-research",
@@ -4500,6 +5148,22 @@
       "status": "bridge required",
       "trust": "manifest-only",
       "icon": "post",
+      "repo": {
+        "url": "https://github.com/Clamepending/phone-imessage-building",
+        "owner": "Clamepending",
+        "name": "phone-imessage-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/phone-imessage-building/main/assets/thumbnail.svg",
+          "alt": "Phone / iMessage Building thumbnail"
+        }
+      },
       "keywords": [
         "phone",
         "imessage",
@@ -4616,6 +5280,22 @@
       "status": "MCP-ready",
       "trust": "mcp",
       "icon": "rentahuman",
+      "repo": {
+        "url": "https://github.com/Clamepending/rentahuman-building",
+        "owner": "Clamepending",
+        "name": "rentahuman-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/rentahuman-building/main/assets/thumbnail.svg",
+          "alt": "RentAHuman Building thumbnail"
+        }
+      },
       "keywords": [
         "rentahuman",
         "external",
@@ -4935,6 +5615,22 @@
       "trust": "helper-command",
       "icon": "gpu",
       "docsUrl": "https://docs.runpod.io/",
+      "repo": {
+        "url": "https://github.com/Clamepending/runpod-building",
+        "owner": "Clamepending",
+        "name": "runpod-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/runpod-building/main/assets/thumbnail.svg",
+          "alt": "RunPod Building thumbnail"
+        }
+      },
       "visual": {
         "shape": "factory"
       },
@@ -5036,6 +5732,22 @@
       "status": "API sunset 2026-09-24",
       "trust": "manifest-only",
       "icon": "studio",
+      "repo": {
+        "url": "https://github.com/Clamepending/sora-building",
+        "owner": "Clamepending",
+        "name": "sora-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/sora-building/main/assets/thumbnail.svg",
+          "alt": "Sora Building thumbnail"
+        }
+      },
       "keywords": [
         "sora",
         "external",
@@ -5152,6 +5864,22 @@
       "trust": "helper-command",
       "icon": "database",
       "docsUrl": "https://supabase.com/docs",
+      "repo": {
+        "url": "https://github.com/Clamepending/supabase-building",
+        "owner": "Clamepending",
+        "name": "supabase-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/supabase-building/main/assets/thumbnail.svg",
+          "alt": "Supabase Building thumbnail"
+        }
+      },
       "visual": {
         "shape": "library"
       },
@@ -5253,6 +5981,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/system-building",
+        "owner": "Clamepending",
+        "name": "system-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/system-building/main/assets/thumbnail.svg",
+          "alt": "System Building thumbnail"
+        }
+      },
       "keywords": [
         "system",
         "vibe-research",
@@ -5413,6 +6157,22 @@
       "status": "auto-detected",
       "trust": "helper-command",
       "icon": "portal",
+      "repo": {
+        "url": "https://github.com/Clamepending/tailscale-building",
+        "owner": "Clamepending",
+        "name": "tailscale-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/tailscale-building/main/assets/thumbnail.svg",
+          "alt": "Tailscale Building thumbnail"
+        }
+      },
       "keywords": [
         "tailscale",
         "vibe-research",
@@ -5617,6 +6377,22 @@
       "status": "setup available",
       "trust": "manifest-only",
       "icon": "telegram",
+      "repo": {
+        "url": "https://github.com/Clamepending/telegram-building",
+        "owner": "Clamepending",
+        "name": "telegram-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/telegram-building/main/assets/thumbnail.svg",
+          "alt": "Telegram Building thumbnail"
+        }
+      },
       "keywords": [
         "telegram",
         "vibe-research",
@@ -5711,6 +6487,22 @@
       "status": "built in",
       "trust": "manifest-only",
       "icon": "plugin",
+      "repo": {
+        "url": "https://github.com/Clamepending/toolshed-building",
+        "owner": "Clamepending",
+        "name": "toolshed-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/toolshed-building/main/assets/thumbnail.svg",
+          "alt": "Toolshed Building thumbnail"
+        }
+      },
       "keywords": [
         "toolshed",
         "vibe-research",
@@ -6252,6 +7044,22 @@
       "status": "connector-ready",
       "trust": "mcp",
       "icon": "post",
+      "repo": {
+        "url": "https://github.com/Clamepending/twitter-building",
+        "owner": "Clamepending",
+        "name": "twitter-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/twitter-building/main/assets/thumbnail.svg",
+          "alt": "Twitter / X Building thumbnail"
+        }
+      },
       "keywords": [
         "twitter",
         "external",
@@ -6389,6 +7197,22 @@
       "status": "setup available",
       "trust": "helper-command",
       "icon": "camera",
+      "repo": {
+        "url": "https://github.com/Clamepending/videomemory-building",
+        "owner": "Clamepending",
+        "name": "videomemory-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/videomemory-building/main/assets/thumbnail.svg",
+          "alt": "VideoMemory Building thumbnail"
+        }
+      },
       "keywords": [
         "videomemory",
         "vibe-research",
@@ -6553,6 +7377,22 @@
       "status": "connector-ready",
       "trust": "manifest-only",
       "icon": "studio",
+      "repo": {
+        "url": "https://github.com/Clamepending/wandb-building",
+        "owner": "Clamepending",
+        "name": "wandb-building",
+        "branch": "main",
+        "manifestPath": "buildinghub/building.json",
+        "readmePath": "README.md",
+        "assetsPath": "assets"
+      },
+      "media": {
+        "thumbnail": {
+          "path": "assets/thumbnail.svg",
+          "url": "https://raw.githubusercontent.com/Clamepending/wandb-building/main/assets/thumbnail.svg",
+          "alt": "W&B Building thumbnail"
+        }
+      },
       "keywords": [
         "wandb",
         "external",

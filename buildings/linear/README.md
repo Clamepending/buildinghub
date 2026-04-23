@@ -1,5 +1,10 @@
 # Linear Building
 
-Manifest-only community building for Linear planning workflows.
+Repo-first BuildingHub snapshot for Linear.
 
-Use this when the agent already has a Linear MCP, OAuth connector, or local helper command. Keep project/team boundaries explicit in the task prompt or Library notes.
+- Source package: https://github.com/Clamepending/linear-building
+- Source manifest: `buildinghub/building.json`
+- Category: Planning
+- Trust lane: mcp
+
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

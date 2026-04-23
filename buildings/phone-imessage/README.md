@@ -1,9 +1,10 @@
 # Phone / iMessage Building
 
-Manifest-only BuildingHub entry for Phone / iMessage.
+Repo-first BuildingHub snapshot for Phone / iMessage.
 
-- Source: Vibe Research core catalog (phone-imessage)
+- Source package: https://github.com/Clamepending/phone-imessage-building
+- Source manifest: `buildinghub/building.json`
 - Category: Communication
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

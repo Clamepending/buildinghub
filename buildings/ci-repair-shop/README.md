@@ -1,9 +1,10 @@
 # CI Repair Shop Building
 
-Manifest-only BuildingHub entry for CI Repair Shop.
+Repo-first BuildingHub snapshot for CI Repair Shop.
 
-- Source: Vibe Research core catalog (ci-repair-shop)
+- Source package: https://github.com/Clamepending/ci-repair-shop-building
+- Source manifest: `buildinghub/building.json`
 - Category: Coding
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

@@ -1,5 +1,10 @@
 # Supabase Building
 
-Manifest-only community building for Supabase projects.
+Repo-first BuildingHub snapshot for Supabase.
 
-Use this to keep project refs, migration policy, and credential scope visible to agents before they touch a database.
+- Source package: https://github.com/Clamepending/supabase-building
+- Source manifest: `buildinghub/building.json`
+- Category: Data
+- Trust lane: helper-command
+
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

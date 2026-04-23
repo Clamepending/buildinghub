@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "helper-command",
   "icon": "post",
+  "repo": {
+    "url": "https://github.com/Clamepending/agent-inbox-building",
+    "owner": "Clamepending",
+    "name": "agent-inbox-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/agent-inbox-building/main/assets/thumbnail.svg",
+      "alt": "Agent Inbox Building thumbnail"
+    }
+  },
   "keywords": [
     "agent",
     "inbox",

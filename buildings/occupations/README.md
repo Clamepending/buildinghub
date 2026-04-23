@@ -1,9 +1,10 @@
 # Occupations Building
 
-Manifest-only BuildingHub entry for Occupations.
+Repo-first BuildingHub snapshot for Occupations.
 
-- Source: Vibe Research core catalog (occupations)
+- Source package: https://github.com/Clamepending/occupations-building
+- Source manifest: `buildinghub/building.json`
 - Category: Vibe Research
 - Trust lane: manifest-only
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.

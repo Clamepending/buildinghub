@@ -7,6 +7,22 @@
   "status": "setup available",
   "trust": "helper-command",
   "icon": "camera",
+  "repo": {
+    "url": "https://github.com/Clamepending/videomemory-building",
+    "owner": "Clamepending",
+    "name": "videomemory-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/videomemory-building/main/assets/thumbnail.svg",
+      "alt": "VideoMemory Building thumbnail"
+    }
+  },
   "keywords": [
     "videomemory",
     "vibe-research",

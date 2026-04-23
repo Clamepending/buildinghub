@@ -7,6 +7,22 @@
   "status": "API sunset 2026-09-24",
   "trust": "manifest-only",
   "icon": "studio",
+  "repo": {
+    "url": "https://github.com/Clamepending/sora-building",
+    "owner": "Clamepending",
+    "name": "sora-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/sora-building/main/assets/thumbnail.svg",
+      "alt": "Sora Building thumbnail"
+    }
+  },
   "keywords": [
     "sora",
     "external",

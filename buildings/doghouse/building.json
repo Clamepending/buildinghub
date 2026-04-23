@@ -7,6 +7,22 @@
   "status": "built in",
   "trust": "manifest-only",
   "icon": "doghouse",
+  "repo": {
+    "url": "https://github.com/Clamepending/doghouse-building",
+    "owner": "Clamepending",
+    "name": "doghouse-building",
+    "branch": "main",
+    "manifestPath": "buildinghub/building.json",
+    "readmePath": "README.md",
+    "assetsPath": "assets"
+  },
+  "media": {
+    "thumbnail": {
+      "path": "assets/thumbnail.svg",
+      "url": "https://raw.githubusercontent.com/Clamepending/doghouse-building/main/assets/thumbnail.svg",
+      "alt": "Doghouse Building thumbnail"
+    }
+  },
   "keywords": [
     "doghouse",
     "vibe-research",

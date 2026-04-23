@@ -1,9 +1,10 @@
 # Discord Building
 
-Manifest-only BuildingHub entry for Discord.
+Repo-first BuildingHub snapshot for Discord.
 
-- Source: Vibe Research core catalog (discord)
+- Source package: https://github.com/Clamepending/discord-building
+- Source manifest: `buildinghub/building.json`
 - Category: Communication
 - Trust lane: mcp
 
-This entry is declarative metadata for search, setup guidance, and Agent Town placement. It does not grant credentials, install code, or run service actions by itself.
+This entry is declarative metadata for search, setup guidance, Agent Town placement, and review. It does not grant credentials, install helper code, or run service actions by itself.
