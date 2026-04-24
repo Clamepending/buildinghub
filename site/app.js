@@ -1,9 +1,12 @@
 const state = {
+  authAvailable: null,
   registry: null,
+  session: null,
   tab: "buildings",
   query: "",
 };
 
+const accountPanel = document.querySelector("#account-panel");
 const cards = document.querySelector("#cards");
 const summary = document.querySelector("#summary");
 const search = document.querySelector("#search");
@@ -171,6 +174,57 @@ function renderExternalLink(url, label, extraClass = "") {
     return "";
   }
   return `<a class="copy ${escapeAttribute(extraClass)}" href="${escapeAttribute(href)}" target="_blank" rel="noreferrer">${escapeHtml(label)}</a>`;
+}
+
+function renderAccountPanel() {
+  if (!accountPanel) {
+    return;
+  }
+
+  if (state.authAvailable === false) {
+    accountPanel.innerHTML = `
+      <div class="account-shell">
+        <div class="account-copy">
+          <strong>Hosted auth unavailable</strong>
+          <span>Static preview mode does not expose BuildingHub accounts.</span>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const account = state.session?.account && typeof state.session.account === "object" ? state.session.account : null;
+  if (state.session?.authenticated && account) {
+    const label = account.login ? `@${account.login}` : text(account.name).trim() || "BuildingHub account";
+    accountPanel.innerHTML = `
+      <div class="account-shell">
+        <div class="account-copy">
+          <strong>${escapeHtml(label)}</strong>
+          <span>${escapeHtml(account.githubLogin ? `Connected with GitHub @${account.githubLogin}` : "Signed in to BuildingHub")}</span>
+        </div>
+        <div class="account-actions">
+          ${account.profileUrl ? `<a class="copy hero-link" href="${escapeAttribute(account.profileUrl)}">Profile</a>` : ""}
+          <button class="copy hero-link" type="button" data-account-logout>Log out</button>
+        </div>
+      </div>
+    `;
+    return;
+  }
+
+  const authUrl = new URL("/auth/github/start", window.location.origin);
+  authUrl.searchParams.set("return_to", window.location.href);
+  authUrl.searchParams.set("token_label", "BuildingHub web");
+  accountPanel.innerHTML = `
+    <div class="account-shell">
+      <div class="account-copy">
+        <strong>BuildingHub accounts</strong>
+        <span>Sign in with GitHub to get a persistent BuildingHub publisher profile.</span>
+      </div>
+      <div class="account-actions">
+        <a class="copy hero-link" href="${escapeAttribute(authUrl.toString())}">Sign in with GitHub</a>
+      </div>
+    </div>
+  `;
 }
 
 function renderBuildingVisual(building, sizeClass = "") {
@@ -761,12 +815,51 @@ cards.addEventListener("keydown", (event) => {
   }
 });
 
+accountPanel?.addEventListener("click", async (event) => {
+  const logoutButton = event.target.closest("[data-account-logout]");
+  if (!logoutButton) {
+    return;
+  }
+
+  try {
+    logoutButton.disabled = true;
+    const response = await fetch("/api/session/logout", {
+      method: "POST",
+    });
+    if (!response.ok) {
+      throw new Error(`Logout failed (${response.status}).`);
+    }
+    state.session = { authenticated: false, account: null };
+    renderAccountPanel();
+  } catch (error) {
+    window.alert(error.message || String(error));
+  } finally {
+    logoutButton.disabled = false;
+  }
+});
+
 search.addEventListener("input", () => {
   state.query = search.value;
   render();
 });
 
 window.addEventListener("hashchange", render);
+
+try {
+  const response = await fetch("/api/session", { cache: "no-store" });
+  if (response.ok) {
+    state.authAvailable = true;
+    state.session = await response.json();
+  } else {
+    state.authAvailable = false;
+    state.session = { authenticated: false, account: null };
+  }
+} catch {
+  state.authAvailable = false;
+  state.session = { authenticated: false, account: null };
+}
+
+renderAccountPanel();
 
 try {
   const response = await fetch("./registry.json", { cache: "no-store" });

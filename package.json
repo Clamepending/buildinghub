@@ -11,6 +11,7 @@
     "doctor": "node bin/buildinghub.mjs doctor",
     "sync:vibe-research": "node scripts/sync-vibe-research-buildings.mjs",
     "list": "node bin/buildinghub.mjs list",
+    "serve": "node server/buildinghub-server.mjs",
     "site": "node bin/buildinghub.mjs site",
     "pack": "node bin/buildinghub.mjs pack --all",
     "test": "node --test test/*.test.mjs && node bin/buildinghub.mjs validate"

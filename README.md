@@ -1,6 +1,6 @@
 # BuildingHub
 
-Community building catalog for Vibe Research. The shape intentionally follows the useful parts of ClawHub: a repo contributors can PR into, a CLI for validate/build/pack, versioned registry metadata, and a future path to a hosted registry.
+Community building catalog for Vibe Research. The shape intentionally follows the useful parts of ClawHub: a repo contributors can PR into, a CLI for validate/build/pack, versioned registry metadata, and a hosted registry/account service.
 
 BuildingHub packages **manifest-only** buildings, shared Agent Town layouts, and Vibe Research scaffold recipes: setup guides, visual town lots, access requirements, agent-facing capability notes, declarative base blueprints, and portable operating setups. Installing a BuildingHub entry, applying a layout, or applying a scaffold in Vibe Research does not execute code from this repository.
 
@@ -57,7 +57,34 @@ npm run sync:vibe-research -- --source /path/to/remote-vibes
 
 `npm run sync:vibe-research` mirrors Vibe Research's first-party building catalog into declarative BuildingHub manifests and adds curated companion entries such as Modal. The generated entries are still manifest-only: they can be searched, copied, reviewed, and loaded as catalog metadata, but they do not grant credentials or install executable code.
 
-`publish` is intentionally a local review prep step right now. It validates the repo, regenerates `registry.json`, writes a package bundle into ignored `dist/`, prints the bundle checksum, and tells the contributor to open a PR. A future hosted BuildingHub can replace that final PR step with authenticated upload without changing the manifest format.
+`publish` is still the local review-prep path for repo-first building submissions. Hosted BuildingHub now also supports authenticated layout and scaffold publishes over HTTP using the same manifest format, so production Vibe Research installs do not need a checked-out BuildingHub repo to publish account-owned content.
+
+## Hosted Server
+
+Run the hosted/server mode with:
+
+```bash
+npm run serve
+```
+
+The server:
+
+- serves the `site/` web UI
+- owns GitHub login and callback at `/auth/github/start` and `/auth/github/callback`
+- creates persistent BuildingHub user accounts tied to GitHub identities
+- issues short-lived grants and long-lived API tokens so Vibe Research can connect a BuildingHub account without storing a GitHub token
+- stores hosted layout and scaffold publishes through `/api/layouts` and `/api/recipes`
+- merges hosted entries into `/registry.json` and serves hosted pages like `/layouts/<id>/` and `/recipes/<id>/`
+- records account-linked publications through `/api/publications`
+
+Key environment variables:
+
+- `BUILDINGHUB_GITHUB_OAUTH_CLIENT_ID`
+- `BUILDINGHUB_GITHUB_OAUTH_CLIENT_SECRET`
+- `BUILDINGHUB_PORT`
+- `BUILDINGHUB_HOST`
+- `BUILDINGHUB_PUBLIC_BASE_URL`
+- `BUILDINGHUB_ALLOWED_RETURN_ORIGINS`
 
 ## Add A Building
 

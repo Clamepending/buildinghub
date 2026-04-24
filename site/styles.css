@@ -614,6 +614,41 @@ h1 {
   min-height: 34px;
 }
 
+.account-panel {
+  margin-top: 20px;
+}
+
+.account-shell {
+  display: flex;
+  flex-wrap: wrap;
+  align-items: center;
+  justify-content: space-between;
+  gap: 14px;
+  padding: 14px 16px;
+  border: 1px solid rgba(245, 241, 236, 0.12);
+  border-radius: 12px;
+  background: rgba(10, 12, 17, 0.42);
+}
+
+.account-copy {
+  display: grid;
+  gap: 4px;
+}
+
+.account-copy strong {
+  font-size: 1rem;
+}
+
+.account-copy span {
+  color: var(--muted);
+}
+
+.account-actions {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 10px;
+}
+
 @media (max-width: 720px) {
   .toolbar {
     grid-template-columns: 1fr;
@@ -630,5 +665,9 @@ h1 {
   .detail-hero,
   .detail-grid {
     grid-template-columns: 1fr;
+  }
+
+  .account-shell {
+    align-items: flex-start;
   }
 }

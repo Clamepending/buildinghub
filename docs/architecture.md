@@ -65,14 +65,23 @@ The bundle contains the manifest, README text, source paths, manifest checksum, 
 
 ## Hosted Registry Path
 
-The next hosted version can add:
+Hosted mode now lives in `server/buildinghub-server.mjs`.
+
+Today it adds:
 
 - GitHub login
-- contributor profiles
-- package pages
+- persistent contributor profiles
+- account profile pages at `/u/:login`
+- short-lived grant exchange for Vibe Research app-to-app login
+- long-lived BuildingHub API tokens so Vibe Research stores a BuildingHub account token instead of a GitHub token
+- hosted layout ingest through `/api/layouts`
+- hosted scaffold recipe ingest through `/api/recipes`
+- merged hosted entries in `/registry.json`
+- publication registration through `/api/publications`
+
+The current hosted path now owns account-linked layout and scaffold publishing, while building/package ingest remains repo-first and PR-reviewed. The app can keep loading `buildings[]` until it needs richer package UI, while the hosted account layer grows into:
+
 - repo submission and ownership verification
 - search, tags, stars, comments, downloads, and install stats
 - moderation queues and report handling
 - immutable package/version records backed by uploaded bundles
-
-The app can keep loading `buildings[]` until it needs richer package UI.

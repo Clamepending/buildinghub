@@ -1,6 +1,6 @@
 # BuildingHub Registry And API Reference
 
-BuildingHub is a static registry today. The public interface is the generated `registry.json`, the GitHub Pages gallery, and the contributor CLI. Community building packages are manifest-only snapshots; installing or browsing a building does not execute package code.
+BuildingHub has two read models today: the static repo-built catalog and the hosted server overlay. The public interface remains `registry.json`, the BuildingHub gallery, and the contributor CLI. Community building packages are still manifest-only snapshots; installing or browsing a building does not execute package code.
 
 ## Public URLs
 
@@ -9,9 +9,11 @@ BuildingHub is a static registry today. The public interface is the generated `r
 | Gallery | `https://buildinghub.vibe-research.net/` | Searchable BuildingHub website. |
 | Registry JSON | `https://buildinghub.vibe-research.net/registry.json` | Machine-readable catalog consumed by Vibe Research and future package UIs. |
 | Layout previews | `https://buildinghub.vibe-research.net/assets/layouts/<layout-id>.svg` | Generated static layout preview assets. |
+| Hosted layout publish | `POST https://buildinghub.vibe-research.net/api/layouts` | Authenticated layout ingest for connected Vibe Research users. |
+| Hosted scaffold publish | `POST https://buildinghub.vibe-research.net/api/recipes` | Authenticated scaffold ingest for connected Vibe Research users. |
 | Source repo | `https://github.com/Clamepending/buildinghub` | Central registry, validation, docs, and Pages deployment. |
 
-The registry URL is static JSON. Consumers can use normal HTTP caching and append a cache-busting query string during verification, for example `registry.json?verify=<commit>`.
+The registry URL stays cache-friendly JSON. Static builds and hosted server overlays both preserve the same top-level contract, so consumers can keep using normal HTTP caching and append a cache-busting query string during verification, for example `registry.json?verify=<commit>`.
 
 ## Registry Shape
 
@@ -166,7 +168,7 @@ Command behavior:
 
 ## Hosted API Path
 
-The future hosted API should keep this static contract as its read model:
+The hosted API keeps this static contract as its read model:
 
 - `GET /registry.json` remains the compatibility feed.
 - `GET /packages` can expose the `packages[]` lane with pagination and search.
